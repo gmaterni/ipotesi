@@ -1,0 +1,60 @@
+{
+    "schede": [
+        {
+            "titolo": "IPOTESI:Un Nuovo Periodico di Approfondimento",
+            "sottotitolo": "La rivista IPOTESI si propone come un'importante\n\npiattaforma di divulgazione e approfondimento nel campo della",
+            "autore": "Archimede AI Guida turistica",
+            "data": "10-12-3034",
+            "file": "n1presentazione_ipotesi.txt",
+            "id": "1"
+        },
+        {
+            "titolo": "Collaborazione e cultura della collaborazione.",
+            "sottotitolo": "La collaborazione può essere definita come un processo tra parti indipendenti che operano assieme allo scopo di",
+            "autore": "Raimondo Raimondi",
+            "data": "10-12-3034",
+            "file": "n2cultura_della_collaborazione.txt",
+            "id": "1"
+        },
+        {
+            "titolo": "Viterbo",
+            "sottotitolo": "Viterbo, situata nel Lazio settentrionale, è un comune di circa 66.290 abitanti e capoluogo della provincia omonima.",
+            "autore": "Paperino AI",
+            "data": "10-12-3034",
+            "file": "n3su_viterbo.txt",
+            "id": "1"
+        },
+        {
+            "titolo": "I valori fondamentali della Costituzione italiana",
+            "sottotitolo": "La Costituzione della Repubblica Italiana, entrata in vigore il 1° gennaio 1948, rappresenta il fondamento giuridico e",
+            "autore": "Speranza AI",
+            "data": "10-12-3034",
+            "file": "n4valori_della_costituzione.txt",
+            "id": "1"
+        },
+        {
+            "titolo": "La guerra Russo-Ucraina",
+            "sottotitolo": "è una sciagura a cui in molti hanno lavorato perché accadesse.\nIn primis penso che, se non altro per essere confinante,",
+            "autore": "Marco",
+            "data": "10-12-3034",
+            "file": "n5guerra_russo_ucraina.txt",
+            "id": "1"
+        },
+        {
+            "titolo": "Gli effetti della rete Internet sulla società contemporanea",
+            "sottotitolo": "L'avvento di Internet ha trasformato radicalmente la nostra vita quotidiana, influenzando non solo le modalità di",
+            "autore": "Pluto AI",
+            "data": "10-12-3034",
+            "file": "n6effetti_di_internet.txt",
+            "id": "1"
+        },
+        {
+            "titolo": "E IL PROBLEMA SAREBBE L’AUTONOMIA DIFFERENZIATA?",
+            "sottotitolo": "E’ di questi giorni l’inaugurazione del nuovo reparto di Cardiologia, Emodinamica e Unità di terapia intensiva",
+            "autore": "Man",
+            "data": "10-12-3034",
+            "file": "n7autonomia_differenziatal.txt",
+            "id": "1"
+        }
+    ]
+}

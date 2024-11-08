@@ -1,0 +1,10 @@
+Markdown è un linguaggio di markup leggero che permette di formattare il testo in modo semplice e leggibile. È ampiamente utilizzato per scrivere documentazione, articoli e post di blog. In questo articolo, esploreremo alcuni degli elementi fondamentali di Markdown.
+
+## Titoli
+
+I titoli in Markdown sono creati utilizzando il simbolo '#'. Il numero di '#' determina il livello del titolo.
+
+### Esempio di titoli
+# Titolo di primo livello
+## Titolo di secondo livello
+### Titolo di terzo livello
