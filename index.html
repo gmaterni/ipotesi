@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>IPOTESI</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        background-color: #404040;
+        height: a0vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vh;
+        font-weight: bold;
+        color: white;
+        line-height: 10vh;
+      }
+
+      .image-container {
+        flex: 1;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100vw;
+        height: 90vh;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      IPOTESI
+    </div>
+    <div class="image-container">
+      <img src="images/viterbo06.jpg" alt="placeholder">
+    </div>
+  </body>
+  <script>
+    setTimeout(function () { location.replace('ipotesi.html'); }, 1000);    
+    //setTimeout(function () { location.replace('ipotesi.html'); }, 10);    
+  </script>
+
+</html>

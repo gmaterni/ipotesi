@@ -1,0 +1,95 @@
+# Manuale di Utilizzo dell'Applicazione di Gestione delle Prenotazioni
+
+## Introduzione
+
+Benvenuto nel manuale di utilizzo dell'applicazione di gestione delle prenotazioni. Questo manuale ti guiderà attraverso le funzionalità principali dell'applicazione, fornendoti tutte le informazioni necessarie per utilizzarla in modo efficace.
+
+## Requisiti di Sistema
+
+Prima di iniziare, assicurati che il tuo sistema soddisfi i seguenti requisiti:
+
+- **Sistema Operativo**: Windows 10, macOS 10.14 o versioni successive, Linux.
+- **Browser**: Google Chrome, Mozilla Firefox, Safari.
+- **Connessione Internet**: Connessione stabile a Internet.
+
+## Installazione
+
+### Passaggi per l'Installazione
+
+1. **Scarica l'Applicazione**: Visita il sito ufficiale e scarica l'ultima versione dell'applicazione.
+2. **Installa l'Applicazione**: Segui le istruzioni di installazione per il tuo sistema operativo.
+3. **Avvia l'Applicazione**: Dopo l'installazione, avvia l'applicazione dal menu di avvio o dal desktop.
+
+## Accesso all'Applicazione
+
+### Passaggi per l'Accesso
+
+1. **Apri il Browser**: Apri il tuo browser preferito.
+2. **Vai all'URL**: Vai all'URL dell'applicazione (es. 'https://www.example.com/prenotazioni').
+3. **Effettua il Login**: Inserisci le tue credenziali (nome utente e password) e clicca su "Login".
+
+## Interfaccia Utente
+
+### Dashboard
+
+La dashboard è la pagina principale dell'applicazione. Qui puoi vedere un riepilogo delle prenotazioni recenti e delle statistiche.
+
+### Menu Principale
+
+Il menu principale si trova sulla sinistra della schermata e contiene le seguenti voci:
+
+- **Home**: Torna alla dashboard.
+- **Prenotazioni**: Gestisci le prenotazioni.
+- **Profilo**: Gestisci le informazioni del tuo profilo.
+- **Impostazioni**: Configura le impostazioni dell'applicazione.
+
+## Gestione delle Prenotazioni
+
+### Creare una Nuova Prenotazione
+
+1. **Vai alla Sezione Prenotazioni**: Clicca su "Prenotazioni" nel menu principale.
+2. **Clicca su "Nuova Prenotazione"**: Clicca sul pulsante "Nuova Prenotazione".
+3. **Compila il Form**: Inserisci i dettagli della prenotazione (nome, data, ora, numero di persone).
+4. **Salva la Prenotazione**: Clicca su "Salva" per creare la prenotazione.
+
+### Modificare una Prenotazione
+
+1. **Vai alla Sezione Prenotazioni**: Clicca su "Prenotazioni" nel menu principale.
+2. **Seleziona una Prenotazione**: Clicca sulla prenotazione che desideri modificare.
+3. **Modifica i Dettagli**: Modifica i dettagli della prenotazione.
+4. **Salva le Modifiche**: Clicca su "Salva" per salvare le modifiche.
+
+### Eliminare una Prenotazione
+
+1. **Vai alla Sezione Prenotazioni**: Clicca su "Prenotazioni" nel menu principale.
+2. **Seleziona una Prenotazione**: Clicca sulla prenotazione che desideri eliminare.
+3. **Elimina la Prenotazione**: Clicca su "Elimina" per eliminare la prenotazione.
+
+## Gestione del Profilo
+
+### Modificare le Informazioni del Profilo
+
+1. **Vai alla Sezione Profilo**: Clicca su "Profilo" nel menu principale.
+2. **Modifica le Informazioni**: Modifica le informazioni del tuo profilo (nome, email, password).
+3. **Salva le Modifiche**: Clicca su "Salva" per salvare le modifiche.
+
+## Impostazioni
+
+### Configurare le Impostazioni
+
+1. **Vai alla Sezione Impostazioni**: Clicca su "Impostazioni" nel menu principale.
+2. **Modifica le Impostazioni**: Modifica le impostazioni dell'applicazione (notifiche, lingua, tema).
+3. **Salva le Impostazioni**: Clicca su "Salva" per salvare le impostazioni.
+
+## Risoluzione dei Problemi
+
+### Problemi Comuni
+
+- **Problema**: Non riesco ad accedere all'applicazione.
+  - **Soluzione**: Assicurati di avere una connessione Internet stabile e di inserire le credenziali corrette.
+
+- **Problema**: Non riesco a creare una nuova prenotazione.
+  - **Soluzione**: Assicurati di compilare tutti i campi obbligatori nel form di prenotazione.
+
+- **Problema**: Non riesco a modificare una prenotazione.
+  - **Soluzione**: Assicurati di avere i permessi necessari per modificare la prenotazione.

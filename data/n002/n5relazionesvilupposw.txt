@@ -1,0 +1,42 @@
+## Introduzione
+
+Questa relazione descrive il progetto di sviluppo software realizzato nel corso dell'ultimo trimestre. Il progetto si è concentrato sulla creazione di un'applicazione web per la gestione delle prenotazioni di un ristorante. L'obiettivo principale era sviluppare un sistema efficiente e user-friendly che potesse migliorare l'esperienza sia per i clienti che per il personale del ristorante.
+
+## Obiettivi del Progetto
+
+Gli obiettivi principali del progetto erano:
+
+- Creare un'interfaccia utente intuitiva per la gestione delle prenotazioni.
+- Implementare un sistema di notifiche per avvisare i clienti delle loro prenotazioni.
+- Assicurare la sicurezza dei dati degli utenti.
+- Garantire la scalabilità del sistema per supportare un numero crescente di utenti.
+
+## Tecnologie Utilizzate
+
+### Frontend
+
+- **HTML5**: Utilizzato per la struttura della pagina web.
+- **CSS3**: Utilizzato per lo stile e il layout della pagina.
+- **JavaScript**: Utilizzato per l'interattività e la gestione degli eventi.
+- **React**: Framework JavaScript per la costruzione dell'interfaccia utente.
+
+### Backend
+
+- **Node.js**: Ambiente di runtime JavaScript per il backend.
+- **Express**: Framework per la creazione di API.
+- **MongoDB**: Database NoSQL per la gestione dei dati.
+
+### Strumenti di Sviluppo
+
+- **Git**: Sistema di controllo versione.
+- **GitHub**: Piattaforma per la gestione del codice sorgente.
+- **Docker**: Piattaforma per la containerizzazione delle applicazioni.
+
+## Architettura del Sistema
+
+L'architettura del sistema è stata progettata per essere modulare e scalabile. Ecco una panoramica dei principali componenti:
+
+### Componenti del Frontend
+
+- **Home Page**: Pagina di benvenuto con informazioni sul ristorante.
+- **Prenotazioni**: Pagina per la gestione delle prenotazioni.
