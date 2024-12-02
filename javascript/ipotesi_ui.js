@@ -46,7 +46,7 @@ const WndDiv = (id) => {
 </div>
 <div class="div-text">${txt}</div>
 </div>
-    `; 
+    `;
       };
       wnds.closeAll();
       const h = fh(s);
@@ -78,6 +78,30 @@ const wnds = {
   },
 };
 
+const sortSchede = (json) => {
+  json.schede.sort((a, b) => {
+    const idA = parseInt(a.id, 10);
+    const idB = parseInt(b.id, 10);
+    return idA - idB;
+  });
+  return json;
+};
+
+
+// const xsortSchede = (json) => {
+//   const sortedSchede = json.schede.sort((a, b) => {
+//       const idA = parseInt(a.id, 10);
+//       const idB = parseInt(b.id, 10);
+//       return idA - idB;
+//   });
+//   const sortedJson = {
+//       schede: sortedSchede
+//   };
+//   return sortedJson;
+// }
+
+
+
 const MgrUi = {
   ipotesi: [],
   htmlIndici: null,
@@ -93,14 +117,16 @@ const MgrUi = {
     this.ipotesi = [];
     this.numeri = nums;
     for (const n of this.numeri) {
+      // lettura del sommario del numero
       const url = `./data/${n}/sommario.json`;
       const sommario = await getJson(url);
-      this.ipotesi.push(sommario);
+      //ordina le schede per id
+      const schede = sortSchede(sommario);
+      this.ipotesi.push(schede);
     }
     this.buildHtml();
     this.showSommario();
   },
-
   buildHtml() {
     const fh = (n, js) => {
       const fpath = `./data/${n}/${js.file}`;
@@ -129,17 +155,18 @@ const MgrUi = {
     jfh.append('<div class="list">');
     for (let i = 0; i < this.ipotesi.length; i++) {
       const sommarioNumero = this.ipotesi[i];
+      // console.log("sommario2",sommarioNumero);
       // numero
       const num = this.numeri[i];
       jfh.append(fnum(num));
       const schede = sommarioNumero.schede;
+      // console.log("schede2",schede);
       for (const scheda of schede) {
         jfh.append(fh(num, scheda));
       }
     }
     jfh.append("</div>");
     this.htmlIndici = jfh.html();
-    // console.log("ipotesi", jfh.text());
     // sommario numero corrente
     const last = this.ipotesi.length - 1;
     const sommarioLast = this.ipotesi[last];
@@ -152,7 +179,7 @@ const MgrUi = {
     }
     jfh.append("</div>");
     this.htmlSommario = jfh.html();
-    // console.log("sommario",jfh.text())
+    // console.log("sommario3",jfh.text())
   },
   showSommario() {
     const item1 = document.querySelector(".item1");

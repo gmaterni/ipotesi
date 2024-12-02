@@ -1,44 +1,40 @@
 {
     "schede": [
         {
-            "titolo": "Introduzione al Markdown",
-            "sottotitolo": "Markdown è un linguaggio di markup leggero che permette di formattare il testo in modo semplice e leggibile. È",
-            "autore": "Sconosciuto AI",
-            "data": "10-12-3034",
-            "file": "n1introduzione_markdown.txt",
-            "id": "2"
+            "titolo": "Ipotesi",
+            "sottotitolo": "embro di una istituzione non sempre amata o seguita e a volte con\npiene ragioni (qualcuno direbbe che dovrebbe sparire dal mercato delle\nidee) mi sono trov",
+            "autore": "Gianni Carparelli",
+            "data": "30-11-2024",
+            "file": "ipotesi1.html",
+            "id": "2",
+            "img": ""
         },
         {
-            "titolo": "Email",
-            "sottotitolo": "Oggetto: Richiesta di Informazioni sui Servizi Offerti",
-            "autore": "Sconosciuto AI",
-            "data": "10-12-3034",
-            "file": "n2_emaildirichiesta.txt",
-            "id": "2"
+            "titolo": "La Guerra Russo Ucraina",
+            "sottotitolo": "una sciagura a cui in molti hanno lavorato perché accadesse)",
+            "autore": "Marco Faregna",
+            "data": "30-11-2024",
+            "file": "la_guerra_russo-ucraina.html",
+            "id": "0",
+            "img": ""
         },
         {
-            "titolo": "Manuale di Utilizzo dell'Applicazione di Gestione delle",
-            "sottotitolo": "Benvenuto nel manuale di utilizzo dell'applicazione di gestione delle prenotazioni. Questo manuale ti guiderà attraverso le funzionalità principali dell'applicazione,",
-            "autore": "Sconosciuto AI",
-            "data": "10-12-3034",
-            "file": "n3manuale.txt",
-            "id": "2"
+            "titolo": "RECITE DEL TEMPO D’OGGI",
+            "sottotitolo": "l’articolo tenta di capire e riflettere sulle dinamiche mentali dei\ncomportamenti in parole ed azioni della giovinezza, della normalità e\ndei maestri d’oggi in opera contestatrice.",
+            "autore": "Gianni Mastrangeli",
+            "data": "30-11-2023",
+            "file": "lettera_giornale.html",
+            "id": "2",
+            "img": ""
         },
         {
-            "titolo": "Report Mensile delle Vendite",
-            "sottotitolo": "Questo report fornisce una panoramica delle vendite mensili per il mese di [Mese, Anno]. Il report include",
-            "autore": "Sconosciuto AI",
-            "data": "10-12-3034",
-            "file": "n4reportvendite.txt",
-            "id": "2"
-        },
-        {
-            "titolo": "Relazione sul Progetto di Sviluppo Software",
-            "sottotitolo": "Questa relazione descrive il progetto di sviluppo software realizzato nel corso dell'ultimo trimestre. Il progetto si",
-            "autore": "Sconosciuto AI",
-            "data": "10-12-3034",
-            "file": "n5relazionesvilupposw.txt",
-            "id": "2"
+            "titolo": "IPOTESI",
+            "sottotitolo": "Il gruppo fondatore di questa testata online si caratterizza per\nessere stato protagonista della vita politica viterbese e non solo, già\na partire dagli anni 70/80 e quindi per aver cumulato decenni di\nesperienza, per",
+            "autore": "Marco Faregna",
+            "data": "20-11-2024",
+            "file": "presentazione_di_ipotesi.html",
+            "id": "1",
+            "img": ""
         }
     ]
 }

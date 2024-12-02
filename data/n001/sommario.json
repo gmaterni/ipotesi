@@ -1,66 +1,39 @@
 {
     "schede": [
         {
-            "titolo": "IPOTESI:Un Nuovo Periodico di Approfondimento",
-            "sottotitolo": "La rivista IPOTESI si propone come un'importante\n\npiattaforma di divulgazione e approfondimento nel campo della",
-            "autore": "Archimede AI Guida turistica",
-            "data": "10-12-3034",
-            "file": "n1presentazione_ipotesi.txt",
-            "id": "1",
-            "img": "images/rag3.jpeg"
+            "titolo": "Ipotesi",
+            "sottotitolo": "Membro di una istituzione non sempre amata o seguita e a volte con\npiene ragioni (qualcuno direbbe che dovrebbe sparire dal mercato delle\nidee) mi sono trov",
+            "autore": "Gianni Carparelli",
+            "data": "30-11-2024",
+            "file": "ipotesi1.html",
+            "id": "2",
+            "img": ""
         },
         {
-            "titolo": "Collaborazione e cultura della collaborazione.",
-            "sottotitolo": "La collaborazione può essere definita come un processo tra parti indipendenti che operano assieme allo scopo di",
-            "autore": "Raimondo Raimondi",
-            "data": "10-12-3034",
-            "file": "n2cultura_della_collaborazione.txt",
+            "titolo": "La Guerra Russo Ucraina",
+            "sottotitolo": "una sciagura a cui in molti hanno lavorato perché accadesse)",
+            "autore": "Marco Faregna",
+            "data": "30-11-2024",
+            "file": "la_guerra_russo-ucraina.html",
+            "id": "3",
+            "img": ""
+        },
+        {
+            "titolo": "RECITE DEL TEMPO D’OGGI",
+            "sottotitolo": "l’articolo tenta di capire e riflettere sulle dinamiche mentali dei\ncomportamenti in parole ed azioni della giovinezza, della normalità e\ndei maestri d’oggi in opera contestatrice.",
+            "autore": "Gianni Mastrangeli",
+            "data": "30-11-2023",
+            "file": "lettera_giornale.html",
             "id": "1",
             "img": ""
         },
         {
-            "titolo": "Viterbo",
-            "sottotitolo": "Viterbo, situata nel Lazio settentrionale, è un comune di circa 66.290 abitanti e capoluogo della provincia omonima.",
-            "autore": "Paperino AI",
-            "data": "10-12-3034",
-            "file": "n3su_viterbo.txt",
-            "id": "1",
-            "img": ""
-        },
-        {
-            "titolo": "I valori fondamentali della Costituzione italiana",
-            "sottotitolo": "La Costituzione della Repubblica Italiana, entrata in vigore il 1° gennaio 1948, rappresenta il fondamento giuridico e",
-            "autore": "Speranza AI",
-            "data": "10-12-3034",
-            "file": "n4valori_della_costituzione.txt",
-            "id": "1",
-            "img": ""
-        },
-        {
-            "titolo": "La guerra Russo-Ucraina",
-            "sottotitolo": "è una sciagura a cui in molti hanno lavorato perché accadesse.\nIn primis penso che, se non altro per essere confinante,",
-            "autore": "Marco",
-            "data": "10-12-3034",
-            "file": "n5guerra_russo_ucraina.txt",
-            "id": "1",
-            "img": ""
-        },
-        {
-            "titolo": "Gli effetti della rete Internet sulla società contemporanea",
-            "sottotitolo": "L'avvento di Internet ha trasformato radicalmente la nostra vita quotidiana, influenzando non solo le modalità di",
-            "autore": "Pluto AI",
-            "data": "10-12-3034",
-            "file": "n6effetti_di_internet.txt",
-            "id": "1",
-            "img": ""
-        },
-        {
-            "titolo": "E IL PROBLEMA SAREBBE L’AUTONOMIA DIFFERENZIATA?",
-            "sottotitolo": "E’ di questi giorni l’inaugurazione del nuovo reparto di Cardiologia, Emodinamica e Unità di terapia intensiva",
-            "autore": "Man",
-            "data": "10-12-3034",
-            "file": "n7autonomia_differenziatal.txt",
-            "id": "1",
+            "titolo": "IPOTESI",
+            "sottotitolo": "Il gruppo fondatore di questa testata online si caratterizza per\nessere stato protagonista della vita politica viterbese e non solo, già\na partire dagli anni 70/80 e quindi per aver cumulato decenni di\nesperienza, per",
+            "autore": "Marco Faregna",
+            "data": "20-11-2024",
+            "file": "presentazione_di_ipotesi.html",
+            "id": "0",
             "img": ""
         }
     ]
