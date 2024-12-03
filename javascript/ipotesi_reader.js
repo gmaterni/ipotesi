@@ -25,7 +25,7 @@ const showReader = (text) => {
   textCurrent = text;
   //AAA const s = md2html(text);
   const s = text;
-  console.log("PAG_HTMn\n", s);
+  // console.log("PAG_HTMn\n", s);
   h = fh(s);
   const w = UaWindowAdm.create("id_reader");
   w.setZ(12);

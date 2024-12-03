@@ -1,6 +1,6 @@
 /** @format */
 
-// 1201px and more 
+// 1201px and more
 @media (max-width: 1200px) {
   .item0 {
     background-color: #8a8a8a !important;
@@ -11,7 +11,7 @@
   }
 }
 
-// 1025px — 1200px: Desktops, 
+// 1025px — 1200px: Desktops,
 @media (max-width: 1024px) {
   .item0 {
     background-color: #01b96c !important;
@@ -39,9 +39,8 @@
 // 481px — 768px: iPads, Tablets.
 @media (max-width: 480px) {
   .item0 {
-    background-color: #00fe44 !important;
+    background-color: #03ab30 !important;
     &::after {
-      // content: "";
       content: "480";
       color: #ffffff;
     }
@@ -60,7 +59,13 @@
       color: #ffffff;
     }
     .img {
-      width: 60vw !important;
+      width: 70vw !important;
+    }
+    div.container {
+      width: 85vw !important;
+    }
+    div.col-rigth {
+      width: 15vw !important;
     }
   }
 }
@@ -128,14 +133,14 @@
 @zbtn: 1;
 
 //dimesioni window
-@menuu_h: 10vh;
-@nwnu-boz-w: 20vw;
-@menu-bix-h: 85vh;
-@cont-w: 75vw;
-@item0-h: 30vh;
-@item1-h: 60vh;
-@col-right-w: 25vw;
-@col-right-h: 90vh;
+// @menuu_h: 10vh;
+// @nwnu-boz-w: 20vw;
+// @menu-bix-h: 85vh;
+// @cont-w: 75vw;
+// @item0-h: 30vh;
+// @item1-h: 60vh;
+// @col-right-w: 25vw;
+// @col-right-h: 90vh;
 
 body {
   background: @bg-base;
@@ -285,7 +290,7 @@ div.menu {
 }
 .btn-theme {
   position: fixed;
-  right: 1vw;
+  right: 6vw;
   top: 1vh;
   z-index: @zbtn;
   button {
@@ -310,6 +315,7 @@ div.menu-box {
   position: fixed;
   top: 10vh;
   left: -2000px;
+  //AAA menu-box-width
   width: 20vw;
   height: 85vh;
   padding: 0;
@@ -361,7 +367,8 @@ div.menu-box {
 
 // UA container
 div.container {
-  width: 75vw;
+  //AAA width: 75vw;
+  width: 80vw;
   position: absolute;
   top: 10vh;
   left: 0;
@@ -405,7 +412,8 @@ div.container {
     border-top: 2px solid @border;
     flex: 10;
     .num {
-      width: 75vw;
+      // width: 75vw;
+      width:100%;
       display: inline-block;
       text-align: center;
       border-top: 1px solid @border;
@@ -450,7 +458,8 @@ div.container {
 // UA col-right
 div.col-right {
   position: absolute;
-  width: 25vw;
+  width: 20vw;
+  //AAA width: 25vw;
   top: 10vh;
   height: 90vh;
   right: 0;
@@ -476,12 +485,15 @@ div.col-right {
   div.item0 {
     // box-sizing: border-box;
     // border: 1px solid yellowgreen;
+    // border:1px solid red;
     flex: 1;
-    height: 24vw;
-    // max-height: 24vw;
-    // min-height: 24vw;
-    max-width: 24vw;
-    min-width: 24vw;
+    // height: 24vw;
+    // max-width: 24vw;
+    // min-width: 24vw;
+    height: 19vw;
+    // max-width: 19vw;
+    // min-width: 19vw;
+    width: 19vw;
     text-align: center;
     transition: all 0.5s ease-in-out; // Aggiunta questa linea
     .img {
@@ -704,11 +716,9 @@ div.col-right {
   line-height: 1.6;
   font-family: @md-font-base;
   color: @md-text;
-  // max-width: 48rem;
   width: 100%;
   margin: 0 auto;
   padding: @md-spacing-base;
-
   // Headers
   h1,
   h2,
@@ -722,7 +732,6 @@ div.col-right {
     line-height: 1.25;
     color: @md-heading;
   }
-
   h1 {
     font-size: 2em;
   }
@@ -741,7 +750,6 @@ div.col-right {
   h6 {
     font-size: 0.85em;
   }
-
   // Paragraphs and lists
   p {
     // border: 1px solid red;
