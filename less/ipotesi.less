@@ -2,50 +2,52 @@
 
 // 1201px and more
 @media (max-width: 1200px) {
-  .item0 {
-    background-color: #8a8a8a !important;
-    &::after {
-      content: "1200";
-      color: #ffffff;
+  div.container {
+    .item0 {
+      background-color: #8a8a8a !important;
+      &::after {
+        content: "1200";
+        color: #ffffff;
+      }
     }
   }
 }
 
 // 1025px — 1200px: Desktops,
 @media (max-width: 1024px) {
-  .item0 {
-    background-color: #01b96c !important;
-    &::after {
-      content: "1024";
-      color: #ffffff;
+  div.container {
+    .item0 {
+      background-color: #01b96c !important;
+      &::after {
+        content: "1024";
+        color: #ffffff;
+      }
     }
   }
 }
 
 // 769px — 1024px: Small screens
 @media (max-width: 765px) {
-  .item0 {
-    background-color: #0404f4 !important;
-    &::after {
-      content: "765";
-      color: #ffffff;
-    }
-    .img {
-      width: 50vw !important;
+  div.container {
+    .item0 {
+      background-color: #0d28da !important;
+      &::after {
+        content: "7600";
+        color: #ffffff;
+      }
     }
   }
 }
 
 // 481px — 768px: iPads, Tablets.
 @media (max-width: 480px) {
-  .item0 {
-    background-color: #03ab30 !important;
-    &::after {
-      content: "480";
-      color: #ffffff;
-    }
-    .img {
-      width: 60vw !important;
+  div.container {
+    .item0 {
+      background-color: #03ab30 !important;
+      &::after {
+        content: "480";
+        color: #ffffff;
+      }
     }
   }
 }
@@ -57,15 +59,6 @@
     &::after {
       content: "320";
       color: #ffffff;
-    }
-    .img {
-      width: 70vw !important;
-    }
-    div.container {
-      width: 85vw !important;
-    }
-    div.col-rigth {
-      width: 15vw !important;
     }
   }
 }
@@ -394,14 +387,16 @@ div.container {
   div.item0 {
     background-color: @bg-item0;
     flex: 1;
-    max-height: 30vh;
-    min-height: 30vh;
+    // max-height: 30vh;
+    // min-height: 30vh;
+    height: 30vh;
     text-align: center;
     .img {
       margin: 0 auto;
       padding: 0;
       width: 30vw;
-      height: 30vh;
+      // height: 30vh;
+      height: 100%;
     }
   }
 
@@ -585,12 +580,11 @@ div.col-right {
   button {
     font-size: @fsize-btn;
     font-weight: bold;
-    margin-left: 2vw;
+    margin-right: 5vw;
     height: 100%;
     aspect-ratio: 1;
     border: none;
-    background: none;
-    //  background-color: transparent;
+     background-color: transparent;
     color: @fg-menu;
     cursor: pointer;
     outline: none;
