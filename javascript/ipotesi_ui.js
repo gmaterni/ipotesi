@@ -1,36 +1,36 @@
 /** @format */
 
-const WndPre = (id) => {
-  return {
-    w: UaWindowAdm.create(id),
-    out: null,
-    show(s) {
-      const fh = (txt) => {
-        return `
-<div class="window-text">
-<div class="btn-wrapper">
-<button title="chiudi" onclick="UaWindowAdm.closeThis(this)">X</button>
-</div>
-<pre class="pre-text">${txt}</pre>
-</div>
-    `;
-      };
-      wnds.closeAll();
-      const h = fh(s);
-      this.w.drag();
-      this.w.setZ(12);
-      this.w.vw_vh().setXY(18.5, 10, -1);
-      this.w.setHtml(h);
-      this.w.show();
-    },
-    close() {
-      this.w.close();
-    },
-    open(url) {
-      fetchText(url, (s) => this.show(s));
-    },
-  };
-};
+// const WndPre = (id) => {
+//   return {
+//     w: UaWindowAdm.create(id),
+//     out: null,
+//     show(s) {
+//       const fh = (txt) => {
+//         return `
+// <div class="window-text">
+// <div class="btn-wrapper">
+// <button title="chiudi" onclick="UaWindowAdm.closeThis(this)">X</button>
+// </div>
+// <pre class="pre-text">${txt}</pre>
+// </div>
+//     `;
+//       };
+//       wnds.closeAll();
+//       const h = fh(s);
+//       this.w.drag();
+//       this.w.setZ(12);
+//       this.w.vw_vh().setXY(18.5, 10, -1);
+//       this.w.setHtml(h);
+//       this.w.show();
+//     },
+//     close() {
+//       this.w.close();
+//     },
+//     open(url) {
+//       fetchText(url, (s) => this.show(s));
+//     },
+//   };
+// };
 //XXX <button onclick="increaseFontSize()">A+</button>
 //XXX <button onclick="decreaseFontSize()">A-</button>
 const WndDiv = (id) => {
@@ -52,7 +52,7 @@ const WndDiv = (id) => {
       const h = fh(s);
       this.w.drag();
       this.w.setZ(12);
-      this.w.vw_vh().setXY(20, 10, -1);
+      this.w.vw_vh().setXY(0, 10, -1);
       this.w.setHtml(h);
       this.w.show();
     },
@@ -67,14 +67,14 @@ const WndDiv = (id) => {
 
 const wnds = {
   wdiv: null,
-  wpre: null,
+  // wpre: null,
   init() {
     this.wdiv = WndDiv("id_w0");
-    this.wpre = WndPre("id_w1");
+    // this.wpre = WndPre("id_w1");
   },
   closeAll() {
     UaWindowAdm.close("id_w0");
-    UaWindowAdm.close("id_w1");
+    // UaWindowAdm.close("id_w1");
   },
 };
 

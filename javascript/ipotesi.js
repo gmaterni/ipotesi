@@ -25,10 +25,14 @@ const opArchivio = function (e) {
 };
 
 const opHelp = function () {
+  toggleMenu();
+  UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/help0.html");
 };
 
 const opNews = function (e) {
+  toggleMenu();
+  UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/help1.html");
 };
 
