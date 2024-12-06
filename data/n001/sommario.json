@@ -1,39 +1,57 @@
 {
     "schede": [
         {
-            "titolo": "Ipotesi",
-            "sottotitolo": "Membro di una istituzione non sempre amata o seguita e a volte con\npiene ragioni (qualcuno direbbe che dovrebbe sparire dal mercato delle\nidee) mi sono trov",
-            "autore": "Gianni Carparelli",
-            "data": "30-11-2024",
-            "file": "ipotesi1.html",
-            "id": "2",
+            "titolo": "Intelligenza Artificiale: Umana troppo umana.",
+            "sottotitolo": "Un tentativo di raccontare l’intelligenza artificiale alla nonna.",
+            "autore": "Giuseppe Materni",
+            "data": "10-12-2024",
+            "file": "ai_umano_troppo_umano_m.html",
+            "id": "5",
             "img": ""
         },
         {
-            "titolo": "La Guerra Russo Ucraina",
-            "sottotitolo": "una sciagura a cui in molti hanno lavorato perché accadesse)",
+            "titolo": "Democrazia debole versus collaborazione e\ncondivisione",
+            "sottotitolo": "Distinguere “politics\", focalizzata sul consenso, e la\n\"policy\", basata sulla collaborazione tra cittadini e amministrazioni\nper comprendere il declino della fiducia nei partiti politici a favore\ndelle organizzazioni di volontariato,",
+            "autore": "Raimondo Raimondi",
+            "data": "10-12-2024",
+            "file": "democrazia_vs_collaborazione_.html",
+            "id": "4",
+            "img": ""
+        },
+        {
+            "titolo": "La guerra Russo-Ucraina",
+            "sottotitolo": "Una sciagura a cui in molti hanno lavorato perché accadesse.",
             "autore": "Marco Faregna",
-            "data": "30-11-2024",
+            "data": "10-12-2024",
             "file": "la_guerra_russo-ucraina.html",
             "id": "3",
             "img": ""
         },
         {
+            "titolo": "Un ritorno: Ipotesi",
+            "sottotitolo": "Esperienza e Innovazione: Un Viaggio tra Politica, Cultura e\nTecnologia",
+            "autore": "Marco Faregna",
+            "data": "10-20-23",
+            "file": "pesentazaione_ipotesi.html",
+            "id": "0",
+            "img": ""
+        },
+        {
             "titolo": "RECITE DEL TEMPO D’OGGI",
-            "sottotitolo": "l’articolo tenta di capire e riflettere sulle dinamiche mentali dei\ncomportamenti in parole ed azioni della giovinezza, della normalità e\ndei maestri d’oggi in opera contestatrice.",
-            "autore": "Gianni Mastrangeli",
-            "data": "30-11-2023",
-            "file": "lettera_giornale.html",
+            "sottotitolo": "L’articolo tenta di capire e riflettere sulle dinamiche mentali dei\ncomportamenti in parole ed azioni della giovinezza, della normalità e\ndei maestri d’oggi in opera contestatrice.",
+            "autore": "Giovanni Mastrangeli",
+            "data": "10-12-2024",
+            "file": "recite_del_tempo_di_oggi.html",
             "id": "1",
             "img": ""
         },
         {
-            "titolo": "IPOTESI",
-            "sottotitolo": "Il gruppo fondatore di questa testata online si caratterizza per\nessere stato protagonista della vita politica viterbese e non solo, già\na partire dagli anni 70/80 e quindi per aver cumulato decenni di\nesperienza, per",
-            "autore": "Marco Faregna",
-            "data": "20-11-2024",
-            "file": "presentazione_di_ipotesi.html",
-            "id": "0",
+            "titolo": "Riflessioni StuzzicaMenti",
+            "sottotitolo": "Riflessioni sul pensiero e la spiritualità: omaggio a Franco\nFerrarotti e Simone Weil nell'era dell'intelligenza artificiale.\"",
+            "autore": "Giovanni Carparelli",
+            "data": "10-12-2024",
+            "file": "riflessioni_stuzzicamenti.html",
+            "id": "2",
             "img": ""
         }
     ]
