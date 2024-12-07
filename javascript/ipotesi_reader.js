@@ -1,5 +1,10 @@
 /** @format */
 let fontSize = 18;
+const fsizeDef = 18;
+const fsizeMax = 32;
+const fsizeMin = 14;
+const fsizeKey = "fsize_reader";
+
 var textCurrent = "";
 
 const fh = (txt) => {
@@ -14,7 +19,7 @@ const fh = (txt) => {
                 <button title="Apri/Chiudi Schemo Interro" onclick="openFullscreen()">⛶</button>
                 <button title="Chiudi" onclick="closeReader()">X</button>
             </div>
-            <div class="content markdown" id="content">
+            <div class="content" id="content">
             ${txt}
             </div>
         </div>
@@ -23,7 +28,6 @@ const fh = (txt) => {
 
 const showReader = (text) => {
   textCurrent = text;
-  //AAA const s = md2html(text);
   const s = text;
   // console.log("PAG_HTMn\n", s);
   h = fh(s);
@@ -32,6 +36,7 @@ const showReader = (text) => {
   w.vw_vh().setXY(0.1, 10, -1);
   w.setHtml(h);
   w.show();
+  defaultFontSize();
 };
 
 function openReader(url) {
@@ -56,17 +61,28 @@ function closeReader() {
     }
   }
 }
+function defaultFontSize() {
+  const s = localStorage.getItem(fsizeKey);
+  let v = parseInt(s, 10);
+  if (isNaN(v)) v = fsizeDef;
+  fontSize = v;
+  content.style.fontSize = `${fontSize}px`;
+}
 
 function increaseFontSize() {
   const content = document.getElementById("content");
-  fontSize = Math.min(fontSize + 2, 32);
+  fontSize = Math.min(fontSize + 2, fsizeMax);
   content.style.fontSize = `${fontSize}px`;
+  const s = fontSize.toString();
+  localStorage.setItem(fsizeKey, s);
 }
 
 function decreaseFontSize() {
   const content = document.getElementById("content");
-  fontSize = Math.max(fontSize - 2, 12);
+  fontSize = Math.max(fontSize - 2, fsizeMin);
   content.style.fontSize = `${fontSize}px`;
+  const s = fontSize.toString();
+  localStorage.setItem(fsizeKey, s);
 }
 
 function openFullscreen() {

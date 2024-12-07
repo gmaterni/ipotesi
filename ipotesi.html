@@ -33,7 +33,7 @@
         IPOTESI
       </div>
       <div class="sub-title">
-        Periodico di informazione
+        Periodico di approfondimento
       </div>
     </div>
     <!--  -->
@@ -69,7 +69,7 @@
     <div class="container">
 
       <div id="id_item0" class="item item0">
-        0.1.8
+        0.1.9
         <img class="img" src="images/giardino800x480.jpg">
       </div>
       <div id="id_item1" class="item item1">
@@ -109,5 +109,8 @@
 
 </html>
 <script>
-  openApp();
+  window.addEventListener('load', () => {
+    console.log("Tutti i file esterni (CSS, JavaScript, immagini) sono stati caricati");
+    openApp();
+  });
 </script>
