@@ -84,7 +84,7 @@ function getTheme() {
   const t = localStorage.getItem("theme");
   if (!!t && t == "dark") setDark();
 }
-
+ 
 function setLight() {
   document.documentElement.classList.toggle("invert");
   document.body.classList.remove("theme-dark");

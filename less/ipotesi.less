@@ -135,6 +135,15 @@
 // @col-right-w: 25vw;
 // @col-right-h: 90vh;
 
+
+html {
+  // background: @contaniner-bg;
+  scrollbar-width: 8px; /* Larghezza della barra di scorrimento */
+  scrollbar-color: #00d3a2 #676767; /* Colore della barra di scorrimento e dello sfondo */
+}
+
+
+
 body {
   background: @bg-base;
   color: @fg-base;
@@ -144,6 +153,28 @@ body {
   margin: 0 auto;
   overflow-y: hidden;
 }
+
+
+///////////////
+// UA scroll-br
+::-webkit-scrollbar {
+  width:8px; /* Larghezza della barra di scorrimento */
+}
+
+::-webkit-scrollbar-track {
+  background: #686868; /* Colore dello sfondo della traccia */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #575758; /* Colore della barra di scorrimento */
+  border-radius: 6px; /* Arrotondamento degli angoli */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06eab5; /* Colore della barra di scorrimento al passaggio del mouse */
+}
+
+
 
 //UA Menu
 .open-menu {
@@ -277,11 +308,11 @@ div.menu {
 }
 
 //UA Bottoni tema
-.display-theme {
-  button {
-    display: inline-block !important;
-  }
-}
+// .display-theme {
+//   button {
+//     display: inline-block !important;
+//   }
+// }
 .btn-theme {
   position: fixed;
   right: 6vw;
