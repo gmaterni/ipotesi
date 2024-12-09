@@ -137,9 +137,8 @@
 
 
 html {
-  // background: @contaniner-bg;
-  scrollbar-width: 8px; /* Larghezza della barra di scorrimento */
-  scrollbar-color: #00d3a2 #676767; /* Colore della barra di scorrimento e dello sfondo */
+  scrollbar-width: thin; 
+  scrollbar-color: #02d95b #ababab; /* Colore della barra di scorrimento e dello sfondo */
 }
 
 
@@ -156,13 +155,13 @@ body {
 
 
 ///////////////
-// UA scroll-br
+// UA scrollbar
 ::-webkit-scrollbar {
-  width:8px; /* Larghezza della barra di scorrimento */
+  width:5px;  /* Larghezza della barra di scorrimento */
 }
 
 ::-webkit-scrollbar-track {
-  background: #686868; /* Colore dello sfondo della traccia */
+  background: #3b3b3b; /* Colore dello sfondo della traccia */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -171,7 +170,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #06eab5; /* Colore della barra di scorrimento al passaggio del mouse */
+  background: #01a47e; /* Colore della barra di scorrimento al passaggio del mouse */
 }
 
 
@@ -494,7 +493,7 @@ div.col-right {
   align-items: center;
   flex-wrap: nowrap;
   overflow-y: auto;
-  overflow-x: auto;
+  overflow-x: hide !important;
 
   div.item {
     margin: 0;
@@ -507,13 +506,14 @@ div.col-right {
   div.item0 {
     background: @border;
     flex: 1;
-    height: 19vw;
-    width: 19vw;
+    height: 18.5vw;
+    width: 18.5vw;
     text-align: center;
     transition: all 0.5s ease-in-out; // Aggiunta questa linea
     .img {
       padding: 0;
-      width: 98%;
+      margin: 0;
+      width: 99%;
       height: 98%;
       transition: all 0.5s ease-in-out; // Aggiunta questa linea
     }
