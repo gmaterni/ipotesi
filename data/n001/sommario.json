@@ -6,7 +6,7 @@
             "autore": "Giuseppe Materni",
             "data": "10-12-2024",
             "file": "ai_umano_troppo_umano_m.html",
-            "id": "5",
+            "id": "9",
             "img": ""
         },
         {
@@ -15,7 +15,7 @@
             "autore": "Raimondo Raimondi",
             "data": "10-12-2024",
             "file": "democrazia_vs_collaborazione_.html",
-            "id": "4",
+            "id": "2",
             "img": ""
         },
         {
@@ -24,7 +24,34 @@
             "autore": "Marco Faregna",
             "data": "10-12-2024",
             "file": "la_guerra_russo-ucraina.html",
-            "id": "3",
+            "id": "6",
+            "img": ""
+        },
+        {
+            "titolo": "Introduzione alla questione uigura nello Xinjiang",
+            "sottotitolo": "Violazioni dei diritti umani e soppressione dell’identità culturale\nnella Repubblica Popolare Cinese",
+            "autore": "Matteo Faregna",
+            "data": "10-12-2024",
+            "file": "la_questione_uigura.html",
+            "id": "5",
+            "img": ""
+        },
+        {
+            "titolo": "Lotta Alla Corruzione",
+            "sottotitolo": "Il presidente Mattarella: \"combattere la piaga corruzione è dovere di\ntutte le Istituzioni: legalità e onestà sono condizioni imprescindibili\nper una crescita giusta. Ognuno è chiamato a fare la propria parte.“",
+            "autore": "Stefano Stefanini",
+            "data": "10-12-2024",
+            "file": "lotta_alla_corruzione.html",
+            "id": "2",
+            "img": ""
+        },
+        {
+            "titolo": "CON LA LUCE A FILO",
+            "sottotitolo": "Un viaggio poetico tra strade illuminate e incontri significativi: alla ricerca della luce e del dialogo con l'universale e il particolare",
+            "autore": "Anita Mancia",
+            "data": "10-12-2024",
+            "file": "luce_al_filo.html",
+            "id": "8",
             "img": ""
         },
         {
@@ -38,7 +65,7 @@
         },
         {
             "titolo": "Recite del tempo di oggi",
-            "sottotitolo": "L’articolo tenta di capire e riflettere sulle dinamiche mentali dei\ncomportamenti in parole ed azioni della giovinezza, della normalità e\ndei maestri d’oggi in opera contestatrice.",
+            "sottotitolo": "L’articolo tenta di capire e riflettere sulle\ndinamiche mentali dei comportamenti in parole ed azioni della\ngiovinezza, della normalità e dei maestri d’oggi in opera contestatrice\ne non solo.",
             "autore": "Giovanni Mastrangeli",
             "data": "10-12-2024",
             "file": "recite_del_tempo_di_oggi.html",
@@ -51,7 +78,16 @@
             "autore": "Giovanni Carparelli",
             "data": "10-12-2024",
             "file": "riflessioni_stuzzicamenti.html",
-            "id": "2",
+            "id": "3",
+            "img": ""
+        },
+        {
+            "titolo": "TUSCIA - UNA TERRA DA SCOPRIRE",
+            "sottotitolo": "Un viaggio tra paesaggi mozzafiato e tesori culturali: alla scoperta\ndella Tuscia, tra storia, natura e tradizioni secolari\"",
+            "autore": "Valentina Berneschi, storica dell’arte-guida turistica.",
+            "data": "10-12-2024",
+            "file": "tuscia_terra_da_scoprire.html",
+            "id": "4",
             "img": ""
         }
     ]
