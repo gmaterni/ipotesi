@@ -7,10 +7,10 @@
       background-color: #8a8a8a !important;
       &::after {
         color: #999999;
-        content: "1200";
+         content: "1200";
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
       }
     }
   }
@@ -26,7 +26,7 @@
         content: "1024";
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
       }
     }
   }
@@ -38,11 +38,11 @@
     .item0 {
       background-color: #0d28da !important;
       &::after {
-        content: "7600";
+        content: "760";
         color: #999999;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
       }
     }
   }
@@ -58,7 +58,7 @@
         color: #999999;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
       }
     }
   }
@@ -73,7 +73,7 @@
       color: #999999;
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
     }
   }
 }
@@ -312,7 +312,7 @@ div.menu {
     font-weight: 800;
     font-style: italic;
     line-height: 1;
-  } 
+  }
   div.release {
     position: absolute;
     bottom: 0;
@@ -434,16 +434,13 @@ div.container {
   div.item0 {
     background-color: @bg-item0;
     flex: 1;
-    // max-height: 30vh;
-    // min-height: 30vh;
-    height: 30vh;
-    text-align: center;
-    .img {
+    padding: 0;
+    margin: 0;
+    img.img {
+      display: block;
       margin: 0 auto;
       padding: 0;
-      width: 30vw;
-      // height: 30vh;
-      height: 100%;
+      height: 25vw;
     }
   }
 
