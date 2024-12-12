@@ -6,8 +6,11 @@
     .item0 {
       background-color: #8a8a8a !important;
       &::after {
+        color: #999999;
         content: "1200";
-        color: #ffffff;
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
   }
@@ -19,8 +22,11 @@
     .item0 {
       background-color: #01b96c !important;
       &::after {
+        color: #999999;
         content: "1024";
-        color: #ffffff;
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
   }
@@ -33,7 +39,10 @@
       background-color: #0d28da !important;
       &::after {
         content: "7600";
-        color: #ffffff;
+        color: #999999;
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
   }
@@ -46,7 +55,10 @@
       background-color: #03ab30 !important;
       &::after {
         content: "480";
-        color: #ffffff;
+        color: #999999;
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
   }
@@ -58,7 +70,10 @@
     background-color: #ff0000 !important;
     &::after {
       content: "320";
-      color: #ffffff;
+      color: #999999;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
@@ -93,7 +108,7 @@
 @bg-a-hover: #afafaf;
 
 @border: #999999;
-@bg-item0: #f0f0f0;
+@bg-item0: #bababa;
 @bg-item1: #fafafa;
 // window
 @bg-wnd: #e6e6e6;
@@ -111,7 +126,7 @@
 
 // Dimensioni font (mantenute uguali)
 @fsize-title: calc(20px + 3.5vw);
-@fsize-subtitle: calc(9px + 1vw);
+@fsize-subtitle: calc(11px + 1vw);
 @fsize-menu-a: calc(8px + 0.9vw);
 @fsize-container: calc(8px + 0.9vw);
 @fsize-wnd: calc(8px + 0.9vw);
@@ -135,13 +150,10 @@
 // @col-right-w: 25vw;
 // @col-right-h: 90vh;
 
-
 html {
-  scrollbar-width: thin; 
+  scrollbar-width: thin;
   // scrollbar-color: #02d95b #ababab; /* Colore della barra di scorrimento e dello sfondo */
 }
-
-
 
 body {
   background: @bg-base;
@@ -152,7 +164,6 @@ body {
   margin: 0 auto;
   overflow-y: hidden;
 }
-
 
 ///////////////
 // UA scrollbar
@@ -172,8 +183,6 @@ body {
 // ::-webkit-scrollbar-thumb:hover {
 //   background: #01a47e; /* Colore della barra di scorrimento al passaggio del mouse */
 // }
-
-
 
 //UA Menu
 .open-menu {
@@ -295,14 +304,22 @@ div.menu {
   }
   div.sub-title {
     position: absolute;
-    bottom: 0.3vh;
-    left: 1vw;
+    bottom: 0.9svh;
+    left: 4vw;
     padding: 0;
     margin: 0;
     font-size: @fsize-subtitle;
     font-weight: 800;
     font-style: italic;
     line-height: 1;
+  }
+  div.release {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 6px;
+    font-weight: 100;
+    color: #999999;
   }
 }
 
