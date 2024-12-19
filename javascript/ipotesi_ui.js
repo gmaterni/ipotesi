@@ -152,6 +152,7 @@ const MgrUi = {
     };
     const jfh = UaJtfh();
     jfh.init();
+    // 
     jfh.append('<div class="list">');
     for (let i = 0; i < this.ipotesi.length; i++) {
       const sommarioNumero = this.ipotesi[i];
@@ -166,12 +167,15 @@ const MgrUi = {
       }
     }
     jfh.append("</div>");
+    // 
     this.htmlIndici = jfh.html();
+    // 
     // sommario numero corrente
     const last = this.ipotesi.length - 1;
     const sommarioLast = this.ipotesi[last];
     const num = this.numeri[last];
     jfh.init();
+    // 
     jfh.append('<div class="list">');
     const schede = sommarioLast.schede;
     for (const scheda of schede) {
@@ -180,13 +184,14 @@ const MgrUi = {
     jfh.append("</div>");
     this.htmlSommario = jfh.html();
     // console.log("sommario3",jfh.text())
+
   },
   showSommario() {
-    const item1 = document.querySelector(".item1");
+    const item1 = document.getElementById("id_item1");
     item1.innerHTML = MgrUi.htmlSommario;
   },
   showIndici() {
-    const item1 = document.querySelector(".item1");
+    const item1 = document.getElementById("id_item1");
     item1.innerHTML = MgrUi.htmlIndici;
   },
 };

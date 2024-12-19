@@ -11,11 +11,11 @@
         },
         {
             "titolo": "Democrazia debole versus collaborazione e condivisione",
-            "sottotitolo": "Distinguere “politics\", focalizzata sul consenso, e la \"policy\",\nbasata sulla collaborazione tra cittadini e amministrazioni per\ncomprendere il declino della fiducia nei partiti politici a favore delle\norganizzazioni di volontariato,",
+            "sottotitolo": "\"POLITICS\" focalizzata sul consenso -\"POLICY\" basata sulla\ncollaborazione tra cittadini e amministrazioni\nLe ragioni della perdita del consenso della politica a vantaggio del\nvolontariato",
             "autore": "Raimondo Raimondi",
             "data": "10-12-2024",
             "file": "democrazia_vs_collaborazione_.html",
-            "id": "2",
+            "id": "4",
             "img": ""
         },
         {
@@ -24,12 +24,12 @@
             "autore": "Marco Faregna",
             "data": "10-12-2024",
             "file": "la_guerra_russo-ucraina.html",
-            "id": "6",
+            "id": "7",
             "img": ""
         },
         {
-            "titolo": "Introduzione alla questione uigura nello Xinjiang",
-            "sottotitolo": "Violazioni dei diritti umani e soppressione dell’identità culturale\nnella Repubblica Popolare Cinese",
+            "titolo": "Violazione dei diritti umani nella Repubblica Popolare Cinese",
+            "sottotitolo": "Introduzione alla questione Uigura nello Xinjiang con la soppressione\ndell'identità culturale",
             "autore": "Matteo Faregna",
             "data": "10-12-2024",
             "file": "la_questione_uigura.html",
@@ -42,11 +42,11 @@
             "autore": "Stefano Stefanini",
             "data": "10-12-2024",
             "file": "lotta_alla_corruzione.html",
-            "id": "2",
+            "id": "3",
             "img": ""
         },
         {
-            "titolo": "CON LA LUCE A FILO",
+            "titolo": "Con La Luce A Filo",
             "sottotitolo": "Un viaggio poetico tra strade illuminate e incontri significativi: alla ricerca della luce e del dialogo con l'universale e il particolare",
             "autore": "Anita Mancia",
             "data": "10-12-2024",
@@ -55,7 +55,7 @@
             "img": ""
         },
         {
-            "titolo": "Un ritorno: Ipotesi",
+            "titolo": "IPOTESI: un ritorno tra Esperienza e Innovazione - un viaggio tra\nPolitica, Cultura e Tecnologia",
             "sottotitolo": "Esperienza e Innovazione: Un Viaggio tra Politica, Cultura e\nTecnologia",
             "autore": "Marco Faregna",
             "data": "10-20-23",
@@ -68,7 +68,7 @@
             "sottotitolo": "L’articolo tenta di capire e riflettere sulle\ndinamiche mentali dei comportamenti in parole ed azioni della\ngiovinezza, della normalità e dei maestri d’oggi in opera contestatrice\ne non solo.",
             "autore": "Giovanni Mastrangeli",
             "data": "10-12-2024",
-            "file": "recite_del_tempo_di_oggi.html",
+            "file": "riflessioni_del_tempo_di_oggi.html",
             "id": "1",
             "img": ""
         },
@@ -78,16 +78,16 @@
             "autore": "Giovanni Carparelli",
             "data": "10-12-2024",
             "file": "riflessioni_stuzzicamenti.html",
-            "id": "3",
+            "id": "2",
             "img": ""
         },
         {
-            "titolo": "TUSCIA - UNA TERRA DA SCOPRIRE",
+            "titolo": "TUSCIA: Una Terra Da Scoprire",
             "sottotitolo": "Un viaggio tra paesaggi mozzafiato e tesori culturali: alla scoperta\ndella Tuscia, tra storia, natura e tradizioni secolari\"",
             "autore": "Valentina Berneschi, storica dell’arte-guida turistica.",
             "data": "10-12-2024",
             "file": "tuscia_terra_da_scoprire.html",
-            "id": "4",
+            "id": "8",
             "img": ""
         }
     ]
