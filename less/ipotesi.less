@@ -4,10 +4,10 @@
 @media (max-width: 1200px) {
   div.container {
     .item0 {
-      background-color: #8a8a8a !important;
+      // background-color: #8a8a8a !important;
       &::after {
         color: #999999;
-         content: "1200";
+        content: "1200";
         position: absolute;
         top: 0;
         left: 0;
@@ -20,7 +20,7 @@
 @media (max-width: 1024px) {
   div.container {
     .item0 {
-      background-color: #01b96c !important;
+      // background-color: #01b96c !important;
       &::after {
         color: #999999;
         content: "1024";
@@ -36,7 +36,7 @@
 @media (max-width: 765px) {
   div.container {
     .item0 {
-      background-color: #0d28da !important;
+      // background-color: #0d28da !important;
       &::after {
         content: "760";
         color: #999999;
@@ -52,7 +52,7 @@
 @media (max-width: 480px) {
   div.container {
     .item0 {
-      background-color: #03ab30 !important;
+      // background-color: #03ab30 !important;
       &::after {
         content: "480";
         color: #999999;
@@ -67,7 +67,7 @@
 // 320px — 480px: Mobile devices.
 @media (max-width: 320px) {
   .item0 {
-    background-color: #ff0000 !important;
+    // background-color: #ff0000 !important;
     &::after {
       content: "320";
       color: #999999;
@@ -94,9 +94,7 @@
   background-color: white;
 }
 
-.invert img,
-.invert video,
-.invert iframe {
+.invert .item0 {
   filter: invert(100%);
 }
 
@@ -215,7 +213,6 @@ div.menu {
     height: 26px;
     cursor: pointer;
     background: none;
-    //background: inherit;
     border: none;
     padding: 0;
     margin: 0;
@@ -324,11 +321,6 @@ div.menu {
 }
 
 //UA Bottoni tema
-// .display-theme {
-//   button {
-//     display: inline-block !important;
-//   }
-// }
 .btn-theme {
   position: fixed;
   right: 6vw;
@@ -411,17 +403,13 @@ div.container {
   top: 10vh;
   left: 0;
   width: 80vw;
-  height:90vh;
+  height: 90vh;
   padding: 0;
   margin: 0;
   transition: margin-left 0.5s ease;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   align-items: stretch;
-  // flex-wrap: nowrap;
-  // overflow-y: auto;
-  // overflow-x: auto;
 
   div.item {
     min-height: 50px;
@@ -429,30 +417,40 @@ div.container {
     padding: 0;
     font-size: @fsize-container;
     color: @fg-base;
-    background-color: @bg-base;
   }
 
   div.item0 {
-    background-color: @bg-item0;
     padding: 0;
     margin: 0;
-    height: 20vw ;
-    img.img {
+    height: 20vw;
+    background: #958875;
+    @keyframes moveCloud3 {
+      0% {
+        left: 0px;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+    .img {
       display: block;
       margin: 0 auto;
       padding: 0;
       height: 100%;
+      // position: relative;
+      // top: 0;
+      // left: 0;
+      // animation: moveCloud3 18s linear infinite;
     }
   }
 
   div.item1 {
     box-sizing: border-box;
-    background-color: @bg-item1;
+    background: transparent;
     border-top: 2px solid @border;
     flex-grow: 1;
-    // border: 1px solid red;
     overflow-y: auto;
-  .num {
+    .num {
       width: 100%;
       display: inline-block;
       text-align: center;
@@ -509,7 +507,6 @@ div.col-right {
   align-items: center;
   flex-wrap: nowrap;
   overflow-y: auto;
-  overflow-x: hide !important;
 
   div.item {
     margin: 0;
