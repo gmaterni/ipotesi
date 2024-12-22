@@ -63,6 +63,7 @@ def pubbl_articoli(dir_src, dir_trg, num):
     source_dir=f"{dir_src}/n{num_str}"
     src_files = sorted(Path(source_dir).glob('*'))
     schede = []
+    art_id=100
     for file in src_files:
         if file.is_file():
             with file.open('r', encoding='utf-8') as f:
@@ -94,9 +95,10 @@ def pubbl_articoli(dir_src, dir_trg, num):
                 "autore": autore,
                 "data": data,
                 "file": file.name,
-                "id": str(num),
+                "id": str(art_id),
                 "img":img
             }
+            art_id+=10
             msg=check_scheda(scheda_json)
             if msg is not None:
                 print("================\n")
