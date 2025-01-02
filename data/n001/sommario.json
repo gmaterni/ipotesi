@@ -15,7 +15,7 @@
             "autore": "Raimondo Raimondi",
             "data": "10-12-2024",
             "file": "democrazia_vs_collaborazione_.html",
-            "id": "110",
+            "id": "14",
             "img": ""
         },
         {
@@ -24,7 +24,7 @@
             "autore": "Stefano Stefanini",
             "data": "10-12-2024",
             "file": "editoriale_ipotesi.html",
-            "id": "120",
+            "id": "10",
             "img": ""
         },
         {
@@ -33,7 +33,7 @@
             "autore": "Marco Faregna",
             "data": "10-12-2024",
             "file": "la_guerra_russo-ucraina.html",
-            "id": "130",
+            "id": "18",
             "img": ""
         },
         {
@@ -42,7 +42,7 @@
             "autore": "Matteo Faregna",
             "data": "10-12-2024",
             "file": "la_questione_uigura.html",
-            "id": "140",
+            "id": "16",
             "img": ""
         },
         {
@@ -51,7 +51,7 @@
             "autore": "Stefano Stefanini",
             "data": "10-12-2024",
             "file": "lottta_alla_corruzione.html",
-            "id": "150",
+            "id": "17",
             "img": ""
         },
         {
@@ -78,7 +78,7 @@
             "autore": "Marco Faregna",
             "data": "10-20-23",
             "file": "pesentazaione_ipotesi.html",
-            "id": "180",
+            "id": "11",
             "img": ""
         },
         {
@@ -87,16 +87,16 @@
             "autore": "Giovanni Mastrangeli",
             "data": "10-12-2024",
             "file": "riflessioni_del_tempo_di_oggi.html",
-            "id": "190",
+            "id": "12",
             "img": ""
         },
         {
             "titolo": "Riflessioni StuzzicaMenti",
             "sottotitolo": "Riflessioni sul pensiero e la spiritualità: omaggio a Franco\nFerrarotti e Simone Weil nell'era dell'intelligenza artificiale.\"",
-            "autore": "Giovanni Carparelli",
+            "autore": "Don Gianni Carparelli",
             "data": "10-12-2024",
             "file": "riflessioni_stuzzicamenti.html",
-            "id": "200",
+            "id": "13",
             "img": ""
         },
         {
@@ -105,7 +105,7 @@
             "autore": "Valentina Berneschi, storica dell’arte-guida turistica.",
             "data": "10-12-2024",
             "file": "tuscia_terra_da_scoprire.html",
-            "id": "210",
+            "id": "15",
             "img": ""
         }
     ]
