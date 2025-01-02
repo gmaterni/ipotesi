@@ -110,6 +110,7 @@ def pubbl_articoli(dir_src, dir_trg, num):
             schede.append(scheda_json)
             # Scrivi il testo dell'articolo nella directory target
             articolo_file = target_dir / file.name
+            print(file.name)
             with articolo_file.open('w', encoding='utf-8') as f:
                 f.write(articolo)
     # Scrivi il file sommario.json

@@ -2,29 +2,20 @@
     "schede": [
         {
             "titolo": "Intelligenza Artificiale: Umana troppo umana.",
-            "sottotitolo": "Perché usare il termine “algoritmo” per la IA è un mezzo abuso.",
+            "sottotitolo": "Un tentativo di raccontare l’intelligenza artificiale alla nonna.",
             "autore": "Giuseppe Materni",
             "data": "10-12-2024",
             "file": "ai_umano_troppo_umano_m.html",
-            "id": "100",
+            "id": "9",
             "img": ""
         },
         {
             "titolo": "Democrazia debole versus collaborazione e condivisione",
-            "sottotitolo": "\"POLITICS\" focalizzata sul consenso -\"POLICY\" basata sulla\ncollaborazione tra cittadini e amministrazioni\nLe ragioni della perdita del consenso della politica a vantaggio del\nvolontariato",
+           "sottotitolo":"Distinguere \"politics\", focalizzata sul consenso, e \"policy\", basata sulla collaborazione tra cittadini e amministrazioni: un elemento per comprendere il declino della fiducia nei partiti politici e la crescita di fiducia nel volontariato",
             "autore": "Raimondo Raimondi",
             "data": "10-12-2024",
             "file": "democrazia_vs_collaborazione_.html",
-            "id": "110",
-            "img": ""
-        },
-        {
-            "titolo": "IPOTESI Editoriale del Direttore",
-            "sottotitolo": "Nasce „Ipotesi 2000“: strumento di dialogo nelle diversità delle\nispirazioni ideali per il Buon Governo della Res Publica: nei comuni e\nuna Provincia ripotenziata di competenze..",
-            "autore": "Stefano Stefanini",
-            "data": "10-12-2024",
-            "file": "editoriale_ipotesi.html",
-            "id": "120",
+            "id": "4",
             "img": ""
         },
         {
@@ -33,7 +24,7 @@
             "autore": "Marco Faregna",
             "data": "10-12-2024",
             "file": "la_guerra_russo-ucraina.html",
-            "id": "130",
+            "id": "7",
             "img": ""
         },
         {
@@ -42,34 +33,25 @@
             "autore": "Matteo Faregna",
             "data": "10-12-2024",
             "file": "la_questione_uigura.html",
-            "id": "140",
+            "id": "5",
             "img": ""
         },
         {
             "titolo": "Lotta Alla Corruzione",
-            "sottotitolo": "Il presidente Mattarella: „ combattere la piaga corruzione è dovere\ndi tutte le Istituzioni: legalità e onestà sono condizioni\nimprescindibili per una crescita giusta. Ognuno è chiamato a fare la\npropria parte.“",
+            "sottotitolo": "Il presidente Mattarella: \"combattere la piaga corruzione è dovere di\ntutte le Istituzioni: legalità e onestà sono condizioni imprescindibili\nper una crescita giusta. Ognuno è chiamato a fare la propria parte.“",
             "autore": "Stefano Stefanini",
             "data": "10-12-2024",
-            "file": "lottta_alla_corruzione.html",
-            "id": "150",
+            "file": "lotta_alla_corruzione.html",
+            "id": "3",
             "img": ""
         },
         {
-            "titolo": "CON LA LUCE A FILO",
-            "sottotitolo": "Un viaggio poetico tra strade illuminate e incontri significativi:\nalla ricerca della luce e del dialogo con l'universale e il\nparticolare",
+            "titolo": "Con La Luce A Filo",
+            "sottotitolo": "Un viaggio poetico tra strade illuminate e incontri significativi: alla ricerca della luce e del dialogo con l'universale e il particolare",
             "autore": "Anita Mancia",
             "data": "10-12-2024",
             "file": "luce_al_filo.html",
-            "id": "160",
-            "img": ""
-        },
-        {
-            "titolo": "Modelli di Sviluppo",
-            "sottotitolo": "ECONOMIA L’anno che verrà: possiamo contribuire ad un nuovo modello\ndi sviluppo fondato su giustizia sociale, lavoro e nuova coscienza\necologica..nell’Anno del Giubileo.",
-            "autore": "Stefano Stefanini",
-            "data": "10-12-2024",
-            "file": "modello_di_sviluppo.html",
-            "id": "170",
+            "id": "8",
             "img": ""
         },
         {
@@ -78,7 +60,7 @@
             "autore": "Marco Faregna",
             "data": "10-20-23",
             "file": "pesentazaione_ipotesi.html",
-            "id": "180",
+            "id": "0",
             "img": ""
         },
         {
@@ -87,7 +69,7 @@
             "autore": "Giovanni Mastrangeli",
             "data": "10-12-2024",
             "file": "riflessioni_del_tempo_di_oggi.html",
-            "id": "190",
+            "id": "1",
             "img": ""
         },
         {
@@ -96,16 +78,16 @@
             "autore": "Giovanni Carparelli",
             "data": "10-12-2024",
             "file": "riflessioni_stuzzicamenti.html",
-            "id": "200",
+            "id": "2",
             "img": ""
         },
         {
-            "titolo": "TUSCIA - UNA TERRA DA SCOPRIRE",
+            "titolo": "TUSCIA: Una Terra Da Scoprire",
             "sottotitolo": "Un viaggio tra paesaggi mozzafiato e tesori culturali: alla scoperta\ndella Tuscia, tra storia, natura e tradizioni secolari\"",
             "autore": "Valentina Berneschi, storica dell’arte-guida turistica.",
             "data": "10-12-2024",
             "file": "tuscia_terra_da_scoprire.html",
-            "id": "210",
+            "id": "8",
             "img": ""
         }
     ]
