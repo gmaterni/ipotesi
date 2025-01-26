@@ -4,6 +4,8 @@ import json
 import re
 import sys
 from pathlib import Path
+from pdb import set_trace
+
 from bs4 import BeautifulSoup
 
 def check_scheda(scheda):
@@ -39,14 +41,15 @@ def get_scheda_articolo(html):
     # Ritorna una lista contenente scheda e html
     return [scheda_ripulita, html_successivo]
 
-
 def pubbl_articoli(dir_src, dir_trg, num):
     num_str = f"{num:03}"
-    print(num_str)
+    source_dir=f"{dir_src}/n{num_str}/html"
+    print(source_dir)
     target_dir = Path(dir_trg) / f"n{num_str}"
     print(target_dir)
+    # set_trace()
     if target_dir.exists():
-        conferma = input(f"{target_dir} esiste.\nVuoi ricrearla.(si): ")
+        conferma = input(f"{target_dir} esiste.\nVuoi ricrearla:(si/no)")
         if conferma.lower() == 'si':
             for item in target_dir.iterdir():
                 if item.is_file():
@@ -58,9 +61,7 @@ def pubbl_articoli(dir_src, dir_trg, num):
             return
     else:
         target_dir.mkdir(parents=True, exist_ok=True)
-
     # Legge i files nella directory dir_src
-    source_dir=f"{dir_src}/n{num_str}"
     src_files = sorted(Path(source_dir).glob('*'))
     schede = []
     art_id=100
@@ -98,7 +99,8 @@ def pubbl_articoli(dir_src, dir_trg, num):
                 "id": str(art_id),
                 "img":img
             }
-            art_id+=10
+            #AAA  
+            # art_id+=10
             msg=check_scheda(scheda_json)
             if msg is not None:
                 print("================\n")
@@ -152,4 +154,3 @@ if __name__ == "__main__":
     n=int(n)
     pubbl_articoli(dir_src, dir_trg, n)
     write_num(dir_trg)
-    
