@@ -1,10 +1,14 @@
 /** @format */
 "use strict";
 
+// Memorizza il cacheBuster in una variabile all'inizio del script
+const cacheBuster = new Date().getTime();
+
 async function getText(url) {
-  alertt("getText");
+  console.error("****getText");
   try {
-    const response = await fetch(url, {
+    const uniqueUrl = `${url}?cacheBuster=${cacheBuster}`;
+    const response = await fetch(uniqueUrl, {
       headers: { "Content-Type": "text/plain" }, // UTF-8 è il default
     });
     if (!response.ok) {
@@ -22,7 +26,8 @@ async function getText(url) {
 
 async function getJson(url) {
   try {
-    const response = await fetch(url, {
+    const uniqueUrl = `${url}?cacheBuster=${cacheBuster}`;
+    const response = await fetch(uniqueUrl, {
       headers: { "Content-Type": "application/json" },
     });
     if (!response.ok) {
@@ -38,7 +43,8 @@ async function getJson(url) {
 }
 
 function fetchText(url, fn) {
-  fetch(url)
+  const uniqueUrl = `${url}?cacheBuster=${cacheBuster}`;
+  fetch(uniqueUrl)
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error ${response.status}\nfetchText\nurl:${url}`);
@@ -53,8 +59,9 @@ function fetchText(url, fn) {
 }
 
 function fetchJson(url, fn) {
-  alertt("fetchJson");
-  fetch(url)
+  console.error("****fetchJson");
+  const uniqueUrl = `${url}?cacheBuster=${cacheBuster}`;
+  fetch(uniqueUrl)
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error ${response.status}\nfetchJson\nurl:${url}`);
