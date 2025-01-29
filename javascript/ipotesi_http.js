@@ -2,6 +2,7 @@
 "use strict";
 
 async function getText(url) {
+  alertt("getText");
   try {
     const response = await fetch(url, {
       headers: { "Content-Type": "text/plain" }, // UTF-8 è il default
@@ -52,6 +53,7 @@ function fetchText(url, fn) {
 }
 
 function fetchJson(url, fn) {
+  alertt("fetchJson");
   fetch(url)
     .then((response) => {
       if (!response.ok) {
