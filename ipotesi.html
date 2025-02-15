@@ -3,10 +3,9 @@
 
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
-
+        <meta http-equiv="Expires" content="0"> -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ipotesi</title>
@@ -48,7 +47,7 @@
                 Periodico di approfondimento
             </div>
 
-            <div id="id_version" class="version">1.0.19</div>
+            <div id="id_version" class="version">0.0</div>
 
         </div>
         <!--  -->
@@ -128,6 +127,23 @@
     window.addEventListener('load', () => {
         // console.log("Tutti i file esterni (CSS, JavaScript, immagini) sono stati caricati");
         openApp();
+
+        const version = '1.0.14';
+
+        function checkVersion() {
+            const oldVersion = localStorage.getItem('appVersion');
+            if (oldVersion !== version) {
+                localStorage.setItem('appVersion', version);
+                console.log('Aggiornamento della cache...');
+                window.location.reload(true);
+            }
+            document.getElementById("id_version").innerHTML = version;
+        }
+
+        checkVersion();
+
     });
+
+
 
 </script>
