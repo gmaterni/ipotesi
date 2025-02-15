@@ -6,6 +6,7 @@ function mgrVersion() {
   const scripts = document.getElementsByTagName("script");
   let v = "0.0";
   for (let script of scripts) {
+    console.log(script);
     if (script.src) {
       const url = script.src;
       const urlObj = new URL(url, window.location.href);
