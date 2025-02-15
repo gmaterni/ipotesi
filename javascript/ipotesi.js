@@ -2,19 +2,22 @@
 
 "use strict";
 
-const version = "3.0.21";
-
 function mgrVersion() {
-  const v = "verion";
-  let oldVersion = localStorage.getItem(v);
-  if (!oldVersion) {
-    oldVersion = "1";
+  const scripts = document.getElementsByTagName("script");
+  let v = "0.0";
+  for (let script of scripts) {
+    if (script.src) {
+      const url = script.src;
+      const urlObj = new URL(url, window.location.href);
+      const version = urlObj.searchParams.get("v");
+      if (version) {
+        v = version;
+        break;
+      }
+    }
   }
-  if (oldVersion !== version) {
-    localStorage.setItem(v, version);
-    location.reload(true);
-  }
-  document.getElementById("id_version").innerHTML = version;
+  console.log(`Versione: ${v}`);
+  document.getElementById("id_version").innerHTML = v;
 }
 
 function openApp() {
