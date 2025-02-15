@@ -2,25 +2,6 @@
 
 "use strict";
 
-function mgrVersion() {
-  const scripts = document.getElementsByTagName("script");
-  let v = "0.0";
-  for (let script of scripts) {
-    console.log(script);
-    if (script.src) {
-      const url = script.src;
-      const urlObj = new URL(url, window.location.href);
-      const version = urlObj.searchParams.get("v");
-      if (version) {
-        v = version;
-        break;
-      }
-    }
-  }
-  console.log(`Versione: ${v}`);
-  document.getElementById("id_version").innerHTML = v;
-}
-
 function openApp() {
   setTimeout(() => {
     initMenu();
@@ -28,7 +9,6 @@ function openApp() {
     MgrUi.init();
     getTheme();
     imageCarousel();
-    mgrVersion();
   }, 10);
 }
 
