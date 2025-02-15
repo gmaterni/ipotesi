@@ -2,7 +2,7 @@
     "schede": [
         {
             "titolo": "Intelligenza Artificiale: Umana troppo umana.",
-            "sottotitolo": "Perché l'abuso del termine “algoritmo” per la IA è indice di un equivoco.",
+            "sottotitolo": "Perché usare il termine “algoritmo” per la IA è un mezzo abuso.",
             "autore": "Giuseppe Materni",
             "data": "10-12-2024",
             "file": "ai_umano_troppo_umano_m.html",
@@ -10,11 +10,11 @@
             "img": ""
         },
         {
-            "titolo": "Democrazia e Volontariato",
-            "sottotitolo": "Democrazia debole versus collaborazione e condivisione",
+            "titolo": "Democrazia debole versus collaborazione e condivisione",
+            "sottotitolo": "\"POLITICS\" focalizzata sul consenso -\"POLICY\" basata sulla\ncollaborazione tra cittadini e amministrazioni\nLe ragioni della perdita del consenso della politica a vantaggio del\nvolontariato",
             "autore": "Raimondo Raimondi",
             "data": "10-12-2024",
-            "file": "democrazia_vs_collaborazione.html",
+            "file": "democrazia_vs_collaborazione_.html",
             "id": "14",
             "img": ""
         },
@@ -55,7 +55,7 @@
             "img": ""
         },
         {
-            "titolo": "Con La Luce  Filo",
+            "titolo": "CON LA LUCE A FILO",
             "sottotitolo": "Un viaggio poetico tra strade illuminate e incontri significativi:\nalla ricerca della luce e del dialogo con l'universale e il\nparticolare",
             "autore": "Anita Mancia",
             "data": "10-12-2024",
@@ -75,7 +75,7 @@
         {
             "titolo": "Recite del tempo di oggi",
             "xx": "L’articolo tenta di capire e riflettere sulle\ndinamiche mentali dei comportamenti in parole ed azioni della\ngiovinezza, della normalità e dei maestri d’oggi in opera contestatrice\ne non solo.",
-            "sottotitolo": "In transito tra due secoli vi dono parole che siano luce e senso per la nostra civiltà personale e sociale.",
+            "sottotitolo":"In transito tra due secoli vi dono parole che siano luce e senso per la nostra civiltà personale e sociale.",
             "autore": "Giovanni Mastrangeli",
             "data": "10-12-2024",
             "file": "riflessioni_del_tempo_di_oggi.html",
@@ -92,7 +92,7 @@
             "img": ""
         },
         {
-            "titolo": "TUSCIA - Una Terra Da Scoprire",
+            "titolo": "TUSCIA - UNA TERRA DA SCOPRIRE",
             "sottotitolo": "Un viaggio tra paesaggi mozzafiato e tesori culturali: alla scoperta\ndella Tuscia, tra storia, natura e tradizioni secolari\"",
             "autore": "Valentina Berneschi, storica dell’arte-guida turistica.",
             "data": "10-12-2024",
