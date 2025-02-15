@@ -2,7 +2,7 @@
 
 "use strict";
 
-const version = "2.0.21";
+const version = "3.0.21";
 
 function mgrVersion() {
   const v = "verion";
