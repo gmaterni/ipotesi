@@ -22,9 +22,9 @@ function openApp() {
     initMenu();
     wnds.init();
     MgrUi.init();
-    mgrVersion();
     getTheme();
     imageCarousel();
+    mgrVersion();
   }, 10);
 }
 
