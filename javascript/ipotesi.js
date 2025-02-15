@@ -2,11 +2,27 @@
 
 "use strict";
 
+const version = "2.0.20";
+
+function mgrVersion() {
+  const v = "verion";
+  let oldVersion = localStorage.getItem(v);
+  if (!oldVersion) {
+    oldVersion = "1";
+  }
+  if (oldVersion !== version) {
+    localStorage.setItem(v, version);
+    location.reload(true);
+  }
+  document.getElementById("id_version").innerHTML = version;
+}
+
 function openApp() {
   setTimeout(() => {
     initMenu();
     wnds.init();
     MgrUi.init();
+    mgrVersion();
     getTheme();
     imageCarousel();
   }, 10);
