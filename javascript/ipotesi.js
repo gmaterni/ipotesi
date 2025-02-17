@@ -37,7 +37,10 @@ const opNews = function (e) {
 };
 
 const opRedazione = function (e) {
-  alert("readzione");
+  toggleMenu();
+  UaWindowAdm.closeAll();
+  wnds.wdiv.open("./html/redazione.html");
+  // wnds.wdiv.open("./html/redazione_0.html");
 };
 
 const opCollaboatori = function (e) {
