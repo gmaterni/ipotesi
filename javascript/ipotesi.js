@@ -6,10 +6,10 @@ function openApp() {
   setTimeout(() => {
     initMenu();
     wnds.init();
-    MgrUi.init();
     getTheme();
     imageCarousel();
-  }, 10);
+    MgrUi.init();
+  }, 100);
 }
 
 const opHome = function (e) {

@@ -126,10 +126,7 @@
 <script>
     window.addEventListener('load', () => {
         // console.log("Tutti i file esterni (CSS, JavaScript, immagini) sono stati caricati");
-        openApp();
-
         const version = '1.0.17';
-
         function checkVersion() {
             const oldVersion = localStorage.getItem('appVersion');
             if (oldVersion !== version) {
@@ -139,8 +136,8 @@
             }
             document.getElementById("id_version").innerHTML = version;
         }
-
         checkVersion();
+        openApp();
 
     });
 
