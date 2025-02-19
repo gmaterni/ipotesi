@@ -128,9 +128,9 @@ Per contenuti dinamici, basta modificare l'attributo via JavaScript.
 
 .tt-right {
   &::before {
-    left: ~"calc(100% + 10px)"; // Posizionato a destra dell'elemento di 12px
-    top: ~"calc(100% + 0px)";
-    transform: translateY(-10%); // Spostato in alto del 50% della sua altezza
+    left: ~"calc(100% + 12px)"; // Posizionato a destra dell'elemento di 12px
+    top: 50%; // Centrato verticalmente
+    transform: translateY(20%); // Spostato in alto del 50% della sua altezza
   }
 
   // &::after {
