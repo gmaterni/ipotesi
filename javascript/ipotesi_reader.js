@@ -12,12 +12,12 @@ const fh = (txt) => {
         <div class="text-reader" id="reader">
             <div class="toolbar">
                 <span>chiudi:(Esc)</span>
-                <button title="Configura lettore "id="configButton" onclick="toggleSpeak()">⚙️</button>
-                <button title="Start/Sop lettore" id="readButton" onclick="toggleReading()">▶</button>
-                <button title="Font +" onclick="increaseFontSize()">A+</button>
-                <button title="Font -" onclick="decreaseFontSize()">A-</button>
-                <button title="Apri/Chiudi Schermo Intero" onclick="openFullscreen()">⛶</button>
-                <button title="Chiudi" onclick="closeReader()">X</button>
+                <button class="tt-bottom" data-tt="Configura lettore "id="configButton" onclick="toggleSpeak()">⚙️</button>
+                <button class="tt-bottom" data-tt="Start/Sop lettore" id="readButton" onclick="toggleReading()">▶</button>
+                <button class="tt-bottom" data-tt="Font +" onclick="increaseFontSize()">A+</button>
+                <button class="tt-bottom" data-tt="Font -" onclick="decreaseFontSize()">A-</button>
+                <button class="tt-bottom" data-tt="Apri/Chiudi Schermo Intero" onclick="openFullscreen()">⛶</button>
+                <button class="tt-left" data-tt="Chiudi" onclick="closeReader()">X</button>
             </div>
             <div class="content" id="content">
             ${txt}

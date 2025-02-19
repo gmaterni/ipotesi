@@ -42,7 +42,7 @@ const WndDiv = (id) => {
         return `
 <div class="window-text">
 <div class="btn-wrapper">
-<button  title="chiudi" onclick="UaWindowAdm.closeThis(this)">X</button>
+<button  class="tt-left" data-tt="chiudi" onclick="UaWindowAdm.closeThis(this)">X</button>
 </div>
 <div class="div-text">${txt}</div>
 </div>
@@ -87,7 +87,6 @@ const sortSchede = (json) => {
   return json;
 };
 
-
 // const xsortSchede = (json) => {
 //   const sortedSchede = json.schede.sort((a, b) => {
 //       const idA = parseInt(a.id, 10);
@@ -99,8 +98,6 @@ const sortSchede = (json) => {
 //   };
 //   return sortedJson;
 // }
-
-
 
 const MgrUi = {
   ipotesi: [],
@@ -152,7 +149,7 @@ const MgrUi = {
     };
     const jfh = UaJtfh();
     jfh.init();
-    // 
+    //
     jfh.append('<div class="list">');
     for (let i = 0; i < this.ipotesi.length; i++) {
       const sommarioNumero = this.ipotesi[i];
@@ -167,15 +164,15 @@ const MgrUi = {
       }
     }
     jfh.append("</div>");
-    // 
+    //
     this.htmlIndici = jfh.html();
-    // 
+    //
     // sommario numero corrente
     const last = this.ipotesi.length - 1;
     const sommarioLast = this.ipotesi[last];
     const num = this.numeri[last];
     jfh.init();
-    // 
+    //
     jfh.append('<div class="list">');
     const schede = sommarioLast.schede;
     for (const scheda of schede) {
@@ -184,7 +181,6 @@ const MgrUi = {
     jfh.append("</div>");
     this.htmlSommario = jfh.html();
     // console.log("sommario3",jfh.text())
-
   },
   showSommario() {
     const item1 = document.getElementById("id_item1");

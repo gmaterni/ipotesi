@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tooltip Ultralight</title>
+        <!-- <link rel="stylesheet" href="less/tooltip.css"> -->
+        <link rel="stylesheet/less" type="text/css" href="less/tooltip.less" />
+        <script src="less/less.js"></script>
+
+        <style>
+            :root {
+                --tip-back: #1a8a1a;
+                --tip-color: #ffffff;
+                --tip-fsize: 14px;
+                --tip-fam: 'Segoe UI', Arial, sans-serif;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                background: #263238;
+                color: #fff;
+                font-family: 'Arial', sans-serif;
+                padding: 2rem;
+            }
+
+            .btn {
+                background: #2E7D32;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 8px;
+                color: white;
+            }
+
+            .icon {
+                font-size: 24px;
+                padding: 12px;
+                background: #37474F;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Esempi -->
+        <button class="btn tt-top" data-tooltip="Pulsante con tooltip superiore">
+            Top 1
+        </button>
+
+        <a href="#" class="link tt-bottom" data-tooltip="Link con tooltip inferiore">
+            Bottom 2
+        </a>
+
+        <div class="icon tt-left" data-tooltip="Icona con tooltip sinistro">
+            ⓘ
+        </div>
+
+        <div class="card tt-right" data-tooltip="Card con tooltip destro">
+            Right 4
+        </div>
+
+        <button class="btn tt-top" data-tooltip="Attenzione! Operazione importante">
+            Top 5
+        </button>
+
+        <div class="icon tt-bottom" data-tooltip="Posizione geolocalizzata">
+            📍
+        </div>
+
+        <a href="#" class="link tt-left" data-tooltip="Navigazione rapida">
+            Left 7
+        </a>
+
+        <div class="card tt-right" data-tooltip="Dettagli completi">
+            Right 8
+        </div>
+    </body>
+
+</html>

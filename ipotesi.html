@@ -13,12 +13,12 @@
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
 
-        <link rel="stylesheet" href="css/ipotesi.min.css" />
-        <script src="js/ipotesi.min.js?v=1.0.14"></script>
+        <!-- <link rel="stylesheet" href="css/ipotesi.min.css" />
+        <script src="js/ipotesi.min.js?v=1.0.14"></script> -->
 
-        <!--
         <link rel="stylesheet" href="less/normalize.css">
         <link rel="stylesheet/less" type="text/css" href="less/ipotesi.less" />
+        <link rel="stylesheet/less" type="text/css" href="less/tooltip.less" />
         <script src="less/less.js"></script>
         <script src="javascript/ipotesi.js"></script>
         <script src="javascript/ipotesi_ui.js"></script>
@@ -28,7 +28,6 @@
         <script src="javascript/uadrag.js"></script>
         <script src="javascript/uawindow.js"></script>
         <script src="javascript/uajtfh.js"></script>
-        -->
 
     </head>
 
@@ -55,13 +54,13 @@
 
         <div class="btn-theme">
 
-            <button class="btn-dark" title="Tema scuro" onclick="setDark()">
+            <button class="btn-dark tt-bottom " data-tt="Tema scuro" onclick="setDark()">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                 </svg>
             </button>
 
-            <button class="btn-light" title="Tema charo" onclick="setLight()">
+            <button class="btn-light tt-bottom" data-tt="Tema charo" onclick="setLight()">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="5" />
                     <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
