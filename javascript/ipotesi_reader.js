@@ -16,7 +16,7 @@ const fh = (txt) => {
                 <button class="tt-bottom" data-tt="Start/Sop lettore" id="readButton" onclick="toggleReading()">▶</button>
                 <button class="tt-bottom" data-tt="Font +" onclick="increaseFontSize()">A+</button>
                 <button class="tt-bottom" data-tt="Font -" onclick="decreaseFontSize()">A-</button>
-                <button class="tt-bottom" data-tt="Apri/Chiudi Schermo Intero" onclick="openFullscreen()">⛶</button>
+                <button class="tt-left" data-tt="Apri/Chiudi Schermo Intero" onclick="openFullscreen()">⛶</button>
                 <button class="tt-left" data-tt="Chiudi" onclick="closeReader()">X</button>
             </div>
             <div class="content" id="content">

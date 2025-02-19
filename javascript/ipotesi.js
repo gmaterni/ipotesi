@@ -81,6 +81,10 @@ function toggleMenu() {
   const menu_h = document.querySelector(".menu-h");
   menu_h.classList.toggle("active");
   document.body.classList.toggle("open-menu");
+
+  const menu_hb = document.querySelector(".menu-h-box");
+  if (menu_h.classList.contains("active")) menu_hb.setAttribute("data-tt", "Close");
+  else menu_hb.setAttribute("data-tt", "Open");
 }
 
 function getTheme() {

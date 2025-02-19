@@ -12,7 +12,7 @@ Per contenuti dinamici, basta modificare l'attributo via JavaScript.
 /* ========= VARIABILI LESS ========= */
 @tt-bg: #3c3a32; // Colore di sfondo del tooltip
 @tt-text: #ffffff; // Colore testo del tooltip
-@tt-font: 14px "Arial", sans-serif; // Stile font
+@tt-font: 16px "Arial", sans-serif; // Stile font
 @tt-radius: 4px; // Border-radius
 @tt-shadow: 0 3px 6px #00000029; // Ombra
 @tt-transition: 0.3s opacity; // Transizione
@@ -24,7 +24,7 @@ Per contenuti dinamici, basta modificare l'attributo via JavaScript.
 .tt-left,
 .tt-right {
   position: relative;
-  cursor: help;
+  // cursor: help;
   transition: 0.2s transform;
 
   // Pseudo-elementi comuni
@@ -43,7 +43,8 @@ Per contenuti dinamici, basta modificare l'attributo via JavaScript.
     background: @tt-bg;
     color: @tt-text;
     font: @tt-font;
-    padding: 8px 16px;
+    // padding: 8px 16px;
+    padding: 2px 10px;
     border-radius: @tt-radius;
     box-shadow: @tt-shadow;
     white-space: nowrap;
@@ -87,17 +88,17 @@ Per contenuti dinamici, basta modificare l'attributo via JavaScript.
     transform: translateX(-50%); // Spostato indietro del 50% della sua larghezza
   }
 
-  &::after {
-    border-bottom-color: @tt-bg; // Colore del bordo inferiore per la freccia
-    top: ~"calc(100% + 0px)"; // Posizionato sotto l'elemento
-    left: 50%; // Centrato orizzontalmente
-    transform: translateX(-50%); // Spostato indietro del 50% della sua larghezza
-  }
+  // &::after {
+  //   border-bottom-color: @tt-bg; // Colore del bordo inferiore per la freccia
+  //   top: ~"calc(100% + 0px)"; // Posizionato sotto l'elemento
+  //   left: 50%; // Centrato orizzontalmente
+  //   transform: translateX(-50%); // Spostato indietro del 50% della sua larghezza
+  // }
 }
 
 .tt-left {
   &::before {
-    right: ~"calc(50% + 0px)";
+    right: ~"calc(30% + 0px)";
     top: ~"calc(100% + 22px)";
     transform: translateY(-50%);
   }
@@ -127,15 +128,30 @@ Per contenuti dinamici, basta modificare l'attributo via JavaScript.
 
 .tt-right {
   &::before {
-    left: ~"calc(100% + 12px)"; // Posizionato a destra dell'elemento di 12px
-    top: 50%; // Centrato verticalmente
-    transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
+    left: ~"calc(100% + 10px)"; // Posizionato a destra dell'elemento di 12px
+    top: ~"calc(100% + 0px)";
+    transform: translateY(-10%); // Spostato in alto del 50% della sua altezza
   }
 
-  &::after {
-    border-right-color: @tt-bg; // Colore del bordo destro per la freccia
-    left: ~"calc(100% + 0px)"; // Posizionato a destra dell'elemento
-    top: 50%; // Centrato verticalmente
-    transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
-  }
+  // &::after {
+  //   border-right-color: @tt-bg; // Colore del bordo destro per la freccia
+  //   left: ~"calc(100% + 0px)"; // Posizionato a destra dell'elemento
+  //   top: 50%; // Centrato verticalmente
+  //   transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
+  // }
 }
+
+// .tt-right {
+//   &::before {
+//     left: ~"calc(100% + 12px)"; // Posizionato a destra dell'elemento di 12px
+//     top: 50%; // Centrato verticalmente
+//     transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
+//   }
+
+//   &::after {
+//     border-right-color: @tt-bg; // Colore del bordo destro per la freccia
+//     left: ~"calc(100% + 0px)"; // Posizionato a destra dell'elemento
+//     top: 50%; // Centrato verticalmente
+//     transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
+//   }
+// }
