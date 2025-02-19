@@ -11,12 +11,13 @@ def pathdocx2html(doc_path, html_path):
 
 if __name__ == "__main__":
     if len(sys.argv)!=3:
-        print("articolo_docx2htmlpy <num> <file_name")
+        print(len(sys.argv))
+        print("articolo_docx2htmlpy <num> <file_name>")
         sys.exit()
-    n=sys.argv[1]
+    n=sys.argv[2]
     n=int(n)
     num_str = f"n{n:03}"
-    doc_name=sys.argv[2]
+    doc_name=sys.argv[1]
     html_name = os.path.basename(doc_name).replace(".docx", ".html")
     path_src = f"./articoli/{num_str}/docx/{doc_name}"
     path_dst = f"./articoli/{num_str}/html/{html_name}"
