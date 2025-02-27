@@ -203,7 +203,7 @@ div.menu {
   width: 100vw;
   //AAA height: 10vh;
   border-bottom: 2px solid #000000;
-  height: 15vh;
+  height: 14.8vh;
   z-index: @zmwnu;
   caret-color: transparent;
 
@@ -404,8 +404,9 @@ div.menu-box {
 
 // UA container
 div.container {
+  box-sizing: border-box;
   position: absolute;
-  top: 10vh;
+  top: 15vh;
   left: 0;
   width: 80vw;
   // height: 90vh;
@@ -413,11 +414,11 @@ div.container {
   padding: 0;
   margin: 0;
   padding-top: 10px;
-
   transition: margin-left 0.5s ease;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  // background: red;
 
   div.item {
     min-height: 50px;
@@ -455,7 +456,7 @@ div.container {
   div.item1 {
     box-sizing: border-box;
     background: transparent;
-    border-top: 2px solid @border;
+    // border-top: 2px solid @border;
     flex-grow: 1;
     overflow-y: auto;
     .num {

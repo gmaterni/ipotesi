@@ -121,8 +121,34 @@
 
 </html>
 <script>
+
+    function aggiornaDataOra() {
+        const idData = document.getElementById('id_version'); // Assicurati di avere un elemento con id="dataOra" nel tuo HTML
+
+        function formattaDataOra() {
+            const now = new Date();
+            const giorno = String(now.getDate()).padStart(2, '0');
+            const mese = String(now.getMonth() + 1).padStart(2, '0');
+            const anno = now.getFullYear();
+            const ore = String(now.getHours()).padStart(2, '0');
+            const minuti = String(now.getMinutes()).padStart(2, '0');
+            const secondi = String(now.getSeconds()).padStart(2, '0');
+            return `${giorno}-${mese}-${anno}:${ore}:${minuti}:${secondi}`;
+        }
+
+        function aggiorna() {
+            idData.textContent = formattaDataOra();
+        }
+        aggiorna();
+        setInterval(aggiorna, 1000); // 1000 millisecondi = 1 secondo
+    }
+
+
+
+
     window.addEventListener('load', () => {
-        const version = '1.0.22';
+        // const version = '1.0.22';
+        const version = new Date().toISOString();
         // data e ora correnti
         // const currentInfo = new Date().toISOString().split('.')[0];
         const currentInfo = new Date().toISOString().split('T')[0];
@@ -135,6 +161,10 @@
         }
         document.getElementById("id_version").innerHTML = version;
         openApp();
+
+        aggiornaDataOra();
+
+
     });
 
 
