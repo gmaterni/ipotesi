@@ -15,11 +15,14 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+        /* Previene scroll durante l'animazione */
       }
 
       .header {
         background-color: #404040;
-        height: a0vh;
+        height: 10vh;
+        /* Corretto da "a0vh" */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,12 +35,45 @@
       .image-container {
         flex: 1;
         overflow: hidden;
+        position: relative;
+        /* Necessario per posizionare l'immagine assolutamente */
       }
 
       img {
-        width: 100vw;
-        height: 90vh;
+        /* Dimensioni iniziali (parti da un'immagine piena) */
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+        /* Mantiene le proporzioni */
+        /* Posizionamento al centro */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Nuovo: Imposta il punto di origine della trasformazione */
+        /* transform-origin: 50% 50%; */
+        transform-origin: 60% 65%;
+        /* animation: zoom 10s ease-out forwards; */
+        animation-name: zoom;
+        animation-duration: 3s;
+        /* animation-timing-function: ease-out; */
+        /* animation-timing-function: ease; */
+        animation-timing-function: ease-in;
+        /* animation-timing-function: ease-in-out;  */
+        /* animation-timing-function: linear; */
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes zoom {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+          /* Parti dal centro */
+        }
+
+        100% {
+          transform: translate(-50%, -50%) scale(1.9);
+          /* Zoom 3x sul centro */
+        }
       }
     </style>
   </head>
@@ -47,11 +83,12 @@
       IPOTESI
     </div>
     <div class="image-container">
-      <img src="images/viterbo06.jpg" alt="placeholder">
+      <img src="images/viterbo06.jpg" alt="ipotesi">
     </div>
   </body>
   <script>
-    setTimeout(function () { location.replace('ipotesi.html?v=10'); }, 1000);
+    // Modifica il timeout a 10 secondi (10000ms) per coincidere con l'animazione
+    setTimeout(function () { location.replace('ipotesi.html'); }, 3000);
   </script>
 
 </html>
