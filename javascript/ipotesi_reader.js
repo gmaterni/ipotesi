@@ -33,6 +33,7 @@ const showReader = (text) => {
   h = fh(s);
   const w = UaWindowAdm.create("id_reader");
   w.setZ(12);
+  // XXX posizione reader
   w.vw_vh().setXY(0.1, 10, -1);
   w.setHtml(h);
   w.show();
