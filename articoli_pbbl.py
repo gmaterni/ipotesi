@@ -146,7 +146,7 @@ def write_num(dir_trg):
 if __name__ == "__main__":
     if len(sys.argv)<2:
         print("\n\n")
-        print("pubbl_articoli.py <num>")
+        print("articoli_pubbl.py <num>")
         sys.exit()
     dir_src = "./articoli"
     dir_trg = "./data"
