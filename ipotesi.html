@@ -123,7 +123,7 @@
 
     function aggiornaDataOra() {
         const idData = document.getElementById('id_version'); // Assicurati di avere un elemento con id="dataOra" nel tuo HTML
-        function formattaDataOra() {
+        const formattaDataOra = () => {
             const now = new Date();
             const giorno = String(now.getDate()).padStart(2, '0');
             const mese = String(now.getMonth() + 1).padStart(2, '0');
@@ -131,9 +131,9 @@
             const ore = String(now.getHours()).padStart(2, '0');
             const minuti = String(now.getMinutes()).padStart(2, '0');
             const secondi = String(now.getSeconds()).padStart(2, '0');
-            return `${giorno}-${mese}-${anno}:${ore}:${minuti}:${secondi}`;
+            return `${giorno}-${mese}-${anno} :${ore}:${minuti}:${secondi}`;
         }
-        function aggiorna() {
+        const aggiorna = () => {
             idData.textContent = formattaDataOra();
         }
         aggiorna();
@@ -142,14 +142,13 @@
 
 
     window.addEventListener('load', () => {
-        // const version = '1.0.22';
         const version = new Date().toISOString();
-        // const currentInfo = new Date().toISOString().split('.')[0];
-        const currentInfo = new Date().toISOString().split('T')[0];
-        // console.log(currentInfo)
+        const aaaammgg = new Date().toISOString().split('T')[0];
+        // console.log("version:", version);
+        // console.log("aaaammgg:", aaaammgg);
         const cacheInfo = localStorage.getItem('appinfo');
-        if (cacheInfo !== currentInfo) {
-            localStorage.setItem('appinfo', currentInfo);
+        if (cacheInfo !== aaaammgg) {
+            localStorage.setItem('appinfo', aaaammgg);
             console.log('Aggiornamento della cache...');
             window.location.reload(true);
         }
