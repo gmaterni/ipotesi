@@ -34,7 +34,7 @@
 
     <body>
         <div class="menu">
-            
+
             <button class="menu-h" aria-label="Menu">
                 <span class="menu-h-box tt-right" data-tt="Open">
                     <span class="menu-h-inner"></span>
@@ -72,7 +72,7 @@
                 <li><a href="#" onCLick="opArchivio();">Archivio</a></li>
                 <!-- <li><a href="#" onCLick="opNews();">News</a></li> -->
                 <li><a href="#" onCLick="opRedazione();">Redazione</a></li>
-                <!-- <li><a href="#" onCLick="opCollaboatori();">Collaboratori</a></li> -->
+                <li><a href="#" onCLick="opCollaboatori();">Collaboratori</a></li>
                 <!-- <li><a href="#" onCLick="opIPOTESI();">IPOTESI</a></li> -->
                 <!-- <li><a href="#" onCLick="opIPubblicita();">Pubblicità</a></li> -->
             </ul>
@@ -125,7 +125,6 @@
 
     function aggiornaDataOra() {
         const idData = document.getElementById('id_version'); // Assicurati di avere un elemento con id="dataOra" nel tuo HTML
-
         function formattaDataOra() {
             const now = new Date();
             const giorno = String(now.getDate()).padStart(2, '0');
@@ -136,7 +135,6 @@
             const secondi = String(now.getSeconds()).padStart(2, '0');
             return `${giorno}-${mese}-${anno}:${ore}:${minuti}:${secondi}`;
         }
-
         function aggiorna() {
             idData.textContent = formattaDataOra();
         }
@@ -145,12 +143,9 @@
     }
 
 
-
-
     window.addEventListener('load', () => {
         // const version = '1.0.22';
         const version = new Date().toISOString();
-        // data e ora correnti
         // const currentInfo = new Date().toISOString().split('.')[0];
         const currentInfo = new Date().toISOString().split('T')[0];
         // console.log(currentInfo)
@@ -162,10 +157,7 @@
         }
         document.getElementById("id_version").innerHTML = version;
         openApp();
-
         aggiornaDataOra();
-
-
     });
 
 

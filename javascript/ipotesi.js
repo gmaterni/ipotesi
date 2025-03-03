@@ -44,7 +44,9 @@ const opRedazione = function (e) {
 };
 
 const opCollaboatori = function (e) {
-  alert("collaboratori");
+  toggleMenu();
+  UaWindowAdm.closeAll();
+  wnds.wdiv.open("./html/collaboratori.html");
 };
 
 const opIPOTESI = function (e) {
