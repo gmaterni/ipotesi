@@ -6,12 +6,15 @@ const fsizeMin = 14;
 const fsizeKey = "fsize_reader";
 
 var textCurrent = "";
+let urlCurrent = "";
 
 const fh = (txt) => {
   return `
         <div class="text-reader" id="reader">
             <div class="toolbar">
                 <span>chiudi:(Esc)</span>
+                <button class="tt-bottom" data-tt="Pari pagina  PDF"  onclick="readPDF()">PDF</button>
+
                 <button class="tt-bottom" data-tt="Configura lettore "id="configButton" onclick="toggleSpeak()">⚙️</button>
                 <button class="tt-bottom" data-tt="Start/Sop lettore" id="readButton" onclick="toggleReading()">▶</button>
                 <button class="tt-bottom" data-tt="Font +" onclick="increaseFontSize()">A+</button>
@@ -41,8 +44,27 @@ const showReader = (text) => {
 };
 
 function openReader(url) {
+  console.log(url);
+  urlCurrent = url;
   fetchText(url, showReader);
   enableEsc();
+}
+
+async function readPDF() {
+  // ./data/n002/cittadini_nel_volontrarito.html
+  // ./data/pdf/n002/cittadini_nel_volontrarito.pdf
+  path = urlCurrent.replace("data/", "data/pdf/").replace(".html", ".pdf");
+  // console.log(path);
+  try {
+    const arrayBuffer = await getPdf(path);
+    const blob = new Blob([arrayBuffer], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
+    console.log(url);
+    // Apri il PDF in una nuova scheda
+    window.open(url, "_blank");
+  } catch (error) {
+    console.error("Errore durante la lettura del PDF:", error);
+  }
 }
 
 function closeReader() {

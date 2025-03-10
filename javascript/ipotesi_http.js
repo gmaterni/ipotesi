@@ -4,8 +4,8 @@
 // Memorizza il cacheBuster in una variabile all'inizio del script
 const cacheBuster = new Date().getTime();
 
+// NON USATO
 async function getText(url) {
-  console.error("****getText");
   try {
     const uniqueUrl = `${url}?cacheBuster=${cacheBuster}`;
     const response = await fetch(uniqueUrl, {
@@ -58,8 +58,8 @@ function fetchText(url, fn) {
     });
 }
 
+// NN USATO
 function fetchJson(url, fn) {
-  console.error("****fetchJson");
   const uniqueUrl = `${url}?cacheBuster=${cacheBuster}`;
   fetch(uniqueUrl)
     .then((response) => {
@@ -73,4 +73,32 @@ function fetchJson(url, fn) {
       console.error(`Error fetchJson ${url}`, error);
       alert(`Error fetchJson ${url}\n${error}`);
     });
+}
+
+async function getPdf(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Errore HTTP: ${response.status}`);
+    }
+    const arrayBuffer = await response.arrayBuffer();
+    return arrayBuffer;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Errore sconosciuto";
+    console.error(`Errore getPdf() ${url}:`, message);
+    alert(`Errore getPdf() ${url}\n${message}`);
+    throw error;
+  }
+}
+
+async function readPdf(path) {
+  try {
+    const arrayBuffer = await getPdf(path);
+    const blob = new Blob([arrayBuffer], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
+    // Apri il PDF in una nuova scheda
+    window.open(url, "_blank");
+  } catch (error) {
+    console.error("Errore durante la lettura del PDF:", error);
+  }
 }
