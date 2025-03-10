@@ -90,15 +90,3 @@ async function getPdf(url) {
     throw error;
   }
 }
-
-async function readPdf(path) {
-  try {
-    const arrayBuffer = await getPdf(path);
-    const blob = new Blob([arrayBuffer], { type: "application/pdf" });
-    const url = URL.createObjectURL(blob);
-    // Apri il PDF in una nuova scheda
-    window.open(url, "_blank");
-  } catch (error) {
-    console.error("Errore durante la lettura del PDF:", error);
-  }
-}
