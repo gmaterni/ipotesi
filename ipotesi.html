@@ -145,7 +145,7 @@
     window.addEventListener('load', () => {
         const version = new Date().toISOString();
         // const aaaammgg = new Date().toISOString().split('T')[0];
-        const aaaammgg = "." + new Date().toISOString().split('T')[0];
+        const aaaammgg = "-" + new Date().toISOString().split('T')[0];
         // console.log("version:", version);
         // console.log("aaaammgg:", aaaammgg);
         const cacheInfo = localStorage.getItem('appinfo');
