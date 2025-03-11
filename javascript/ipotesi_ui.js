@@ -113,7 +113,8 @@ const MgrUi = {
   async setting(nums) {
     this.ipotesi = [];
     this.numeri = nums;
-    for (const n of this.numeri) {
+    // AAA invertito ordine numeri
+    for (const n of this.numeri.reverse()) {
       // lettura del sommario del numero
       const url = `./data/${n}/sommario.json`;
       const sommario = await getJson(url);
@@ -148,8 +149,8 @@ const MgrUi = {
       `;
     };
     const jfh = UaJtfh();
+
     jfh.init();
-    //
     jfh.append('<div class="list">');
     for (let i = 0; i < this.ipotesi.length; i++) {
       const sommarioNumero = this.ipotesi[i];
@@ -164,15 +165,14 @@ const MgrUi = {
       }
     }
     jfh.append("</div>");
-    //
+    //archivio
     this.htmlIndici = jfh.html();
-    //
     // sommario numero corrente
     const last = this.ipotesi.length - 1;
     const sommarioLast = this.ipotesi[last];
     const num = this.numeri[last];
-    jfh.init();
     //
+    jfh.init();
     jfh.append('<div class="list">');
     const schede = sommarioLast.schede;
     for (const scheda of schede) {
