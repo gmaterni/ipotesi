@@ -3,10 +3,30 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>IPOTESI</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPOTESI - Periodico di Approfondimento</title>
+    <meta name="description" content="IPOTESI è un periodico di approfondimento redatto a Viterbo che affronta problematiche generali.">
+    <meta name="keywords" content="periodico, approfondimento, Viterbo, notizie, articoli">
+
+    <!-- Open Graph per social media -->
+    <meta property="og:title" content="IPOTESI - Periodico Culturale di Viterbo">
+    <meta property="og:description" content="Approfondimenti e analisi su cultura e società nel territorio viterbese">
+    <meta property="og:url" content="https://www.ipotesi.eu/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <!-- Geo tagging per SEO locale -->
+    <meta name="geo.region" content="IT-62">
+    <meta name="geo.placename" content="Viterbo">
+
+    <!-- Gestione della cache -->
+    <meta http-equiv="Cache-Control" content="public, max-age=604800, stale-while-revalidate=86400">
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Expires" content="0"> -->
+
+    <!-- Canonical assoluto per il dominio principale -->
+    <!-- <link rel="canonical" href="https://www.ipotesi.eu/"> -->
+    <link rel="canonical" href="https://ipotesi2000.github.io/index.html">
+
     <style>
       body {
         margin: 0;
@@ -16,13 +36,11 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        /* Previene scroll durante l'animazione */
       }
 
       .header {
         background-color: #404040;
         height: 10vh;
-        /* Corretto da "a0vh" */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -36,43 +54,27 @@
         flex: 1;
         overflow: hidden;
         position: relative;
-        /* Necessario per posizionare l'immagine assolutamente */
       }
 
       img {
-        /* Dimensioni iniziali (parti da un'immagine piena) */
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* Mantiene le proporzioni */
-        /* Posizionamento al centro */
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /* Nuovo: Imposta il punto di origine della trasformazione */
-        /* transform-origin: 50% 50%; */
         transform-origin: 60% 65%;
-        /* animation: zoom 10s ease-out forwards; */
-        animation-name: zoom;
-        animation-duration: 3s;
-        /* animation-timing-function: ease-out; */
-        /* animation-timing-function: ease; */
-        animation-timing-function: ease-in;
-        /* animation-timing-function: ease-in-out;  */
-        /* animation-timing-function: linear; */
-        animation-fill-mode: forwards;
+        animation: zoom 3s ease-in forwards;
       }
 
       @keyframes zoom {
         0% {
           transform: translate(-50%, -50%) scale(1);
-          /* Parti dal centro */
         }
 
         100% {
           transform: translate(-50%, -50%) scale(1.9);
-          /* Zoom 3x sul centro */
         }
       }
     </style>
@@ -83,17 +85,14 @@
       IPOTESI
     </div>
     <div class="image-container">
-      <img src="images/viterbo06.jpg" alt="ipotesi">
+      <img src="images/viterbo06.jpg" alt="Immagine di copertina del periodico IPOTESI">
     </div>
-  </body>
-  <script>
-    // setTimeout(function () { location.replace('ipotesi.html'); }, 3000);
-    setTimeout(function () { location.replace('ipotesi.html?v=1.02'); }, 3000);
-    // setTimeout(function () {
-    //   const par = 'nocache=' + new Date().getTime();
-    //   location.replace('ipotesi.html?' + par);
-    // }, 3000);
 
-  </script>
+    <script>
+      setTimeout(() => {
+        location.replace(`ipotesi.html`);
+      }, 3000);
+    </script>
+  </body>
 
 </html>
