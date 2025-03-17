@@ -1,36 +1,5 @@
 /** @format */
 
-// const WndPre = (id) => {
-//   return {
-//     w: UaWindowAdm.create(id),
-//     out: null,
-//     show(s) {
-//       const fh = (txt) => {
-//         return `
-// <div class="window-text">
-// <div class="btn-wrapper">
-// <button title="chiudi" onclick="UaWindowAdm.closeThis(this)">X</button>
-// </div>
-// <pre class="pre-text">${txt}</pre>
-// </div>
-//     `;
-//       };
-//       wnds.closeAll();
-//       const h = fh(s);
-//       this.w.drag();
-//       this.w.setZ(12);
-//       this.w.vw_vh().setXY(18.5, 10, -1);
-//       this.w.setHtml(h);
-//       this.w.show();
-//     },
-//     close() {
-//       this.w.close();
-//     },
-//     open(url) {
-//       fetchText(url, (s) => this.show(s));
-//     },
-//   };
-// };
 //XXX <button onclick="increaseFontSize()">A+</button>
 //XXX <button onclick="decreaseFontSize()">A-</button>
 const WndDiv = (id) => {
@@ -179,10 +148,10 @@ const MgrUi = {
     this.htmlSommario = jfh.html();
   },
   showSommario() {
-    // const item1 = document.getElementById("id_item1");
-    // item1.innerHTML = MgrUi.htmlSommario;
     const item1 = document.getElementById("id_item1");
-    item1.innerHTML = MgrUi.htmlIndici;
+    item1.innerHTML = MgrUi.htmlSommario;
+    // const item1 = document.getElementById("id_item1");
+    // item1.innerHTML = MgrUi.htmlIndici;
   },
   showIndici() {
     const item1 = document.getElementById("id_item1");
