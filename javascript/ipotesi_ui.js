@@ -135,18 +135,31 @@ const MgrUi = {
     //archivio
     this.htmlIndici = jfh.html();
     const last = this.ipotesi.length - 1;
-    const num = this.numeri[last];
-    const sommarioLast = this.ipotesi[last];
-    //
+
+    // const num = this.numeri[last];
+    // const sommarioLast = this.ipotesi[last];
+    // //
+    // jfh.init();
+    // jfh.append('<div class="list">');
+    // const schede = sommarioLast.schede;
+    // for (const scheda of schede) {
+    //   jfh.append(fh(num, scheda));
+    // }
+    // jfh.append("</div>");
+
+    const numCurr = this.numeri[0];
+    const sommarioCurr = this.ipotesi[0];
     jfh.init();
     jfh.append('<div class="list">');
-    const schede = sommarioLast.schede;
+    const schede = sommarioCurr.schede;
     for (const scheda of schede) {
-      jfh.append(fh(num, scheda));
+      jfh.append(fh(numCurr, scheda));
     }
     jfh.append("</div>");
+
     this.htmlSommario = jfh.html();
   },
+
   showSommario() {
     const item1 = document.getElementById("id_item1");
     item1.innerHTML = MgrUi.htmlSommario;
