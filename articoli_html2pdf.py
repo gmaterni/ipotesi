@@ -1,56 +1,98 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-import sys
 import os
 from pathlib import Path
+import sys
+
 import pdfkit
 
 def build_html_page(html_content):
-    """Build a complete HTML page with the given content."""
     page = f"""
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPOTESI</title>
-    <style>
-        body {{
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }}
-        .content {{
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-        }}
-        p {{
-            margin-bottom: 15px;
-        }}
-        strong {{
-            font-weight: bold;
-        }}
-    </style>
-</head>
-<body>
-    <div class="content">
-        {html_content}
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IPOTESI</title>
+        <style>
+            body {{
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 10px;
+            }}
+            .ipotesi {{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin: 2px auto;
+                padding: 2px;
+                font-size: 22px;
+                font-weight: bold;
+            }}
+
+            .link {{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }}
+
+            .link a {{
+                color: #1a73e8;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }}
+
+            .link a:hover {{
+                color: #d93025;
+                text-decoration: underline;
+            }}
+
+            .link a:visited {{
+                color: #4b0082;
+            }}
+
+            .content {{
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+            }}
+
+            p {{
+                margin-bottom: 15px;
+            }}
+
+            strong {{
+                font-weight: bold;
+            }}
+        </style>
+    </head>
+
+    <body>
+    <br>
+        <div class="ipotesi">
+        IPOTESI 
+        </div>
+        <div class="link">
+            <a href="http://www.ipotesi.eu" target="_blank">www.ipotesi.eu</a>
+        </div>
+        <div class="content">
+            {html_content}
+        </div>
+    </body>
+
 </html>
+
     """
     return page
 
 def list_html_files(directory):
-    """List all HTML files in the given directory."""
     return list(directory.glob('*.html'))
 
 def convert_html_to_pdf(html_content, output_path):
-    """Convert HTML content to a PDF file."""
     try:
         pdfkit.from_string(html_content, output_path)
     except Exception as e:
@@ -62,7 +104,6 @@ def convert_html_to_pdf(html_content, output_path):
             error_file.write(error_message)
 
 def main(number):
-    """Main function to process HTML files and convert them to PDF."""
     # Create the directory name
     directory_name = f"n00{number}"
     html_directory_path = Path(f"./data/{directory_name}")
@@ -80,15 +121,20 @@ def main(number):
     for html_file in html_files:
         print(html_file)
         try:
+            # Define the path for the PDF file
+            pdf_file_path = pdf_directory_path / f"{html_file.stem}.pdf"
+
+            # Check if the PDF file already exists
+            if pdf_file_path.exists():
+                print(f"\nIl file PDF {pdf_file_path} esiste già. Saltato.")
+                continue
+
             # Read the content of the HTML file
             with open(html_file, 'r', encoding='utf-8') as file:
                 html_content = file.read()
 
             # Build the HTML page
             complete_html_page = build_html_page(html_content)
-
-            # Define the path for the PDF file
-            pdf_file_path = pdf_directory_path / f"{html_file.stem}.pdf"
 
             # Convert HTML to PDF
             convert_html_to_pdf(complete_html_page, pdf_file_path)
@@ -97,7 +143,7 @@ def main(number):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("htmldir2pdf.py <num>")
+        print("articoli_html2pdf.py <num>")
         sys.exit(1)
     try:
         number = int(sys.argv[1])
