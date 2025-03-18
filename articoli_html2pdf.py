@@ -19,6 +19,8 @@ def build_html_page(html_content):
             body {{
                 font-family: Arial, sans-serif;
                 margin: 5px;
+                margin-left:100px;
+                margin-right:100px;
             }} 
             .ipotesi {{
                 position: absolute;
@@ -70,10 +72,11 @@ def build_html_page(html_content):
             .content {{
                 margin: 0 auto;
                 margin-top:80px;
-                font-size: 18px;
                 padding: 10px;
                 border: 1px solid #ccc;
                 background-color: #f9f9f9;
+                font-size: 28px;
+                
             }}
 
             p {{

@@ -14,7 +14,6 @@ const fh = (txt) => {
             <div class="toolbar">
                 <span>chiudi:(Esc)</span>
                 <button class="tt-bottom" data-tt="Apri pagina PDF"  onclick="readPDF()">PDF</button>
-
                 <button class="tt-bottom" data-tt="Configura lettore "id="configButton" onclick="toggleSpeak()">⚙️</button>
                 <button class="tt-bottom" data-tt="Start/Sop lettore" id="readButton" onclick="toggleReading()">▶</button>
                 <button class="tt-bottom" data-tt="Font +" onclick="increaseFontSize()">A+</button>

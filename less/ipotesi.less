@@ -147,6 +147,7 @@
 @fsize-subtitle: calc(11px + 1vw);
 @fsize-menu-a: calc(8px + 0.9vw);
 @fsize-container: calc(8px + 0.9vw);
+@fsize-reader: calc(9px + 1vw); // AAA font articolo
 @fsize-wnd: calc(8px + 0.9vw);
 @fsize-btn: calc(10px + 0.9vw);
 @fsize-num: calc(10px + 1.1vw);
@@ -446,7 +447,7 @@ div.container {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  // background: red;
+  font-size: @fsize-container;
 
   div.item {
     min-height: 50px;
@@ -754,7 +755,10 @@ div.col-right {
     box-sizing: border-box;
     height: calc(90vh - 3vh);
     width: 100%;
-    padding: 1vh 2vw 2vh 2vw;
+    // AAA window artioclo
+    // padding: 1vh 2vw 2vh 2vw;
+    padding: 1vh 7vw 2vh 7vw;
+
     margin: 0 auto;
     letter-spacing: 0.015em;
     word-spacing: 0.05em;
@@ -764,6 +768,8 @@ div.col-right {
     background-color: @md-bg;
     line-height: 1.6;
     font-family: @md-font-base;
+    //AAA font articoloX
+    font-size: @fsize-reader;
     h1,
     h2,
     h3,
@@ -819,7 +825,6 @@ div.col-right {
       padding: 0 @md-spacing-base;
       color: @md-quote;
       border-left: 0.25em solid @md-border;
-
       p {
         margin: @md-spacing-small 0;
         text-indent: 0;
