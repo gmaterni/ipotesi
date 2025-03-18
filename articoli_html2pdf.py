@@ -18,25 +18,39 @@ def build_html_page(html_content):
         <style>
             body {{
                 font-family: Arial, sans-serif;
-                line-height: 1.6;
-                margin: 10px;
-            }}
+                margin: 5px;
+            }} 
             .ipotesi {{
                 position: absolute;
                 top: 0;
-                left: 50%;
-                margin: 2px auto;
-                padding: 2px;
-                font-size: 22px;
+                left: 40%;
+                width:100%;
+                margin: 0 auto;
+                padding: 0;
+                font-size: 70px;
                 font-weight: bold;
+                font-style: italic;
+                font-family: "Courier New", Courier, monospace;
+                text-transform: uppercase;
+                line-height: 1;
+                letter-spacing: 9px;
             }}
 
+            .subtitle {{
+                position: absolute;
+                top:60px;
+                left: 5px;
+                font-size: 30px;
+                font-weight: bold;
+                font-style: italic;
+            }}
             .link {{
                 position: absolute;
-                top: 20px;
-                left: 20px;
+                top: 60px;
+                right: 10px;
+                font-size: 25px;
+                font-weight: bold;
             }}
-
             .link a {{
                 color: #1a73e8;
                 text-decoration: none;
@@ -54,9 +68,10 @@ def build_html_page(html_content):
             }}
 
             .content {{
-                max-width: 800px;
                 margin: 0 auto;
-                padding: 20px;
+                margin-top:80px;
+                font-size: 18px;
+                padding: 10px;
                 border: 1px solid #ccc;
                 background-color: #f9f9f9;
             }}
@@ -75,6 +90,9 @@ def build_html_page(html_content):
     <br>
         <div class="ipotesi">
         IPOTESI 
+        </div>
+        <div class="subtitle">
+        Periodico di approfondimento
         </div>
         <div class="link">
             <a href="http://www.ipotesi.eu" target="_blank">www.ipotesi.eu</a>
