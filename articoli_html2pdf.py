@@ -31,7 +31,6 @@ def build_html_page(html_content):
                 padding: 0;
                 font-size: 70px;
                 font-weight: bold;
-                font-style: italic;
                 font-family: "Courier New", Courier, monospace;
                 text-transform: uppercase;
                 line-height: 1;
