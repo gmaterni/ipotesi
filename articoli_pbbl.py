@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 import json
-import re
-import sys
 from pathlib import Path
 from pdb import set_trace
+import re
+import sys
 
 from bs4 import BeautifulSoup
 
@@ -31,13 +31,16 @@ def get_scheda_articolo(html):
             break
     if articolo_line is None:
         raise ValueError("Nessuna riga contiene l'etichetta 'ARTICOLO'")
-    # Assegna ad una variabile html tutto il testo successivo alla riga che contiene il tag ARTICOLO
-    html_successivo = '\n'.join(lines[articolo_line + 1:])
-    # Assegna ad una variabile scheda il testo dall'inizio alla riga che contiene il tag ARTICOLO compresa
-    scheda = '\n'.join(lines[:articolo_line + 1])
-    # Ripulisce del markup il testo contenuto nella variabile scheda
-    soup = BeautifulSoup(scheda, 'html.parser')
-    scheda_ripulita = soup.get_text()
+    try:
+        # Assegna ad una variabile html tutto il testo successivo alla riga che contiene il tag ARTICOLO
+        html_successivo = '\n'.join(lines[articolo_line + 1:])
+        # Assegna ad una variabile scheda il testo dall'inizio alla riga che contiene il tag ARTICOLO compresa
+        scheda = '\n'.join(lines[:articolo_line + 1])
+        # Ripulisce del markup il testo contenuto nella variabile scheda
+        soup = BeautifulSoup(scheda, 'html.parser')
+        scheda_ripulita = soup.get_text()
+    except Exception as e:
+        sys.exit(e)    
     # Ritorna una lista contenente scheda e html
     return [scheda_ripulita, html_successivo]
 
@@ -73,7 +76,6 @@ def pubbl_articoli(dir_src, dir_trg, num):
             lst=get_scheda_articolo(ftxt)
             scheda=lst[0]
             articolo=lst[1]
-
             # Estrai i dati della scheda
             try:
                 img=""

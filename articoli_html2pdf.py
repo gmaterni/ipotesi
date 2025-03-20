@@ -36,6 +36,12 @@ def build_html_page(html_content):
                 line-height: 1;
                 letter-spacing: 9px;
             }}
+            h3 {{
+              text-align: center;
+              font-size: 40px;
+              font-weight: bold;
+              font-style: italic;
+            }}
 
             .subtitle {{
                 position: absolute;
