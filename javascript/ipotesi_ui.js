@@ -70,7 +70,7 @@ const sortSchede = (json) => {
 
 const MgrUi = {
   ipotesi: [],
-  htmlIndici: null,
+  htmlArchivio: null,
   htmlSommario: null,
   numeri: [],
   async init() {
@@ -112,13 +112,14 @@ const MgrUi = {
         </div>`;
     };
     const fnum = (n) => {
-      const s = n.replace(/^0+/, "");
+      // const s = n.replace(/^0+/, "");
+      const num = n.replace("n", "Numero: ");
       return `
-      <div class="num">Numero: ${s}</div>
+      <div class="num">${num}</div>
       `;
     };
     const jfh = UaJtfh();
-
+    //sommario
     jfh.init();
     jfh.append('<div class="list">');
     for (let i = 0; i < this.ipotesi.length; i++) {
@@ -133,9 +134,8 @@ const MgrUi = {
     }
     jfh.append("</div>");
     //archivio
-    this.htmlIndici = jfh.html();
-    const last = this.ipotesi.length - 1;
-
+    this.htmlArchivio = jfh.html();
+    // const last = this.ipotesi.length - 1;
     // const num = this.numeri[last];
     // const sommarioLast = this.ipotesi[last];
     // //
@@ -146,17 +146,16 @@ const MgrUi = {
     //   jfh.append(fh(num, scheda));
     // }
     // jfh.append("</div>");
-
     const numCurr = this.numeri[0];
     const sommarioCurr = this.ipotesi[0];
     jfh.init();
     jfh.append('<div class="list">');
+    jfh.append(fnum(numCurr));
     const schede = sommarioCurr.schede;
     for (const scheda of schede) {
       jfh.append(fh(numCurr, scheda));
     }
     jfh.append("</div>");
-
     this.htmlSommario = jfh.html();
   },
 
@@ -164,10 +163,10 @@ const MgrUi = {
     const item1 = document.getElementById("id_item1");
     item1.innerHTML = MgrUi.htmlSommario;
     // const item1 = document.getElementById("id_item1");
-    // item1.innerHTML = MgrUi.htmlIndici;
+    // item1.innerHTML = MgrUi.htmlArchivio;
   },
   showIndici() {
     const item1 = document.getElementById("id_item1");
-    item1.innerHTML = MgrUi.htmlIndici;
+    item1.innerHTML = MgrUi.htmlArchivio;
   },
 };
