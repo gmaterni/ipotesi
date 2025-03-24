@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPOTESI - Periodico di Approfondimento</title>
+    <meta name="description" content="IPOTESI è un periodico di approfondimento redatto a Viterbo che affronta problematiche generali.">
+    <meta name="keywords" content="periodico, approfondimento, Viterbo, notizie, articoli">
+
+    <!-- Open Graph per social media -->
+    <meta property="og:title" content="IPOTESI - Periodico Culturale di Viterbo">
+    <meta property="og:description" content="Approfondimenti e analisi su cultura e società nel territorio viterbese">
+    <meta property="og:url" content="https://www.ipotesi.eu/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <!-- Geo tagging per SEO locale -->
+    <meta name="geo.region" content="IT-62">
+    <meta name="geo.placename" content="Viterbo">
+
+    <!-- Gestione della cache -->
+    <meta http-equiv="Cache-Control" content="public, max-age=604800, stale-while-revalidate=86400">
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Expires" content="0"> -->
+
+    <!-- Canonical assoluto per il dominio principale -->
+    <link rel="canonical" href="https://www.ipotesi.eu/">
+    <!-- <link rel="canonical" href="https://ipotesi2000.github.io/index.html"> -->
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .header {
+        background-color: #404040;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vh;
+        font-weight: bold;
+        color: white;
+        line-height: 10vh;
+      }
+
+      .image-container {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: 60% 65%;
+        animation: zoom 3s ease-in forwards;
+      }
+
+      @keyframes zoom {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+
+        100% {
+          transform: translate(-50%, -50%) scale(1.9);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      IPOTESI
+    </div>
+    <div class="image-container">
+      <img src="images/viterbo06.jpg" alt="Immagine di copertina del periodico IPOTESI">
+    </div>
+
+    <script>
+      setTimeout(() => {
+        location.replace(`ipotesi.html`);
+      }, 2000);
+    </script>
+  </body>
+
+</html>
