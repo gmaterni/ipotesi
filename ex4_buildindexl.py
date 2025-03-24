@@ -29,6 +29,7 @@ def listdir_reverse(directory):
         return []
 
 def generate_indice_html(data_directory, output_file, directories):
+    # AAA Numero di nueri visibile nella HOME 
     max_num=2
     indice_content = []
     try:
