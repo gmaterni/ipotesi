@@ -143,7 +143,9 @@
 @bg-menu-hover: #bbbbbb;
 
 // Dimensioni font (mantenute uguali)
-@fsize-title: calc(20px + 5.5vw);
+// AAA dimensioni tyitolo
+// @fsize-title: calc(20px + 5.5vw);
+@fsize-title: calc(20px + 5.9vh);
 @fsize-subtitle: calc(11px + 1vw);
 @fsize-menu-a: calc(8px + 0.9vw);
 @fsize-container: calc(8px + 0.9vw);
@@ -205,7 +207,7 @@ div.menu {
   left: 0;
   width: 100vw;
   //AAA height: 10vh;
-  border-bottom: 2px solid #000000;
+  border-bottom: 1px solid #000000;
   height: 14.8vh;
   z-index: @zmwnu;
   caret-color: transparent;
@@ -294,17 +296,19 @@ div.menu {
   //UA titolo
   div.title {
     position: absolute;
-    top: 0.1vh;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0;
-    margin: 0;
     font-size: @fsize-title;
     font-weight: bold;
     font-family: @fserif;
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 9px;
+    // background: red;
+    // border: 1px solid red;
+    padding: 0;
+    margin: 0;
   }
   div.sub-title {
     position: absolute;
@@ -695,7 +699,8 @@ div.col-right {
 // UA text-reader
 .text-reader {
   width: 100vw;
-  height: 90vh;
+  // AAA altezza text-reader
+  height: 89.9vh;
   margin: 0;
   overflow: hidden;
   position: relative;

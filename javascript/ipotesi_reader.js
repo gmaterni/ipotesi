@@ -31,12 +31,11 @@ const fh = (txt) => {
 const showReader = (text) => {
   textCurrent = text;
   const s = text;
-  // console.log("PAG_HTMn\n", s);
   h = fh(s);
   const w = UaWindowAdm.create("id_reader");
   w.setZ(12);
-  // XXX posizione reader
-  w.vw_vh().setXY(0.1, 10, -1);
+  // AAA posizione reader in v e h
+  w.vw_vh().setXY(0.1, 10.2, -1);
   w.setHtml(h);
   w.show();
   defaultFontSize();

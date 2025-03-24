@@ -6,7 +6,8 @@
             "autore": "Giuseppe Materni",
             "data": "10-12-2024",
             "file": "ai_mal_di_testa_m.html",
-            "id": "120"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "Costituzione e Volontariato",
@@ -14,7 +15,8 @@
             "autore": "Raimondo Raimondi",
             "data": "18-03-2025",
             "file": "cittadini_nel_volontrarito.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "Decreto Cultura",
@@ -22,7 +24,8 @@
             "autore": "Stefano Stefanini",
             "data": "20-02-2025",
             "file": "decreto_cultura.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "La Guerra Dei Dazi",
@@ -30,7 +33,8 @@
             "autore": "Paolo Mastromo",
             "data": "20-02-2025",
             "file": "disavanzi__commerciali.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "In transito tra due secoli e un millennio",
@@ -38,7 +42,17 @@
             "autore": "Giovanni Mastrangeli",
             "data": "12-03-2025",
             "file": "in_transito_tra_due_secoli.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
+        },
+        {
+            "titolo": "L'impatto dell'inquinamento da microplastiche su ambiente e salute",
+            "sottotitolo": "Incontro presso l'I.I.S.S. Carlo Alberto Dalla Chiesa di Montefiascone con Antonella Litta di \"Medici per l'Ambiente\".",
+            "autore": "Stefano Stefanini",
+            "data": "20-02-2025",
+            "file": "inquinamento_da_microplastiche.html",
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "Orti Solidali Urbani e la Rete",
@@ -46,15 +60,17 @@
             "autore": "Elena Bocci,Leonardo Varvaro",
             "data": "17-03-2025",
             "file": "orti_solidali.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
-            "titolo": "aaa",
-            "sottotitolo": "aa",
-            "autore": "aa",
-            "data": "aa",
+            "titolo": "Ventot di Marzo / Doona",
+            "sottotitolo": "Poesie",
+            "autore": "Luana Sabatin, Enrico Schiralli",
+            "data": "15-’03-2025",
             "file": "poesie.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "Riforma Della Magistratura e Separazione Delle Carriere",
@@ -62,7 +78,8 @@
             "autore": "Mirko Bandiera",
             "data": "20-02-2025",
             "file": "separazione_delle__carriere.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "Tuscania a spasso tra le fontane storiche",
@@ -70,7 +87,8 @@
             "autore": "Anna Rita Properzi\nAnna",
             "data": "20-03-2025",
             "file": "tuscania_fontane_storiche.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "l’Europa Nella Trappola Ucraina.",
@@ -78,7 +96,8 @@
             "autore": "Marcvo Faregna",
             "data": "17-03-2025",
             "file": "ucraina_eu_usa_russia.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "Una Porta Aperta che Parla",
@@ -86,7 +105,8 @@
             "autore": "Don Gianni Carparelli",
             "data": "20-02-2025",
             "file": "una_porta_aperta.html",
-            "id": "090"
+            "id": "100",
+            "img": ""
         }
     ]
 }

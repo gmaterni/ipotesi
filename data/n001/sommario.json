@@ -2,27 +2,30 @@
     "schede": [
         {
             "titolo": "Intelligenza Artificiale: Umana troppo umana.",
-            "sottotitolo": "Perché usare il termine “algoritmo” per la IA è un mezzo abuso.",
+            "sottotitolo": "Perché l'abuso del termine “algoritmo” per la IA è indice di un equivoco.",
             "autore": "Giuseppe Materni",
             "data": "10-12-2024",
             "file": "ai_umano_troppo_umano_m.html",
-            "id": "110"
+            "id": "100",
+            "img": ""
         },
         {
-            "titolo": "IPOTESI Editoriale del Direttore",
-            "sottotitolo": "Nasce „Ipotesi 2000“: strumento di dialogo nelle diversità delle\nispirazioni ideali per il Buon Governo della Res Publica: nei comuni e\nuna Provincia ripotenziata di competenze..",
-            "autore": "Stefano Stefanini",
+            "titolo": "Democrazia e Volontariato",
+            "sottotitolo": "Democrazia debole versus collaborazione e condivisione",
+            "autore": "Raimondo Raimondi",
             "data": "10-12-2024",
             "file": "democrazia_vs_collaborazione.html",
-            "id": "120"
+            "id": "14",
+            "img": ""
         },
         {
-            "titolo": "IPOTESI Editoriale del Direttore",
-            "sottotitolo": "Nasce „Ipotesi 2000“: strumento di dialogo nelle diversità delle\nispirazioni ideali per il Buon Governo della Res Publica: nei comuni e\nuna Provincia ripotenziata di competenze..",
+            "titolo": "IPOTESI Editoriale del Direttore Responsabile",
+            "sottotitolo": "NasceIpotesi 2000“: strumento di dialogo nelle diversità delle\nispirazioni ideali per il Buon Governo della Res Publica.",
             "autore": "Stefano Stefanini",
             "data": "10-12-2024",
             "file": "editoriale_ipotesi.html",
-            "id": "108"
+            "id": "10",
+            "img": ""
         },
         {
             "titolo": "La guerra Russo-Ucraina",
@@ -30,7 +33,8 @@
             "autore": "Marco Faregna",
             "data": "10-12-2024",
             "file": "la_guerra_russo-ucraina.html",
-            "id": "107"
+            "id": "18",
+            "img": ""
         },
         {
             "titolo": "Violazione dei diritti umani nella Repubblica Popolare Cinese",
@@ -38,7 +42,8 @@
             "autore": "Matteo Faregna",
             "data": "10-12-2024",
             "file": "la_questione_uigura.html",
-            "id": "106"
+            "id": "16",
+            "img": ""
         },
         {
             "titolo": "Lotta Alla Corruzione",
@@ -46,15 +51,17 @@
             "autore": "Stefano Stefanini",
             "data": "10-12-2024",
             "file": "lottta_alla_corruzione.html",
-            "id": "105"
+            "id": "17",
+            "img": ""
         },
         {
-            "titolo": "CON LA LUCE A FILO",
+            "titolo": "Con La Luce A  Filo",
             "sottotitolo": "Un viaggio poetico tra strade illuminate e incontri significativi:\nalla ricerca della luce e del dialogo con l'universale e il\nparticolare",
             "autore": "Anita Mancia",
             "data": "10-12-2024",
             "file": "luce_al_filo.html",
-            "id": "104"
+            "id": "160",
+            "img": ""
         },
         {
             "titolo": "IPOTESI: un ritorno tra Esperienza e Innovazione - un viaggio tra\nPolitica, Cultura e Tecnologia",
@@ -62,31 +69,36 @@
             "autore": "Marco Faregna",
             "data": "10-20-23",
             "file": "pesentazaione_ipotesi.html",
-            "id": "103"
+            "id": "11",
+            "img": ""
         },
         {
             "titolo": "Recite del tempo di oggi",
-            "sottotitolo": "L’articolo tenta di capire e riflettere sulle\ndinamiche mentali dei comportamenti in parole ed azioni della\ngiovinezza, della normalità e dei maestri d’oggi in opera contestatrice\ne non solo.",
+            "xx": "L’articolo tenta di capire e riflettere sulle\ndinamiche mentali dei comportamenti in parole ed azioni della\ngiovinezza, della normalità e dei maestri d’oggi in opera contestatrice\ne non solo.",
+            "sottotitolo": "In transito tra due secoli vi dono parole che siano luce e senso per la nostra civiltà personale e sociale.",
             "autore": "Giovanni Mastrangeli",
             "data": "10-12-2024",
             "file": "riflessioni_del_tempo_di_oggi.html",
-            "id": "102"
+            "id": "12",
+            "img": ""
         },
         {
             "titolo": "Riflessioni StuzzicaMenti",
             "sottotitolo": "Riflessioni sul pensiero e la spiritualità: omaggio a Franco\nFerrarotti e Simone Weil nell'era dell'intelligenza artificiale.\"",
-            "autore": "Giovanni Carparelli",
+            "autore": "Don Gianni Carparelli",
             "data": "10-12-2024",
             "file": "riflessioni_stuzzicamenti.html",
-            "id": "101"
+            "id": "13",
+            "img": ""
         },
         {
-            "titolo": "TUSCIA - UNA TERRA DA SCOPRIRE",
+            "titolo": "TUSCIA - Una Terra Da Scoprire",
             "sottotitolo": "Un viaggio tra paesaggi mozzafiato e tesori culturali: alla scoperta\ndella Tuscia, tra storia, natura e tradizioni secolari\"",
             "autore": "Valentina Berneschi, storica dell’arte-guida turistica.",
             "data": "10-12-2024",
             "file": "tuscia_terra_da_scoprire.html",
-            "id": "099"
+            "id": "15",
+            "img": ""
         }
     ]
 }

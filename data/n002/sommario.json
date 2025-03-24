@@ -1,20 +1,13 @@
 {
     "schede": [
         {
-            "titolo": "Intelligenza Artificiale: Umana troppo umana.",
-            "sottotitolo": "Perché usare il termine “algoritmo” per la IA è un mezzo abuso.",
-            "autore": "Giuseppe Materni",
-            "data": "10-12-2024",
-            "file": "ai_mal_di_testa_m.html",
-            "id": "100"
-        },
-        {
             "titolo": "Costituzione e Volontariato",
             "sottotitolo": "I cittadini attivi nel volontariato amano la\nCostituzione.",
             "autore": "Raimondo Raimondi",
             "data": "18-03-2025",
             "file": "cittadini_nel_volontrarito.html",
-            "id": "100"
+            "id": "096",
+            "img": ""
         },
         {
             "titolo": "Decreto Cultura",
@@ -22,7 +15,8 @@
             "autore": "Stefano Stefanini",
             "data": "20-02-2025",
             "file": "decreto_cultura.html",
-            "id": "100"
+            "id": "103",
+            "img": ""
         },
         {
             "titolo": "La Guerra Dei Dazi",
@@ -30,7 +24,8 @@
             "autore": "Paolo Mastromo",
             "data": "20-02-2025",
             "file": "disavanzi__commerciali.html",
-            "id": "100"
+            "id": "085",
+            "img": ""
         },
         {
             "titolo": "In transito tra due secoli e un millennio",
@@ -38,23 +33,26 @@
             "autore": "Giovanni Mastrangeli",
             "data": "12-03-2025",
             "file": "in_transito_tra_due_secoli.html",
-            "id": "100"
+            "id": "095",
+            "img": ""
         },
         {
             "titolo": "Orti Solidali Urbani e la Rete",
             "sottotitolo": "L’Esperienza Degli Orti Solidali Urbani e la Rete\nr.o.s.a.",
-            "autore": "Elena Bocci,Leonardo Varvaro",
+            "autore": "Leonardo Varvaro / Elena Bocci",
             "data": "17-03-2025",
             "file": "orti_solidali.html",
-            "id": "100"
+            "id": "086",
+            "img": ""
         },
         {
-            "titolo": "POESIE",
-            "sottotitolo": "Vento e Dobba",
-            "autore": "Schiralli",
-            "data": "01-03-2035",
+            "titolo": "Vento di Marzo / Donna",
+            "sottotitolo": "Poesie",
+            "autore": "Enrico Schiralli / Luana Sabatini",
+            "data": "15-’03-2025",
             "file": "poesie.html",
-            "id": "100"
+            "id": "110",
+            "img": ""
         },
         {
             "titolo": "Riforma Della Magistratura e Separazione Delle Carriere",
@@ -62,7 +60,8 @@
             "autore": "Mirko Bandiera",
             "data": "20-02-2025",
             "file": "separazione_delle__carriere.html",
-            "id": "100"
+            "id": "080",
+            "img": ""
         },
         {
             "titolo": "Tuscania a spasso tra le fontane storiche",
@@ -70,15 +69,17 @@
             "autore": "Anna Rita Properzi\nAnna",
             "data": "20-03-2025",
             "file": "tuscania_fontane_storiche.html",
-            "id": "100"
+            "id": "086",
+            "img": ""
         },
         {
             "titolo": "l’Europa Nella Trappola Ucraina.",
             "sottotitolo": "Sceneggiata surreale nella stanza ovale.",
-            "autore": "Marcvo Faregna",
+            "autore": "Marco Faregna",
             "data": "17-03-2025",
             "file": "ucraina_eu_usa_russia.html",
-            "id": "100"
+            "id": "100",
+            "img": ""
         },
         {
             "titolo": "Una Porta Aperta che Parla",
@@ -86,7 +87,17 @@
             "autore": "Don Gianni Carparelli",
             "data": "20-02-2025",
             "file": "una_porta_aperta.html",
-            "id": "100"
+            "id": "102",
+            "img": ""
+        },
+        {
+            "titolo": "L'impatto dell'inquinamento da microplastiche su ambiente e salute",
+            "sottotitolo": "Incontro presso l'I.I.S.S. Carlo Alberto Dalla Chiesa di Montefiascone con Antonella Litta di 'Medici per l'Ambiente'",
+            "autore": "Stefano Stefanini",
+            "data": "20-02-2025",
+            "file": "inquinamento_da_microplastiche.html",
+            "id": "90",
+            "img": ""
         }
     ]
 }
