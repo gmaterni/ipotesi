@@ -28,19 +28,12 @@
         <script src="javascript/uawindow.js"></script>
         <script src="javascript/uajtfh.js"></script> -->
 
-        <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-E93YC2J6LE"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E93YC2J6LE"></script>
         <script>
-            if (!window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-E93YC2J6LE');
-            } else {
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function () {
-                    console.log('GA disabled in development');
-                };
-            }
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-E93YC2J6LE'); 
         </script>
 
 
@@ -162,9 +155,6 @@
                 localStorage.setItem('appinfo', today);
                 console.log('***** Aggiornamento della cache', today);
                 window.location.reload(true);
-                // // Usa history.replaceState invece di reload
-                // history.replaceState(null, null, window.location.href);
-                // window.location.href = window.location.href;
             }
         };
         checkCache();
@@ -172,5 +162,6 @@
         setInterval(updateDateTime, 1000);
         openApp();
     });
+
 
 </script>
