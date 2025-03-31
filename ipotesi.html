@@ -27,17 +27,6 @@
         <script src="javascript/uawindow.js"></script>
         <script src="javascript/uajtfh.js"></script> -->
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E93YC2J6LE"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-E93YC2J6LE', {
-                'cookie_domain': window.location.hostname,
-                'cookie_flags': 'SameSite=None;Secure'
-            });
-        </script>
-
     </head>
 
     <body>
@@ -88,9 +77,6 @@
         <!--  -->
 
         <div class="container">
-            <!-- <div id="id_item0" class="item item0">
-                <img class="img" src="images/ipotesih.jpg">
-            </div> -->
             <div id="id_item1" class="item item1">
             </div>
         </div>
@@ -125,43 +111,55 @@
             </div>
         </div>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E93YC2J6LE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-E93YC2J6LE', {
+                'cookie_domain': window.location.hostname,
+                'cookie_flags': 'SameSite=None;Secure'
+            });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const versionElement = document.getElementById('id_version');
+
+                const formatDateTime = () => {
+                    const now = new Date();
+                    const day = String(now.getDate()).padStart(2, '0');
+                    const month = String(now.getMonth() + 1).padStart(2, '0');
+                    const year = now.getFullYear();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const seconds = String(now.getSeconds()).padStart(2, '0');
+                    return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+                };
+
+                const updateDateTime = () => {
+                    versionElement.textContent = formatDateTime();
+                };
+
+                const checkCache = () => {
+                    version = "v=1.021"
+                    // const today = new Date().toISOString().split('T')[0];
+                    const today = new Date().toISOString().split('T')[0] + version;
+                    const cachedDate = localStorage.getItem('appinfo');
+                    if (cachedDate !== today) {
+                        localStorage.setItem('appinfo', today);
+                        console.log('***** Aggiornamento della cache', today);
+                        window.location.reload(true);
+                    }
+                };
+                checkCache();
+                updateDateTime();
+                setInterval(updateDateTime, 1000);
+                openApp();
+            });
+
+        </script>
+
     </body>
 
 </html>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const versionElement = document.getElementById('id_version');
-
-        const formatDateTime = () => {
-            const now = new Date();
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const year = now.getFullYear();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
-        };
-
-        const updateDateTime = () => {
-            versionElement.textContent = formatDateTime();
-        };
-
-        const checkCache = () => {
-            version = "v=1.021"
-            // const today = new Date().toISOString().split('T')[0];
-            const today = new Date().toISOString().split('T')[0] + version;
-            const cachedDate = localStorage.getItem('appinfo');
-            if (cachedDate !== today) {
-                localStorage.setItem('appinfo', today);
-                console.log('***** Aggiornamento della cache', today);
-                window.location.reload(true);
-            }
-        };
-        checkCache();
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-        openApp();
-    });
-
-</script>
