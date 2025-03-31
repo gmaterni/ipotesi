@@ -158,9 +158,6 @@
                 localStorage.setItem('appinfo', today);
                 console.log('***** Aggiornamento della cache', today);
                 window.location.reload(true);
-                // // Usa history.replaceState invece di reload
-                // history.replaceState(null, null, window.location.href);
-                // window.location.href = window.location.href;
             }
         };
         checkCache();
