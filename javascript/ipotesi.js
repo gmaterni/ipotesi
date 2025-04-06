@@ -133,21 +133,16 @@ function cmdEsc() {
 // //////////////
 
 const imageCarousel = () => {
-  // Get parent container
   const parentContainer = document.querySelector(".col-right");
-  // Initially show all images
   const imageContainers = parentContainer.querySelectorAll(".item0");
   imageContainers.forEach((container) => {
     container.classList.add("active");
   });
   const rotateImages = () => {
-    // Get the first item
     const firstItem = parentContainer.querySelector(".item0");
-    // Move it to the end
     parentContainer.appendChild(firstItem);
   };
-  // Rotate images every 10 seconds
-  setInterval(rotateImages, 5000);
+  // AAA setInterval(rotateImages, 5000);
 };
 
 // Call the function to start the carousel
