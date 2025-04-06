@@ -8,12 +8,14 @@
         <meta http-equiv="Expires" content="0">      -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ipotesi</title>
+        <title>IPOTESI</title>
 
-        <!-- <link rel="stylesheet" href="css/ipotesi.min.css" />
-        <script src="js/ipotesi.min.js"></script> -->
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2h1v20h-1z'/><path d='M9 5h6v1H9zM9 18h6v1H9z'/></svg>">
 
-        <link rel="stylesheet" href="less/normalize.css">
+        <link rel="stylesheet" href="css/ipotesi.min.css" />
+        <script src="js/ipotesi.min.js"></script>
+
+        <!-- <link rel="stylesheet" href="less/normalize.css">
         <link rel="stylesheet/less" type="text/css" href="less/ipotesi.less" />
         <script src="less/less.js"></script>
         <script src="javascript/ipotesi.js"></script>
@@ -23,7 +25,7 @@
         <script src="javascript/ipotesi_speak.js"></script>
         <script src="javascript/uadrag.js"></script>
         <script src="javascript/uawindow.js"></script>
-        <script src="javascript/uajtfh.js"></script>
+        <script src="javascript/uajtfh.js"></script> --> -->
 
     </head>
 
@@ -38,7 +40,7 @@
 
             <div class="title">IPOTESI</div>
             <div class="sub-title">Periodico di approfondimento</div>
-            <div id="id_version" class="version">0.0</div>
+            <div id="id_version" class="version">0.1</div>
         </div>
         <!--  -->
         <div class="btn-theme">
@@ -75,25 +77,19 @@
         <!--  -->
 
         <div class="container">
-            <!-- <div id="id_item0" class="item item0">
-                <img class="img" src="images/ipotesih.jpg">
-            </div> -->
             <div id="id_item1" class="item item1">
             </div>
         </div>
 
         <div class="col-right">
             <div class="item item0">
+                <img class="img" src="images/publ/lib_etruria_300.jpg">
+            </div>
+            <div class="item item0">
                 <img class="img" src="images/publ/auto.jpg">
             </div>
             <div class="item item0">
-                <img class="img" src="images/publ/apriechiudi.jpg">
-            </div>
-            <div class="item item0">
                 <img class="img" src="images/publ/camina.jpg">
-            </div>
-            <div class="item item0">
-                <img class="img" src="images/publ/iltuoamico.jpg">
             </div>
             <div class="item item0">
                 <img class="img" src="images/publ/ognicosa.jpg">
@@ -112,44 +108,55 @@
             </div>
         </div>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E93YC2J6LE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-E93YC2J6LE', {
+                'cookie_domain': window.location.hostname,
+                'cookie_flags': 'SameSite=None;Secure'
+            });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const versionElement = document.getElementById('id_version');
+
+                const formatDateTime = () => {
+                    const now = new Date();
+                    const day = String(now.getDate()).padStart(2, '0');
+                    const month = String(now.getMonth() + 1).padStart(2, '0');
+                    const year = now.getFullYear();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const seconds = String(now.getSeconds()).padStart(2, '0');
+                    return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+                };
+
+                const updateDateTime = () => {
+                    versionElement.textContent = formatDateTime();
+                };
+
+                const checkCache = () => {
+                    version = "v=1.021"
+                    // const today = new Date().toISOString().split('T')[0];
+                    const today = new Date().toISOString().split('T')[0] + version;
+                    const cachedDate = localStorage.getItem('appinfo');
+                    if (cachedDate !== today) {
+                        localStorage.setItem('appinfo', today);
+                        console.log('***** Aggiornamento della cache', today);
+                        window.location.reload(true);
+                    }
+                };
+                checkCache();
+                updateDateTime();
+                setInterval(updateDateTime, 1000);
+                openApp();
+            });
+
+        </script>
+
     </body>
 
 </html>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const versionElement = document.getElementById('id_version');
-
-        const formatDateTime = () => {
-            const now = new Date();
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const year = now.getFullYear();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
-        };
-
-        const updateDateTime = () => {
-            versionElement.textContent = formatDateTime();
-        };
-
-        const checkCache = () => {
-            version = "v=1.021"
-            // const today = new Date().toISOString().split('T')[0];
-            const today = new Date().toISOString().split('T')[0] + version;
-            const cachedDate = localStorage.getItem('appinfo');
-            if (cachedDate !== today) {
-                localStorage.setItem('appinfo', today);
-                console.log('***** Aggiornamento della cache', today);
-                window.location.reload(true);
-            }
-        };
-        checkCache();
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-        openApp();
-    });
-
-
-</script>
