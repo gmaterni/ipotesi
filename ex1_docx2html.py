@@ -6,6 +6,7 @@ import pathlib as pt
 import sys
 
 from bs4 import BeautifulSoup
+from docx import Document
 import pypandoc
 
 def rlist(path: str, match: str = "*") -> list:
@@ -16,62 +17,134 @@ def make_dir(path: str, mode: int = 0o777):
     p.mkdir(parents=True, exist_ok=True, mode=mode)
     p.chmod(mode=mode)
 
-def process_images_in_html(html_path):
-    """Sostituisce i riferimenti alle immagini con dati base64 incorporati"""
-    html_dir = os.path.dirname(html_path)
-    
-    with open(html_path, 'r', encoding='utf-8') as f:
-        soup = BeautifulSoup(f, 'html.parser')
-    
-    mime_types = {
-        '.gif': 'image/gif',
-        '.png': 'image/png',
-        '.jpg': 'image/jpeg',
-        '.jpeg': 'image/jpeg',
-        '.svg': 'image/svg+xml',
-        '.bmp': 'image/bmp',
-        '.webp': 'image/webp'
-    }
-    
-    for img in soup.find_all('img'):
-        src = img.get('src', '')
-        if src.startswith(('data:', 'http:', 'https:')):
-            continue
-        
-        img_path = os.path.normpath(os.path.join(html_dir, src))
-        
-        if not os.path.isfile(img_path):
-            print(f"Attenzione: file immagine non trovato '{img_path}'")
-            continue
-        
-        try:
-            with open(img_path, 'rb') as img_file:
-                img_data = img_file.read()
-                base64_str = base64.b64encode(img_data).decode('ascii')
-                
-            ext = os.path.splitext(img_path)[1].lower()
-            mime = mime_types.get(ext, 'application/octet-stream')
-            
-            img['src'] = f"data:{mime};base64,{base64_str}"
-        except Exception as e:
-            print(f"Errore processando {img_path}: {str(e)}")
-    
-    with open(html_path, 'w', encoding='utf-8') as f:
-        f.write(str(soup))
+def extract_images_from_docx(docx_path, output_dir):
+    """Extract images from a DOCX file and save them to a directory."""
+    doc = Document(docx_path)
+    image_paths = {}  # Changed to a dictionary to map image names to paths
+    rels = doc.part.rels
+
+    for rel in rels:
+        if "image" in rels[rel].target_ref:
+            img_data = rels[rel].target_part.blob
+            img_name = os.path.basename(rels[rel].target_ref)
+            img_path = os.path.join(output_dir, img_name)
+            with open(img_path, "wb") as f:
+                f.write(img_data)
+            # Store the image name and its full path
+            image_paths[img_name] = img_path
+            print(f"Image extracted and saved to: {img_path}")  # Debug message
+
+    return image_paths
+
+def encode_image_to_base64(image_path):
+    """Encode an image to base64."""
+    try:
+        with open(image_path, "rb") as image_file:
+            return base64.b64encode(image_file.read()).decode('utf-8')
+    except Exception as e:
+        print(f"Errore nella lettura dell'immagine {image_path}: {e}")
+        return None
 
 def docx2html(docx_path, html_path):
     try:
+        img_dir = os.path.join(os.path.dirname(html_path), "images")
+        os.makedirs(img_dir, exist_ok=True)
+        
+        # Extract images from DOCX and get a mapping of image names to paths
+        image_map = extract_images_from_docx(docx_path, img_dir)
+        
+        # Convert DOCX to HTML
         output = pypandoc.convert_file(docx_path, 'html', outputfile=html_path)
         assert output == ""
-        process_images_in_html(html_path)  # Aggiunta elaborazione immagini
+        
+        # Read the generated HTML
+        with open(html_path, 'r', encoding='utf-8') as file:
+            html_content = file.read()
+        
+        # Parse the HTML content
+        soup = BeautifulSoup(html_content, 'html.parser')
+        
+        # Find all image tags
+        img_tags = soup.find_all('img')
+        
+        # Encode images to base64 and replace the src attribute
+        for img in img_tags:
+            if 'src' not in img.attrs:
+                continue
+                
+            img_src = img['src']
+            print(f"Processing image tag with src: {img_src}")  # Debug message
+            
+            # Extract the image filename from the src attribute
+            img_filename = os.path.basename(img_src)
+            
+            # Check if this image exists in our extracted images
+            if img_filename in image_map:
+                full_img_path = image_map[img_filename]
+                # or use this more flexible approach:
+                # full_img_path = os.path.join(img_dir, img_filename)
+                
+                if os.path.exists(full_img_path):
+                    # Encode the image to base64
+                    img_base64 = encode_image_to_base64(full_img_path)
+                    if img_base64:
+                        # Determine the image MIME type
+                        if img_filename.lower().endswith('.png'):
+                            mime_type = 'image/png'
+                        elif img_filename.lower().endswith('.jpg') or img_filename.lower().endswith('.jpeg'):
+                            mime_type = 'image/jpeg'
+                        elif img_filename.lower().endswith('.gif'):
+                            mime_type = 'image/gif'
+                        else:
+                            mime_type = 'image/unknown'
+
+                        # Replace the src attribute with base64 encoded image
+                        img['src'] = f"data:{mime_type};base64,{img_base64}"
+                        print(f"Image {img_filename} converted to base64.")  # Debug message
+                    else:
+                        print(f"Skipping image {img_filename} due to encoding error.")
+                else:
+                    print(f"Image path does not exist: {full_img_path}")
+            else:
+                # Try a direct path approach as fallback
+                if img_src.startswith('images/'):
+                    full_img_path = os.path.join(os.path.dirname(html_path), img_src)
+                else:
+                    full_img_path = os.path.join(img_dir, img_filename)
+                
+                if os.path.exists(full_img_path):
+                    img_base64 = encode_image_to_base64(full_img_path)
+                    if img_base64:
+                        # Determine the image MIME type
+                        if img_filename.lower().endswith('.png'):
+                            mime_type = 'image/png'
+                        elif img_filename.lower().endswith('.jpg') or img_filename.lower().endswith('.jpeg'):
+                            mime_type = 'image/jpeg'
+                        elif img_filename.lower().endswith('.gif'):
+                            mime_type = 'image/gif'
+                        else:
+                            mime_type = 'image/unknown'
+
+                        # Replace the src attribute with base64 encoded image
+                        img['src'] = f"data:{mime_type};base64,{img_base64}"
+                        print(f"Image {img_filename} converted to base64.")  # Debug message
+                    else:
+                        print(f"Skipping image {img_filename} due to encoding error.")
+                else:
+                    print(f"Could not find image for src: {img_src}")
+
+        # Write the modified HTML back to the file
+        with open(html_path, 'w', encoding='utf-8') as file:
+            file.write(str(soup))
+
     except Exception as e:
         print(f"Errore: {e}")
         exit(1)
 
-# Il resto del codice rimane invariato
 def add_scheda_articolo(hpath):
     with open(hpath,'r', encoding='utf-8') as f:
        html = f.read()
+    # Trova la prima riga che contiene l'etichetta "ARTICOLO"
     lines = html.split('\n')
     articolo_line = None
     for i, line in enumerate(lines):
@@ -105,11 +178,15 @@ def add_scheda_articolo(hpath):
             elif sn==".":
                 sys.exit(0)
     else:
+        # Assegna ad una variabile html tutto il testo successivo alla riga che contiene il tag ARTICOLO
         articolo_html = '\n'.join(lines[articolo_line + 1:])
+        # Assegna ad una variabile scheda il testo dall'inizio alla riga che contiene il tag ARTICOLO compresa
         scheda_html = '\n'.join(lines[:articolo_line + 1])
+        # Ripulisce del markup il testo contenuto nella variabile scheda
         soup = BeautifulSoup(scheda_html, 'html.parser')
         scheda_txt = soup.get_text()
 
+    # commenta la scheda
     scheda_info=f"<!--\n{scheda_txt}\n-->"
     with open(hpath,"w") as f:
         f.write(scheda_info)
@@ -123,7 +200,8 @@ def dirdocx2html(src_dir, dest_dir):
     for doc_path in path_lst:
         print(doc_path)
         fname = os.path.basename(doc_path).replace(".docx", ".html")
-        fname = fname.lower().replace(" ", "_")
+        fname = fname.lower()
+        fname = fname.replace(" ", "_")
         html_path = os.path.join(dest_dir, fname)
         docx2html(doc_path, html_path)
         add_scheda_articolo(html_path)
