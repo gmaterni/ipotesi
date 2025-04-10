@@ -1,0 +1,44 @@
+{
+    "schede": [
+        {
+            "titolo": "barabbata",
+            "sottotitolo": "barabbata",
+            "autore": "aa",
+            "data": "aa",
+            "file": "barabbata_per_ipotesi.html",
+            "id": "100"
+        },
+        {
+            "titolo": "modelli letterari",
+            "sottotitolo": "modelli letterari",
+            "autore": "aa",
+            "data": "aa",
+            "file": "i_racconti_dei__modelli_letterali.html",
+            "id": "110"
+        },
+        {
+            "titolo": "In transito tra due secoli e un millennio (2)",
+            "sottotitolo": "Cronache del disagio della civilta' di oggi (parte 2)",
+            "autore": "Giovanni Mastrangeli",
+            "data": "12-03-2025",
+            "file": "in_transito_tra_due_secoli2.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Per Una Resurrezione Laica",
+            "sottotitolo": "Nel periodo anche commercialmente conosciuto come Pasquale, credenti\nnon-credenti e miscredenti, siamo esposti alla parola: resurrezione. Mi\nmetto nei panni di chi non la legge con occhi di fede.",
+            "autore": "don GianniCcarparelli",
+            "data": "Aprile 2025",
+            "file": "perr_una_resurrezione_laica.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Primo, Secondo e Terzo Settore",
+            "sottotitolo": "Il mondo del volontariato e i suoi interlocutori",
+            "autore": "Raimondo Raimondi",
+            "data": "18-04-2025",
+            "file": "primosecondoterzosettore.html",
+            "id": "140"
+        }
+    ]
+}
