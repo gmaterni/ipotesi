@@ -2,9 +2,9 @@
     "schede": [
         {
             "titolo": "La Barabbata",
-            "sottotitolo": "Una antica festa",
-            "autore": "Arduini",
-            "data": "aa",
+            "sottotitolo": "xxx",
+            "autore": "xxx",
+            "data": "xxx",
             "file": "barabbata_per_ipotesi.html",
             "id": "100"
         },
@@ -25,12 +25,28 @@
             "id": "120"
         },
         {
+            "titolo": "Letteratura sulla liberazione",
+            "sottotitolo": "xxx",
+            "autore": "xxx",
+            "data": "xxx",
+            "file": "letteratura_della_liberazione.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Liberazione Valori",
+            "sottotitolo": "xxx",
+            "autore": "xxx",
+            "data": "xxx",
+            "file": "liberazione_valori_attualizzato_e_fatti_storici.html",
+            "id": "140"
+        },
+        {
             "titolo": "Per Una Resurrezione Laica",
             "sottotitolo": "Nel periodo anche commercialmente conosciuto come Pasquale, credenti\nnon-credenti e miscredenti, siamo esposti alla parola: resurrezione. Mi\nmetto nei panni di chi non la legge con occhi di fede.",
             "autore": "don GianniCcarparelli",
             "data": "Aprile 2025",
             "file": "perr_una_resurrezione_laica.html",
-            "id": "130"
+            "id": "150"
         },
         {
             "titolo": "Primo, Secondo e Terzo Settore",
@@ -38,7 +54,15 @@
             "autore": "Raimondo Raimondi",
             "data": "18-04-2025",
             "file": "primosecondoterzosettore.html",
-            "id": "140"
+            "id": "160"
+        },
+        {
+            "titolo": "San Pellegrinp",
+            "sottotitolo": "XXX",
+            "autore": "XXX",
+            "data": "XXX",
+            "file": "san_pellegrino.html",
+            "id": "170"
         }
     ]
 }

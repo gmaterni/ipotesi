@@ -107,6 +107,7 @@ def pubbl_articoli(dir_src, dir_trg, num):
                 f.write(articolo)
     # Scrivi il file sommario.json
     # sommario_file = target_dir / f"{num_str}_sommario.json"
+    # set_trace()
     sommario_file = target_dir / f"sommario.json"
     with sommario_file.open('w', encoding='utf-8') as f:
         json.dump({"schede": schede}, f, ensure_ascii=False, indent=4)
