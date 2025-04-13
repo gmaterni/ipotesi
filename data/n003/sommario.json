@@ -1,10 +1,10 @@
 {
     "schede": [
         {
-            "titolo": "La Barabbata",
-            "sottotitolo": "xxx",
-            "autore": "xxx",
-            "data": "xxx",
+            "titolo": "Ila Barabbata di Marta",
+            "sottotitolo": "XXX",
+            "autore": "Marcello Arduini",
+            "data": "12-03-2025",
             "file": "barabbata_per_ipotesi.html",
             "id": "100"
         },
@@ -25,15 +25,15 @@
             "id": "120"
         },
         {
-            "titolo": "Letteratura sulla liberazione",
+            "titolo": "Letteratura della Liberazione",
             "sottotitolo": "xxx",
-            "autore": "xxx",
-            "data": "xxx",
+            "autore": "xx",
+            "data": "xx",
             "file": "letteratura_della_liberazione.html",
             "id": "130"
         },
         {
-            "titolo": "Liberazione Valori",
+            "titolo": "Valori della Liberazione",
             "sottotitolo": "xxx",
             "autore": "xxx",
             "data": "xxx",
@@ -59,7 +59,7 @@
         {
             "titolo": "San Pellegrinp",
             "sottotitolo": "XXX",
-            "autore": "XXX",
+            "autore": "Anna Rita Properzi",
             "data": "XXX",
             "file": "san_pellegrino.html",
             "id": "170"

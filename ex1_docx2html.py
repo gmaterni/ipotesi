@@ -5,7 +5,7 @@ import os
 import pathlib as pt
 import sys
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment
 from docx import Document
 import pypandoc
 
@@ -16,6 +16,20 @@ def make_dir(path: str, mode: int = 0o777):
     p = pt.Path(path)
     p.mkdir(parents=True, exist_ok=True, mode=mode)
     p.chmod(mode=mode)
+
+
+def set_tag_title(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    primo_elemento = None
+    for elem in soup.contents:
+        if not isinstance(elem, Comment):
+            primo_elemento = elem
+            break
+    if primo_elemento:
+        nuovo_elemento = soup.new_tag('h3')
+        nuovo_elemento.string = primo_elemento.text
+        primo_elemento.replace_with(nuovo_elemento)
+    return str(soup)
 
 def extract_images_from_docx(docx_path, output_dir):
     """Extract images from a DOCX file and save them to a directory."""
@@ -63,7 +77,7 @@ def docx2html(docx_path, html_path):
         
         # Parse the HTML content
         soup = BeautifulSoup(html_content, 'html.parser')
-        
+
         # Find all image tags
         img_tags = soup.find_all('img')
         
@@ -178,16 +192,21 @@ def add_scheda_articolo(hpath):
             elif sn==".":
                 sys.exit(0)
     else:
-        # Assegna ad una variabile html tutto il testo successivo alla riga che contiene il tag ARTICOLO
+        # Assegna ad una variabile html tutto il testo successivo 
+        # alla riga che contiene il tag ARTICOLO
         articolo_html = '\n'.join(lines[articolo_line + 1:])
+
+        articolo_html=set_tag_title(articolo_html)        
+
         # Assegna ad una variabile scheda il testo dall'inizio alla riga che contiene il tag ARTICOLO compresa
         scheda_html = '\n'.join(lines[:articolo_line + 1])
         # Ripulisce del markup il testo contenuto nella variabile scheda
         soup = BeautifulSoup(scheda_html, 'html.parser')
         scheda_txt = soup.get_text()
-
     # commenta la scheda
     scheda_info=f"<!--\n{scheda_txt}\n-->"
+
+
     with open(hpath,"w") as f:
         f.write(scheda_info)
         f.write(os.linesep)
