@@ -33,7 +33,6 @@ def generate_indice_html(data_directory, output_file, directories):
     max_num=2
     indice_content = []
     try:
-        # Limit to the last two directories
         directories_for_indice = directories[:max_num+1]
         for dir_name in directories_for_indice:
             dir_path = os.path.join(data_directory, dir_name)
@@ -49,12 +48,15 @@ def generate_indice_html(data_directory, output_file, directories):
                     sottotitolo = scheda.get('sottotitolo', '')
                     autore = scheda.get('autore', '')
                     file_path = os.path.join(dir_path, scheda.get('file', ''))
+                    st=f"<p>{sottotitolo}</p>"
+                    if len(sottotitolo.strip())<=2:
+                        st=""
                     indice_content.append(f'''
                     <div class="list-item">
                         <a href="#" onclick="openReader('{file_path}')">
                             <strong>{titolo}</strong>
                         </a>
-                        <p>{sottotitolo}</p>
+                        {st}
                         <p class="autore">{autore}</p>
                     </div>
                     ''')
