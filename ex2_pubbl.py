@@ -116,23 +116,23 @@ def pubbl_articoli(dir_src, dir_trg, num):
         item.chmod(0o777)
 
 # ./data
-def write_num(dir_trg):
-    dir_path = Path(dir_trg)
-    # Ottieni l'elenco delle directory contenute in dir_trg
-    dirs = [d for d in dir_path.iterdir() if d.is_dir()]
-    # Crea una lista di numeri nel formato "001", "002", ...
-    numeri = [f"n{i:03}" for i in range(1, len(dirs))]
-    # Crea il dizionario JSON
-    data = {
-        "numeri": numeri
-    }
-    # Crea il percorso del file ipotesi.json
-    file_path = dir_path / "ipotesi.json"
-    # Scrivi il JSON nel file
-    with open(file_path, 'w') as file:
-        json.dump(data, file, indent=4)
-    # Imposta i permessi del file in lettura e scrittura per tutti gli utenti
-    file_path.chmod(0o777)
+# def write_num(dir_trg):
+#     dir_path = Path(dir_trg)
+#     # Ottieni l'elenco delle directory contenute in dir_trg
+#     dirs = [d for d in dir_path.iterdir() if d.is_dir()]
+#     # Crea una lista di numeri nel formato "001", "002", ...
+#     numeri = [f"n{i:03}" for i in range(1, len(dirs))]
+#     # Crea il dizionario JSON
+#     data = {
+#         "numeri": numeri
+#     }
+#     # Crea il percorso del file ipotesi.json
+#     file_path = dir_path / "ipotesi.json"
+#     # Scrivi il JSON nel file
+#     with open(file_path, 'w') as file:
+#         json.dump(data, file, indent=4)
+#     # Imposta i permessi del file in lettura e scrittura per tutti gli utenti
+#     file_path.chmod(0o777)
 
 
 if __name__ == "__main__":
