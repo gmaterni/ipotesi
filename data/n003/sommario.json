@@ -2,18 +2,18 @@
     "schede": [
         {
             "titolo": "La Barabbata di Marta",
-            "sottotitolo": ".",
+            "sottotitolo": "Una Festa Antica a\nUna festa antica che si svolge il 14 di maggio a Marta\\",
             "autore": "Marcello Arduini",
             "data": "10-0-2025",
             "file": "barabbata_per_ipotesi.html",
-            "id": "105"
+            "id": "109"
         },
         {
-            "titolo": "Come La AI Puo’ Salvare La Didattica (E Noi Con Lei)",
-            "sottotitolo": ".",
+            "titolo": "Come La IA Può Salvare La Didattica (E Noi Con Lei)",
+            "sottotitolo": "La vera sfida non è eliminare la tecnologia, ma imparare a\nutilizzarla in modo che completi e arricchisca le nostre capacità\ncognitive.",
             "autore": "Valerio Ferri",
             "data": "10-04-2025",
-            "file": "come_ai_puo_salvare_la_scuoola.html",
+            "file": "come_ai_puo_salvare_la_scuola.html",
             "id": "110"
         },
         {
@@ -46,7 +46,7 @@
             "autore": "Simone Stefanini Conti",
             "data": "14.04.2025",
             "file": "letteratura_della_liberazione.html",
-            "id": "100"
+            "id": "104"
         },
         {
             "titolo": "La lezione e il significato del 25 Aprile....dopo 80 anni dalla\nLiberazione.",
@@ -54,7 +54,7 @@
             "autore": "Stefano Stefanini",
             "data": "14.04.2025",
             "file": "liberazione_valori_attualizzato_e_fatti_storici.html",
-            "id": "160"
+            "id": "103"
         },
         {
             "titolo": "Per Una Resurrezione Laica",
@@ -62,7 +62,7 @@
             "autore": "Don Gianni Carparelli",
             "data": "Aprile 2025",
             "file": "perr_una_resurrezione_laica.html",
-            "id": "170"
+            "id": "100"
         },
         {
             "titolo": "Primo, Secondo e Terzo Settore",
@@ -74,7 +74,7 @@
         },
         {
             "titolo": "San Pellegrino",
-            "sottotitolo": ".",
+            "sottotitolo": "A spasso nel Medioevo",
             "autore": "Anna Rita Properzi",
             "data": "10-04-2025",
             "file": "san_pellegrino.html",
