@@ -2,7 +2,6 @@
 # coding: utf-8
 import json
 from pathlib import Path
-from pdb import set_trace
 import re
 import sys
 
@@ -13,7 +12,7 @@ def check_scheda(scheda):
     for field, value in scheda.items():
         if not value:
             s=f"{field}: null"
-            empty_fields.append(s)    
+            empty_fields.append(s)
     if empty_fields:
         return ",\n".join(empty_fields)
     else:
@@ -37,7 +36,7 @@ def get_scheda(html):
         scheda_ripulita = soup.get_text()
         # scheda_ripulita=scheda_ripulita.replace("<!--","").relace("-->")
     except Exception as e:
-        sys.exit(e)    
+        sys.exit(e)
     return scheda_ripulita
 
 def pubbl_articoli(dir_src, dir_trg, num):
@@ -60,10 +59,11 @@ def pubbl_articoli(dir_src, dir_trg, num):
             return
     else:
         target_dir.mkdir(parents=True, exist_ok=True)
+
     # Legge i files nella directory dir_src
     src_files = sorted(Path(source_dir).glob('*'))
     schede= []
-    art_id=90
+    art_id=100
     for file in src_files:
         if file.is_file():
             with file.open('r', encoding='utf-8') as f:
@@ -75,8 +75,8 @@ def pubbl_articoli(dir_src, dir_trg, num):
                 titolo = re.search(r'TITOLO\s*(.*?)\s*SOTTOTITOLO', scheda, re.DOTALL).group(1).strip()
                 sottotitolo = re.search(r'SOTTOTITOLO\s*(.*?)\s*AUTORE', scheda, re.DOTALL).group(1).strip()
                 autore = re.search(r'AUTORE\s*(.*?)\s*DATA', scheda, re.DOTALL).group(1).strip()
-                data = re.search(r'DATA\s*(.*?)\s*ARTICOLO', scheda, re.DOTALL).group(1).strip()                
-                art_id+=10                
+                data = re.search(r'DATA\s*(.*?)\s*ARTICOLO', scheda, re.DOTALL).group(1).strip()
+                art_id+=10
             except Exception as e:
                 print("\n=========================")
                 print(e)
@@ -105,44 +105,26 @@ def pubbl_articoli(dir_src, dir_trg, num):
             print(file.name)
             with articolo_file.open('w', encoding='utf-8') as f:
                 f.write(articolo)
+
+    # Estrai i nomi dei file dalle schede
+    file_names = [scheda["file"] for scheda in schede]
+
     # Scrivi il file sommario.json
-    # sommario_file = target_dir / f"{num_str}_sommario.json"
-    # set_trace()
     sommario_file = target_dir / f"sommario.json"
     with sommario_file.open('w', encoding='utf-8') as f:
-        json.dump({"schede": schede}, f, ensure_ascii=False, indent=4)
+        json.dump({"ordine": file_names, "schede": schede}, f, ensure_ascii=False, indent=4)
+
     target_dir.chmod(0o777)
     for item in target_dir.iterdir():
         item.chmod(0o777)
 
-# ./data
-# def write_num(dir_trg):
-#     dir_path = Path(dir_trg)
-#     # Ottieni l'elenco delle directory contenute in dir_trg
-#     dirs = [d for d in dir_path.iterdir() if d.is_dir()]
-#     # Crea una lista di numeri nel formato "001", "002", ...
-#     numeri = [f"n{i:03}" for i in range(1, len(dirs))]
-#     # Crea il dizionario JSON
-#     data = {
-#         "numeri": numeri
-#     }
-#     # Crea il percorso del file ipotesi.json
-#     file_path = dir_path / "ipotesi.json"
-#     # Scrivi il JSON nel file
-#     with open(file_path, 'w') as file:
-#         json.dump(data, file, indent=4)
-#     # Imposta i permessi del file in lettura e scrittura per tutti gli utenti
-#     file_path.chmod(0o777)
-
-
 if __name__ == "__main__":
     if len(sys.argv)<2:
         print("\n\n")
-        print("articoli_pubbl.py <num>")
+        print("ex2_pubbl.py <num>")
         sys.exit()
     dir_src = "./articoli"
     dir_trg = "./data"
     n=sys.argv[1]
     n=int(n)
     pubbl_articoli(dir_src, dir_trg, n)
-    # write_num(dir_trg)

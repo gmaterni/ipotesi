@@ -18,15 +18,16 @@ def minify_html(html):
 
 
 def listdir_reverse(directory):
-    """List directories in reverse order."""
+    """List directories in reverse order that start with 'n'."""
     try:
         return sorted(
-            (d for d in os.listdir(directory) if os.path.isdir(os.path.join(directory, d))),
+            (d for d in os.listdir(directory) if os.path.isdir(os.path.join(directory, d)) and d.startswith('n')),
             reverse=True
-        )
+       )
     except Exception as e:
         print(f"Errore durante la lettura della directory: {e}")
         return []
+
 
 def generate_indice_html(data_directory, output_file, directories):
     # AAA Numero di nueri visibile nella HOME 
@@ -42,7 +43,17 @@ def generate_indice_html(data_directory, output_file, directories):
                     sommario_data = json.load(file)
                 numero = str(int(dir_name.lstrip('n')))
                 indice_content.append(f'<div class="num">Numero: {numero}</div>')
-                schede_sorted = sorted(sommario_data.get('schede', []), key=lambda x: x['id'])
+                # Verifica se il campo 'ordine' esiste
+                if 'ordine' in sommario_data:
+                    ordine = sommario_data['ordine']
+                    # Crea un dizionario per mappare il nome del file al suo indice nell'ordine
+                    ordine_index = {nome: index for index, nome in enumerate(ordine)}
+                    # Ordina le schede in base alla loro posizione nel campo 'ordine'
+                    schede_sorted = sorted(sommario_data.get('schede', []), key=lambda x: ordine_index.get(x['file'], float('inf')))
+                else:
+                    # Se il campo 'ordine' non esiste, usa il codice originale
+                    schede_sorted = sorted(sommario_data.get('schede', []), key=lambda x: x['id'])
+
                 for scheda in schede_sorted:
                     titolo = scheda.get('titolo', '')
                     sottotitolo = scheda.get('sottotitolo', '')
@@ -102,10 +113,11 @@ if __name__ == "__main__":
     data_directory = './data'
     indice_output = './data/indice.html'
     archivio_output = './data/archivio.html'
-
     # Get the list of directories in reverse order
     directories = listdir_reverse(data_directory)
-
+    for d in directories:
+        print(d)
     # Generate the HTML files
     generate_indice_html(data_directory, indice_output, directories)
     generate_archivio_html(data_directory, archivio_output, directories)
+# 

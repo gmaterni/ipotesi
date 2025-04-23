@@ -169,7 +169,7 @@ def main(number):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("articoli_html2pdf.py <num>")
+        print("ex3_html2pdf.py <num>")
         sys.exit(1)
     try:
         number = int(sys.argv[1])

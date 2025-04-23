@@ -227,7 +227,7 @@ def dirdocx2html(src_dir, dest_dir):
 
 if __name__ == "__main__":
     if len(sys.argv)!=2:
-        print("articoli_docx2htmlpy <num>")
+        print("ex1_docx2htmlpy <num>")
         sys.exit()
     n=sys.argv[1]
     n=int(n)

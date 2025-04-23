@@ -1,4 +1,17 @@
 {
+    "ordine": [
+        "morto_il_papa.html",
+        "perr_una_resurrezione_laica.html",
+        "liberazione_valori_attualizzato_e_fatti_storici.html",
+        "letteratura_della_liberazione.html",
+        "barabbata_per_ipotesi.html",
+        "come_ai_puo_salvare_la_scuola.html",
+        "dopo_la_guerra_dei_dazi.html",
+        "i_racconti_dei__modelli_letterali.html",
+        "in_transito_tra_due_secoli2.html",
+        "primosecondoterzosettore.html",
+        "san_pellegrino.html"
+    ],
     "schede": [
         {
             "titolo": "La Barabbata di Marta",
@@ -6,7 +19,7 @@
             "autore": "Marcello Arduini",
             "data": "10-0-2025",
             "file": "barabbata_per_ipotesi.html",
-            "id": "109"
+            "id": "110"
         },
         {
             "titolo": "Come La IA Può Salvare La Didattica (E Noi Con Lei)",
@@ -14,7 +27,7 @@
             "autore": "Valerio Ferri",
             "data": "10-04-2025",
             "file": "come_ai_puo_salvare_la_scuola.html",
-            "id": "110"
+            "id": "120"
         },
         {
             "titolo": "Dopo la guerra dei dazi niente più come prima",
@@ -22,7 +35,7 @@
             "autore": "Di Paolo Mastromo",
             "data": "10-04-2025",
             "file": "dopo_la_guerra_dei_dazi.html",
-            "id": "120"
+            "id": "130"
         },
         {
             "titolo": "I racconti dei modelli letterali",
@@ -30,7 +43,7 @@
             "autore": "Guido Angeloni",
             "data": "10-04-2025",
             "file": "i_racconti_dei__modelli_letterali.html",
-            "id": "130"
+            "id": "140"
         },
         {
             "titolo": "In transito tra due secoli e un millennio (2)",
@@ -38,7 +51,7 @@
             "autore": "Giovanni Mastrangeli",
             "data": "12-03-2025",
             "file": "in_transito_tra_due_secoli2.html",
-            "id": "140"
+            "id": "150"
         },
         {
             "titolo": "Il 25 Aprile 1945-2025 : l’attualità delle storie della Resistenza\nnei racconti degli scrittori Calvino, Pavese, Fenoglio e Tobino",
@@ -46,7 +59,7 @@
             "autore": "Simone Stefanini Conti",
             "data": "14.04.2025",
             "file": "letteratura_della_liberazione.html",
-            "id": "104"
+            "id": "160"
         },
         {
             "titolo": "La lezione e il significato del 25 Aprile....dopo 80 anni dalla\nLiberazione.",
@@ -54,7 +67,7 @@
             "autore": "Stefano Stefanini",
             "data": "14.04.2025",
             "file": "liberazione_valori_attualizzato_e_fatti_storici.html",
-            "id": "103"
+            "id": "170"
         },
         {
             "titolo": "Francesco il Papa è morto anzi: NO!",
@@ -62,7 +75,7 @@
             "autore": "don Gianni Carparelli",
             "data": "21 aprile 2025",
             "file": "morto_il_papa.html",
-            "id": "100"
+            "id": "180"
         },
         {
             "titolo": "Per Una Resurrezione Laica",
@@ -70,7 +83,7 @@
             "autore": "Don Gianni Carparelli",
             "data": "Aprile 2025",
             "file": "perr_una_resurrezione_laica.html",
-            "id": "101"
+            "id": "190"
         },
         {
             "titolo": "Primo, Secondo e Terzo Settore",
@@ -78,7 +91,7 @@
             "autore": "Raimondo Raimondi",
             "data": "18-04-2025",
             "file": "primosecondoterzosettore.html",
-            "id": "190"
+            "id": "200"
         },
         {
             "titolo": "San Pellegrino",
@@ -86,7 +99,7 @@
             "autore": "Anna Rita Properzi",
             "data": "10-04-2025",
             "file": "san_pellegrino.html",
-            "id": "200"
+            "id": "210"
         }
     ]
 }
