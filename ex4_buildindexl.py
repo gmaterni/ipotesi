@@ -34,7 +34,7 @@ def generate_indice_html(data_directory, output_file, directories):
     max_num=2
     indice_content = []
     try:
-        directories_for_indice = directories[:max_num+1]
+        directories_for_indice = directories[:max_num]
         for dir_name in directories_for_indice:
             dir_path = os.path.join(data_directory, dir_name)
             sommario_file = os.path.join(dir_path, 'sommario.json')

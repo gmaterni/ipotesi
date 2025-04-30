@@ -1,5 +1,6 @@
 {
     "ordine": [
+        "1maggio.html",
         "morto_il_papa.html",
         "perr_una_resurrezione_laica.html",
         "liberazione_valori_attualizzato_e_fatti_storici.html",
@@ -13,6 +14,14 @@
         "san_pellegrino.html"
     ],
     "schede": [
+        {
+            "titolo": "1°Maggio 'UNITI per un LAVORO SICURO'",
+            "sottotitolo": "La CISL per la salute e la sicurezza sui posti di lavoro ",
+            "autore": "Elisa Durantini Segretaria Ust Cisl di Viterbo",
+            "data": "29-’4-2025",
+            "file": "1maggio.html",
+            "id": "110"
+        },
         {
             "titolo": "La Barabbata di Marta",
             "sottotitolo": "Una Festa Antica a\nUna festa antica che si svolge il 14 di maggio a Marta\\",
