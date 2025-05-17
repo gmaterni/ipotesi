@@ -1,0 +1,69 @@
+{
+    "ordine": [
+        "francesco__analisi__grafologica.html",
+        "gaza_il_martirio.html",
+        "libertà_e_partecipazione.html",
+        "marginalita_della_politica.html",
+        "moro_fioroni.html",
+        "papa_leone.html",
+        "scuderie_bramante.html"
+    ],
+    "schede": [
+        {
+            "titolo": "La grafia di Papa Francesco",
+            "sottotitolo": "Osservazioni grafologiche e di grafica simbolizzata",
+            "autore": "Guido Angeloni",
+            "data": "8-05-2025",
+            "file": "francesco__analisi__grafologica.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Gaza, il martirio continua.",
+            "sottotitolo": "e forse mai cesserà",
+            "autore": "Paolo Mastrolo",
+            "data": "15-05-2025",
+            "file": "gaza_il_martirio.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Libertà e partecipazione",
+            "sottotitolo": "Banalizzazione di problemi complessi e complessità delle\nsoluzioni",
+            "autore": "Raimondo Raimondi",
+            "data": "18-05-2025",
+            "file": "libertà_e_partecipazione.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Marginalità e Irrilevanza della Politica Italiana",
+            "sottotitolo": "Massimo Comun Denominatore dei politici italiani di maggioranza e di\nminoranza .\nssimo Comun Denominatore dei politici di maggioranza e di\nminoranza.",
+            "autore": "Marco Faregna",
+            "data": "12-05-2025",
+            "file": "marginalita_della_politica.html",
+            "id": "140"
+        },
+        {
+            "titolo": "Intervista a Fioroni sula morte di Aldo Moro",
+            "sottotitolo": "Fioroni: “Moro, adottando le parole di Papa Prevost, voleva costruire\nponti”",
+            "autore": "Da “Il Domani” David\nTesoriere",
+            "data": "12-05-2925",
+            "file": "moro_fioroni.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Un Leone mansueto come agnello",
+            "sottotitolo": "La Chiesa, quella vera che cerca di seguire il suo fondatore Gesù\nCristo, ha una marcia in più. Emerge dallo spirito che guarda in alto,\nsi innamora della luce e la porta tra la gente.",
+            "autore": "don Gianni Carparelli",
+            "data": "Maggio 2025",
+            "file": "papa_leone.html",
+            "id": "160"
+        },
+        {
+            "titolo": "Recupero Scuderie Papali del Bramante",
+            "sottotitolo": "Viterbo: il recupero delle Scuderie papali del Bramante di Piazza\nSallupara, un gioiello del Rinascimento viterbese (1506-1508) .",
+            "autore": "Stefano Stefanini",
+            "data": "15-05-2025",
+            "file": "scuderie_bramante.html",
+            "id": "170"
+        }
+    ]
+}
