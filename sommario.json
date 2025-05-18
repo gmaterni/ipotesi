@@ -6,8 +6,7 @@
         "marginalita_della_politica.html",
         "libertà_e_partecipazione.html",
         "francesco__analisi__grafologica.html",
-        "scuderie_bramante.html",
-        "una_rivoluzione_conservatrice.html"
+        "scuderie_bramante.html"
     ],
     "schede": [
         {
@@ -36,7 +35,7 @@
         },
         {
             "titolo": "Marginalità e Irrilevanza della Politica Italiana",
-            "sottotitolo": "Maggioranza e Minoranza accomunate dall’ignavia di fronte al piano di\nDraghi.",
+            "sottotitolo": "Maggioranza e Minoranza accomunate dall’ignavia di fronte al\npiano\ndi Draghi.",
             "autore": "Marco Faregna",
             "data": "12-05-2025",
             "file": "marginalita_della_politica.html",
@@ -65,14 +64,6 @@
             "data": "15-05-2025",
             "file": "scuderie_bramante.html",
             "id": "170"
-        },
-        {
-            "titolo": "Una rivoluzione radicalmente\nconservatrice",
-            "sottotitolo": "La seconda amministrazione Trump ha reso evidente la fine della\nglobalizzazione a direzione Usa, ma non del neoliberismo come progetto\nideologico.",
-            "autore": "Vincenzo Orsomarso",
-            "data": "19-05-2025",
-            "file": "una_rivoluzione_conservatrice.html",
-            "id": "180"
         }
     ]
 }
