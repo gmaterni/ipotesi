@@ -29,7 +29,9 @@ def listdir_reverse(directory):
         return []
 
 
-def generate_indice_html(data_directory, output_file, directories):
+def generate_indice_html(data_directory, 
+                         output_file, 
+                         directories):
     # AAA Numero di nueri visibile nella HOME 
     max_num=2
     indice_content = []
@@ -70,7 +72,7 @@ def generate_indice_html(data_directory, output_file, directories):
                         {st}
                         <p class="autore">{autore}</p>
                     </div>
-                    ''')
+                    ''')                
         indice_html = f'<div class="list">{" ".join(indice_content)}</div>'
         h=minify_html(indice_html)
         with open(output_file, 'w', encoding='utf-8') as file:
@@ -78,7 +80,9 @@ def generate_indice_html(data_directory, output_file, directories):
     except Exception as e:
         print(f"Errore durante la generazione del file indice HTML: {e}")
 
-def generate_archivio_html(data_directory, output_file, directories):
+def generate_archivio_html(data_directory, 
+                           output_file, 
+                           directories):
     archivio_content = []
     try:
         for dir_name in directories:
@@ -89,7 +93,13 @@ def generate_archivio_html(data_directory, output_file, directories):
                     sommario_data = json.load(file)
                 numero = str(int(dir_name.lstrip('n')))
                 archivio_content.append(f'<div class="num">Numero: {numero}</div>')
-                schede_sorted = sorted(sommario_data.get('schede', []), key=lambda x: x['id'])
+                # schede_sorted = sorted(sommario_data.get('schede', []), key=lambda x: x['id'])
+                if 'ordine' in sommario_data:
+                    ordine = sommario_data['ordine']
+                    ordine_index = {nome: index for index, nome in enumerate(ordine)}
+                    schede_sorted = sorted(sommario_data.get('schede', []), key=lambda x: ordine_index.get(x['file'], float('inf')))
+                else:
+                    schede_sorted = sorted(sommario_data.get('schede', []), key=lambda x: x['id'])
                 for scheda in schede_sorted:
                     titolo = scheda.get('titolo', '')
                     autore = scheda.get('autore', '')
