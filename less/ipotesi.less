@@ -154,6 +154,7 @@
 @fsize-btn: calc(10px + 0.9vw);
 @fsize-num: calc(10px + 1.1vw);
 @fsize-vers: calc(5px + 0.9vw);
+@fsize-msg: 5px;
 
 @fserif: Georigia, "Ties New Roman", serif;
 @fsans: arial, verdana, Helvetica, sans-serif;
@@ -359,7 +360,7 @@ div.menu-box {
   position: fixed;
   top: 10vh;
   left: -2000px;
-  width: 20vw;
+  width: 25vw;
   height: 85vh;
   padding: 0;
   padding-top: 10px;
@@ -406,8 +407,8 @@ div.menu-box {
       }
     }
     li.msg {
-      font-size: @fsize-vers;
-      font-weight: bold;
+      font-size: @fsize-msg !important;
+      font-weight: normal;
       color: @fg-base;
       padding-top: 10px;
       padding-bottom: 10px;
