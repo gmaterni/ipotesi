@@ -28,7 +28,11 @@ articoli_pubbl.py <num>
 3) ./ipotesi/data/n001/sommario.json
 4) ./ipotesi/data/n001/<articololo.html>
 
-    
+########
+index.html pagina iniziale
+ipotesi.html pagina giornale
+data/indice.html  indice degli ultimi due numei
+data/archivio.html archvio di tutti i numeri    
 
 
 

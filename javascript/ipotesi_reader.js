@@ -8,6 +8,7 @@ const fsizeKey = "fsize_reader";
 var textCurrent = "";
 let urlCurrent = "";
 
+// AAA pagina a articoli
 const fh = (txt) => {
   return `
         <div class="text-reader" id="reader">
