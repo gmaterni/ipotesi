@@ -31,6 +31,7 @@ const fh = (txt) => {
 
 const showReader = (text) => {
   textCurrent = text;
+  // console.log(text);
   const s = text;
   h = fh(s);
   const w = UaWindowAdm.create("id_reader");
