@@ -3,6 +3,7 @@
 import base64
 import os
 import pathlib as pt
+from pdb import set_trace
 import sys
 
 from bs4 import BeautifulSoup, Comment
@@ -205,7 +206,6 @@ def add_scheda_articolo(hpath):
         scheda_txt = soup.get_text()
     # commenta la scheda
     scheda_info=f"<!--\n{scheda_txt}\n-->"
-
 
     with open(hpath,"w") as f:
         f.write(scheda_info)

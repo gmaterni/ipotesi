@@ -1,0 +1,96 @@
+{
+    "ordine": [
+        "borghi_della_teverina.html",
+        "confederazione_gricoltura.html",
+        "convegno_citta_ideal.html",
+        "il_declino_della_differena.html",
+        "la_giovinetta_rosa.html",
+        "referendum.html",
+        "scudetto_e_businnes.html",
+        "suonare_il_piffero.html",
+        "tuscia_pride.html",
+        "una_rivoluzione_conservatrice.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Borghi della Teverina",
+            "sottotitolo": "Storie di rinascita sulla scia di Civita",
+            "autore": "Loretta Scarino, tour operator e guida turistica",
+            "data": "10-06-2025",
+            "file": "borghi_della_teverina.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Intervista al presidente della Confederazione Italiana Agricoltura\nViterbo e Rieti",
+            "sottotitolo": "Intervista a Sergio Del Gelsomino su produzioni, esigenze e qualità\ndell‘agricoltura.",
+            "autore": "Stefano Stefanini",
+            "data": "19-06-2025",
+            "file": "confederazione_gricoltura.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Il Convegno CITTÁ IDEALI.",
+            "sottotitolo": "Visioni e progetti per il futuro urbano” occorr maggiore attenzione e\ntutela ai gioielli urbanistici dei nostri centri storici per la qualità\ndella vita dei residenti e il successo delle presente turistiche.",
+            "autore": "Stefano Stefanini",
+            "data": "19-006-2025",
+            "file": "convegno_citta_ideal.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Il Declino della Diffrenza e della Identità",
+            "sottotitolo": "L'identità è distinzione e differenza: è possibile protagonismo della\npropria storia, è processo dinamico dell’ilo che diviene nel tempo della\nstoria personale.",
+            "autore": "Giovanni Mastrangeli",
+            "data": "16-05-2025",
+            "file": "il_declino_della_differena.html",
+            "id": "140"
+        },
+        {
+            "titolo": "La Giovinetta Rosa",
+            "sottotitolo": "Da un libro sulla complessa storia della Viterbo medievale, uscito in\nquesti giorni, il sintetico profilo della Santa la cui vicenda illumina\ned esalta da secoli la religiosità dei Viterbesi.",
+            "autore": "Alfio Cortonesi\nAngela Lanconelli",
+            "data": "20-06-2025",
+            "file": "la_giovinetta_rosa.html",
+            "id": "150"
+        },
+        {
+            "titolo": "REFERENDUM dell’8 e 9 Giugno",
+            "sottotitolo": "Sul Referendum c’è chi ha mentito spudoratamente, spergiurando sul\nraggiungimento del quorum per salvaguardare diritti degli immigrati,\nallontanare lo spettro della precarietà, sconfiggere il ritorno alla\nbrutalità dei licenziamenti senza causa e della miseria dell’indennizzo\nprevisto dal Job Act.",
+            "autore": "Marco Faregna",
+            "data": "16-06-2025",
+            "file": "referendum.html",
+            "id": "160"
+        },
+        {
+            "titolo": "Scudetto e business all’ombra del Vesuvio",
+            "sottotitolo": "Il successo - sportivo, economico e di immagine – del Napoli\nCalcio nasce dall’incontro-scontro fra due vincenti (Aurelio De\nLaurentiis e Antonio Conte)",
+            "autore": "Paolo Mastromo",
+            "data": "15-06-2025",
+            "file": "scudetto_e_businnes.html",
+            "id": "170"
+        },
+        {
+            "titolo": "Suonare il piffero",
+            "sottotitolo": "Il volontariato e l’impegnativo cammino verso\nl’autonomia",
+            "autore": "Raimondo Raimondi",
+            "data": "1-06-2025",
+            "file": "suonare_il_piffero.html",
+            "id": "180"
+        },
+        {
+            "titolo": "Se ci fosse rispetto non ci sarebbe il tusciapride",
+            "sottotitolo": "Se le persone si sentissero e fossero rispettate non ci sarebbe la\nnecessità di mettersi in pubblico per ricordarcelo, anche se in formato\ngoliardico e provocatorio. Benvenuti a chi ce lo ricorda.",
+            "autore": "don Gianni Carparelli",
+            "data": "Giugno 2025",
+            "file": "tuscia_pride.html",
+            "id": "190"
+        },
+        {
+            "titolo": "Una rivoluzione radicalmente\nconservatrice",
+            "sottotitolo": "La seconda amministrazione Trump ha reso evidente la fine della\nglobalizaione a direzione Usa, ma non del neoliberismo come progetto\nideologico di ricostruzione della società",
+            "autore": "Vincenzo Orsomarso",
+            "data": "10-06-2025",
+            "file": "una_rivoluzione_conservatrice.html",
+            "id": "200"
+        }
+    ]
+}
