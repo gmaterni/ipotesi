@@ -1,5 +1,87 @@
 /** @format */
 
+// ===================================================================
+// VARIABLES
+// ===================================================================
+
+// --- Colors ---
+@bg-base: #ffffff;
+@fg-base: #000000;
+@fg-nuanced: #696969;
+@fg-a: #000000;
+@bg-a-hover: #afafaf;
+@border: #999999;
+@bg-item0: #bababa;
+@bg-item1: #fafafa;
+
+// --- Window ---
+@bg-wnd: #e6e6e6;
+@fg-wnd: #000000;
+
+// --- Reader ---
+@bg-reader: #e6e6e6;
+@fg-reader: #000000;
+
+// --- Menu ---
+@menu-icon: #000000;
+@bg-menu: #ffffff;
+@bg-menu-box: #e6e6e6;
+@menu-border: #a5a4a4;
+@fg-menu: #000000;
+@bg-menu-hover: #bbbbbb;
+
+// --- Markdown Reader ---
+@md-font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+@md-font-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+@md-bg: #ffffff;
+@md-text: #000000;
+@md-heading: #222222;
+@md-link: #0366d6;
+@md-quote: #666666;
+@md-border: #dddddd;
+@md-code-bg: rgba(27, 31, 35, 0.05);
+@md-pre-bg: #f6f8fa;
+@md-hr: #e1e4e8;
+@md-spacing-base: 1em;
+@md-spacing-large: 1.5em;
+@md-spacing-small: 0.5em;
+@md-paragraph-indent: 1em;
+
+// --- Tooltip ---
+@tt-bg: #e0450c;
+@tt-text: #ffffff;
+@tt-font: 20px "Arial", sans-serif;
+@tt-radius: 4px;
+@tt-shadow: 0 3px 6px #e2ca0e29;
+@tt-transition: 0.3s opacity;
+@border-width: 6px;
+
+// --- Sizing & Fonts ---
+@fsize-title: calc(20px + 5.9vh);
+@fsize-subtitle: calc(11px + 1vw);
+@fsize-menu-a: calc(8px + 0.9vw);
+@fsize-container: calc(8px + 0.9vw);
+@fsize-reader: calc(9px + 1vw);
+@fsize-wnd: calc(8px + 0.9vw);
+@fsize-btn: calc(10px + 0.9vw);
+@fsize-num: calc(10px + 1.1vw);
+@fsize-vers: calc(5px + 0.9vw);
+@fsize-msg: 5px;
+
+@fserif: Georigia, "Ties New Roman", serif;
+@fsans: arial, verdana, Helvetica, sans-serif;
+
+// --- Z-Indexes ---
+@zmwnu: 1;
+@zmenubox: 102;
+@zfullscreen: 101;
+@zbtn: 1;
+
+
+// ===================================================================
+// STYLES
+// ===================================================================
+
 // 1201px and more
 @media (max-width: 1200px) {
   div.container {
@@ -103,79 +185,10 @@
 .invert .tt-right::before,
 .invert .tt-bottom::before {
   filter: invert(100%);
-  // filter: invert(100%) hue-rotate(180deg);
 }
-
-// .invert .alert-dialog,
-// .invert .confirm-dialog,
-// // .invert .inv,
-// // .invert .item0,
-// .inver svg,
-// .invert img,
-// .invert video,
-// .invert iframe {
-//   filter: invert(100%);
-//   // filter: invert(100%) hue-rotate(180deg);
-// }
-
-@bg-base: #ffffff;
-@fg-base: #000000;
-@fg-nuanced: #696969;
-
-@fg-a: #000000;
-@bg-a-hover: #afafaf;
-
-@border: #999999;
-@bg-item0: #bababa;
-@bg-item1: #fafafa;
-// window
-@bg-wnd: #e6e6e6;
-@fg-wnd: #000000;
-// reader
-@bg-reader: #e6e6e6;
-@fg-reader: #000000;
-// menu
-@menu-icon: #000000;
-@bg-menu: #ffffff;
-@bg-menu-box: #e6e6e6;
-@menu-border: #a5a4a4;
-@fg-menu: #000000;
-@bg-menu-hover: #bbbbbb;
-
-// Dimensioni font (mantenute uguali)
-// AAA dimensioni tyitolo
-// @fsize-title: calc(20px + 5.5vw);
-@fsize-title: calc(20px + 5.9vh);
-@fsize-subtitle: calc(11px + 1vw);
-@fsize-menu-a: calc(8px + 0.9vw);
-@fsize-container: calc(8px + 0.9vw);
-@fsize-reader: calc(9px + 1vw); // AAA font articolo
-@fsize-wnd: calc(8px + 0.9vw);
-@fsize-btn: calc(10px + 0.9vw);
-@fsize-num: calc(10px + 1.1vw);
-@fsize-vers: calc(5px + 0.9vw);
-@fsize-msg: 5px;
-
-@fserif: Georigia, "Ties New Roman", serif;
-@fsans: arial, verdana, Helvetica, sans-serif;
-@zmwnu: 1;
-@zmenubox: 102;
-@zfullscreen: 101;
-@zbtn: 1;
-
-//dimesioni window
-// @menuu_h: 10vh;
-// @nwnu-boz-w: 20vw;
-// @menu-bix-h: 85vh;
-// @cont-w: 75vw;
-// @item0-h: 30vh;
-// @item1-h: 60vh;
-// @col-right-w: 25vw;
-// @col-right-h: 90vh;
 
 html {
   scrollbar-width: thin;
-  // scrollbar-color: #02d95b #ababab; /* Colore della barra di scorrimento e dello sfondo */
 }
 
 body {
@@ -191,9 +204,7 @@ body {
 //UA Menu
 .open-menu {
   .container {
-    // AAA scorrimento menu
     cursor: none;
-    // margin-left: 20vw !important;
   }
   .menu-box {
     left: 0 !important;
@@ -207,7 +218,6 @@ div.menu {
   top: 0;
   left: 0;
   width: 100vw;
-  //AAA height: 10vh;
   border-bottom: 1px solid #000000;
   height: 14.8vh;
   z-index: @zmwnu;
@@ -294,7 +304,6 @@ div.menu {
     }
   }
 
-  //UA titolo
   div.title {
     position: absolute;
     top: 0;
@@ -306,8 +315,6 @@ div.menu {
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 9px;
-    // background: red;
-    // border: 1px solid red;
     padding: 0;
     margin: 0;
   }
@@ -332,7 +339,6 @@ div.menu {
   }
 }
 
-//UA Bottoni tema
 .btn-theme {
   position: fixed;
   right: 6vw;
@@ -353,7 +359,6 @@ div.menu {
   }
 }
 
-// UA menu-box
 div.menu-box {
   z-index: @zmenubox;
   box-sizing: border-box;
@@ -387,7 +392,6 @@ div.menu-box {
 
     li {
       border-left: 1px solid @menu-border;
-      // border-right: 1px solid @menu-border;
       border-bottom: 1px solid @menu-border;
 
       a {
@@ -416,14 +420,12 @@ div.menu-box {
   }
 }
 
-// UA container
 div.container {
   box-sizing: border-box;
   position: absolute;
   top: 15vh;
   left: 0;
   width: 80vw;
-  // height: 90vh;
   height: 85vh;
   padding: 0;
   margin: 0;
@@ -447,30 +449,17 @@ div.container {
     margin: 0;
     height: 29vw;
     background: #958875;
-    @keyframes moveCloud3 {
-      0% {
-        left: 0px;
-      }
-      100% {
-        left: 100%;
-      }
-    }
     .img {
       display: block;
       margin: 0 auto;
       padding: 0;
       height: 100%;
-      // position: relative;
-      // top: 0;
-      // left: 0;
-      // animation: moveCloud3 18s linear infinite;
     }
   }
 
   div.item1 {
     box-sizing: border-box;
     background: transparent;
-    // border-top: 2px solid @border;
     flex-grow: 1;
     overflow-y: auto;
     .num {
@@ -535,7 +524,6 @@ div.container {
   }
 }
 
-// UA col-right
 div.col-right {
   box-sizing: border-box;
   position: absolute;
@@ -553,7 +541,6 @@ div.col-right {
   align-items: center;
   flex-wrap: nowrap;
   overflow-y: auto;
-  // background: red;
 
   div.item {
     margin: 0;
@@ -562,30 +549,23 @@ div.col-right {
     font-size: @fsize-container;
     color: @fg-base;
     background-color: @bg-base;
-    // background: yellowgreen;
   }
 
   div.item0 {
     background: @border;
-    // background: #03d67b;
     flex: 1;
     height: 19vw;
     width: 19vw;
     text-align: center;
-    // Aggiunta questa linea
-    // transition: all 0.5s ease-in-out;
     .img {
       padding: 0;
       margin: 0;
       width: 100%;
       height: 100%;
-      // Aggiunta questa linea
-      // transition: all 0.5s ease-in-out;
     }
   }
 }
 
-//UA Window
 .window-text {
   position: relative;
   top: 0;
@@ -603,8 +583,6 @@ div.col-right {
   overflow-x: auto;
   pre.pre-text {
     color: @fg-wnd;
-    // border: 1px solid red;
-    // white-space: pre-wrap;
     white-space: pre-line;
     word-wrap: break-word;
     font-family: @fserif;
@@ -614,7 +592,6 @@ div.col-right {
     padding-right: 5px;
     padding-left: 6px;
     margin: 0;
-    // margin-right: 5px;
     text-align: left;
     hr {
       margin: 0;
@@ -635,7 +612,6 @@ div.col-right {
     padding: 0 2px 0 2px;
     margin: 0;
   }
-  // help
   div.text {
     font-size: @fsize-wnd;
     font-weight: normal;
@@ -705,17 +681,12 @@ div.col-right {
   }
 }
 
-// AAA articolo
-// UA text-reader
 .text-reader {
   width: 100vw;
-  // AAA altezza text-reader
   height: 89.9vh;
   margin: 0;
   overflow: hidden;
   position: relative;
-  // border: 1px solid red;
-  // background: red;
 
   .toolbar {
     box-sizing: content-box;
@@ -740,7 +711,6 @@ div.col-right {
       margin-left: 2vw;
       margin-bottom: 2px !important;
       height: 100%;
-      // aspect-ratio: 1;
       border: none;
       background: none;
       color: @fg-menu;
@@ -750,89 +720,46 @@ div.col-right {
       }
     }
   }
-  //
-  @md-font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  @md-font-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  //
-  @md-bg: #ffffff;
-  @md-text: #000000;
-  @md-heading: #222222;
-  @md-link: #0366d6;
-  @md-quote: #666666;
-  @md-border: #dddddd;
-  @md-code-bg: rgba(27, 31, 35, 0.05);
-  @md-pre-bg: #f6f8fa;
-  @md-hr: #e1e4e8;
-  //
-  @md-spacing-base: 1em;
-  @md-spacing-large: 1.5em;
-  @md-spacing-small: 0.5em;
-  @md-paragraph-indent: 1em;
-  // XXX impaginazione articolo
+  
   .content {
     box-sizing: border-box;
-    // border: 2px solid red !important;
-    // height: calc(90vh - 3vh);
     height: 87vh;
     width: 100%;
-    // AAA window artioclo
     padding: 1vh 7vw 5vh 7vw;
     margin: 0 auto;
-    // XXX giustificazione articolo
     text-align: justify;
     letter-spacing: 0.015em;
     word-spacing: 0.05em;
-    // max-width: 190ch;
     overflow-y: auto;
     color: @md-text;
     background-color: @md-bg;
     line-height: 1.6;
     font-family: @md-font-base;
-    //AAA font articolo
     font-size: @fsize-reader;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h1, h2, h3, h4, h5, h6 {
       margin-top: @md-spacing-large;
       margin-bottom: @md-spacing-base;
       font-weight: 600;
       line-height: 1.25;
       color: @md-heading;
     }
-    h1 {
-      font-size: 2em;
-    }
-    h2 {
-      font-size: 1.5em;
-    }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
     h3 {
       padding: 5px 5px 5px 5px !important;
       font-size: 1.7em;
       text-align: center;
       margin: 0;
     }
-    h4 {
-      font-size: 1em;
-    }
-    h5 {
-      font-size: 0.875em;
-    }
-    h6 {
-      font-size: 0.85em;
-    }
+    h4 { font-size: 1em; }
+    h5 { font-size: 0.875em; }
+    h6 { font-size: 0.85em; }
     p {
       margin-top: 0;
-      // margin-bottom: 1px;
-      // XXX margine paragrafi articolo
       margin-bottom: 1vh;
       text-indent: @md-paragraph-indent;
-      // border: 1px solid darken(@md-bg, 20%);
     }
-    ul,
-    ol {
+    ul, ol {
       margin-bottom: @md-spacing-base;
       padding-left: 2em;
       li {
@@ -853,7 +780,6 @@ div.col-right {
       }
     }
 
-    // Code
     code {
       padding: 0.2em 0.4em;
       background-color: @md-code-bg;
@@ -879,7 +805,6 @@ div.col-right {
       }
     }
 
-    // Links
     a {
       color: @md-link;
       text-decoration: none;
@@ -889,21 +814,18 @@ div.col-right {
       }
     }
 
-    // Images
     img {
       max-width: 100%;
       height: auto;
       margin: @md-spacing-base 0;
     }
 
-    // Tables
     table {
       width: 100%;
       margin: @md-spacing-base 0;
       border-collapse: collapse;
 
-      th,
-      td {
+      th, td {
         padding: @md-spacing-small @md-spacing-base;
         border: 1px solid @md-border;
       }
@@ -922,7 +844,6 @@ div.col-right {
       }
     }
 
-    // Horizontal rule
     hr {
       height: 0.25em;
       padding: 0;
@@ -947,7 +868,6 @@ div.col-right {
   }
 }
 
-// UAconfig-pannel
 .panel-speak {
   box-sizing: border-box;
   transition: opacity 0.3s ease;
@@ -996,41 +916,10 @@ div.col-right {
   }
 }
 
-// TOOLTIP
-/*
-Regolare i valori di calc() per distanze diverse
-Aggiungere white-space: normal per tooltip multi-riga
-Modificare border-width per frecce più grandi/più piccole
-
-Nota importante: 
-Il sistema sfrutta l'attributo data-tooltip per il contenuto testuale,
-mantenendo HTML semantico e accessibile. 
-Per contenuti dinamici, basta modificare l'attributo via JavaScript.
-Esmpio:
-<span class="menu-h-box tt-right" data-tt="Open">
-  <span class="menu-h-inner"></span>
-</span>
-*/
-/* ========= VARIABILI LESS ========= */
-@tt-bg: #e0450c; // Colore di sfondo del tooltip
-@tt-text: #ffffff; // Colore testo del tooltip
-@tt-font: 20px "Arial", sans-serif; // Stile font
-@tt-radius: 4px; // Border-radius
-@tt-shadow: 0 3px 6px #e2ca0e29; // Ombra
-@tt-transition: 0.3s opacity; // Transizione
-@border-width: 6px;
-
-/* ========= BASE TOOLTIP ========= */
-.tt-top,
-.tt-bottom,
-.tt-left,
-.tt-right {
+.tt-top, .tt-bottom, .tt-left, .tt-right {
   position: relative;
-  // cursor: help;
   transition: 0.2s transform;
-  // Pseudo-elementi comuni
-  &::before,
-  &::after {
+  &::before, &::after {
     position: absolute;
     opacity: 0;
     pointer-events: none;
@@ -1038,65 +927,39 @@ Esmpio:
     transition: @tt-transition;
   }
 
-  // Testo del tooltip
   &::before {
     content: attr(data-tt);
     background: @tt-bg;
     color: @tt-text;
     font: @tt-font;
     font-weight: normal;
-    // padding: 8px 16px;
     padding: 4px 10px;
     border-radius: @tt-radius;
     box-shadow: @tt-shadow;
-    // border: 2px solid yellow;
     white-space: nowrap;
   }
 
-  // Freccia
-  // &::after {
-  //   content: "";
-  //   border: @border-width solid transparent;
-  // }
-
-  // Hover states
   &:hover {
-    &::before,
-    &::after {
+    &::before, &::after {
       opacity: 1;
     }
   }
 }
 
-/* ========= POSIZIONAMENTI ========= */
 .tt-top {
   &::before {
-    bottom: ~"calc(100% + 12px)"; // Posizionato sopra l'elemento di 12px
-    left: 50%; // Centrato orizzontalmente
-    transform: translateX(-50%); // Spostato indietro del 50% della sua larghezza
+    bottom: ~"calc(100% + 12px)";
+    left: 50%;
+    transform: translateX(-50%);
   }
-
-  // &::after {
-  //   border-top-color: @tt-bg; // Colore del bordo superiore per la freccia
-  //   bottom: ~"calc(100% + 0px)"; // Posizionato sopra l'elemento
-  //   left: 50%; // Centrato orizzontalmente
-  //   transform: translateX(-50%); // Spostato indietro del 50% della sua larghezza
-  // }
 }
 
 .tt-bottom {
   &::before {
-    top: ~"calc(100% + 12px)"; // Posizionato sotto l'elemento di 12px
-    left: 50%; // Centrato orizzontalmente
-    transform: translateX(-50%); // Spostato indietro del 50% della sua larghezza
+    top: ~"calc(100% + 12px)";
+    left: 50%;
+    transform: translateX(-50%);
   }
-
-  // &::after {
-  //   border-bottom-color: @tt-bg; // Colore del bordo inferiore per la freccia
-  //   top: ~"calc(100% + 0px)"; // Posizionato sotto l'elemento
-  //   left: 50%; // Centrato orizzontalmente
-  //   transform: translateX(-50%); // Spostato indietro del 50% della sua larghezza
-  // }
 }
 
 .tt-left {
@@ -1104,58 +967,13 @@ Esmpio:
     right: ~"calc(100% + 8px)";
     top: 80%;
     transform: translateY(20%);
-    // top: ~"calc(100% + 12px)";
-    // transform: translateY(-50%);
   }
-
-  // &::after {
-  //   border-left-color: @tt-bg;
-  //   right: ~"calc(100% + 0px)";
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  // }
 }
-
-// .tt-left {
-//   &::before {
-//     right: ~"calc(100% + 12px)"; // Posizionato a sinistra dell'elemento di 12px
-//     top: 50%; // Centrato verticalmente
-//     transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
-//   }
-
-//   &::after {
-//     border-left-color: @tt-bg; // Colore del bordo sinistro per la freccia
-//     right: ~"calc(100% + 0px)"; // Posizionato a sinistra dell'elemento
-//     top: 50%; // Centrato verticalmente
-//     transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
-//   }
-// }
 
 .tt-right {
   &::before {
-    left: ~"calc(100% + 12px)"; // Posizionato a destra dell'elemento di 12px
-    top: 50%; // Centrato verticalmente
-    transform: translateY(10%); // Spostato in alto del 50% della sua altezza
+    left: ~"calc(100% + 12px)";
+    top: 50%;
+    transform: translateY(10%);
   }
-  // &::after {
-  //   border-right-color: @tt-bg; // Colore del bordo destro per la freccia
-  //   left: ~"calc(100% + 0px)"; // Posizionato a destra dell'elemento
-  //   top: 50%; // Centrato verticalmente
-  //   transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
-  // }
 }
-
-// .tt-right {
-//   &::before {
-//     left: ~"calc(100% + 12px)"; // Posizionato a destra dell'elemento di 12px
-//     top: 50%; // Centrato verticalmente
-//     transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
-//   }
-
-//   &::after {
-//     border-right-color: @tt-bg; // Colore del bordo destro per la freccia
-//     left: ~"calc(100% + 0px)"; // Posizionato a destra dell'elemento
-//     top: 50%; // Centrato verticalmente
-//     transform: translateY(-50%); // Spostato in alto del 50% della sua altezza
-//   }
-// }
