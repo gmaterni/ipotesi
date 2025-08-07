@@ -4,52 +4,78 @@
 // VARIABLES
 // ===================================================================
 
-// --- Colors ---
-@bg-base: #ffffff;
-@fg-base: #000000;
-@fg-nuanced: #696969;
-@fg-a: #000000;
-@bg-a-hover: #afafaf;
-@border: #999999;
-@bg-item0: #bababa;
-@bg-item1: #fafafa;
+// --- Light Theme Colors ---
+@bg-base-light: #ffffff;
+@fg-base-light: #000000;
+@fg-nuanced-light: #696969;
+@fg-a-light: #000000;
+@bg-a-hover-light: #afafaf;
+@border-light: #999999;
+@bg-item0-light: #bababa;
+@bg-item1-light: #fafafa;
+@bg-wnd-light: #e6e6e6;
+@fg-wnd-light: #000000;
+@bg-reader-light: #e6e6e6;
+@fg-reader-light: #000000;
+@menu-icon-light: #000000;
+@bg-menu-light: #ffffff;
+@bg-menu-box-light: #e6e6e6;
+@menu-border-light: #a5a4a4;
+@fg-menu-light: #000000;
+@bg-menu-hover-light: #bbbbbb;
+@md-bg-light: #ffffff;
+@md-text-light: #000000;
+@md-heading-light: #222222;
+@md-link-light: #0366d6;
+@md-quote-light: #666666;
+@md-border-light: #dddddd;
+@md-code-bg-light: rgba(27, 31, 35, 0.05);
+@md-pre-bg-light: #f6f8fa;
+@md-hr-light: #e1e4e8;
+@tt-bg-light: #e0450c;
+@tt-text-light: #ffffff;
 
-// --- Window ---
-@bg-wnd: #e6e6e6;
-@fg-wnd: #000000;
+// --- Dark Theme Colors ---
+@bg-base-dark: #222222;
+@fg-base-dark: #dddddd;
+@fg-nuanced-dark: #aaaaaa;
+@fg-a-dark: #dddddd;
+@bg-a-hover-dark: #555555;
+@border-dark: #666666;
+@bg-item0-dark: #444444;
+@bg-item1-dark: #333333;
+@bg-wnd-dark: #3a3a3a;
+@fg-wnd-dark: #dddddd;
+@bg-reader-dark: #3a3a3a;
+@fg-reader-dark: #dddddd;
+@menu-icon-dark: #dddddd;
+@bg-menu-dark: #222222;
+@bg-menu-box-dark: #3a3a3a;
+@menu-border-dark: #777777;
+@fg-menu-dark: #dddddd;
+@bg-menu-hover-dark: #555555;
+@md-bg-dark: #333333;
+@md-text-dark: #dddddd;
+@md-heading-dark: #eeeeee;
+@md-link-dark: #58a6ff;
+@md-quote-dark: #bbbbbb;
+@md-border-dark: #555555;
+@md-code-bg-dark: rgba(200, 200, 200, 0.1);
+@md-pre-bg-dark: #2a2a2a;
+@md-hr-dark: #444444;
+@tt-bg-dark: #e0450c;
+@tt-text-dark: #ffffff;
 
-// --- Reader ---
-@bg-reader: #e6e6e6;
-@fg-reader: #000000;
-
-// --- Menu ---
-@menu-icon: #000000;
-@bg-menu: #ffffff;
-@bg-menu-box: #e6e6e6;
-@menu-border: #a5a4a4;
-@fg-menu: #000000;
-@bg-menu-hover: #bbbbbb;
 
 // --- Markdown Reader ---
 @md-font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 @md-font-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-@md-bg: #ffffff;
-@md-text: #000000;
-@md-heading: #222222;
-@md-link: #0366d6;
-@md-quote: #666666;
-@md-border: #dddddd;
-@md-code-bg: rgba(27, 31, 35, 0.05);
-@md-pre-bg: #f6f8fa;
-@md-hr: #e1e4e8;
 @md-spacing-base: 1em;
 @md-spacing-large: 1.5em;
 @md-spacing-small: 0.5em;
 @md-paragraph-indent: 1em;
 
 // --- Tooltip ---
-@tt-bg: #e0450c;
-@tt-text: #ffffff;
 @tt-font: 20px "Arial", sans-serif;
 @tt-radius: 4px;
 @tt-shadow: 0 3px 6px #e2ca0e29;
@@ -171,34 +197,24 @@
   }
 }
 
-.invert {
-  filter: invert(100%);
-  background-color: white;
-}
-
-.invert .item0 {
-  filter: invert(100%);
-}
-
-.invert .tt-top::before,
-.invert .tt-left::before,
-.invert .tt-right::before,
-.invert .tt-bottom::before {
-  filter: invert(100%);
-}
-
 html {
   scrollbar-width: thin;
 }
 
 body {
-  background: @bg-base;
-  color: @fg-base;
   min-height: 100vh;
   position: relative;
   padding: 0;
   margin: 0 auto;
   overflow-y: hidden;
+  &.theme-light {
+    background: @bg-base-light;
+    color: @fg-base-light;
+  }
+  &.theme-dark {
+    background: @bg-base-dark;
+    color: @fg-base-dark;
+  }
 }
 
 //UA Menu
@@ -213,15 +229,22 @@ body {
 
 div.menu {
   box-sizing: border-box;
-  background-color: @bg-menu-box;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  border-bottom: 1px solid #000000;
   height: 14.8vh;
   z-index: @zmwnu;
   caret-color: transparent;
+
+  .theme-light & {
+    background-color: @bg-menu-box-light;
+    border-bottom: 1px solid @border-light;
+  }
+  .theme-dark & {
+    background-color: @bg-menu-box-dark;
+    border-bottom: 1px solid @border-dark;
+  }
 
   .menu-h {
     box-sizing: border-box;
@@ -236,8 +259,11 @@ div.menu {
     padding: 0;
     margin: 0;
     outline: none;
-    &:hover {
-      background: @bg-menu-hover;
+    .theme-light &:hover {
+      background: @bg-menu-hover-light;
+    }
+    .theme-dark &:hover {
+      background: @bg-menu-hover-dark;
     }
     .menu-h-box {
       width: 25px;
@@ -251,7 +277,6 @@ div.menu {
       .menu-h-inner {
         width: 25px;
         height: 3px;
-        background: @fg-base !important;
         border-radius: 4px;
         position: absolute;
         transition-property: transform;
@@ -260,18 +285,29 @@ div.menu {
         top: 50%;
         margin-top: -2px;
         left: 0;
+        .theme-light & {
+          background: @fg-base-light !important;
+        }
+        .theme-dark & {
+          background: @fg-base-dark !important;
+        }
         &::before,
         &::after {
           content: "";
           display: block;
           width: 25px;
           height: 3px;
-          background: @fg-base !important;
           border-radius: 4px;
           position: absolute;
           transition-property: transform;
           transition-duration: 0.15s;
           transition-timing-function: ease;
+          .theme-light & {
+            background: @fg-base-light !important;
+          }
+          .theme-dark & {
+            background: @fg-base-dark !important;
+          }
         }
 
         &::before {
@@ -335,7 +371,12 @@ div.menu {
     right: 1vw;
     font-size: @fsize-vers;
     font-weight: bold;
-    color: @fg-base;
+    .theme-light & {
+      color: @fg-base-light;
+    }
+    .theme-dark & {
+      color: @fg-base-dark;
+    }
   }
 }
 
@@ -345,12 +386,17 @@ div.menu {
   top: 1vh;
   z-index: @zbtn;
   button {
-    color: @fg-base;
     border: none;
     background: none;
     cursor: pointer;
     padding: 5px;
     display: none;
+    .theme-light & {
+      color: @fg-base-light;
+    }
+    .theme-dark & {
+      color: @fg-base-dark;
+    }
     svg {
       width: 24px;
       height: 24px;
@@ -370,9 +416,6 @@ div.menu-box {
   padding: 0;
   padding-top: 10px;
   padding-left: 10px;
-  border-top: 2px solid @border;
-  border-right: 1px solid @menu-border;
-  background-color: @bg-menu-box;
   transition: left 0.5s ease;
   display: flex;
   flex-direction: column;
@@ -381,6 +424,16 @@ div.menu-box {
   align-items: stretch;
   overflow-y: auto;
   overflow-x: auto;
+  .theme-light & {
+    border-top: 2px solid @border-light;
+    border-right: 1px solid @menu-border-light;
+    background-color: @bg-menu-box-light;
+  }
+  .theme-dark & {
+    border-top: 2px solid @border-dark;
+    border-right: 1px solid @menu-border-dark;
+    background-color: @bg-menu-box-dark;
+  }
 
   ul {
     list-style: none;
@@ -388,14 +441,24 @@ div.menu-box {
     padding: 0;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid @menu-border;
+    .theme-light & {
+      border-top: 1px solid @menu-border-light;
+    }
+    .theme-dark & {
+      border-top: 1px solid @menu-border-dark;
+    }
 
     li {
-      border-left: 1px solid @menu-border;
-      border-bottom: 1px solid @menu-border;
+      .theme-light & {
+        border-left: 1px solid @menu-border-light;
+        border-bottom: 1px solid @menu-border-light;
+      }
+      .theme-dark & {
+        border-left: 1px solid @menu-border-dark;
+        border-bottom: 1px solid @menu-border-dark;
+      }
 
       a {
-        color: @fg-menu;
         font-size: @fsize-menu-a;
         font-weight: bold;
         display: block;
@@ -403,19 +466,35 @@ div.menu-box {
         padding: 10px 5px;
         text-align: left;
         text-decoration: none;
+        .theme-light & {
+          color: @fg-menu-light;
+        }
+        .theme-dark & {
+          color: @fg-menu-dark;
+        }
       }
 
       &:hover {
         text-decoration: underline;
-        background-color: @bg-menu-hover;
+        .theme-light & {
+          background-color: @bg-menu-hover-light;
+        }
+        .theme-dark & {
+          background-color: @bg-menu-hover-dark;
+        }
       }
     }
     li.msg {
       font-size: @fsize-msg !important;
       font-weight: normal;
-      color: @fg-base;
       padding-top: 10px;
       padding-bottom: 10px;
+      .theme-light & {
+        color: @fg-base-light;
+      }
+      .theme-dark & {
+        color: @fg-base-dark;
+      }
     }
   }
 }
@@ -441,7 +520,12 @@ div.container {
     margin: 0;
     padding: 0;
     font-size: @fsize-container;
-    color: @fg-base;
+    .theme-light & {
+      color: @fg-base-light;
+    }
+    .theme-dark & {
+      color: @fg-base-dark;
+    }
   }
 
   div.item0 {
@@ -466,13 +550,21 @@ div.container {
       width: 100%;
       display: inline-block;
       text-align: center;
-      border-top: 1px solid @border;
-      border-bottom: 1px solid @border;
       padding: 1vh 0 1vh 0;
-      color: @fg-menu;
-      background: @bg-menu;
       font-size: @fsize-num;
       font-weight: bold;
+      .theme-light & {
+        border-top: 1px solid @border-light;
+        border-bottom: 1px solid @border-light;
+        color: @fg-menu-light;
+        background: @bg-menu-light;
+      }
+      .theme-dark & {
+        border-top: 1px solid @border-dark;
+        border-bottom: 1px solid @border-dark;
+        color: @fg-menu-dark;
+        background: @bg-menu-dark;
+      }
     }
     .list {
       box-sizing: border-box;
@@ -482,16 +574,31 @@ div.container {
       .list-item {
         margin-bottom: 3vh;
         a {
-          color: @fg-a;
           text-decoration: none;
+          .theme-light & {
+            color: @fg-a-light;
+          }
+          .theme-dark & {
+            color: @fg-a-dark;
+          }
         }
         a:hover {
-          background: @bg-a-hover;
           text-decoration: underline;
+          .theme-light & {
+            background: @bg-a-hover-light;
+          }
+          .theme-dark & {
+            background: @bg-a-hover-dark;
+          }
         }
         p {
           margin: 5px 0 0 0;
-          color: @fg-base;
+          .theme-light & {
+            color: @fg-base-light;
+          }
+          .theme-dark & {
+            color: @fg-base-dark;
+          }
         }
         p.autore {
           font-style: italic;
@@ -500,16 +607,31 @@ div.container {
       .list-item2 {
         margin-bottom: 1.4vh;
         a {
-          color: @fg-a;
           text-decoration: none;
+          .theme-light & {
+            color: @fg-a-light;
+          }
+          .theme-dark & {
+            color: @fg-a-dark;
+          }
         }
         a:hover {
-          background: @bg-a-hover;
           text-decoration: underline;
+          .theme-light & {
+            background: @bg-a-hover-light;
+          }
+          .theme-dark & {
+            background: @bg-a-hover-dark;
+          }
         }
         p {
           margin: 5px 0 0 0;
-          color: @fg-base;
+          .theme-light & {
+            color: @fg-base-light;
+          }
+          .theme-dark & {
+            color: @fg-base-dark;
+          }
         }
         p.autore {
           font-style: italic;
@@ -547,16 +669,27 @@ div.col-right {
     padding: 0;
     margin-bottom: 5px;
     font-size: @fsize-container;
-    color: @fg-base;
-    background-color: @bg-base;
+    .theme-light & {
+      color: @fg-base-light;
+      background-color: @bg-base-light;
+    }
+    .theme-dark & {
+      color: @fg-base-dark;
+      background-color: @bg-base-dark;
+    }
   }
 
   div.item0 {
-    background: @border;
     flex: 1;
     height: 19vw;
     width: 19vw;
     text-align: center;
+    .theme-light & {
+      background: @border-light;
+    }
+    .theme-dark & {
+      background: @border-dark;
+    }
     .img {
       padding: 0;
       margin: 0;
@@ -570,19 +703,25 @@ div.col-right {
   position: relative;
   top: 0;
   left: 0;
-  background: @bg-wnd;
-  color: @fg-wnd;
   padding: 0 2px 2px 2px;
   width: 78vw;
   height: 90vh;
   border-radius: 10px;
   box-sizing: border-box;
   outline: none;
-  border: 1px solid @border;
   overflow-y: auto;
   overflow-x: auto;
+  .theme-light & {
+    background: @bg-wnd-light;
+    color: @fg-wnd-light;
+    border: 1px solid @border-light;
+  }
+  .theme-dark & {
+    background: @bg-wnd-dark;
+    color: @fg-wnd-dark;
+    border: 1px solid @border-dark;
+  }
   pre.pre-text {
-    color: @fg-wnd;
     white-space: pre-line;
     word-wrap: break-word;
     font-family: @fserif;
@@ -593,6 +732,12 @@ div.col-right {
     padding-left: 6px;
     margin: 0;
     text-align: left;
+    .theme-light & {
+      color: @fg-wnd-light;
+    }
+    .theme-dark & {
+      color: @fg-wnd-dark;
+    }
     hr {
       margin: 0;
       margin-top: 2vh;
@@ -605,12 +750,17 @@ div.col-right {
     }
   }
   div.div-text {
-    color: @fg-wnd;
     word-wrap: break-word;
     font-family: @fserif;
     font-size: @fsize-wnd;
     padding: 0 2px 0 2px;
     margin: 0;
+    .theme-light & {
+      color: @fg-wnd-light;
+    }
+    .theme-dark & {
+      color: @fg-wnd-dark;
+    }
   }
   div.text {
     font-size: @fsize-wnd;
@@ -624,14 +774,24 @@ div.col-right {
       font-weight: bold;
       text-decoration: underline;
       font-style: italic;
-      color: @fg-base;
+      .theme-light & {
+        color: @fg-base-light;
+      }
+      .theme-dark & {
+        color: @fg-base-dark;
+      }
     }
     .label {
       margin: 5px 0 5px 10px;
       font-size: @fsize-wnd;
       font-weight: bold;
       font-style: italic;
-      color: @fg-base;
+      .theme-light & {
+        color: @fg-base-light;
+      }
+      .theme-dark & {
+        color: @fg-base-dark;
+      }
     }
     div {
       font-family: @fserif;
@@ -658,11 +818,16 @@ div.col-right {
   position: sticky;
   top: 0;
   padding: 0;
-  background: @bg-item1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
+  .theme-light & {
+    background: @bg-item1-light;
+  }
+  .theme-dark & {
+    background: @bg-item1-dark;
+  }
 
   button {
     font-size: @fsize-btn;
@@ -672,11 +837,21 @@ div.col-right {
     aspect-ratio: 1;
     border: none;
     background-color: transparent;
-    color: @fg-menu;
     cursor: pointer;
     outline: none;
+    .theme-light & {
+      color: @fg-menu-light;
+    }
+    .theme-dark & {
+      color: @fg-menu-dark;
+    }
     &:hover {
-      background: @bg-menu-hover;
+      .theme-light & {
+        background: @bg-menu-hover-light;
+      }
+      .theme-dark & {
+        background: @bg-menu-hover-dark;
+      }
     }
   }
 }
@@ -690,20 +865,31 @@ div.col-right {
 
   .toolbar {
     box-sizing: content-box;
-    border: 1px solid @border;
     min-height: 2.5vh;
-    background-color: @bg-menu;
     padding: 0 10px 0 10px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    .theme-light & {
+      border: 1px solid @border-light;
+      background-color: @bg-menu-light;
+    }
+    .theme-dark & {
+      border: 1px solid @border-dark;
+      background-color: @bg-menu-dark;
+    }
     span {
       font-size: @fsize-btn;
       font-weight: bold;
-      color: @fg-nuanced !important;
       font-style: italic;
       margin-right: 5vw;
+      .theme-light & {
+        color: @fg-nuanced-light !important;
+      }
+      .theme-dark & {
+        color: @fg-nuanced-dark !important;
+      }
     }
     button {
       font-size: @fsize-btn;
@@ -713,10 +899,20 @@ div.col-right {
       height: 100%;
       border: none;
       background: none;
-      color: @fg-menu;
       cursor: pointer;
+      .theme-light & {
+        color: @fg-menu-light;
+      }
+      .theme-dark & {
+        color: @fg-menu-dark;
+      }
       &:hover {
-        background: @bg-menu-hover;
+        .theme-light & {
+          background: @bg-menu-hover-light;
+        }
+        .theme-dark & {
+          background: @bg-menu-hover-dark;
+        }
       }
     }
   }
@@ -731,17 +927,28 @@ div.col-right {
     letter-spacing: 0.015em;
     word-spacing: 0.05em;
     overflow-y: auto;
-    color: @md-text;
-    background-color: @md-bg;
     line-height: 1.6;
     font-family: @md-font-base;
     font-size: @fsize-reader;
+    .theme-light & {
+      color: @md-text-light;
+      background-color: @md-bg-light;
+    }
+    .theme-dark & {
+      color: @md-text-dark;
+      background-color: @md-bg-dark;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: @md-spacing-large;
       margin-bottom: @md-spacing-base;
       font-weight: 600;
       line-height: 1.25;
-      color: @md-heading;
+      .theme-light & {
+        color: @md-heading-light;
+      }
+      .theme-dark & {
+        color: @md-heading-dark;
+      }
     }
     h1 { font-size: 2em; }
     h2 { font-size: 1.5em; }
@@ -772,8 +979,14 @@ div.col-right {
     blockquote {
       margin: @md-spacing-base 0;
       padding: 0 @md-spacing-base;
-      color: @md-quote;
-      border-left: 0.25em solid @md-border;
+      .theme-light & {
+        color: @md-quote-light;
+        border-left: 0.25em solid @md-border-light;
+      }
+      .theme-dark & {
+        color: @md-quote-dark;
+        border-left: 0.25em solid @md-border-dark;
+      }
       p {
         margin: @md-spacing-small 0;
         text-indent: 0;
@@ -782,18 +995,28 @@ div.col-right {
 
     code {
       padding: 0.2em 0.4em;
-      background-color: @md-code-bg;
       border-radius: 3px;
       font-family: @md-font-code;
       font-size: 0.85em;
+      .theme-light & {
+        background-color: @md-code-bg-light;
+      }
+      .theme-dark & {
+        background-color: @md-code-bg-dark;
+      }
     }
 
     pre {
       margin: @md-spacing-base 0;
       padding: @md-spacing-base;
-      background-color: @md-pre-bg;
       border-radius: 3px;
       overflow: auto;
+      .theme-light & {
+        background-color: @md-pre-bg-light;
+      }
+      .theme-dark & {
+        background-color: @md-pre-bg-dark;
+      }
 
       code {
         padding: 0;
@@ -806,8 +1029,13 @@ div.col-right {
     }
 
     a {
-      color: @md-link;
       text-decoration: none;
+      .theme-light & {
+        color: @md-link-light;
+      }
+      .theme-dark & {
+        color: @md-link-dark;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -827,16 +1055,31 @@ div.col-right {
 
       th, td {
         padding: @md-spacing-small @md-spacing-base;
-        border: 1px solid @md-border;
+        .theme-light & {
+          border: 1px solid @md-border-light;
+        }
+        .theme-dark & {
+          border: 1px solid @md-border-dark;
+        }
       }
 
       th {
-        background-color: @md-pre-bg;
         font-weight: 600;
+        .theme-light & {
+          background-color: @md-pre-bg-light;
+        }
+        .theme-dark & {
+          background-color: @md-pre-bg-dark;
+        }
       }
 
       tr:nth-child(even) {
-        background-color: fadeout(@md-pre-bg, 50%);
+        .theme-light & {
+          background-color: fadeout(@md-pre-bg-light, 50%);
+        }
+        .theme-dark & {
+          background-color: fadeout(@md-pre-bg-dark, 50%);
+        }
       }
 
       p {
@@ -848,8 +1091,13 @@ div.col-right {
       height: 0.25em;
       padding: 0;
       margin: @md-spacing-large 0;
-      background-color: @md-hr;
       border: 0;
+      .theme-light & {
+        background-color: @md-hr-light;
+      }
+      .theme-dark & {
+        background-color: @md-hr-dark;
+      }
     }
   }
 
@@ -874,24 +1122,37 @@ div.col-right {
   width: 35vw;
   height: 25vh;
   transform: translate(-50%, -50%);
-  background-color: @bg-item0;
-  color: @fg-menu;
   padding: 2px;
   border-radius: 5px;
-  border: 3px solid @border;
   display: block;
   opacity: 1;
+  .theme-light & {
+    background-color: @bg-item0-light;
+    color: @fg-menu-light;
+    border: 3px solid @border-light;
+  }
+  .theme-dark & {
+    background-color: @bg-item0-dark;
+    color: @fg-menu-dark;
+    border: 3px solid @border-dark;
+  }
   .toolbar {
     box-sizing: content-box;
-    border: 1px solid @border;
     min-height: 1.5vh;
-    background-color: @bg-menu;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    .theme-light & {
+      border: 1px solid @border-light;
+      background-color: @bg-menu-light;
+    }
+    .theme-dark & {
+      border: 1px solid @border-dark;
+      background-color: @bg-menu-dark;
+    }
     button {
       font-size: @fsize-btn;
       padding: 0;
@@ -900,10 +1161,20 @@ div.col-right {
       height: 100%;
       border: none;
       background: none;
-      color: @fg-menu;
       cursor: pointer;
+      .theme-light & {
+        color: @fg-menu-light;
+      }
+      .theme-dark & {
+        color: @fg-menu-dark;
+      }
       &:hover {
-        background: @bg-menu-hover;
+        .theme-light & {
+          background: @bg-menu-hover-light;
+        }
+        .theme-dark & {
+          background: @bg-menu-hover-dark;
+        }
       }
     }
   }
@@ -929,14 +1200,20 @@ div.col-right {
 
   &::before {
     content: attr(data-tt);
-    background: @tt-bg;
-    color: @tt-text;
     font: @tt-font;
     font-weight: normal;
     padding: 4px 10px;
     border-radius: @tt-radius;
     box-shadow: @tt-shadow;
     white-space: nowrap;
+    .theme-light & {
+      background: @tt-bg-light;
+      color: @tt-text-light;
+    }
+    .theme-dark & {
+      background: @tt-bg-dark;
+      color: @tt-text-dark;
+    }
   }
 
   &:hover {

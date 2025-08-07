@@ -95,14 +95,12 @@ function getTheme() {
 }
 
 function setLight() {
-  document.documentElement.classList.toggle("invert");
   document.body.classList.remove("theme-dark");
   document.body.classList.add("theme-light");
-  localStorage.setItem("theme", "ligth");
+  localStorage.setItem("theme", "light");
 }
 
 function setDark() {
-  document.documentElement.classList.toggle("invert");
   document.body.classList.remove("theme-light");
   document.body.classList.add("theme-dark");
   localStorage.setItem("theme", "dark");
