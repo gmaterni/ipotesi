@@ -2,14 +2,22 @@
 
 "use strict";
 
+// const openApp = () => {
+//   setTimeout(() => {
+//     initMenu();
+//     wnds.init();
+//     getTheme();
+//     imageCarousel();
+//     showSommario();
+//   }, 100);
+// };
+
 const openApp = () => {
-  setTimeout(() => {
-    initMenu();
-    wnds.init();
-    getTheme();
-    imageCarousel();
-    showSommario();
-  }, 100);
+  initMenu();
+  wnds.init();
+  getTheme();
+  imageCarousel();
+  showSommario();
 };
 
 const opHome = (e) => {
@@ -151,5 +159,32 @@ const imageCarousel = () => {
   // AAA setInterval(rotateImages, 5000);
 };
 
-// Call the function to start the carousel
-// imageCarousel();
+document.addEventListener("DOMContentLoaded", () => {
+  const versionElement = document.getElementById("id_version");
+
+  const formatDateTime = () => {
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, "0");
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const year = now.getFullYear();
+    return `${day}-${month}-${year}`;
+  };
+
+  const updateDateTime = () => {
+    versionElement.textContent = formatDateTime();
+  };
+
+  const checkCache = () => {
+    const version = "v=1.025";
+    const today = new Date().toISOString().split("T")[0] + version;
+    const cachedDate = localStorage.getItem("appinfo");
+    if (cachedDate !== today) {
+      localStorage.setItem("appinfo", today);
+      console.log("***** Aggiornamento della cache", today);
+      window.location.reload(true);
+    }
+  };
+  checkCache();
+  updateDateTime();
+  openApp();
+});
