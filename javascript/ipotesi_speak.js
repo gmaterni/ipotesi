@@ -117,25 +117,48 @@ class TextToSpeech {
   }
 
   toggleReading() {
+    // #XXX
+    // Se la lettura è già in corso, la fermiamo.
     if (this.isReading) {
-      document.getElementById("readButton").innerText = "▶";
-      window.speechSynthesis.cancel();
-      this.isReading = false;
+      this.stopReading();
     } else {
-      document.getElementById("readButton").innerText = "⏸";
+      // Altrimenti, iniziamo la lettura.
+      const readButton = document.getElementById("readButton");
+      readButton.innerText = "⏸"; // Aggiorniamo l'icona del pulsante a "pausa".
+      this.isReading = true; // Impostiamo lo stato di lettura a "in corso".
+
+      // Carichiamo le impostazioni vocali (volume, tono, velocità).
       const js = this.loadSettings();
+      // Puliamo il testo da leggere da tag HTML e altri caratteri non necessari.
       const text = this.cleanupText(textCurrent);
+      // Creiamo un nuovo oggetto per la sintesi vocale.
       const ssu = new SpeechSynthesisUtterance(text);
+
+      // Applichiamo le impostazioni all'oggetto di sintesi vocale.
       ssu.volume = js.amplitude;
       ssu.rate = js.speed;
       ssu.pitch = js.pitch;
-      ssu.lang = "it-IT";
-      // ssu.lang = "fr-FR";
-      // ssu.lang = "en-GB";
-      // ssu.lang = "de-DE";
-      // ssu.lang = "es-ES";
+      ssu.lang = "it-IT"; // Impostiamo la lingua.
+
+      // Definiamo una funzione per resettare lo stato dell'interfaccia.
+      const resetState = () => {
+        this.isReading = false;
+        readButton.innerText = "▶"; // Reimpostiamo l'icona del pulsante a "play".
+      };
+
+      // Assegniamo la funzione `resetState` all'evento `onend`.
+      // Questo evento viene chiamato automaticamente quando la sintesi vocale termina.
+      ssu.onend = resetState;
+
+      // Assegniamo una funzione di gestione all'evento `onerror`.
+      // Questo evento viene chiamato se si verifica un errore durante la sintesi.
+      ssu.onerror = (event) => {
+        console.error("Errore nella sintesi vocale:", event.error);
+        resetState(); // Resettiamo lo stato anche in caso di errore.
+      };
+
+      // Avviamo la sintesi vocale.
       window.speechSynthesis.speak(ssu);
-      this.isReading = true;
     }
   }
 

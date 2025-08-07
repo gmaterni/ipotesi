@@ -11,10 +11,9 @@
         <title>IPOTESI</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2h1v20h-1z'/><path d='M9 5h6v1H9zM9 18h6v1H9z'/></svg>">
 
-        <link rel="stylesheet" href="css/ipotesi.min.css" />
-        <script src="js/ipotesi.min.js" defer></script>
+        <!-- <link rel="stylesheet" href="css/ipotesi.min.css" />
+        <script src="js/ipotesi.min.js" defer></script> -->
 
-        <!-- <link rel="stylesheet" href="less/normalize.css">
         <link rel="stylesheet/less" type="text/css" href="less/ipotesi.less" />
         <script src="less/less.js"></script>
         <script src="javascript/ipotesi.js"></script>
@@ -24,7 +23,7 @@
         <script src="javascript/ipotesi_speak.js"></script>
         <script src="javascript/uadrag.js"></script>
         <script src="javascript/uawindow.js"></script>
-        <script src="javascript/uajtfh.js"></script> -->
+        <script src="javascript/uajtfh.js"></script>
 
     </head>
 
@@ -126,10 +125,7 @@
                     const day = String(now.getDate()).padStart(2, '0');
                     const month = String(now.getMonth() + 1).padStart(2, '0');
                     const year = now.getFullYear();
-                    const hours = String(now.getHours()).padStart(2, '0');
-                    const minutes = String(now.getMinutes()).padStart(2, '0');
-                    const seconds = String(now.getSeconds()).padStart(2, '0');
-                    return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+                    return `${day}-${month}-${year}`;
                 };
 
                 const updateDateTime = () => {
@@ -137,7 +133,7 @@
                 };
 
                 const checkCache = () => {
-                    const version = "v=1.024"
+                    const version = "v=1.025"
                     const today = new Date().toISOString().split('T')[0] + version;
                     const cachedDate = localStorage.getItem('appinfo');
                     if (cachedDate !== today) {
@@ -148,7 +144,6 @@
                 };
                 checkCache();
                 updateDateTime();
-                setInterval(updateDateTime, 1000);
                 openApp();
             });
 
