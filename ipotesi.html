@@ -12,7 +12,7 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2h1v20h-1z'/><path d='M9 5h6v1H9zM9 18h6v1H9z'/></svg>">
 
         <link rel="stylesheet" href="css/ipotesi.min.css" />
-        <script src="js/ipotesi.min.js"></script>
+        <script src="js/ipotesi.min.js" defer></script>
 
         <!-- <link rel="stylesheet" href="less/normalize.css">
         <link rel="stylesheet/less" type="text/css" href="less/ipotesi.less" />
@@ -138,7 +138,6 @@
 
                 const checkCache = () => {
                     const version = "v=1.024"
-                    // const today = new Date().toISOString().split('T')[0];
                     const today = new Date().toISOString().split('T')[0] + version;
                     const cachedDate = localStorage.getItem('appinfo');
                     if (cachedDate !== today) {
