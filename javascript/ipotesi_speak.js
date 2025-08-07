@@ -1,8 +1,8 @@
 /** @format */
 "use strict";
 
-function toggleReading() {
-  tts.toggleReading();
+function toggleReading(text) {
+  tts.toggleReading(text);
 }
 
 function stopReading() {
@@ -113,29 +113,29 @@ class TextToSpeech {
 
   stopReading() {
     if (this.isReading) {
-      document.getElementById("readButton").innerText = "▶";
+      document.getElementById("btn-toggle-reading").innerText = "▶";
       window.speechSynthesis.cancel();
       this.isReading = false;
     }
   }
 
-  toggleReading() {
+  toggleReading(text) {
     // #XXX
     // Se la lettura è già in corso, la fermiamo.
     if (this.isReading) {
       this.stopReading();
     } else {
       // Altrimenti, iniziamo la lettura.
-      const readButton = document.getElementById("readButton");
+      const readButton = document.getElementById("btn-toggle-reading");
       readButton.innerText = "⏸"; // Aggiorniamo l'icona del pulsante a "pausa".
       this.isReading = true; // Impostiamo lo stato di lettura a "in corso".
 
       // Carichiamo le impostazioni vocali (volume, tono, velocità).
       const js = this.loadSettings();
       // Puliamo il testo da leggere da tag HTML e altri caratteri non necessari.
-      const text = this.cleanupText(textCurrent);
+      const cleanedText = this.cleanupText(text);
       // Creiamo un nuovo oggetto per la sintesi vocale.
-      const ssu = new SpeechSynthesisUtterance(text);
+      const ssu = new SpeechSynthesisUtterance(cleanedText);
 
       // Applichiamo le impostazioni all'oggetto di sintesi vocale.
       ssu.volume = js.amplitude;

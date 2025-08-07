@@ -31,7 +31,7 @@ const WndDiv = (id) => {
       this.w.close();
     },
     open(url) {
-      fetchText(url, (s) => this.show(s));
+      HttpService.fetchText(url, (s) => this.show(s));
     },
   };
 };
@@ -64,7 +64,7 @@ const showSommario = function () {
     item1.innerHTML = h;
   };
   const url = "./data/indice.html";
-  fetchText(url, fn);
+  HttpService.fetchText(url, fn);
 };
 
 const showIndici = function () {
@@ -73,5 +73,5 @@ const showIndici = function () {
     item1.innerHTML = h;
   };
   const url = "./data/archivio.html";
-  fetchText(url, fn);
+  HttpService.fetchText(url, fn);
 };

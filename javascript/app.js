@@ -20,59 +20,7 @@ const openApp = () => {
   showSommario();
 };
 
-const opHome = (e) => {
-  showSommario();
-  toggleMenu();
-  UaWindowAdm.closeAll();
-};
 
-const opArchivio = (e) => {
-  showIndici();
-  toggleMenu();
-  UaWindowAdm.closeAll();
-};
-
-const opHelp = () => {
-  toggleMenu();
-  UaWindowAdm.closeAll();
-  wnds.wdiv.open("./html/help0.html");
-};
-
-const opNews = (e) => {
-  toggleMenu();
-  UaWindowAdm.closeAll();
-  wnds.wdiv.open("./html/help1.html");
-};
-
-const opRedazione = (e) => {
-  toggleMenu();
-  UaWindowAdm.closeAll();
-  wnds.wdiv.open("./html/redazione.html");
-  // wnds.wdiv.open("./html/redazione_0.html");
-};
-
-const opCollaboatori = (e) => {
-  toggleMenu();
-  UaWindowAdm.closeAll();
-  wnds.wdiv.open("./html/collaboratori.html");
-};
-
-const opIPOTESI = (e) => {
-  alert("IPOTESI");
-};
-
-const opIPubblicita = (e) => {
-  alert("pubblicita");
-  // imageCarousel();
-};
-
-const op9 = async (e) => {
-  alert("op0");
-};
-
-const op10 = async (e) => {
-  alert("op10");
-};
 
 ////////////////////////////
 
@@ -105,22 +53,7 @@ const toggleMenu = () => {
   else menu_hb.setAttribute("data-tt", "Open");
 };
 
-const getTheme = () => {
-  const t = localStorage.getItem("theme");
-  if (!!t && t == "dark") setDark();
-};
 
-const setLight = () => {
-  document.body.classList.remove("theme-dark");
-  document.body.classList.add("theme-light");
-  localStorage.setItem("theme", "light");
-};
-
-const setDark = () => {
-  document.body.classList.remove("theme-light");
-  document.body.classList.add("theme-dark");
-  localStorage.setItem("theme", "dark");
-};
 
 const invertColors = () => {
   const elements = document.querySelectorAll("*");
@@ -129,21 +62,7 @@ const invertColors = () => {
   });
 };
 
-const enableEsc = (event) => {
-  document.addEventListener("keydown", cmdEsc);
-  if (!event) return;
-  if (event.key === "Escape" || event.keyCode === 27) {
-    cmdEsc();
-  }
-};
 
-const disableEsc = (event) => {
-  document.removeEventListener("keydown", cmdEsc);
-};
-
-const cmdEsc = () => {
-  closeReader();
-};
 // //////////////
 
 const imageCarousel = () => {
