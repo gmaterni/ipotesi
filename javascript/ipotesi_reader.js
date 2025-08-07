@@ -14,13 +14,13 @@ const fh = (txt) => {
         <div class="text-reader" id="reader">
             <div class="toolbar">
                 <span>chiudi:(Esc)</span>
-                <button class="tt-bottom" data-tt="Apri pagina PDF"  onclick="readPDF()">PDF</button>
-                <button class="tt-bottom" data-tt="Configura lettore "id="configButton" onclick="toggleSpeak()">⚙️</button>
-                <button class="tt-bottom" data-tt="Start/Sop lettore" id="readButton" onclick="toggleReading()">▶</button>
-                <button class="tt-bottom" data-tt="Font +" onclick="increaseFontSize()">A+</button>
-                <button class="tt-bottom" data-tt="Font -" onclick="decreaseFontSize()">A-</button>
-                <button class="tt-left" data-tt="Apri/Chiudi Schermo Intero" onclick="openFullscreen()">⛶</button>
-                <button class="tt-left" data-tt="Chiudi" onclick="closeReader()">X</button>
+                <button id="btn-read-pdf" class="tt-bottom" data-tt="Apri pagina PDF">PDF</button>
+                <button id="btn-toggle-speak" class="tt-bottom" data-tt="Configura lettore">⚙️</button>
+                <button id="btn-toggle-reading" class="tt-bottom" data-tt="Start/Sop lettore">▶</button>
+                <button id="btn-increase-font" class="tt-bottom" data-tt="Font +">A+</button>
+                <button id="btn-decrease-font" class="tt-bottom" data-tt="Font -">A-</button>
+                <button id="btn-fullscreen" class="tt-left" data-tt="Apri/Chiudi Schermo Intero">⛶</button>
+                <button id="btn-close-reader" class="tt-left" data-tt="Chiudi">X</button>
             </div>
             <div class="content" id="content">
             ${txt}
@@ -33,7 +33,7 @@ const showReader = (text) => {
   textCurrent = text;
   // console.log(text);
   const s = text;
-  h = fh(s);
+  const h = fh(s);
   const w = UaWindowAdm.create("id_reader");
   w.setZ(12);
   // AAA posizione reader in v e h
@@ -41,6 +41,14 @@ const showReader = (text) => {
   w.setHtml(h);
   w.show();
   defaultFontSize();
+
+  document.getElementById("btn-read-pdf").addEventListener("click", readPDF);
+  document.getElementById("btn-toggle-speak").addEventListener("click", toggleSpeak);
+  document.getElementById("btn-toggle-reading").addEventListener("click", toggleReading);
+  document.getElementById("btn-increase-font").addEventListener("click", increaseFontSize);
+  document.getElementById("btn-decrease-font").addEventListener("click", decreaseFontSize);
+  document.getElementById("btn-fullscreen").addEventListener("click", openFullscreen);
+  document.getElementById("btn-close-reader").addEventListener("click", closeReader);
 };
 
 function openReader(url) {

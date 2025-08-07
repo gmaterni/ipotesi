@@ -33,8 +33,8 @@ class TextToSpeech {
       return `
       <div id="configPanel" class="panel-speak">
       <div class="toolbar">
-        <button  onclick="saveSpeak()">Salva</button>
-        <button  onclick="closeSpeak()">X</button>
+        <button id="btn-save-speak">Salva</button>
+        <button id="btn-close-speak">X</button>
       </div>
       <div id="id_voices">
         <p>Volume:<input type="range" name="amplitude" min="0" max="1" step="0.1" value="1"></p>
@@ -56,6 +56,9 @@ class TextToSpeech {
     w.drag();
     this.setSpeak();
     this.panel = true;
+
+    document.getElementById("btn-save-speak").addEventListener("click", saveSpeak);
+    document.getElementById("btn-close-speak").addEventListener("click", closeSpeak);
   }
 
   closeSpeak() {

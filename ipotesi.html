@@ -16,7 +16,7 @@
 
         <link rel="stylesheet/less" type="text/css" href="less/ipotesi.less" />
         <script src="less/less.js"></script>
-        <script src="javascript/ipotesi.js"></script>
+        <script src="javascript/app.js"></script>
         <script src="javascript/ipotesi_ui.js"></script>
         <script src="javascript/ipotesi_http.js"></script>
         <script src="javascript/ipotesi_reader.js"></script>
@@ -43,13 +43,13 @@
         <!--  -->
         <div class="btn-theme">
 
-            <button class="btn-dark tt-left " data-tt="Tema scuro" onclick="setDark()">
+            <button id="btn-dark-theme" class="btn-dark tt-left " data-tt="Tema scuro">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                 </svg>
             </button>
 
-            <button class="btn-light tt-left" data-tt="Tema charo" onclick="setLight()">
+            <button id="btn-light-theme" class="btn-light tt-left" data-tt="Tema charo">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="5" />
                     <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
@@ -60,14 +60,14 @@
         <div class="menu-box">
             <ul>
                 <li class="msg">ipotesi2000@gmail.com</li>
-                <li><a href="#" onCLick="opHelp();">Help</a></li>
-                <li><a href="#" onCLick="opHome();">Home</a></li>
-                <li><a href="#" onCLick="opArchivio();">Archivio</a></li>
-                <!-- <li><a href="#" onCLick="opNews();">News</a></li> -->
-                <li><a href="#" onCLick="opRedazione();">Redazione</a></li>
-                <li><a href="#" onCLick="opCollaboatori();">Collaboratori</a></li>
-                <!-- <li><a href="#" onCLick="opIPOTESI();">IPOTESI</a></li> -->
-                <!-- <li><a href="#" onCLick="opIPubblicita();">Pubblicità</a></li> -->
+                <li><a href="#" id="btn-help">Help</a></li>
+                <li><a href="#" id="btn-home">Home</a></li>
+                <li><a href="#" id="btn-archivio">Archivio</a></li>
+                <!-- <li><a href="#" id="btn-news">News</a></li> -->
+                <li><a href="#" id="btn-redazione">Redazione</a></li>
+                <li><a href="#" id="btn-collaboratori">Collaboratori</a></li>
+                <!-- <li><a href="#" id="btn-ipotesi">IPOTESI</a></li> -->
+                <!-- <li><a href="#" id="btn-pubblicita">Pubblicità</a></li> -->
             </ul>
         </div>
 

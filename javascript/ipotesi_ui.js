@@ -11,7 +11,7 @@ const WndDiv = (id) => {
         return `
 <div class="window-text">
 <div class="btn-wrapper">
-<button  class="tt-left" data-tt="chiudi" onclick="UaWindowAdm.closeThis(this)">X</button>
+<button id="btn-close-wnd" class="tt-left" data-tt="chiudi">X</button>
 </div>
 <div class="div-text">${txt}</div>
 </div>
@@ -24,6 +24,8 @@ const WndDiv = (id) => {
       this.w.vw_vh().setXY(0, 10, -1);
       this.w.setHtml(h);
       this.w.show();
+
+      document.getElementById("btn-close-wnd").addEventListener("click", () => UaWindowAdm.closeThis(this.w.getElement()));
     },
     close() {
       this.w.close();

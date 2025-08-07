@@ -2,7 +2,7 @@
 
 "use strict";
 
-function openApp() {
+const openApp = () => {
   setTimeout(() => {
     initMenu();
     wnds.init();
@@ -10,65 +10,65 @@ function openApp() {
     imageCarousel();
     showSommario();
   }, 100);
-}
+};
 
-const opHome = function (e) {
+const opHome = (e) => {
   showSommario();
   toggleMenu();
   UaWindowAdm.closeAll();
 };
 
-const opArchivio = function (e) {
+const opArchivio = (e) => {
   showIndici();
   toggleMenu();
   UaWindowAdm.closeAll();
 };
 
-const opHelp = function () {
+const opHelp = () => {
   toggleMenu();
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/help0.html");
 };
 
-const opNews = function (e) {
+const opNews = (e) => {
   toggleMenu();
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/help1.html");
 };
 
-const opRedazione = function (e) {
+const opRedazione = (e) => {
   toggleMenu();
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/redazione.html");
   // wnds.wdiv.open("./html/redazione_0.html");
 };
 
-const opCollaboatori = function (e) {
+const opCollaboatori = (e) => {
   toggleMenu();
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/collaboratori.html");
 };
 
-const opIPOTESI = function (e) {
+const opIPOTESI = (e) => {
   alert("IPOTESI");
 };
 
-const opIPubblicita = function (e) {
+const opIPubblicita = (e) => {
   alert("pubblicita");
   // imageCarousel();
 };
 
-const op9 = async function (e) {
+const op9 = async (e) => {
   alert("op0");
 };
 
-const op10 = async function (e) {
+const op10 = async (e) => {
   alert("op10");
 };
 
 ////////////////////////////
 
-function initMenu() {
+const initMenu = () => {
   document.body.classList.add("theme-light");
   const menu_h = document.querySelector(".menu-h");
   menu_h.addEventListener("click", toggleMenu);
@@ -77,9 +77,17 @@ function initMenu() {
       toggleMenu();
     }
   });
-}
 
-function toggleMenu() {
+  document.getElementById("btn-dark-theme").addEventListener("click", setDark);
+  document.getElementById("btn-light-theme").addEventListener("click", setLight);
+  document.getElementById("btn-help").addEventListener("click", opHelp);
+  document.getElementById("btn-home").addEventListener("click", opHome);
+  document.getElementById("btn-archivio").addEventListener("click", opArchivio);
+  document.getElementById("btn-redazione").addEventListener("click", opRedazione);
+  document.getElementById("btn-collaboratori").addEventListener("click", opCollaboatori);
+};
+
+const toggleMenu = () => {
   const menu_h = document.querySelector(".menu-h");
   menu_h.classList.toggle("active");
   document.body.classList.toggle("open-menu");
@@ -87,47 +95,47 @@ function toggleMenu() {
   const menu_hb = document.querySelector(".menu-h-box");
   if (menu_h.classList.contains("active")) menu_hb.setAttribute("data-tt", "Close");
   else menu_hb.setAttribute("data-tt", "Open");
-}
+};
 
-function getTheme() {
+const getTheme = () => {
   const t = localStorage.getItem("theme");
   if (!!t && t == "dark") setDark();
-}
+};
 
-function setLight() {
+const setLight = () => {
   document.body.classList.remove("theme-dark");
   document.body.classList.add("theme-light");
   localStorage.setItem("theme", "light");
-}
+};
 
-function setDark() {
+const setDark = () => {
   document.body.classList.remove("theme-light");
   document.body.classList.add("theme-dark");
   localStorage.setItem("theme", "dark");
-}
+};
 
-function invertColors() {
+const invertColors = () => {
   const elements = document.querySelectorAll("*");
   elements.forEach((element) => {
     element.classList.add("invert-colors");
   });
-}
+};
 
-function enableEsc(event) {
+const enableEsc = (event) => {
   document.addEventListener("keydown", cmdEsc);
   if (!event) return;
   if (event.key === "Escape" || event.keyCode === 27) {
     cmdEsc();
   }
-}
+};
 
-function disableEsc(event) {
+const disableEsc = (event) => {
   document.removeEventListener("keydown", cmdEsc);
-}
+};
 
-function cmdEsc() {
+const cmdEsc = () => {
   closeReader();
-}
+};
 // //////////////
 
 const imageCarousel = () => {
