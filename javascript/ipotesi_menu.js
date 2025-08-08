@@ -24,17 +24,17 @@ export const opHelp = () => {
   wnds.wdiv.open("./html/help0.html");
 };
 
-const opNews = (e) => {
-  toggleMenu();
-  UaWindowAdm.closeAll();
-  wnds.wdiv.open("./html/help1.html");
-};
+// AAA news
+// const opNews = () => {
+//   toggleMenu();
+//   UaWindowAdm.closeAll();
+//   wnds.wdiv.open("./html/help1.html");
+// };
 
 export const opRedazione = () => {
   toggleMenu();
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/redazione.html");
-  // wnds.wdiv.open("./html/redazione_0.html");
 };
 
 export const opCollaboatori = (e) => {
@@ -47,15 +47,16 @@ export const opIPOTESI = (e) => {
   alert("IPOTESI");
 };
 
-const opIPubblicita = (e) => {
-  alert("pubblicita");
-  // imageCarousel();
-};
+// AAA opIPubblicita
+// const opIPubblicita = (e) => {
+//   alert("pubblicita");
+//   // imageCarousel();
+// };
 
-export const op9 = async (e) => {
-  alert("op0");
-};
+// export const op9 = async (e) => {
+//   alert("op0");
+// };
 
-export const op10 = async (e) => {
-  alert("op10");
-};
+// export const op10 = async (e) => {
+//   alert("op10");
+// };

@@ -69,12 +69,12 @@ export const toggleMenu = () => {
   }
 };
 
-const invertColors = () => {
-  const elements = document.querySelectorAll("*");
-  elements.forEach((element) => {
-    element.classList.add("invert-colors");
-  });
-};
+// AAA const invertColors = () => {
+//   const elements = document.querySelectorAll("*");
+//   elements.forEach((element) => {
+//     element.classList.add("invert-colors");
+//   });
+// };
 
 // //////////////
 
