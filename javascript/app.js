@@ -4,12 +4,9 @@ import { getTheme, setLight, setDark } from "./ipotesi_theme.js";
 import { opHome, opArchivio, opHelp, opRedazione, opCollaboatori } from "./ipotesi_menu.js";
 import { wnds, showSommario } from "./ipotesi_ui.js";
 // import { reader } from './ipotesi_reader.js';
+// import { reader } from './ipotesi_reader.js';
 
-import { reader } from './ipotesi_reader.js';
-
-/** @format */
-
-"use strict";
+("use strict");
 
 const openApp = () => {
   initMenu();

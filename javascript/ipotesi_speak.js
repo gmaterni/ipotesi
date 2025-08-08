@@ -23,19 +23,25 @@ class TextToSpeech {
         </div>
         <div id="id_voices">
           <div class="voice-row">
-            <label>Volume (0-1):</label>
-            <input type="range" min="0" max="1" step="0.1" value="${js.amplitude}" name="amplitude" />
-            <span>${js.amplitude}</span>
+            <label for="amplitude">Volume</label>
+            <div>
+              <input type="range" min="0" max="1" step="0.1" value="${js.amplitude}" name="amplitude" id="amplitude" />
+              <span>${js.amplitude}</span>
+            </div>
           </div>
           <div class="voice-row">
-            <label>Tono (0-2):</label>
-            <input type="range" min="0" max="2" step="0.1" value="${js.pitch}" name="pitch" />
-            <span>${js.pitch}</span>
+            <label for="pitch">Tono</label>
+            <div>
+              <input type="range" min="0" max="2" step="0.1" value="${js.pitch}" name="pitch" id="pitch" />
+              <span>${js.pitch}</span>
+            </div>
           </div>
           <div class="voice-row">
-            <label>Velocità (0.1-2):</label>
-            <input type="range" min="0.1" max="2" step="0.1" value="${js.speed}" name="speed" />
-            <span>${js.speed}</span>
+            <label for="speed">Velocità</label>
+            <div>
+              <input type="range" min="0.1" max="2" step="0.1" value="${js.speed}" name="speed" id="speed" />
+              <span>${js.speed}</span>
+            </div>
           </div>
         </div>
       </div>
