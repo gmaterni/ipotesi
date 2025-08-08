@@ -59,13 +59,10 @@ export const toggleMenu = () => {
   menu_h.classList.toggle("active");
   document.body.classList.toggle("open-menu");
 
-  const menu_hb = document.querySelector(".menu-h-box");
-  if (menu_hb) {
-    if (menu_h.classList.contains("active")) {
-      menu_hb.setAttribute("data-tt", "Close");
-    } else {
-      menu_hb.setAttribute("data-tt", "Open");
-    }
+  if (menu_h.classList.contains("active")) {
+    menu_h.setAttribute("data-tt", "Close");
+  } else {
+    menu_h.setAttribute("data-tt", "Open");
   }
 };
 
