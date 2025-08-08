@@ -1,5 +1,6 @@
-import { UaWindowAdm } from './uawindow.js';
-import { HttpService } from './ipotesi_http.js';
+import { UaWindowAdm } from "./uawindow.js";
+import { HttpService } from "./ipotesi_http.js";
+import { reader } from "./ipotesi_reader.js";
 
 /** @format */
 
@@ -28,7 +29,10 @@ const WndDiv = (id) => {
       this.w.setHtml(h);
       this.w.show();
 
-      document.getElementById("btn-close-wnd").addEventListener("click", () => UaWindowAdm.closeThis(this.w.getElement()));
+      const btnClose = document.getElementById("btn-close-wnd");
+      if (btnClose) {
+        btnClose.addEventListener("click", () => UaWindowAdm.closeThis(this.w.getElement()));
+      }
     },
     close() {
       this.w.close();
@@ -52,29 +56,39 @@ export const wnds = {
   },
 };
 
-// const sortSchede = (json) => {
-//   json.schede.sort((a, b) => {
-//     const idA = parseInt(a.id, 10);
-//     const idB = parseInt(b.id, 10);
-//     return idA - idB;
-//   });
-//   return json;
-// };
+const handleContentClick = (event) => {
+  const anchor = event.target.closest("a[data-url]");
+  if (anchor) {
+    event.preventDefault();
+    const url = anchor.dataset.url;
+    if (url) {
+      reader.openReader(url);
+    }
+  }
+};
+
+const loadContent = (url, element) => {
+  if (!element) return;
+  const fn = (html) => {
+    element.innerHTML = html;
+  };
+  HttpService.fetchText(url, fn);
+};
 
 export const showSommario = function () {
   const item1 = document.getElementById("id_item1");
-  const fn = (h) => {
-    item1.innerHTML = h;
-  };
-  const url = "./data/indice.html";
-  HttpService.fetchText(url, fn);
+  if (item1) {
+    item1.removeEventListener("click", handleContentClick); // Rimuovi listener precedente se esiste
+    item1.addEventListener("click", handleContentClick);
+    loadContent("./data/indice.html", item1);
+  }
 };
 
 export const showIndici = function () {
   const item1 = document.getElementById("id_item1");
-  const fn = (h) => {
-    item1.innerHTML = h;
-  };
-  const url = "./data/archivio.html";
-  HttpService.fetchText(url, fn);
+  if (item1) {
+    item1.removeEventListener("click", handleContentClick); // Rimuovi listener precedente se esiste
+    item1.addEventListener("click", handleContentClick);
+    loadContent("./data/archivio.html", item1);
+  }
 };

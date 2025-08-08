@@ -11,8 +11,6 @@ import { reader } from './ipotesi_reader.js';
 
 "use strict";
 
-window.reader = reader;
-
 const openApp = () => {
   initMenu();
   wnds.init();
@@ -21,37 +19,57 @@ const openApp = () => {
   showSommario();
 };
 
-window.openReaderFromGlobal = (url) => reader.openReader(url);
-
 ////////////////////////////
 
 const initMenu = () => {
   document.body.classList.add("theme-light");
   const menu_h = document.querySelector(".menu-h");
-  menu_h.addEventListener("click", toggleMenu);
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && menu_h.classList.contains("active")) {
-      toggleMenu();
-    }
-  });
+  if (menu_h) {
+    menu_h.addEventListener("click", toggleMenu);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && menu_h.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+  }
 
-  document.getElementById("btn-dark-theme").addEventListener("click", setDark);
-  document.getElementById("btn-light-theme").addEventListener("click", setLight);
-  document.getElementById("btn-help").addEventListener("click", opHelp);
-  document.getElementById("btn-home").addEventListener("click", opHome);
-  document.getElementById("btn-archivio").addEventListener("click", opArchivio);
-  document.getElementById("btn-redazione").addEventListener("click", opRedazione);
-  document.getElementById("btn-collaboratori").addEventListener("click", opCollaboatori);
+  const btnDarkTheme = document.getElementById("btn-dark-theme");
+  if (btnDarkTheme) btnDarkTheme.addEventListener("click", setDark);
+
+  const btnLightTheme = document.getElementById("btn-light-theme");
+  if (btnLightTheme) btnLightTheme.addEventListener("click", setLight);
+
+  const btnHelp = document.getElementById("btn-help");
+  if (btnHelp) btnHelp.addEventListener("click", opHelp);
+
+  const btnHome = document.getElementById("btn-home");
+  if (btnHome) btnHome.addEventListener("click", opHome);
+
+  const btnArchivio = document.getElementById("btn-archivio");
+  if (btnArchivio) btnArchivio.addEventListener("click", opArchivio);
+
+  const btnRedazione = document.getElementById("btn-redazione");
+  if (btnRedazione) btnRedazione.addEventListener("click", opRedazione);
+
+  const btnCollaboratori = document.getElementById("btn-collaboratori");
+  if (btnCollaboratori) btnCollaboratori.addEventListener("click", opCollaboatori);
 };
 
 export const toggleMenu = () => {
   const menu_h = document.querySelector(".menu-h");
+  if (!menu_h) return;
+
   menu_h.classList.toggle("active");
   document.body.classList.toggle("open-menu");
 
   const menu_hb = document.querySelector(".menu-h-box");
-  if (menu_h.classList.contains("active")) menu_hb.setAttribute("data-tt", "Close");
-  else menu_hb.setAttribute("data-tt", "Open");
+  if (menu_hb) {
+    if (menu_h.classList.contains("active")) {
+      menu_hb.setAttribute("data-tt", "Close");
+    } else {
+      menu_hb.setAttribute("data-tt", "Open");
+    }
+  }
 };
 
 const invertColors = () => {
@@ -65,13 +83,18 @@ const invertColors = () => {
 
 const imageCarousel = () => {
   const parentContainer = document.querySelector(".col-right");
+  if (!parentContainer) return;
+
   const imageContainers = parentContainer.querySelectorAll(".item0");
   imageContainers.forEach((container) => {
     container.classList.add("active");
   });
+
   const rotateImages = () => {
     const firstItem = parentContainer.querySelector(".item0");
-    parentContainer.appendChild(firstItem);
+    if (firstItem) {
+      parentContainer.appendChild(firstItem);
+    }
   };
   // AAA setInterval(rotateImages, 5000);
 };
@@ -88,7 +111,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const updateDateTime = () => {
-    versionElement.textContent = formatDateTime();
+    if (versionElement) {
+      versionElement.textContent = formatDateTime();
+    }
   };
 
   const checkCache = () => {
@@ -101,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.reload(true);
     }
   };
+
   checkCache();
   updateDateTime();
   openApp();

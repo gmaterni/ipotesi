@@ -46,13 +46,26 @@ class Reader {
     w.show();
     this.defaultFontSize();
 
-    document.getElementById("btn-read-pdf").addEventListener("click", () => this.readPDF());
-    document.getElementById("btn-toggle-speak").addEventListener("click", () => tts.toggleSpeak());
-    document.getElementById("btn-toggle-reading").addEventListener("click", () => tts.toggleReading(this.textCurrent));
-    document.getElementById("btn-increase-font").addEventListener("click", () => this.increaseFontSize());
-    document.getElementById("btn-decrease-font").addEventListener("click", () => this.decreaseFontSize());
-    document.getElementById("btn-fullscreen").addEventListener("click", () => this.openFullscreen());
-    document.getElementById("btn-close-reader").addEventListener("click", () => this.closeReader());
+    const btnReadPdf = document.getElementById("btn-read-pdf");
+    if (btnReadPdf) btnReadPdf.addEventListener("click", () => this.readPDF());
+
+    const btnToggleSpeak = document.getElementById("btn-toggle-speak");
+    if (btnToggleSpeak) btnToggleSpeak.addEventListener("click", () => tts.toggleSpeak());
+
+    const btnToggleReading = document.getElementById("btn-toggle-reading");
+    if (btnToggleReading) btnToggleReading.addEventListener("click", () => tts.toggleReading(this.textCurrent));
+
+    const btnIncreaseFont = document.getElementById("btn-increase-font");
+    if (btnIncreaseFont) btnIncreaseFont.addEventListener("click", () => this.increaseFontSize());
+
+    const btnDecreaseFont = document.getElementById("btn-decrease-font");
+    if (btnDecreaseFont) btnDecreaseFont.addEventListener("click", () => this.decreaseFontSize());
+
+    const btnFullscreen = document.getElementById("btn-fullscreen");
+    if (btnFullscreen) btnFullscreen.addEventListener("click", () => this.openFullscreen());
+
+    const btnCloseReader = document.getElementById("btn-close-reader");
+    if (btnCloseReader) btnCloseReader.addEventListener("click", () => this.closeReader());
   }
 
   openReader(url) {

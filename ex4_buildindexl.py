@@ -66,7 +66,7 @@ def generate_indice_html(data_directory,
                         st=""
                     indice_content.append(f'''
                     <div class="list-item">
-                        <a href="#" onclick="window.openReaderFromGlobal('{file_path}')">
+                        <a href="#" data-url="{file_path}">
                             <strong>{titolo}</strong>
                         </a>
                         {st}
@@ -106,7 +106,7 @@ def generate_archivio_html(data_directory,
                     file_path = os.path.join(dir_path, scheda.get('file', ''))
                     archivio_content.append(f'''
                     <div class="list-item2">
-                        <a href="#" onclick="window.openReaderFromGlobal('{file_path}')">
+                        <a href="#" data-url="{file_path}">
                             <strong>{titolo}</strong>
                         </a>
                        <span>{autore}</span></div>
