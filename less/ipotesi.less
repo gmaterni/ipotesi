@@ -205,8 +205,12 @@ div.menu {
     position: absolute;
     top: 1vh;
     left: 1vw;
-    width: 25px;
-    height: 26px;
+    height: 36px;
+    width: 36px;
+    border-radius: 4px; // Rounded corners for the rectangle
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     background: none;
     border: none;
@@ -220,9 +224,9 @@ div.menu {
       background: @theme-dark-bg-hover;
     }
 
-    .menu-h-box .menu-h-inner {
-      width: 25px;
-      height: 3px;
+    .menu-h-inner {
+      width: 24px; // Icon size
+      height: 2px; // Line thickness
       border-radius: 4px;
       position: absolute;
       transition: transform 0.15s ease;
