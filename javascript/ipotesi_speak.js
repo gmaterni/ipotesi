@@ -1,64 +1,80 @@
 /** @format */
-"use strict";
 
-function toggleReading(text) {
-  tts.toggleReading(text);
-}
+import { UaWindowAdm } from "./uawindow.js";
 
-function stopReading() {
-  tts.stopReading();
-}
-
-function closeSpeak() {
-  tts.closeSpeak();
-}
-
-function toggleSpeak() {
-  tts.toggleSpeak();
-}
-
-function saveSpeak() {
-  tts.saveSpeak();
-}
-///////////////////////
+("use strict");
 
 class TextToSpeech {
   constructor() {
     this.isReading = false;
     this.panel = false;
+    this.textCurrent = "";
   }
 
   openSpeak() {
-    const fhPanel = () => {
+    this.panel = true;
+    const js = this.loadSettings();
+    const fhPanel = (js) => {
       return `
       <div id="configPanel" class="panel-speak">
-      <div class="toolbar">
-        <button id="btn-save-speak">Salva</button>
-        <button id="btn-close-speak">X</button>
-      </div>
-      <div id="id_voices">
-        <p>Volume:<input type="range" name="amplitude" min="0" max="1" step="0.1" value="1"></p>
-        <p>Tono:<input type="range" name="pitch" min="0" max="2" step="0.1" value="1"></p>
-        <p>Velocità:<input type="range" name="speed" min="0.5" max="2" step="0.1" value="1"></p>
+        <div class="toolbar">
+          <button id="btn-save-speak">Salva</button>
+          <button id="btn-close-speak">X</button>
+        </div>
+        <div id="id_voices">
+          <div class="voice-row">
+            <label>Volume (0-1):</label>
+            <input type="range" min="0" max="1" step="0.1" value="${js.amplitude}" name="amplitude" />
+            <span>${js.amplitude}</span>
+          </div>
+          <div class="voice-row">
+            <label>Tono (0-2):</label>
+            <input type="range" min="0" max="2" step="0.1" value="${js.pitch}" name="pitch" />
+            <span>${js.pitch}</span>
+          </div>
+          <div class="voice-row">
+            <label>Velocità (0.1-2):</label>
+            <input type="range" min="0.1" max="2" step="0.1" value="${js.speed}" name="speed" />
+            <span>${js.speed}</span>
+          </div>
         </div>
       </div>
       `;
     };
 
-    const jfh = UaJtfh();
-    jfh.init();
-    const html = fhPanel();
+    const html = fhPanel(js);
     const w = UaWindowAdm.create("id_speak");
     w.setZ(1000);
-    w.vw_vh().setXY(30, 50, -1);
     w.setHtml(html);
+    w.vw_vh().setXY(30, 50, -1);
     w.show();
     w.drag();
     this.setSpeak();
-    this.panel = true;
 
-    document.getElementById("btn-save-speak").addEventListener("click", saveSpeak);
-    document.getElementById("btn-close-speak").addEventListener("click", closeSpeak);
+    const wnd = w.getElement();
+    wnd.querySelector("#btn-save-speak").addEventListener("click", () => this.saveSpeak());
+    wnd.querySelector("#btn-close-speak").addEventListener("click", () => this.closeSpeak());
+
+    const range = wnd.querySelectorAll('input[type="range"]');
+    range.forEach((el) => {
+      el.addEventListener("input", function () {
+        const v = this.value;
+        const p = this.parentElement.querySelector("span");
+        p.innerText = v;
+      });
+    });
+  }
+
+  setSpeak() {
+    const js = this.loadSettings();
+    const w = document.getElementById("id_voices");
+    if (!w) return;
+    w.querySelector('[name="amplitude"]').value = js.amplitude;
+    w.querySelector('[name="pitch"]').value = js.pitch;
+    w.querySelector('[name="speed"]').value = js.speed;
+    w.querySelector('[name="amplitude"]').parentElement.querySelector("span").innerText = js.amplitude;
+    w.querySelector('[name="pitch"]').parentElement.querySelector("span").innerText = js.pitch;
+    w.querySelector('[name="speed"]').parentElement.querySelector("span").innerText = js.speed;
   }
 
   closeSpeak() {
@@ -75,20 +91,12 @@ class TextToSpeech {
     }
   }
 
-  setSpeak() {
-    const js = this.loadSettings();
-    const w = document.getElementById("id_voices");
-    w.querySelector('[name="amplitude"]').value = js.amplitude;
-    w.querySelector('[name="pitch"]').value = js.pitch;
-    w.querySelector('[name="speed"]').value = js.speed;
-  }
-
   saveSpeak() {
     const w = document.getElementById("id_voices");
     if (!w) return;
-    const amplitude = w.querySelector('[name="amplitude"]').value; //volumE
-    const pitch = w.querySelector('[name="pitch"]').value; //tono
-    const speed = w.querySelector('[name="speed"]').value; //rate
+    const amplitude = w.querySelector('[name="amplitude"]').value;
+    const pitch = w.querySelector('[name="pitch"]').value;
+    const speed = w.querySelector('[name="speed"]').value;
     this.saveSettings(amplitude, pitch, speed);
   }
 
@@ -113,54 +121,42 @@ class TextToSpeech {
 
   stopReading() {
     if (this.isReading) {
-      document.getElementById("btn-toggle-reading").innerText = "▶";
+      const readButton = document.getElementById("btn-toggle-reading");
+      if (readButton) readButton.innerText = "▶";
       window.speechSynthesis.cancel();
       this.isReading = false;
     }
   }
 
   toggleReading(text) {
-    // #XXX
-    // Se la lettura è già in corso, la fermiamo.
+    this.textCurrent = text;
     if (this.isReading) {
       this.stopReading();
     } else {
-      // Altrimenti, iniziamo la lettura.
       const readButton = document.getElementById("btn-toggle-reading");
-      readButton.innerText = "⏸"; // Aggiorniamo l'icona del pulsante a "pausa".
-      this.isReading = true; // Impostiamo lo stato di lettura a "in corso".
+      if (readButton) readButton.innerText = "⏸";
+      this.isReading = true;
 
-      // Carichiamo le impostazioni vocali (volume, tono, velocità).
       const js = this.loadSettings();
-      // Puliamo il testo da leggere da tag HTML e altri caratteri non necessari.
-      const cleanedText = this.cleanupText(text);
-      // Creiamo un nuovo oggetto per la sintesi vocale.
+      const cleanedText = this.cleanupText(this.textCurrent);
       const ssu = new SpeechSynthesisUtterance(cleanedText);
 
-      // Applichiamo le impostazioni all'oggetto di sintesi vocale.
       ssu.volume = js.amplitude;
       ssu.rate = js.speed;
       ssu.pitch = js.pitch;
-      ssu.lang = "it-IT"; // Impostiamo la lingua.
+      ssu.lang = "it-IT";
 
-      // Definiamo una funzione per resettare lo stato dell'interfaccia.
       const resetState = () => {
         this.isReading = false;
-        readButton.innerText = "▶"; // Reimpostiamo l'icona del pulsante a "play".
+        if (readButton) readButton.innerText = "▶";
       };
 
-      // Assegniamo la funzione `resetState` all'evento `onend`.
-      // Questo evento viene chiamato automaticamente quando la sintesi vocale termina.
       ssu.onend = resetState;
-
-      // Assegniamo una funzione di gestione all'evento `onerror`.
-      // Questo evento viene chiamato se si verifica un errore durante la sintesi.
       ssu.onerror = (event) => {
         console.error("Errore nella sintesi vocale:", event.error);
-        resetState(); // Resettiamo lo stato anche in caso di errore.
+        resetState();
       };
 
-      // Avviamo la sintesi vocale.
       window.speechSynthesis.speak(ssu);
     }
   }
@@ -173,4 +169,4 @@ class TextToSpeech {
   }
 }
 
-const tts = new TextToSpeech();
+export const tts = new TextToSpeech();

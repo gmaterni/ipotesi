@@ -1,16 +1,17 @@
 /** @format */
 
+import { getTheme, setLight, setDark } from "./ipotesi_theme.js";
+import { opHome, opArchivio, opHelp, opRedazione, opCollaboatori } from "./ipotesi_menu.js";
+import { wnds, showSommario } from "./ipotesi_ui.js";
+// import { reader } from './ipotesi_reader.js';
+
+import { reader } from './ipotesi_reader.js';
+
+/** @format */
+
 "use strict";
 
-// const openApp = () => {
-//   setTimeout(() => {
-//     initMenu();
-//     wnds.init();
-//     getTheme();
-//     imageCarousel();
-//     showSommario();
-//   }, 100);
-// };
+window.reader = reader;
 
 const openApp = () => {
   initMenu();
@@ -20,7 +21,7 @@ const openApp = () => {
   showSommario();
 };
 
-
+window.openReaderFromGlobal = (url) => reader.openReader(url);
 
 ////////////////////////////
 
@@ -43,7 +44,7 @@ const initMenu = () => {
   document.getElementById("btn-collaboratori").addEventListener("click", opCollaboatori);
 };
 
-const toggleMenu = () => {
+export const toggleMenu = () => {
   const menu_h = document.querySelector(".menu-h");
   menu_h.classList.toggle("active");
   document.body.classList.toggle("open-menu");
@@ -53,15 +54,12 @@ const toggleMenu = () => {
   else menu_hb.setAttribute("data-tt", "Open");
 };
 
-
-
 const invertColors = () => {
   const elements = document.querySelectorAll("*");
   elements.forEach((element) => {
     element.classList.add("invert-colors");
   });
 };
-
 
 // //////////////
 

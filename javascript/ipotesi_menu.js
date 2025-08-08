@@ -2,19 +2,23 @@
 
 "use strict";
 
-const opHome = (e) => {
+import { showSommario, showIndici, wnds } from "./ipotesi_ui.js";
+import { toggleMenu } from "./app.js";
+import { UaWindowAdm } from "./uawindow.js";
+
+export const opHome = (e) => {
   showSommario();
   toggleMenu();
   UaWindowAdm.closeAll();
 };
 
-const opArchivio = (e) => {
+export const opArchivio = (e) => {
   showIndici();
   toggleMenu();
   UaWindowAdm.closeAll();
 };
 
-const opHelp = () => {
+export const opHelp = () => {
   toggleMenu();
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/help0.html");
@@ -26,20 +30,20 @@ const opNews = (e) => {
   wnds.wdiv.open("./html/help1.html");
 };
 
-const opRedazione = (e) => {
+export const opRedazione = () => {
   toggleMenu();
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/redazione.html");
   // wnds.wdiv.open("./html/redazione_0.html");
 };
 
-const opCollaboatori = (e) => {
+export const opCollaboatori = (e) => {
   toggleMenu();
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/collaboratori.html");
 };
 
-const opIPOTESI = (e) => {
+export const opIPOTESI = (e) => {
   alert("IPOTESI");
 };
 
@@ -48,10 +52,10 @@ const opIPubblicita = (e) => {
   // imageCarousel();
 };
 
-const op9 = async (e) => {
+export const op9 = async (e) => {
   alert("op0");
 };
 
-const op10 = async (e) => {
+export const op10 = async (e) => {
   alert("op10");
 };

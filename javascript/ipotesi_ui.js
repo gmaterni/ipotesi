@@ -1,3 +1,6 @@
+import { UaWindowAdm } from './uawindow.js';
+import { HttpService } from './ipotesi_http.js';
+
 /** @format */
 
 //XXX <button onclick="increaseFontSize()">A+</button>
@@ -36,7 +39,7 @@ const WndDiv = (id) => {
   };
 };
 
-const wnds = {
+export const wnds = {
   wdiv: null,
   // wpre: null,
   init() {
@@ -58,7 +61,7 @@ const wnds = {
 //   return json;
 // };
 
-const showSommario = function () {
+export const showSommario = function () {
   const item1 = document.getElementById("id_item1");
   const fn = (h) => {
     item1.innerHTML = h;
@@ -67,7 +70,7 @@ const showSommario = function () {
   HttpService.fetchText(url, fn);
 };
 
-const showIndici = function () {
+export const showIndici = function () {
   const item1 = document.getElementById("id_item1");
   const fn = (h) => {
     item1.innerHTML = h;

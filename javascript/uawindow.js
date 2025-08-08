@@ -4,7 +4,9 @@
 // release 03-05-24
 "use strict";
 
-var UaWindowAdm = {
+import { UaDrag } from "./uadrag.js";
+
+export var UaWindowAdm = {
   ws: {},
   create(id, parent_id = null) {
     let w = document.getElementById(id);

@@ -1,3 +1,9 @@
+/** @format */
+
+import { HttpService } from "./ipotesi_http.js";
+import { tts } from "./ipotesi_speak.js";
+import { UaWindowAdm } from "./uawindow.js";
+
 class Reader {
   constructor() {
     this.fontSize = 18;
@@ -41,8 +47,8 @@ class Reader {
     this.defaultFontSize();
 
     document.getElementById("btn-read-pdf").addEventListener("click", () => this.readPDF());
-    document.getElementById("btn-toggle-speak").addEventListener("click", () => toggleSpeak());
-    document.getElementById("btn-toggle-reading").addEventListener("click", () => toggleReading(this.textCurrent));
+    document.getElementById("btn-toggle-speak").addEventListener("click", () => tts.toggleSpeak());
+    document.getElementById("btn-toggle-reading").addEventListener("click", () => tts.toggleReading(this.textCurrent));
     document.getElementById("btn-increase-font").addEventListener("click", () => this.increaseFontSize());
     document.getElementById("btn-decrease-font").addEventListener("click", () => this.decreaseFontSize());
     document.getElementById("btn-fullscreen").addEventListener("click", () => this.openFullscreen());
@@ -52,7 +58,7 @@ class Reader {
   openReader(url) {
     this.urlCurrent = url;
     HttpService.fetchText(url, (text) => this.showReader(text));
-    enableEsc();
+    this.enableEsc();
   }
 
   async readPDF() {
@@ -68,9 +74,9 @@ class Reader {
   }
 
   closeReader() {
-    disableEsc();
-    closeSpeak();
-    stopReading();
+    this.disableEsc();
+    tts.closeSpeak();
+    tts.stopReading();
     UaWindowAdm.close("id_reader");
     if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
       if (document.exitFullscreen) {
@@ -119,22 +125,22 @@ class Reader {
       }
     }
   }
+
+  enableEsc(event) {
+    document.addEventListener("keydown", this.cmdEsc);
+    if (!event) return;
+    if (event.key === "Escape" || event.keyCode === 27) {
+      this.cmdEsc();
+    }
+  }
+
+  disableEsc(event) {
+    document.removeEventListener("keydown", this.cmdEsc);
+  }
+
+  cmdEsc = () => {
+    this.closeReader();
+  };
 }
 
-const reader = new Reader();
-
-const enableEsc = (event) => {
-  document.addEventListener("keydown", cmdEsc);
-  if (!event) return;
-  if (event.key === "Escape" || event.keyCode === 27) {
-    cmdEsc();
-  }
-};
-
-const disableEsc = (event) => {
-  document.removeEventListener("keydown", cmdEsc);
-};
-
-const cmdEsc = () => {
-  reader.closeReader();
-};
+export const reader = new Reader();

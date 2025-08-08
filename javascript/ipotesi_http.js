@@ -1,7 +1,7 @@
 /** @format */
 "use strict";
 
-const HttpService = {
+export const HttpService = {
   cacheBuster: new Date().getTime(),
 
   async getText(url) {
