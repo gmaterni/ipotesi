@@ -40,20 +40,6 @@ const initMenu = () => {
   if (btnCollaboratori) btnCollaboratori.addEventListener("click", opCollaboatori);
 };
 
-// export const toggleMenu = () => {
-//   const menu_h = document.querySelector(".menu-h");
-//   if (!menu_h) return;
-
-//   menu_h.classList.toggle("active");
-//   document.body.classList.toggle("open-menu");
-
-//   if (menu_h.classList.contains("active")) {
-//     menu_h.setAttribute("data-tt", "Close");
-//   } else {
-//     menu_h.setAttribute("data-tt", "Open");
-//   }
-// };
-
 const updateDateTime = () => {
   const formatDateTime = () => {
     const now = new Date();
