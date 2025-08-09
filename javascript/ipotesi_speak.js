@@ -8,11 +8,36 @@ class TextToSpeech {
     this.isReading = false;
     this.panel = false;
     this.textCurrent = "";
+    this.voices = [];
+    this.synth = window.speechSynthesis;
+  }
+
+  init() {
+    if (!this.synth) {
+      console.warn("Speech Synthesis non è supportato da questo browser.");
+      return;
+    }
+    this.populateVoiceList();
+    if (this.synth.onvoiceschanged !== undefined) {
+      this.synth.onvoiceschanged = () => this.populateVoiceList();
+    }
+  }
+
+  populateVoiceList() {
+    this.voices = this.synth.getVoices().filter(voice => voice.lang.startsWith('it'));
   }
 
   openSpeak() {
+    if (!this.synth) {
+      alert("La sintesi vocale non è supportata da questo browser.");
+      return;
+    }
     this.panel = true;
     const js = this.loadSettings();
+    const voiceOptions = this.voices.map(voice => 
+      `<option value="${voice.name}" ${js.voice === voice.name ? 'selected' : ''}>${voice.name} (${voice.lang})</option>`
+    ).join('');
+
     const fhPanel = (js) => {
       return `
       <div id="configPanel" class="panel-speak">
@@ -21,6 +46,10 @@ class TextToSpeech {
           <button id="btn-close-speak">X</button>
         </div>
         <div id="id_voices">
+          <div class="voice-row">
+            <label for="voice">Voce</label>
+            <select id="voice" name="voice">${voiceOptions}</select>
+          </div>
           <div class="voice-row">
             <label for="amplitude">Volume</label>
             <div>
@@ -99,13 +128,15 @@ class TextToSpeech {
   saveSpeak() {
     const w = document.getElementById("id_voices");
     if (!w) return;
+    const voice = w.querySelector('[name="voice"]').value;
     const amplitude = w.querySelector('[name="amplitude"]').value;
     const pitch = w.querySelector('[name="pitch"]').value;
     const speed = w.querySelector('[name="speed"]').value;
-    this.saveSettings(amplitude, pitch, speed);
+    this.saveSettings(voice, amplitude, pitch, speed);
   }
 
-  saveSettings(amplitude, pitch, speed) {
+  saveSettings(voice, amplitude, pitch, speed) {
+    localStorage.setItem("voice", voice);
     localStorage.setItem("amplitude", amplitude);
     localStorage.setItem("pitch", pitch);
     localStorage.setItem("speed", speed);
@@ -113,6 +144,7 @@ class TextToSpeech {
 
   loadSettings() {
     const js = {};
+    js["voice"] = localStorage.getItem("voice") || "default";
     js["amplitude"] = localStorage.getItem("amplitude") || 1;
     js["pitch"] = localStorage.getItem("pitch") || 1;
     js["speed"] = localStorage.getItem("speed") || 1;
@@ -128,12 +160,13 @@ class TextToSpeech {
     if (this.isReading) {
       const readButton = document.getElementById("btn-toggle-reading");
       if (readButton) readButton.innerText = "▶";
-      window.speechSynthesis.cancel();
+      this.synth.cancel();
       this.isReading = false;
     }
   }
 
   toggleReading(text) {
+    if (!this.synth) return;
     this.textCurrent = text;
     if (this.isReading) {
       this.stopReading();
@@ -145,6 +178,11 @@ class TextToSpeech {
       const js = this.loadSettings();
       const cleanedText = this.cleanupText(this.textCurrent);
       const ssu = new SpeechSynthesisUtterance(cleanedText);
+
+      const selectedVoice = this.voices.find(voice => voice.name === js.voice);
+      if (selectedVoice) {
+        ssu.voice = selectedVoice;
+      }
 
       ssu.volume = js.amplitude;
       ssu.rate = js.speed;
@@ -162,7 +200,7 @@ class TextToSpeech {
         resetState();
       };
 
-      window.speechSynthesis.speak(ssu);
+      this.synth.speak(ssu);
     }
   }
 

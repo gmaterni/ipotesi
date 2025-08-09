@@ -4,6 +4,7 @@
 import { getTheme, setLight, setDark } from "./ipotesi_theme.js";
 import { toggleMenu,opHome, opArchivio, opHelp, opRedazione, opCollaboatori } from "./ipotesi_menu.js";
 import { wnds, showSommario } from "./ipotesi_ui.js";
+import { tts } from "./ipotesi_speak.js";
 
 
 const initMenu = () => {
@@ -61,6 +62,7 @@ const getAppVersion=()=>{
 const openApp = () => {
   initMenu();
   wnds.init();
+  tts.init();
   getTheme();
   showSommario();
   updateDateTime();
