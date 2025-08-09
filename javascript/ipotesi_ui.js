@@ -4,8 +4,6 @@ import { reader } from "./ipotesi_reader.js";
 
 /** @format */
 
-//XXX <button onclick="increaseFontSize()">A+</button>
-//XXX <button onclick="decreaseFontSize()">A-</button>
 const WndDiv = (id) => {
   return {
     w: UaWindowAdm.create(id),

@@ -13,6 +13,7 @@ class Reader {
     this.fsizeKey = "fsize_reader";
     this.textCurrent = "";
     this.urlCurrent = "";
+    // this.cmdEsc = this.cmdEsc.bind(this);
   }
 
   fh(txt) {
@@ -151,7 +152,7 @@ class Reader {
     document.removeEventListener("keydown", this.cmdEsc);
   }
 
-  cmdEsc(){
+  cmdEsc=()=>{
     this.closeReader();
   };
 }
