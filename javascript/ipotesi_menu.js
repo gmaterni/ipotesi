@@ -1,10 +1,24 @@
 /** @format */
-
+ 
 "use strict";
 
 import { showSommario, showIndici, wnds } from "./ipotesi_ui.js";
-import { toggleMenu } from "./app.js";
 import { UaWindowAdm } from "./uawindow.js";
+
+export const toggleMenu = () => {
+  const menu_h = document.querySelector(".menu-h");
+  if (!menu_h) return;
+
+  menu_h.classList.toggle("active");
+  document.body.classList.toggle("open-menu");
+
+  if (menu_h.classList.contains("active")) {
+    menu_h.setAttribute("data-tt", "Close");
+  } else {
+    menu_h.setAttribute("data-tt", "Open");
+  }
+};
+
 
 export const opHome = (e) => {
   showSommario();
@@ -23,13 +37,6 @@ export const opHelp = () => {
   UaWindowAdm.closeAll();
   wnds.wdiv.open("./html/help0.html");
 };
-
-// AAA news
-// const opNews = () => {
-//   toggleMenu();
-//   UaWindowAdm.closeAll();
-//   wnds.wdiv.open("./html/help1.html");
-// };
 
 export const opRedazione = () => {
   toggleMenu();

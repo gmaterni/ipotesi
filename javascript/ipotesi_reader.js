@@ -151,7 +151,7 @@ class Reader {
     document.removeEventListener("keydown", this.cmdEsc);
   }
 
-  cmdEsc = () => {
+  cmdEsc(){
     this.closeReader();
   };
 }

@@ -1,8 +1,7 @@
 /** @format */
+"use strict";
 
 import { UaWindowAdm } from "./uawindow.js";
-
-("use strict");
 
 class TextToSpeech {
   constructor() {

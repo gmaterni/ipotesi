@@ -1,22 +1,10 @@
 /** @format */
+"use strict";
 
 import { getTheme, setLight, setDark } from "./ipotesi_theme.js";
-import { opHome, opArchivio, opHelp, opRedazione, opCollaboatori } from "./ipotesi_menu.js";
+import { toggleMenu,opHome, opArchivio, opHelp, opRedazione, opCollaboatori } from "./ipotesi_menu.js";
 import { wnds, showSommario } from "./ipotesi_ui.js";
-// import { reader } from './ipotesi_reader.js';
-// import { reader } from './ipotesi_reader.js';
 
-("use strict");
-
-const openApp = () => {
-  initMenu();
-  wnds.init();
-  getTheme();
-  imageCarousel();
-  showSommario();
-};
-
-////////////////////////////
 
 const initMenu = () => {
   document.body.classList.add("theme-light");
@@ -52,50 +40,21 @@ const initMenu = () => {
   if (btnCollaboratori) btnCollaboratori.addEventListener("click", opCollaboatori);
 };
 
-export const toggleMenu = () => {
-  const menu_h = document.querySelector(".menu-h");
-  if (!menu_h) return;
+// export const toggleMenu = () => {
+//   const menu_h = document.querySelector(".menu-h");
+//   if (!menu_h) return;
 
-  menu_h.classList.toggle("active");
-  document.body.classList.toggle("open-menu");
+//   menu_h.classList.toggle("active");
+//   document.body.classList.toggle("open-menu");
 
-  if (menu_h.classList.contains("active")) {
-    menu_h.setAttribute("data-tt", "Close");
-  } else {
-    menu_h.setAttribute("data-tt", "Open");
-  }
-};
-
-// AAA const invertColors = () => {
-//   const elements = document.querySelectorAll("*");
-//   elements.forEach((element) => {
-//     element.classList.add("invert-colors");
-//   });
+//   if (menu_h.classList.contains("active")) {
+//     menu_h.setAttribute("data-tt", "Close");
+//   } else {
+//     menu_h.setAttribute("data-tt", "Open");
+//   }
 // };
 
-// //////////////
-
-const imageCarousel = () => {
-  const parentContainer = document.querySelector(".col-right");
-  if (!parentContainer) return;
-
-  const imageContainers = parentContainer.querySelectorAll(".item0");
-  imageContainers.forEach((container) => {
-    container.classList.add("active");
-  });
-
-  const rotateImages = () => {
-    const firstItem = parentContainer.querySelector(".item0");
-    if (firstItem) {
-      parentContainer.appendChild(firstItem);
-    }
-  };
-  // AAA setInterval(rotateImages, 5000);
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  const versionElement = document.getElementById("id_version");
-
+const updateDateTime = () => {
   const formatDateTime = () => {
     const now = new Date();
     const day = String(now.getDate()).padStart(2, "0");
@@ -103,25 +62,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const year = now.getFullYear();
     return `${day}-${month}-${year}`;
   };
+  const versione = document.getElementById("id_version");
+  versione.textContent = formatDateTime();
+};
 
-  const updateDateTime = () => {
-    if (versionElement) {
-      versionElement.textContent = formatDateTime();
-    }
-  };
-
-  const checkCache = () => {
-    const version = "v=1.025";
-    const today = new Date().toISOString().split("T")[0] + version;
-    const cachedDate = localStorage.getItem("appinfo");
-    if (cachedDate !== today) {
-      localStorage.setItem("appinfo", today);
-      console.log("***** Aggiornamento della cache", today);
-      window.location.reload(true);
-    }
-  };
-
-  checkCache();
+const getAppVersion=()=>{
+  const appScript = document.getElementById("app-script");
+  const appVersion = appScript.src.split("?v=")[1];
+  window.APP_VERSION = appVersion;
+  console.log(window.APP_VERSION);
+}
+const openApp = () => {
+  initMenu();
+  wnds.init();
+  getTheme();
+  showSommario();
   updateDateTime();
+  getAppVersion();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
   openApp();
 });
