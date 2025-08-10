@@ -27,24 +27,22 @@ const initMenu = () => {
   });
 };
 
-const updateDateTime = () => {
-  const formatDateTime = () => {
-    const now = new Date();
-    const day = String(now.getDate()).padStart(2, "0");
-    const month = String(now.getMonth() + 1).padStart(2, "0");
-    const year = now.getFullYear();
-    return `${day}-${month}-${year}`;
-  };
-  const versione = document.getElementById("id_version");
-  if(versione) versione.textContent = formatDateTime();
-};
-
-const getAppVersion = () => {
+const updateVersionAndDate = () => {
   const appScript = document.getElementById("app-script");
-  if (!appScript) return;
-  const appVersion = appScript.src.split("?v=")[1] || 'N/A';
+  const appVersion = appScript ? appScript.src.split("?v=")[1] || 'N/A' : 'N/A';
   window.APP_VERSION = appVersion;
   console.log(`App Version: ${window.APP_VERSION}`);
+
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, "0");
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const year = now.getFullYear();
+  const formattedDate = `${day}-${month}-${year}`;
+  
+  const versionElement = document.getElementById("id_version");
+  if (versionElement) {
+    versionElement.textContent = `v.${appVersion}  ${formattedDate}`;
+  }
 };
 
 const openApp = () => {
@@ -53,8 +51,7 @@ const openApp = () => {
   tts.init();
   getTheme();
   showSommario();
-  updateDateTime();
-  getAppVersion();
+  updateVersionAndDate();
 };
 
 // L'evento DOMContentLoaded non ha bisogno di EventManager, è un evento di inizializzazione una tantum.
