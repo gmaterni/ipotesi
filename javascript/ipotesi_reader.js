@@ -13,7 +13,13 @@ class Reader {
     this.fsizeKey = "fsize_reader";
     this.textCurrent = "";
     this.urlCurrent = "";
-    // this.cmdEsc = this.cmdEsc.bind(this);
+    // AAA gestione di this
+    const self = this;
+    this.escKeyHandler = function (event) {
+      if (event.key === "Escape" || event.keyCode === 27) {
+        self.closeReader();
+      }
+    };
   }
 
   fh(txt) {
@@ -140,21 +146,14 @@ class Reader {
     }
   }
 
-  enableEsc(event) {
-    document.addEventListener("keydown", this.cmdEsc);
-    if (!event) return;
-    if (event.key === "Escape" || event.keyCode === 27) {
-      this.cmdEsc();
-    }
+  enableEsc() {
+     document.addEventListener("keydown", this.escKeyHandler);
   }
 
-  disableEsc(event) {
-    document.removeEventListener("keydown", this.cmdEsc);
+  disableEsc() {
+     document.addEventListener("keydown", this.escKeyHandler);
   }
 
-  cmdEsc=()=>{
-    this.closeReader();
-  };
 }
 
 export const reader = new Reader();
