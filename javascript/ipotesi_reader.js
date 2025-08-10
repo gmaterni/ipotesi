@@ -3,6 +3,7 @@
 import { HttpService } from "./ipotesi_http.js";
 import { tts } from "./ipotesi_speak.js";
 import { UaWindowAdm } from "./uawindow.js";
+import { EventManager } from "./event_manager.js";
 
 class Reader {
   constructor() {
@@ -13,13 +14,27 @@ class Reader {
     this.fsizeKey = "fsize_reader";
     this.textCurrent = "";
     this.urlCurrent = "";
-    // AAA gestione di this
-    const self = this;
-    this.escKeyHandler = function (event) {
-      if (event.key === "Escape" || event.keyCode === 27) {
-        self.closeReader();
-      }
-    };
+    this.isReaderOpen = false;
+
+    // Registra gli handler degli eventi una sola volta
+    this.registerEventHandlers();
+  }
+
+  registerEventHandlers() {
+    EventManager.on("click", "#btn-read-pdf", () => this.readPDF());
+    EventManager.on("click", "#btn-toggle-speak", () => tts.toggleSpeak());
+    EventManager.on("click", "#btn-toggle-reading", () => tts.toggleReading(this.textCurrent));
+    EventManager.on("click", "#btn-increase-font", () => this.increaseFontSize());
+    EventManager.on("click", "#btn-decrease-font", () => this.decreaseFontSize());
+    EventManager.on("click", "#btn-fullscreen", () => this.openFullscreen());
+    EventManager.on("click", "#btn-close-reader", () => this.closeReader());
+
+    // Gestione centralizzata del tasto ESC
+    EventManager.on("keydown", "body", (e) => {
+        if (e.key === "Escape" && this.isReaderOpen) {
+            this.closeReader();
+        }
+    });
   }
 
   fh(txt) {
@@ -44,44 +59,23 @@ class Reader {
 
   showReader(text) {
     this.textCurrent = text;
-    const s = text;
-    const h = this.fh(s);
+    const h = this.fh(text);
     const w = UaWindowAdm.create("id_reader");
     w.setZ(12);
     w.vw_vh().setXY(0.1, 10.2, -1);
     w.setHtml(h);
     w.show();
     this.defaultFontSize();
-
-    const btnReadPdf = document.getElementById("btn-read-pdf");
-    if (btnReadPdf) btnReadPdf.addEventListener("click", () => this.readPDF());
-
-    const btnToggleSpeak = document.getElementById("btn-toggle-speak");
-    if (btnToggleSpeak) btnToggleSpeak.addEventListener("click", () => tts.toggleSpeak());
-
-    const btnToggleReading = document.getElementById("btn-toggle-reading");
-    if (btnToggleReading) btnToggleReading.addEventListener("click", () => tts.toggleReading(this.textCurrent));
-
-    const btnIncreaseFont = document.getElementById("btn-increase-font");
-    if (btnIncreaseFont) btnIncreaseFont.addEventListener("click", () => this.increaseFontSize());
-
-    const btnDecreaseFont = document.getElementById("btn-decrease-font");
-    if (btnDecreaseFont) btnDecreaseFont.addEventListener("click", () => this.decreaseFontSize());
-
-    const btnFullscreen = document.getElementById("btn-fullscreen");
-    if (btnFullscreen) btnFullscreen.addEventListener("click", () => this.openFullscreen());
-
-    const btnCloseReader = document.getElementById("btn-close-reader");
-    if (btnCloseReader) btnCloseReader.addEventListener("click", () => this.closeReader());
   }
 
   openReader(url) {
     this.urlCurrent = url;
     HttpService.fetchText(url, (text) => this.showReader(text));
-    this.enableEsc();
+    this.isReaderOpen = true;
   }
 
   async readPDF() {
+    if (!this.urlCurrent) return;
     const path = this.urlCurrent.replace("data/", "data/pdf/").replace(".html", ".pdf");
     try {
       const arrayBuffer = await HttpService.getPdf(path);
@@ -94,20 +88,15 @@ class Reader {
   }
 
   closeReader() {
-    this.disableEsc();
+    if (!this.isReaderOpen) return;
+    
+    this.isReaderOpen = false;
     tts.closeSpeak();
     tts.stopReading();
     UaWindowAdm.close("id_reader");
-    if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      }
+
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(err => console.error(err));
     }
   }
 
@@ -117,43 +106,34 @@ class Reader {
     if (isNaN(v)) v = this.fsizeDef;
     this.fontSize = v;
     const content = document.getElementById("content");
-    content.style.fontSize = `${this.fontSize}px`;
+    if(content) content.style.fontSize = `${this.fontSize}px`;
   }
 
   increaseFontSize() {
     const content = document.getElementById("content");
+    if (!content) return;
     this.fontSize = Math.min(this.fontSize + 2, this.fsizeMax);
     content.style.fontSize = `${this.fontSize}px`;
-    const s = this.fontSize.toString();
-    localStorage.setItem(this.fsizeKey, s);
+    localStorage.setItem(this.fsizeKey, this.fontSize.toString());
   }
 
   decreaseFontSize() {
     const content = document.getElementById("content");
+    if (!content) return;
     this.fontSize = Math.max(this.fontSize - 2, this.fsizeMin);
     content.style.fontSize = `${this.fontSize}px`;
-    const s = this.fontSize.toString();
-    localStorage.setItem(this.fsizeKey, s);
+    localStorage.setItem(this.fsizeKey, this.fontSize.toString());
   }
 
   openFullscreen() {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+      document.documentElement.requestFullscreen().catch(err => console.error(err));
     } else {
       if (document.exitFullscreen) {
-        document.exitFullscreen();
+        document.exitFullscreen().catch(err => console.error(err));
       }
     }
   }
-
-  enableEsc() {
-     document.addEventListener("keydown", this.escKeyHandler);
-  }
-
-  disableEsc() {
-     document.addEventListener("keydown", this.escKeyHandler);
-  }
-
 }
 
 export const reader = new Reader();

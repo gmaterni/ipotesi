@@ -2,6 +2,7 @@
 "use strict";
 
 import { UaWindowAdm } from "./uawindow.js";
+import { EventManager } from "./event_manager.js";
 
 class TextToSpeech {
   constructor() {
@@ -21,6 +22,16 @@ class TextToSpeech {
     if (this.synth.onvoiceschanged !== undefined) {
       this.synth.onvoiceschanged = () => this.populateVoiceList();
     }
+    this.registerEventHandlers();
+  }
+
+  registerEventHandlers() {
+    EventManager.on("click", "#btn-save-speak", () => this.saveSpeak());
+    EventManager.on("click", "#btn-close-speak", () => this.closeSpeak());
+    EventManager.on("input", '#id_voices input[type="range"]', (e, target) => {
+        const span = target.parentElement.querySelector("span");
+        if(span) span.textContent = target.value;
+    });
   }
 
   populateVoiceList() {
@@ -84,19 +95,6 @@ class TextToSpeech {
     w.show();
     w.drag();
     this.setSpeak();
-
-    const wnd = w.getElement();
-    wnd.querySelector("#btn-save-speak").addEventListener("click", () => this.saveSpeak());
-    wnd.querySelector("#btn-close-speak").addEventListener("click", () => this.closeSpeak());
-
-    const range = wnd.querySelectorAll('input[type="range"]');
-    range.forEach((el) => {
-      el.addEventListener("input", function () {
-        const v = this.value;
-        const p = this.parentElement.querySelector("span");
-        p.innerText = v;
-      });
-    });
   }
 
   setSpeak() {

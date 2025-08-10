@@ -2,43 +2,29 @@
 "use strict";
 
 import { getTheme, setLight, setDark } from "./ipotesi_theme.js";
-import { toggleMenu,opHome, opArchivio, opHelp, opRedazione, opCollaboatori } from "./ipotesi_menu.js";
+import { toggleMenu, opHome, opArchivio, opHelp, opRedazione, opCollaboatori } from "./ipotesi_menu.js";
 import { wnds, showSommario } from "./ipotesi_ui.js";
 import { tts } from "./ipotesi_speak.js";
-
+import { EventManager } from "./event_manager.js";
 
 const initMenu = () => {
   document.body.classList.add("theme-light");
-  const menu_h = document.querySelector(".menu-h");
-  if (menu_h) {
-    menu_h.addEventListener("click", toggleMenu);
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && menu_h.classList.contains("active")) {
-        toggleMenu();
-      }
-    });
-  }
 
-  const btnDarkTheme = document.getElementById("btn-dark-theme");
-  if (btnDarkTheme) btnDarkTheme.addEventListener("click", setDark);
+  EventManager.on("click", ".menu-h", toggleMenu);
+  EventManager.on("click", "#btn-dark-theme", setDark);
+  EventManager.on("click", "#btn-light-theme", setLight);
+  EventManager.on("click", "#btn-help", opHelp);
+  EventManager.on("click", "#btn-home", opHome);
+  EventManager.on("click", "#btn-archivio", opArchivio);
+  EventManager.on("click", "#btn-redazione", opRedazione);
+  EventManager.on("click", "#btn-collaboratori", opCollaboatori);
 
-  const btnLightTheme = document.getElementById("btn-light-theme");
-  if (btnLightTheme) btnLightTheme.addEventListener("click", setLight);
-
-  const btnHelp = document.getElementById("btn-help");
-  if (btnHelp) btnHelp.addEventListener("click", opHelp);
-
-  const btnHome = document.getElementById("btn-home");
-  if (btnHome) btnHome.addEventListener("click", opHome);
-
-  const btnArchivio = document.getElementById("btn-archivio");
-  if (btnArchivio) btnArchivio.addEventListener("click", opArchivio);
-
-  const btnRedazione = document.getElementById("btn-redazione");
-  if (btnRedazione) btnRedazione.addEventListener("click", opRedazione);
-
-  const btnCollaboratori = document.getElementById("btn-collaboratori");
-  if (btnCollaboratori) btnCollaboratori.addEventListener("click", opCollaboatori);
+  EventManager.on("keydown", "body", (e) => {
+    const menu_h = document.querySelector(".menu-h");
+    if (e.key === "Escape" && menu_h && menu_h.classList.contains("active")) {
+      toggleMenu();
+    }
+  });
 };
 
 const updateDateTime = () => {
@@ -50,15 +36,17 @@ const updateDateTime = () => {
     return `${day}-${month}-${year}`;
   };
   const versione = document.getElementById("id_version");
-  versione.textContent = formatDateTime();
+  if(versione) versione.textContent = formatDateTime();
 };
 
-const getAppVersion=()=>{
+const getAppVersion = () => {
   const appScript = document.getElementById("app-script");
-  const appVersion = appScript.src.split("?v=")[1];
+  if (!appScript) return;
+  const appVersion = appScript.src.split("?v=")[1] || 'N/A';
   window.APP_VERSION = appVersion;
-  console.log(window.APP_VERSION);
-}
+  console.log(`App Version: ${window.APP_VERSION}`);
+};
+
 const openApp = () => {
   initMenu();
   wnds.init();
@@ -69,6 +57,5 @@ const openApp = () => {
   getAppVersion();
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  openApp();
-});
+// L'evento DOMContentLoaded non ha bisogno di EventManager, è un evento di inizializzazione una tantum.
+document.addEventListener("DOMContentLoaded", openApp);
