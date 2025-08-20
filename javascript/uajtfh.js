@@ -1,6 +1,6 @@
 /** @format */ 
 
-const UaJtfh = () => {
+export const UaJtfh = () => {
   return {
     rows: [],
     init() {
@@ -24,29 +24,3 @@ const UaJtfh = () => {
     },
   };
 };
-
-
-// const jfh = UaJtfh();
-
-// const data = {
-//     k0: "Valore k0 ",
-//     k1: "Valore k1",
-//     k2: "valore 4",
-//     k3: "Non so",
-//     k4: "3",
-//   };
-
-//   const fnh = (d) => `
-//    <br/>
-//    k0:${d.k0}
-//    <br/>k1:${d.k1}
-//    <br/>k3:${d.k3}
-//    <br/>k4:${d.k4}
-//    <br/>k5:${d.k5}
-//    `;
-
-//   jfh.init().append(fnh(data));
-//   jfh.append("<H3>AAA</H3>");
-//   html=jfh.html();
-// };
-  

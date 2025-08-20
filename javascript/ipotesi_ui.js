@@ -1,17 +1,21 @@
+import { UaWindowAdm } from "./uawindow.js";
+import { HttpService } from "./ipotesi_http.js";
+import { reader } from "./ipotesi_reader.js";
+import { EventManager } from "./event_manager.js";
+
 /** @format */
 
-//XXX <button onclick="increaseFontSize()">A+</button>
-//XXX <button onclick="decreaseFontSize()">A-</button>
 const WndDiv = (id) => {
   return {
     w: UaWindowAdm.create(id),
     out: null,
     show(s) {
       const fh = (txt) => {
+        // Usiamo una classe per il bottone di chiusura invece di un ID per evitare duplicati
         return `
 <div class="window-text">
 <div class="btn-wrapper">
-<button  class="tt-left" data-tt="chiudi" onclick="UaWindowAdm.closeThis(this)">X</button>
+<button class="btn-close-wnd tt-left" data-tt="chiudi">X</button>
 </div>
 <div class="div-text">${txt}</div>
 </div>
@@ -29,47 +33,56 @@ const WndDiv = (id) => {
       this.w.close();
     },
     open(url) {
-      fetchText(url, (s) => this.show(s));
+      HttpService.fetchText(url, (s) => this.show(s));
     },
   };
 };
 
-const wnds = {
+export const wnds = {
   wdiv: null,
-  // wpre: null,
   init() {
     this.wdiv = WndDiv("id_w0");
-    // this.wpre = WndPre("id_w1");
+    // Gestiamo la chiusura delle finestre tramite EventManager
+    EventManager.on("click", ".btn-close-wnd", (e, target) => {
+        const windowElement = target.closest('[data-name="ua-window"]');
+        if (windowElement) {
+            UaWindowAdm.close(windowElement.id);
+        }
+    });
   },
   closeAll() {
     UaWindowAdm.close("id_w0");
-    // UaWindowAdm.close("id_w1");
   },
 };
 
-// const sortSchede = (json) => {
-//   json.schede.sort((a, b) => {
-//     const idA = parseInt(a.id, 10);
-//     const idB = parseInt(b.id, 10);
-//     return idA - idB;
-//   });
-//   return json;
-// };
-
-const showSommario = function () {
-  const item1 = document.getElementById("id_item1");
-  const fn = (h) => {
-    item1.innerHTML = h;
-  };
-  const url = "./data/indice.html";
-  fetchText(url, fn);
+const handleContentClick = (event, target) => {
+  event.preventDefault();
+  const url = target.dataset.url;
+  if (url) {
+    reader.openReader(url);
+  }
 };
 
-const showIndici = function () {
-  const item1 = document.getElementById("id_item1");
-  const fn = (h) => {
-    item1.innerHTML = h;
-  };
-  const url = "./data/archivio.html";
-  fetchText(url, fn);
+const loadContent = (url, element) => {
+  if (!element) return;
+  HttpService.fetchText(url, (html) => {
+    element.innerHTML = html;
+  });
 };
+
+export const showSommario = function () {
+  const item1 = document.getElementById("id_item1");
+  if (item1) {
+    loadContent("./data/indice.html", item1);
+  }
+};
+
+export const showIndici = function () {
+  const item1 = document.getElementById("id_item1");
+  if (item1) {
+    loadContent("./data/archivio.html", item1);
+  }
+};
+
+// Registra il gestore di eventi una sola volta all'inizializzazione del modulo
+EventManager.on("click", "#id_item1 a[data-url]", handleContentClick);

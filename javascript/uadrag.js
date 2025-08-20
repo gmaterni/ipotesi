@@ -5,7 +5,7 @@
 const nodrag_tds = ['input', 'select', 'a'];
 const nodrag_cls = "nodrag";
 
-var UaDrag = function (e) {
+export var UaDrag = function (e) {
     const drag = function (element) {
         let pos1 = 0,
             pos2 = 0,

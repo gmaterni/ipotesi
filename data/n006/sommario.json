@@ -1,0 +1,87 @@
+{
+    "ordine": [
+        "dazi_trump.html",
+        "la_guerra.html",
+        "fensore.html",
+        "la_grande_ambizione.html",
+        "il_declino_della_differenza.html",
+        "santa_rosa.html",
+        "trasporto_dies_natalis.html",
+        "collaborazione.html",
+        "il_significato_dei_numeri.html"
+    ],
+    "schede": [
+        {
+            "titolo": "“Collaborazione”",
+            "sottotitolo": "Uno spettro da addomesticare",
+            "autore": "Raimondo Raimondi",
+            "data": "26-06-2025",
+            "file": "collaborazione.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Trump: davvero sono soltanto dazi?",
+            "sottotitolo": "Forse è anche un problema geopolitico",
+            "autore": "Di Paolo Mastromo",
+            "data": "19-08-2025",
+            "file": "dazi_trump.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Ricordo del Dr. Claudio Fensore a un anno dalla sua\nscomparsa",
+            "sottotitolo": "Incontrare chi crede ma fuori dei banchi",
+            "autore": "don gianni carparelli",
+            "data": "19-08 2025",
+            "file": "fensore.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Il Declino della Diffrenza e della Identità ( 2 parte )",
+            "sottotitolo": "L'identità è distinzione e differenza: è possibile protagonismo della\npropria storia, è processo dinamico dell’ilo che diviene nel tempo della\nstoria personale.",
+            "autore": "Giovanni Mastrangeli",
+            "data": "19-08-2025",
+            "file": "il_declino_della_differenza.html",
+            "id": "140"
+        },
+        {
+            "titolo": "I Racconti dei numeri (Prima parte)",
+            "sottotitolo": "Educare e prevenire tramite l’iconografia dei numeri",
+            "autore": "Guido Angeloni",
+            "data": "12-08-2025",
+            "file": "il_significato_dei_numeri.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Berlinguer: La Grande Ambizione",
+            "sottotitolo": ".",
+            "autore": "Matilde Gregori",
+            "data": "19-08-2025",
+            "file": "la_grande_ambizione.html",
+            "id": "160"
+        },
+        {
+            "titolo": "La guerra, prostituta sempre incinta, aiutiamola ad\nabortire",
+            "sottotitolo": "Alcune riflessioni dal carteggio tra Einstein e Freud nel\n1932",
+            "autore": "don Gianni Carparelli",
+            "data": "Luglio 2025",
+            "file": "la_guerra.html",
+            "id": "170"
+        },
+        {
+            "titolo": "Santa Rosa: siamo davvero “tutti de ‘n\nsentimento”?",
+            "sottotitolo": "Una chiacchierata con Anna e Luigi Roselli, figli del\n“Facchino qualunque” Ernesto.",
+            "autore": "Chiara Vitali",
+            "data": "19-08-2025",
+            "file": "santa_rosa.html",
+            "id": "180"
+        },
+        {
+            "titolo": "Trasporto di “Dies Natalis”",
+            "sottotitolo": "L'attesa e il rinnovo della meraviglia per il secondo Trasporto",
+            "autore": "Stefano Stefanini",
+            "data": "20-08-2025",
+            "file": "trasporto_dies_natalis.html",
+            "id": "190"
+        }
+    ]
+}
