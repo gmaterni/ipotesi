@@ -4,6 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <title>IPOTESI - Periodico di Approfondimento</title>
 
     <meta name="description" content="IPOTESI è un periodico di approfondimento redatto a Viterbo che affronta problematiche generali.">
@@ -18,12 +23,6 @@
     <!-- Geo tagging per SEO locale -->
     <meta name="geo.region" content="IT-62">
     <meta name="geo.placename" content="Viterbo">
-
-    <!-- Gestione della cache -->
-    <!-- <meta http-equiv="Cache-Control" content="public, max-age=604800, stale-while-revalidate=86400"> -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
 
     <!-- Canonical assoluto per il dominio principale -->
     <link rel="canonical" href="https://www.ipotesi.eu/">
@@ -90,8 +89,9 @@
       <img src="images/viterbo06.jpg">
     </div>
     <script>
+      const timestamp = new Date().getTime();
       setTimeout(() => {
-        location.replace(`ipotesi.html`);
+        window.location.replace(`ipotesi.html?=${timestamp}`);
       }, 2000);
     </script>
   </body>
