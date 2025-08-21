@@ -6,9 +6,8 @@ import { toggleMenu, opHome, opArchivio, opHelp, opRedazione, opCollaboatori } f
 import { wnds, showSommario } from "./ipotesi_ui.js";
 import { tts } from "./ipotesi_speak.js";
 import { EventManager } from "./event_manager.js";
-import { initUsageTracker } from './usage_tracker.mjs';
-
-initUsageTracker();
+// import { initUsageTracker } from './usage_tracker.mjs';
+// initUsageTracker();
 
 const initMenu = () => {
   document.body.classList.add("theme-light");
