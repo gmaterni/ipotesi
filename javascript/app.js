@@ -44,7 +44,7 @@ const updateVersionAndDate = () => {
   
   const versionElement = document.getElementById("id_version");
   if (versionElement) {
-    versionElement.textContent = `v.${appVersion}  ${formattedDate}`;
+    versionElement.textContent = `v.${appVersion}__${formattedDate}`;
   }
 };
 
