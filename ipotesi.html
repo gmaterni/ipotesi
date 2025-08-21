@@ -3,54 +3,45 @@
 
     <head>
         <meta charset="UTF-8" />
-        <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">      -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>IPOTESI</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2h1v20h-1z'/><path d='M9 5h6v1H9zM9 18h6v1H9z'/></svg>">
 
         <link rel="stylesheet" href="css/ipotesi.min.css" />
-        <script src="js/ipotesi.min.js" defer></script>
+        <!-- <link rel="stylesheet/less" type="text/css" href="less/ipotesi.less" />
+        <script src="less/less.js"></script> -->
 
-        <!-- <link rel="stylesheet" href="less/normalize.css">
-        <link rel="stylesheet/less" type="text/css" href="less/ipotesi.less" />
-        <script src="less/less.js"></script>
-        <script src="javascript/ipotesi.js"></script>
-        <script src="javascript/ipotesi_ui.js"></script>
-        <script src="javascript/ipotesi_http.js"></script>
-        <script src="javascript/ipotesi_reader.js"></script>
-        <script src="javascript/ipotesi_speak.js"></script>
-        <script src="javascript/uadrag.js"></script>
-        <script src="javascript/uawindow.js"></script>
-        <script src="javascript/uajtfh.js"></script> -->
+        <script id="app-script" type="module" src="javascript/app.js?v=0.6.6"></script>
 
     </head>
 
     <body>
         <div class="menu">
 
-            <button class="menu-h" aria-label="Menu">
-                <span class="menu-h-box tt-right" data-tt="Open">
-                    <span class="menu-h-inner"></span>
-                </span>
+            <button class="menu-h tt-right" aria-label="Menu" data-tt="Open">
+                <svg class="menu-icon-open" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </svg>
+                <svg class="menu-icon-close" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
+                </svg>
             </button>
 
             <div class="title">IPOTESI</div>
             <div class="sub-title">Periodico di approfondimento</div>
-            <div id="id_version" class="version">0.2</div>
+            <div id="id_version" class="version"></div>
         </div>
         <!--  -->
         <div class="btn-theme">
 
-            <button class="btn-dark tt-left " data-tt="Tema scuro" onclick="setDark()">
+            <button id="btn-dark-theme" class="btn-dark tt-left " data-tt="Tema scuro">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                 </svg>
             </button>
 
-            <button class="btn-light tt-left" data-tt="Tema charo" onclick="setLight()">
+            <button id="btn-light-theme" class="btn-light tt-left" data-tt="Tema charo">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="5" />
                     <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
@@ -61,14 +52,14 @@
         <div class="menu-box">
             <ul>
                 <li class="msg">ipotesi2000@gmail.com</li>
-                <li><a href="#" onCLick="opHelp();">Help</a></li>
-                <li><a href="#" onCLick="opHome();">Home</a></li>
-                <li><a href="#" onCLick="opArchivio();">Archivio</a></li>
-                <!-- <li><a href="#" onCLick="opNews();">News</a></li> -->
-                <li><a href="#" onCLick="opRedazione();">Redazione</a></li>
-                <li><a href="#" onCLick="opCollaboatori();">Collaboratori</a></li>
-                <!-- <li><a href="#" onCLick="opIPOTESI();">IPOTESI</a></li> -->
-                <!-- <li><a href="#" onCLick="opIPubblicita();">Pubblicità</a></li> -->
+                <li><a href="#" id="btn-help">Help</a></li>
+                <li><a href="#" id="btn-home">Home</a></li>
+                <li><a href="#" id="btn-archivio">Archivio</a></li>
+                <!-- <li><a href="#" id="btn-news">News</a></li> -->
+                <li><a href="#" id="btn-redazione">Redazione</a></li>
+                <li><a href="#" id="btn-collaboratori">Collaboratori</a></li>
+                <!-- <li><a href="#" id="btn-ipotesi">IPOTESI</a></li> -->
+                <!-- <li><a href="#" id="btn-pubblicita">Pubblicità</a></li> -->
             </ul>
         </div>
 
@@ -109,7 +100,9 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-E93YC2J6LE"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
             gtag('js', new Date());
             gtag('config', 'G-E93YC2J6LE', {
                 'cookie_domain': window.location.hostname,
@@ -117,43 +110,6 @@
             });
         </script>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const versionElement = document.getElementById('id_version');
-
-                const formatDateTime = () => {
-                    const now = new Date();
-                    const day = String(now.getDate()).padStart(2, '0');
-                    const month = String(now.getMonth() + 1).padStart(2, '0');
-                    const year = now.getFullYear();
-                    // const hours = String(now.getHours()).padStart(2, '0');
-                    // const minutes = String(now.getMinutes()).padStart(2, '0');
-                    // const seconds = String(now.getSeconds()).padStart(2, '0');
-                    // return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
-                    return `${day}-${month}-${year}`;
-                };
-
-                const updateDateTime = () => {
-                    versionElement.textContent = formatDateTime();
-                };
-
-                const checkCache = () => {
-                    const version = "v=1.024"
-                    const today = new Date().toISOString().split('T')[0] + version;
-                    const cachedDate = localStorage.getItem('appinfo');
-                    if (cachedDate !== today) {
-                        localStorage.setItem('appinfo', today);
-                        console.log('***** Aggiornamento della cache', today);
-                        window.location.reload(true);
-                    }
-                };
-                checkCache();
-                updateDateTime();
-                // setInterval(updateDateTime, 1000);
-                openApp();
-            });
-
-        </script>
 
     </body>
 
