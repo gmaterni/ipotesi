@@ -7,16 +7,18 @@ import sys
 
 from bs4 import BeautifulSoup
 
+
 def check_scheda(scheda):
     empty_fields = []
     for field, value in scheda.items():
         if not value:
-            s=f"{field}: null"
+            s = f"{field}: null"
             empty_fields.append(s)
     if empty_fields:
         return ",\n".join(empty_fields)
     else:
         return None
+
 
 def get_scheda(html):
     # Trova la prima riga che contiene l'etichetta "ARTICOLO"
@@ -36,12 +38,14 @@ def get_scheda(html):
         scheda_ripulita = soup.get_text()
         # scheda_ripulita=scheda_ripulita.replace("<!--","").relace("-->")
     except Exception as e:
-        sys.exit(e)
+        s = str(e)
+        sys.exit(s)
     return scheda_ripulita
+
 
 def pubbl_articoli(dir_src, dir_trg, num):
     num_str = f"{num:03}"
-    source_dir=f"{dir_src}/n{num_str}/html"
+    source_dir = f"{dir_src}/n{num_str}/html"
     print(source_dir)
     target_dir = Path(dir_trg) / f"n{num_str}"
     print(target_dir)
@@ -62,27 +66,31 @@ def pubbl_articoli(dir_src, dir_trg, num):
 
     # Legge i files nella directory dir_src
     src_files = sorted(Path(source_dir).glob('*'))
-    schede= []
-    art_id=100
+    schede = []
+    art_id = 100
     for file in src_files:
         if file.is_file():
             with file.open('r', encoding='utf-8') as f:
                 ftxt = f.read()
-            scheda=get_scheda(ftxt)
-            articolo=ftxt
+            scheda = get_scheda(ftxt)
+            articolo = ftxt
             # Estrai i dati della scheda
             try:
-                titolo = re.search(r'TITOLO\s*(.*?)\s*SOTTOTITOLO', scheda, re.DOTALL).group(1).strip()
-                sottotitolo = re.search(r'SOTTOTITOLO\s*(.*?)\s*AUTORE', scheda, re.DOTALL).group(1).strip()
-                autore = re.search(r'AUTORE\s*(.*?)\s*DATA', scheda, re.DOTALL).group(1).strip()
-                data = re.search(r'DATA\s*(.*?)\s*ARTICOLO', scheda, re.DOTALL).group(1).strip()
-                art_id+=10
+                titolo = re.search(r'TITOLO\s*(.*?)\s*SOTTOTITOLO',
+                                   scheda, re.DOTALL).group(1).strip()
+                sottotitolo = re.search(
+                    r'SOTTOTITOLO\s*(.*?)\s*AUTORE', scheda, re.DOTALL).group(1).strip()
+                autore = re.search(r'AUTORE\s*(.*?)\s*DATA',
+                                   scheda, re.DOTALL).group(1).strip()
+                data = re.search(r'DATA\s*(.*?)\s*ARTICOLO',
+                                 scheda, re.DOTALL).group(1).strip()
+                art_id += 10
             except Exception as e:
                 print("\n=========================")
                 print(e)
                 print(f"\n\nErrore nella scheda del file:\n{file}\n\n")
                 sys.exit()
-            scheda_json={
+            scheda_json = {
                 "titolo": titolo,
                 "sottotitolo": sottotitolo,
                 "autore": autore,
@@ -91,7 +99,7 @@ def pubbl_articoli(dir_src, dir_trg, num):
                 "id": str(art_id)
             }
             # art_id+=10
-            msg=check_scheda(scheda_json)
+            msg = check_scheda(scheda_json)
             if msg is not None:
                 print("================\n")
                 print(f"Errore nella scheda del file:\n{file}")
@@ -112,19 +120,21 @@ def pubbl_articoli(dir_src, dir_trg, num):
     # Scrivi il file sommario.json
     sommario_file = target_dir / f"sommario.json"
     with sommario_file.open('w', encoding='utf-8') as f:
-        json.dump({"ordine": file_names, "schede": schede}, f, ensure_ascii=False, indent=4)
+        json.dump({"ordine": file_names, "schede": schede},
+                  f, ensure_ascii=False, indent=4)
 
     target_dir.chmod(0o777)
     for item in target_dir.iterdir():
         item.chmod(0o777)
 
+
 if __name__ == "__main__":
-    if len(sys.argv)<2:
+    if len(sys.argv) < 2:
         print("\n\n")
         print("ex2_pubbl.py <num>")
         sys.exit()
     dir_src = "./articoli"
     dir_trg = "./data"
-    n=sys.argv[1]
-    n=int(n)
+    n = sys.argv[1]
+    n = int(n)
     pubbl_articoli(dir_src, dir_trg, n)

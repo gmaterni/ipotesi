@@ -1,0 +1,60 @@
+{
+    "ordine": [
+        "dopo_santa_rosa.html",
+        "fare_rete_col_cocchio.html",
+        "il_culto_di_snanta_rosa.html",
+        "la_pubblicita_nella_ia.html",
+        "la_verita_e_il_tempo_delle_bugie.html",
+        "putin_isolato_o_europa_disgregata.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Dopo Santa Rosa c’è sempre un dopo",
+            "sottotitolo": "Le feste sono una occasione culturale e anche spirituale. La comunità\nsi incontra, si organizza, riflette, analizza, si eleva un pochino sul\nquotidiano, guarda avanti… insomma comunque vadano le cose, è importante\nche ci siano feste e commemorazioni. Per lo spirito, poi, non ci\ndovrebbe essere un “prima…” e un “dopo…”.",
+            "autore": "Don Gianni Carparelli",
+            "data": "Settembre 2025",
+            "file": "dopo_santa_rosa.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Fare rete col cocchio.",
+            "sottotitolo": "Una frase fatta e alcuni vizietti del\nvolontariato.",
+            "autore": "Raimondo Raimondi",
+            "data": "20-09-2025",
+            "file": "fare_rete_col_cocchio.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Il culto di Santa Rosa a Viterbo",
+            "sottotitolo": "Brevi spunti storico-antropologici",
+            "autore": "Marcello Arduini",
+            "data": "20-09-2025",
+            "file": "il_culto_di_snanta_rosa.html",
+            "id": "130"
+        },
+        {
+            "titolo": "La Rivoluzione della Pubblicità nell'IA",
+            "sottotitolo": "Con il diffondersi dell’Intelligenza Artificiale la pubblicità sarà\npiù nascosta, insidiosa e manipolatrice.",
+            "autore": "Giuseppe Materni",
+            "data": "20-09-2025",
+            "file": "la_pubblicita_nella_ia.html",
+            "id": "140"
+        },
+        {
+            "titolo": "La verità? Scordatevela. Oggi è il tempo delle\nbugie.",
+            "sottotitolo": "Le mezze verità e le bugie intere. L'informazione fra manipolazione,\npropaganda e violenza.\"",
+            "autore": "Di Paolo Mastromo",
+            "data": "20-09-2025",
+            "file": "la_verita_e_il_tempo_delle_bugie.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Putin islato o Europa in affanno?",
+            "sottotitolo": "I MEDIA occidentali (europei) continuano a raccontare la favola di\nPutin isolato dal mondo intero e alle prese con un’economia allo\nsbando.",
+            "autore": "Marco Faregna",
+            "data": "20-09-2025",
+            "file": "putin_isolato_o_europa_disgregata.html",
+            "id": "160"
+        }
+    ]
+}
