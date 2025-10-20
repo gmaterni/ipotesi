@@ -34,9 +34,9 @@ def get_scheda(html):
         # Assegna ad una variabile scheda il testo dall'inizio alla riga che contiene il tag ARTICOLO compresa
         scheda = '\n'.join(lines[:articolo_line + 1])
         # Ripulisce del markup il testo contenuto nella variabile scheda
-        soup = BeautifulSoup(scheda, 'html.parser')
-        scheda_ripulita = soup.get_text()
-        # scheda_ripulita=scheda_ripulita.replace("<!--","").relace("-->")
+        # soup = BeautifulSoup(scheda, 'html.parser')
+        # scheda_ripulita = soup.get_text()
+        scheda_ripulita = scheda.replace("<!--", "").replace("-->", "")
     except Exception as e:
         s = str(e)
         sys.exit(s)

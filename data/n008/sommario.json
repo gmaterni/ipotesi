@@ -1,0 +1,69 @@
+{
+    "ordine": [
+        "fideiussione_e_collaborazione.html",
+        "il_significato_dei_numeri.html",
+        "intervista_completa.html",
+        "le_persone_non_sono_danni.html",
+        "minimacchina_santa_rosa.html",
+        "nel_silenzio_esplode_la_vita.html",
+        "trump_promotore_di_pace.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Fideiussione e Collaborazione",
+            "sottotitolo": "Niente confusione.",
+            "autore": "Raimondo Raimondi",
+            "data": "20-10-2025",
+            "file": "fideiussione_e_collaborazione.html",
+            "id": "110"
+        },
+        {
+            "titolo": "I Racconti dei numeri (Seconda parte)",
+            "sottotitolo": "Educare e prevenire tramite l’iconografia dei numeri",
+            "autore": "Guido Angeloni",
+            "data": "20-09-2025",
+            "file": "il_significato_dei_numeri.html",
+            "id": "120"
+        },
+        {
+            "titolo": "UNA ECCELLENZA DELLA SANITA' VITERBESE",
+            "sottotitolo": "IL TRATTAMENTO DELL'ICTUS ISCHEMICO IN FASE ACUTA\nPRESSO L'OSPEDALE \"SANTA ROSA\" DI BELCOLLE",
+            "autore": "(a cura di Gabriele Salvatori)",
+            "data": "20-10-2025",
+            "file": "intervista_completa.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Le persone non sono danni collaterali",
+            "sottotitolo": "E’ solo una breve riflessione su quello che la pazzia delle pazzie,\nla guerra e i suoi massacri, vuole farci digerire come: “… Ah, a\nproposito, anche le persone muoiono… pazienza... cose che capitano! … Ma\nabbiamo vinto, abbiamo conquistato territori e ricchezze, abbiamo\nallargato il nostro potere e poi sulle macerie ricostruiremo la\nbellezza…”.",
+            "autore": "Don Gianni Carparelli",
+            "data": "Ottobre 2025",
+            "file": "le_persone_non_sono_danni.html",
+            "id": "140"
+        },
+        {
+            "titolo": "La Minimacchina di S. Rosa",
+            "sottotitolo": "Possiamo iniziare con la domanda: la Minimacchina di Santa Rosa ha\nuna sua “piccola storia”",
+            "autore": "di Marcello Arduini",
+            "data": "2010-2025",
+            "file": "minimacchina_santa_rosa.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Nel silenzio è esplosa la vita",
+            "sottotitolo": "L’evento del 2-3 Agosto a Roma che ha visto circa un milione di\ngiovani da tutto il mondo non può non farci riflettere, credenti o no.\nRispettosi, rumorosi e se non lo fossero ci sarebbe da preoccuparsi,\nallegri, sorridenti… giovani che non avremmo problemi ad ospitare in\ncasa.\nDa tempo sto raccogliendo idee e opinioni da giovani, italiani e non,\ngiovani con problemi di salute mentale e altri che stanno uscendo dalle\ndipendenze, giovani attivi nei propri paesi , giovani che affrontano\nl’emarginazione per le loro scelte di vita, giovani amici sparsi ovunque\nche ancora si fidano di un vecchio come me.",
+            "autore": "don Gianni Carparelli",
+            "data": "20-10-2025",
+            "file": "nel_silenzio_esplode_la_vita.html",
+            "id": "160"
+        },
+        {
+            "titolo": "TRUMP promotore di PACE, incontra Zelensky e Putin.",
+            "sottotitolo": "L’EUROPA sta a guardare INASCOLTATA e IMPOTENTE per le scelte di\npolitica estera, affidate alla Commissaria lettone Kaja Kallas.",
+            "autore": "Marco Faregna",
+            "data": "20-10-2025",
+            "file": "trump_promotore_di_pace.html",
+            "id": "170"
+        }
+    ]
+}
