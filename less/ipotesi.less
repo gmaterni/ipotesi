@@ -543,6 +543,7 @@ div.col-right {
 // --- Generic Window & Reader Styles ---
 .window-text {
   // Generic popup window
+  box-sizing: border-box;
   padding: 2px;
   width: 78vw;
   height: 90vh;
@@ -663,7 +664,6 @@ div.col-right {
   }
 
   .content {
-    // Markdown content
     box-sizing: border-box;
     height: 87vh;
     width: 100%;
@@ -689,7 +689,7 @@ div.col-right {
       margin-top: 1.5em;
       margin-bottom: 1em;
       font-weight: 600;
-      line-height: 1.25;
+      line-height: 1.1;
     }
     h1 {
       font-size: 2em;
@@ -699,6 +699,10 @@ div.col-right {
     }
     h3 {
       font-size: 1.7em;
+      text-align: center;
+    }
+    h4 {
+      font-size: 1.3em;
       text-align: center;
     }
     a {
@@ -716,13 +720,14 @@ div.col-right {
     blockquote {
       margin: 1em 0;
       padding: 0 1em;
+      border-left: none;
       .theme-light & {
         color: @theme-light-text-secondary;
-        border-left: 0.25em solid @theme-light-border-secondary;
+        // border-left: 0.25em solid @theme-light-border-secondary;
       }
       .theme-dark & {
         color: @theme-dark-text-secondary;
-        border-left: 0.25em solid @theme-dark-border-secondary;
+        // border-left: 0.25em solid @theme-dark-border-secondary;
       }
     }
   }
