@@ -2,10 +2,13 @@
     "ordine": [
         "intervista_completa.html",
         "trump_promotore_di_pace.html",
+        "partecipazione_politica_contro__disinformazione.html",
         "fideiussione_e_collaborazione.html",
-        "il_significato_dei_numeri.html",
         "le_persone_non_sono_danni.html",
         "nel_silenzio_esplode_la_vita.html",
+        "scuderie_papali_bramante.html",
+        "politiche_agroalimentari__paesagg__rurali_.html",
+        "il_significato_dei_numeri.html",
         "minimacchina_santa_rosa.html"
     ],
     "schede": [
@@ -58,12 +61,36 @@
             "id": "160"
         },
         {
+            "titolo": "Europa più vicina si cittadini.",
+            "sottotitolo": "Un Workshop Internazionale per costruire la Partecipazione Civica\nContro la Disinformazione.",
+            "autore": "Stefano Stefanini",
+            "data": "20-10-2025",
+            "file": "partecipazione_politica_contro__disinformazione.html",
+            "id": "170"
+        },
+        {
+            "titolo": "Riflessioni a margine della Giornata mondiale dell‘Alimentazione",
+            "sottotitolo": "Il ruolo strategico dei territori italiani per la promozione e lo\nsviluppo delle politiche agroalimentari internazionali e interne.",
+            "autore": "Simone Stefanini Conti",
+            "data": "20-10-2025",
+            "file": "politiche_agroalimentari__paesagg__rurali_.html",
+            "id": "180"
+        },
+        {
+            "titolo": "Sallupara, un gioiello del Rinascimento viterbese (1506-1508) .",
+            "sottotitolo": "Proseguono a pieno ritmo i lavori per il recupero delle Scuderie\npapali del Bramante di Piazza Sallupara",
+            "autore": "Stefano Stefanini",
+            "data": "20-10-2025",
+            "file": "scuderie_papali_bramante.html",
+            "id": "190"
+        },
+        {
             "titolo": "TRUMP promotore di PACE, incontra Zelensky e Putin.",
             "sottotitolo": "L’EUROPA sta a guardare INASCOLTATA e IMPOTENTE per le scelte di\npolitica estera, affidate alla Commissaria lettone Kaja Kallas.",
             "autore": "Marco Faregna",
             "data": "20-10-2025",
             "file": "trump_promotore_di_pace.html",
-            "id": "170"
+            "id": "200"
         }
     ]
 }
