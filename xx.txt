@@ -1,0 +1,17 @@
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDGLPWSCHB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DDGLPWSCHB');
+</script>
+
+
+ipotesi.eu
+https://gmaterni.github.io/ipotesi/ipotesi.html
+ID stream  13000962388
+id misurazione: G-DDGLPWSCHB
+
+proprety id: 494206441
