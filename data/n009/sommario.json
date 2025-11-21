@@ -1,0 +1,69 @@
+{
+    "ordine": [
+        "perchè_la_guerra.html",
+        "ucraina.html",
+        "alfio_pannega.html",
+        "tuscania_nuovo_centro_scommesse.html",
+        "abitare_il_presente_dal_basso.html",
+        "iil_significato_dei_numeri_ii_parte.html",
+        "minimcchina_2.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Abitare il presente dal basso: radici, passi,\nresponsabilità",
+            "sottotitolo": "Corpo e Territorio - Postura Naturale nella\nTuscia",
+            "autore": "di Barbara Matteucci",
+            "data": "20-11-2025",
+            "file": "abitare_il_presente_dal_basso.html",
+            "id": "110"
+        },
+        {
+            "titolo": "E’ novembre e penso a Alfio Pannega, poeta della semplicità vera",
+            "sottotitolo": "Nell’immaginario collettivo il mese di novembre ci ricorda i nostri\ndefunti. Mi permetto di riportare alla memoria un personaggio mitico\ndelle nostre strade deceduto il 30 Aprile del 2010. Lo incontravamo con\nil suo carrettino pieno di cartone da riciclare. Certe persone non si\nriciclano, sono musica senza tempo.",
+            "autore": "Don Gianni Carparelli",
+            "data": "20-11-2025",
+            "file": "alfio_pannega.html",
+            "id": "120"
+        },
+        {
+            "titolo": "I Racconti dei numeri (Seconda parte)",
+            "sottotitolo": "Educare e prevenire tramite l’iconografia dei numeri",
+            "autore": "Guido Angeloni",
+            "data": "17-11-2025",
+            "file": "iil_significato_dei_numeri_ii_parte.html",
+            "id": "130"
+        },
+        {
+            "titolo": "La Minimacchina di Santa Rosa.",
+            "sottotitolo": "Interpretazioni e significati:Lo spazio e il tempo\ndell'azione rituale.",
+            "autore": "Marcello Arduini",
+            "data": "20-11-2025",
+            "file": "minimcchina_2.html",
+            "id": "140"
+        },
+        {
+            "titolo": "Perché la GUERRA?",
+            "sottotitolo": "Il Saggio trae spunto dal carteggio Einstein-Freud proponendo lo\nstudio della coscienza nei suoi dispositivi verso violenza e\naggressività espresse nella “normalità” e nella guerra.",
+            "autore": "Giovanni Mastrangeli",
+            "data": "20-11-2025",
+            "file": "perchè_la_guerra.html",
+            "id": "150"
+        },
+        {
+            "titolo": "A Tuscania nuovo Centro scommesse ce ne era eramente bisogno?",
+            "sottotitolo": "Nel 2021 gli italiani hanno “investito” circa 111 miliardi di euro\nnel gioco d’azzardo, cifra che è salita a 157 miliardi nel 2024, molto\nben al di sopra delle spese per sanità e istruzione! … Una malattia o un\ndisturbo dell’anima, cioè: della vita.",
+            "autore": "Don Pier Paolo Fanelli, presbitero della Comunità Cristiana di\nTuscania",
+            "data": "20-11-2025",
+            "file": "tuscania_nuovo_centro_scommesse.html",
+            "id": "160"
+        },
+        {
+            "titolo": "Ucraina: non sembra ma la guerra sta per finire",
+            "sottotitolo": "In diplomazia, per ottenere risultati, bisogna fare\nogni volta dei passi avanti. Magari lenti, però sempre nella stessa\ndirezione.",
+            "autore": "di Paolo Mastromo",
+            "data": "20-11-2025",
+            "file": "ucraina.html",
+            "id": "170"
+        }
+    ]
+}
