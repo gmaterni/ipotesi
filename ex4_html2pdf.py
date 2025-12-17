@@ -7,6 +7,7 @@ import sys
 
 import pdfkit
 
+
 def build_html_page(html_content):
     page = f"""
 <!DOCTYPE html>
@@ -115,8 +116,10 @@ def build_html_page(html_content):
     """
     return page
 
+
 def list_html_files(directory):
     return list(directory.glob('*.html'))
+
 
 def convert_html_to_pdf(html_content, output_path):
     try:
@@ -129,9 +132,11 @@ def convert_html_to_pdf(html_content, output_path):
         with open(error_file_path, 'w', encoding='utf-8') as error_file:
             error_file.write(error_message)
 
-def main(number):
+
+def main(num):
     # Create the directory name
-    directory_name = f"n00{number}"
+    num_str = f"n{num:03}"
+    directory_name = f"{num_str}"
     html_directory_path = Path(f"./data/{directory_name}")
 
     # Create the directory if it doesn't exist
@@ -166,6 +171,7 @@ def main(number):
             convert_html_to_pdf(complete_html_page, pdf_file_path)
         except Exception as e:
             print(f"Errore durante l'elaborazione del file {html_file}: {e}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

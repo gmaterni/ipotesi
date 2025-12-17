@@ -44,10 +44,10 @@ def get_scheda(html):
 
 
 def pubbl_articoli(dir_src, dir_trg, num):
-    num_str = f"{num:03}"
-    source_dir = f"{dir_src}/n{num_str}/html"
+    num_str = f"n{num:03}"
+    source_dir = f"{dir_src}/{num_str}/html"
     print(source_dir)
-    target_dir = Path(dir_trg) / f"n{num_str}"
+    target_dir = Path(dir_trg) / f"{num_str}"
     print(target_dir)
     # set_trace()
     if target_dir.exists():

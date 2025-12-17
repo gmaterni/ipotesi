@@ -130,9 +130,12 @@ def list_html_files(directory):
     return list(directory.glob('*.html'))
 
 
-def main(number):
+def main(num):
     # Create the directory name
-    directory_name = f"n00{number}"
+    # directory_name = f"n00{number}"
+    num_str = f"n{num:03}"
+    directory_name = f"{num_str}"
+
     html_directory_path = Path(f"./data/{directory_name}")
 
     # Create the directory if it doesn't exist
