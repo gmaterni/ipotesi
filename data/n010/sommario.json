@@ -1,19 +1,30 @@
 {
     "ordine": [
+        "che_succede_tra_uas_e_ue.html",
         "il_mondo_è_in_fiamme.html",
         "il_silenzio_come_ben_comune.html",
         "natale_che_non_si_vdee.html",
         "perchè_la_guerra_2.html",
-        "quando_non_cera_la_lavatrice.html"
+        "quando_non_cera_la_lavatrice.html",
+        "un_reale_modello_di_sviluppodella_tuscia.html",
+        "urp.html"
     ],
     "schede": [
+        {
+            "titolo": "Che sta succedendo tra USA e UE ?",
+            "sottotitolo": "E’ tutta colpa solo di Trump o già con Biden qualcosa cominciava a\nscricchiolare?",
+            "autore": "Marco Faregna",
+            "data": "20-12-2025",
+            "file": "che_succede_tra_uas_e_ue.html",
+            "id": "110"
+        },
         {
             "titolo": "Il mondo intero è in fiamme: davvero",
             "sottotitolo": "una brutta eredità per il 2026 che è alle porte",
             "autore": "di Paolo Mastromo",
             "data": "20-12-2025",
             "file": "il_mondo_è_in_fiamme.html",
-            "id": "110"
+            "id": "120"
         },
         {
             "titolo": "Ascolto – Il silenzio come bene comune",
@@ -21,7 +32,7 @@
             "autore": "di Barbara Matteucci",
             "data": "2’-12-2025",
             "file": "il_silenzio_come_ben_comune.html",
-            "id": "120"
+            "id": "130"
         },
         {
             "titolo": "Il natale commerciale è un motore per l’economia ma c’è un\naltro NATALE",
@@ -29,7 +40,7 @@
             "autore": "Don Gianni Carparelli",
             "data": "10-12 2025",
             "file": "natale_che_non_si_vdee.html",
-            "id": "130"
+            "id": "140"
         },
         {
             "titolo": "PERCHE’ LA GUERRA (parte seconda)",
@@ -37,7 +48,7 @@
             "autore": "Giovanni Mastrangeli",
             "data": "20-12-2025",
             "file": "perchè_la_guerra_2.html",
-            "id": "140"
+            "id": "150"
         },
         {
             "titolo": "Al Lavatoio",
@@ -45,7 +56,23 @@
             "autore": "Caterina Cola",
             "data": "30-11-2025",
             "file": "quando_non_cera_la_lavatrice.html",
-            "id": "150"
+            "id": "160"
+        },
+        {
+            "titolo": "Un reale modello di sviluppo della Tuscia ?",
+            "sottotitolo": "Redazionale del direttore responsabile. L’anno che verrà “Le\ncondizioni per l’attuazione di un modello di sviluppo della Tuscia nel\n2026”",
+            "autore": "Stefano Stefanini",
+            "data": "20-12-2025",
+            "file": "un_reale_modello_di_sviluppodella_tuscia.html",
+            "id": "170"
+        },
+        {
+            "titolo": "URP",
+            "sottotitolo": "Ufficio Relazioni con il Pubblico: un banco di prova per la\ncittadinanza attiva.",
+            "autore": "Raimondo Raimondi",
+            "data": "17-12-2025",
+            "file": "urp.html",
+            "id": "180"
         }
     ]
 }

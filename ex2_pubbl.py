@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 import re
 import sys
-
-from bs4 import BeautifulSoup
+from pdb import set_trace
+# from bs4 import BeautifulSoup
 
 
 def check_scheda(scheda):
@@ -44,6 +44,7 @@ def get_scheda(html):
 
 
 def pubbl_articoli(dir_src, dir_trg, num):
+    # set_trace()
     num_str = f"n{num:03}"
     source_dir = f"{dir_src}/{num_str}/html"
     print(source_dir)
