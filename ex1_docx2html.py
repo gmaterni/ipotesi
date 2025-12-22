@@ -67,7 +67,8 @@ def center_first_image_after_title(html_content):
 
     return str(soup)
 
-# HACK def encode_image_to_base64(image_path):
+#
+# AAA def encode_image_to_base64(image_path):
 #     """Encode an image to base64."""
 #     try:
 #         with open(image_path, "rb") as image_file:
