@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
+from PIL import Image
+import io
 import base64
 import os
 import pathlib as pt
@@ -35,6 +37,46 @@ def set_tag_title(html):
     return str(soup)
 
 
+def center_first_image_after_title(html_content):
+    """Centra la prima immagine che appare dopo il tag h3 (titolo)."""
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    # Trova il tag h3 (titolo)
+    h3_tag = soup.find('h3')
+
+    if h3_tag:
+        # Trova la prima immagine dopo il titolo
+        first_img = None
+        for sibling in h3_tag.find_all_next():
+            if sibling.name == 'img':
+                first_img = sibling
+                break
+
+        if first_img:
+            # Crea un div con stile per centrare l'immagine
+            center_div = soup.new_tag(
+                'div', style='text-align: center; margin: 20px 0;')
+
+            # Sposta l'immagine dentro il div
+            img_parent = first_img.parent
+            first_img.extract()
+            center_div.append(first_img)
+
+            # Inserisce il div nella posizione originale dell'immagine
+            img_parent.insert(0, center_div)
+
+    return str(soup)
+
+# HACK def encode_image_to_base64(image_path):
+#     """Encode an image to base64."""
+#     try:
+#         with open(image_path, "rb") as image_file:
+#             return base64.b64encode(image_file.read()).decode('utf-8')
+#     except Exception as e:
+#         print(f"Errore nella lettura dell'immagine {image_path}: {e}")
+#         return None
+
+
 def extract_images_from_docx(docx_path, output_dir):
     """Extract images from a DOCX file and save them to a directory."""
     doc = Document(docx_path)
@@ -54,11 +96,38 @@ def extract_images_from_docx(docx_path, output_dir):
     return image_paths
 
 
-def encode_image_to_base64(image_path):
+def xencode_image_to_base64(image_path):
     """Encode an image to base64."""
     try:
         with open(image_path, "rb") as image_file:
             return base64.b64encode(image_file.read()).decode('utf-8')
+    except Exception as e:
+        print(f"Errore nella lettura dell'immagine {image_path}: {e}")
+        return None
+
+
+def encode_image_to_base64(image_path, max_width=800, quality=60):
+    """Encode an image to base64 with compression."""
+    try:
+        img = Image.open(image_path)
+
+        if img.width > max_width:
+            ratio = max_width / img.width
+            new_height = int(img.height * ratio)
+            img = img.resize((max_width, new_height), Image.LANCZOS)
+        # Converti in RGB se è PNG (per salvare come JPEG)
+        if img.mode in ('RGBA', 'LA', 'P'):
+            background = Image.new('RGB', img.size, (255, 255, 255))
+            if img.mode == 'P':
+                img = img.convert('RGBA')
+            background.paste(img, mask=img.split()
+                             [-1] if img.mode == 'RGBA' else None)
+            img = background
+        # Salva in memoria con compressione
+        buffer = io.BytesIO()
+        img.save(buffer, format='JPEG', quality=quality, optimize=True)
+        buffer.seek(0)
+        return base64.b64encode(buffer.read()).decode('utf-8')
     except Exception as e:
         print(f"Errore nella lettura dell'immagine {image_path}: {e}")
         return None
@@ -208,6 +277,9 @@ def add_scheda_articolo(hpath):
         articolo_html = '\n'.join(lines[articolo_line + 1:])
 
         articolo_html = set_tag_title(articolo_html)
+
+        # NUOVA FUNZIONE: Centra la prima immagine dopo il titolo
+        articolo_html = center_first_image_after_title(articolo_html)
 
         # Assegna ad una variabile scheda il testo dall'inizio alla riga che contiene il tag ARTICOLO compresa
         scheda_html = '\n'.join(lines[:articolo_line + 1])
