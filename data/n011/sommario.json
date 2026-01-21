@@ -1,0 +1,69 @@
+{
+    "ordine": [
+        "le_cerimonie_ingrassano.html",
+        "mastrangeli_3.html",
+        "babbonatale.html",
+        "leprospettivedipace.html",
+        "elezioneprovinciaviterbo.html",
+        "asse_cielo_terra.html",
+        "manganogennaio.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Verticalità – L’asse tra cielo e pietra",
+            "sottotitolo": "Etica, libertà e spina dorsale etica nella Tuscia",
+            "autore": "di Barbara Matteucci",
+            "data": "20-01-2026",
+            "file": "asse_cielo_terra.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Babbo Natale Icona Universale",
+            "sottotitolo": "Dalle origini cristiane alla globalizzazione commerciale",
+            "autore": "Marcello Arduini",
+            "data": "20-01-2026",
+            "file": "babbonatale.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Elezioni Provinciali di Viterbo",
+            "sottotitolo": "Con oltre 500 voti ponderati dei 60 comuni della Tuscia Alessandro\nRomoli e’ stato riconfermato presidente della provincia di Viterbo. Una\nlarga coalizione per potenziare il ruolo di Palazzo Gentili.",
+            "autore": "Stefano Stefanini",
+            "data": "10-01-2026",
+            "file": "elezioneprovinciaviterbo.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Le cerimonie ingrassano mentre le celebrazioni alimentano",
+            "sottotitolo": "Dopo le “feste” molti si lamentano di tante cose. Chi delle diete\nandate all’aria. Chi non ha avuto motivi per festeggiare. Chi avrebbe\nvoluto fare più affari…. Chi è contrario a tutto e a tutti… Poi ci sono\nanche coloro che ringraziano e hanno passato momenti belli in famiglia e\ncon gli amici. In un giardino non ci sono solo erbacce, ma anche fiori\nche fioriscono e uccelli che cantano.",
+            "autore": "Don Gianni Carparelli",
+            "data": "20-02-2026",
+            "file": "le_cerimonie_ingrassano.html",
+            "id": "140"
+        },
+        {
+            "titolo": "Le Prospettive di Pace",
+            "sottotitolo": "Le parole di Papa Leone e per una pace disarmata e disarmante e del\nPresidente della Repubblica Sergio Mattarella per rafforzare la\ncooperazione internazionale e affrontare sfide globali come la tutela\ndel clima, la lotta alla povertà e alle disuguaglianze.",
+            "autore": "Stefano Stefanini",
+            "data": "20-01-2026",
+            "file": "leprospettivedipace.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Domenico Mangano un uomo malato di “ALTRITE”",
+            "sottotitolo": "Deceduto il 22 dicembre 2001. Dal 1974 membro e collaboratore nel\n“Movimento dei Focolari” e poi consulente di Chiara Lubich, la\nfondatrice. Politico e amministratore. Già membro della Azione Cattolica\ndi Viterbo e educatore. Sposo di Maria Pia e padre di tre figli. Grande\npersonalità di cultura e sempre presente nel servizio agli “ALTRI”. Per\nquesto la moglie lo riteneva malato di “Altrite”.",
+            "autore": "Don Gianni Carparelli",
+            "data": "12-01- 2026",
+            "file": "manganogennaio.html",
+            "id": "160"
+        },
+        {
+            "titolo": "PERCHE’ LA GUERRA (parte terza)",
+            "sottotitolo": "Il saggio trae spunto dal carteggio Freud-Einstein proponendo lo\nstudio della coscienza nei suoi dispositivi verso violenza e\naggressività espresse nella “normalità” e nella guerra",
+            "autore": "Giovanni Mastrangeli",
+            "data": "20-01-2023",
+            "file": "mastrangeli_3.html",
+            "id": "170"
+        }
+    ]
+}

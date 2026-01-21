@@ -193,7 +193,7 @@ def generate_ipotesi_index(num):
 </html>'''
     
     # Write the HTML file
-    output_filename = f"ined_ipotesi{num}.html"
+    output_filename = f"index_ipotesi{num}.html"
     with open(output_filename, 'w', encoding='utf-8') as f:
         f.write(html_content)
     
