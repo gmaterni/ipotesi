@@ -1,0 +1,69 @@
+{
+    "ordine": [
+        "corpo_territorio.html",
+        "referendum_separazione.html",
+        "guerra_ucraina.html",
+        "politichese_senza_cuore.html",
+        "benessere_equo.html",
+        "enrico_minio.html",
+        "riti_primaverili.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Bnessere Equo Sostenibile",
+            "sottotitolo": "La dimensione \"Benessere economico\" fotografa il territorio in base\nalle risorse presenti .",
+            "autore": "Simone Stefanini Conti",
+            "data": "20-02-2026",
+            "file": "benessere_equo.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Corpo e Territorio – Postura Naturale nella\nTuscia",
+            "sottotitolo": "Fluire – Camminare come atto politico\nSpostare il corpo, cambiare passo: resilienza, trasformazione,\nfiducia",
+            "autore": "Barbara Matteucci",
+            "data": "20-02-2026",
+            "file": "corpo_territorio.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Enrico Minio",
+            "sottotitolo": "Un grande personaggio e un fallimento esistenziale, cosa ci insegnano\nl’uno e l’altro?",
+            "autore": "Guido Angeloni",
+            "data": "23-02-2026",
+            "file": "enrico_minio.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Ci eravamo illusi: in Ucraina la guerra mostra di essere\nassai più forte della pace",
+            "sottotitolo": "Altro che “pace vicina”, ci siamo cascati in tanti. Nonostante le\napparenze, la pace in Ucraina è sempre più lontana.",
+            "autore": "Di Paolo Mastromo",
+            "data": "20-02-2026",
+            "file": "guerra_ucraina.html",
+            "id": "140"
+        },
+        {
+            "titolo": "Il politichese senza cuore e senza coscienza inchiodato su\nuna poltronasacra",
+            "sottotitolo": "In un contesto mondiale, con troppi politicanti di mestiere e\npoca POLITICA, azzardo l’ingresso della bellezza e della poesia. Una\namica carissima italo-canadese ha recentemente scritto questa poesia:\n“This world has spawned leaders without a beating muscle or blood or\nconscience, anointed them as gods…” (…che mondo, ha partorito signori\nprivi di un cuore pensante…).\nQuesta mia riflessione non aggiunge nulla a quelle di altri\nche riescono a vedere “ALTRO” e con più profonda intuizione. E’ ora di\nsvegliarci… e ci sono segni di una rivoluzione pacifica delle coscienze.\nIo desidero trovarmi in questo gruppo.",
+            "autore": "Don Gianni Carparelli",
+            "data": "Febbraio 2026",
+            "file": "politichese_senza_cuore.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Le ragioni del Si e le ragioni del No",
+            "sottotitolo": "Le ragioni del Si e le ragioni del No al Referendum confermativo\nsulla legge costituzionale sulla separazione delle carriere della\nMagistratura di domenica 22 e lunedì 23 marzo. Invito alla chiarezza e\npacatezza in campagna referendaria.",
+            "autore": "Stefano Stefanini",
+            "data": "20-02-2026",
+            "file": "referendum_separazione.html",
+            "id": "160"
+        },
+        {
+            "titolo": "Culti arborei e riti primaverili. Brevi note antropologiche.",
+            "sottotitolo": "Pe’ la Candelora dall’inverno semo fora\nMa se piove e tira vento\nDell’inverno semo dentro.",
+            "autore": "Marcello Arduini",
+            "data": "20-02-2026",
+            "file": "riti_primaverili.html",
+            "id": "170"
+        }
+    ]
+}
