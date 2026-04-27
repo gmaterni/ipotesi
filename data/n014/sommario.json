@@ -1,6 +1,7 @@
 {
     "ordine": [
         "25_aprile.html",
+        "liberazione_valori_attuali.html",
         "1_maggio_maghera.html",
         "ungheria.html",
         "omaggio_odissea_spazio.html",
@@ -34,12 +35,20 @@
             "id": "130"
         },
         {
+            "titolo": "Liberzione: valori attuali e fatti storici",
+            "sottotitolo": "La lezione del 25 Aprile....dopo 81 anni dalla Liberazione, esigenza\ndi unita’ per costruire un’Italia più solidale, efficiente, con la\ntutela di ambiente, formazione, lavoro, cultura e benessere diffuso.",
+            "autore": "Stefno Stefanini",
+            "data": "24-04-2026",
+            "file": "liberazione_valori_attuali.html",
+            "id": "140"
+        },
+        {
             "titolo": "Omaggio a “2001: Odissea nello spazio” ed ai simboli per uscire umani\ndal disagio di oggi.",
             "sottotitolo": "Riprendendo i temi della coscienza in crisi nel nuovo millennio, e la\ndecadenza di identità rassicurante, si propongono farmaci di umana\nmaturità per ridurre rischi ed inciviltà personale e sociale, nel\nrapporto tra vita e tecnologia.",
             "autore": "Giovanni Mastrangeli",
             "data": "20-04-2026",
             "file": "omaggio_odissea_spazio.html",
-            "id": "140"
+            "id": "150"
         },
         {
             "titolo": "Esperienze di un raccoglitore di fiabe",
@@ -47,7 +56,7 @@
             "autore": "Marcello Arduini",
             "data": "20-04-2026",
             "file": "raccoglitore_fiabe.html",
-            "id": "150"
+            "id": "160"
         },
         {
             "titolo": "Corpo e Territorio – Postura Naturale nella\nTuscia",
@@ -55,7 +64,7 @@
             "autore": "Barbara Matteucci",
             "data": "20-04-2026",
             "file": "ritrovre_gesto_naturale.html",
-            "id": "160"
+            "id": "170"
         },
         {
             "titolo": "UNGHERIA: E’ finita l’era Orban.",
@@ -63,7 +72,7 @@
             "autore": "Marco Faregna",
             "data": "21-04-2026",
             "file": "ungheria.html",
-            "id": "170"
+            "id": "180"
         }
     ]
 }
