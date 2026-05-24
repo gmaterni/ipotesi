@@ -1,0 +1,87 @@
+{
+    "ordine": [
+        "lavori_roma_civitavecchia.html",
+        "civilta_millenarie.html",
+        "partecipazione_vo_cercando.html",
+        "democracywise_europeo.html",
+        "fiumi_e_laghi_italiani.html",
+        "il_gioco_con_vincita.html",
+        "mattarella_pontedera.html",
+        "quando_le_rovine.html",
+        "le_persone_umane.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Civiltà Millenarie",
+            "sottotitolo": "Ci sono degli episodi storici, delle metafore, degli\naneddoti che attraversano il tempo, anche secoli, conservando freschezza\ned insegnamenti; così la TRAPPOLA DI TUCIDITE, dal IV secolo a.C. ad\noggi, da Atene a Pechino, conserva ancora quel\nfascino.",
+            "autore": "Francesco Chiucchiurlotto",
+            "data": "2026-0520",
+            "file": "civilta_millenarie.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Democracywise",
+            "sottotitolo": "Un Toolkit per difendere la democrazia euroea atteso al Parlamento\nEuropeo dal 6 al 9 maggio.",
+            "autore": "Simone Stefanini Conti",
+            "data": "2026-0520",
+            "file": "democracywise_europeo.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Fiumi e laghi italiani: quale futuro?",
+            "sottotitolo": "Alla ricerca del Piano che non c’è",
+            "autore": "Di Paolo Mastromo",
+            "data": "2026-’5-20",
+            "file": "fiumi_e_laghi_italiani.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Il Gioco Con Vincita In Denaro In Italia",
+            "sottotitolo": "Somme giocate Euro 165.324.629.773\nSomme all’Erario Euro 10.372.728.582",
+            "autore": "Domenico Faggiani",
+            "data": "2026-05-20",
+            "file": "il_gioco_con_vincita.html",
+            "id": "140"
+        },
+        {
+            "titolo": "Superstrada Orte-Civitavecchia",
+            "sottotitolo": "Partiti i cantieri per i 5 chilometri di strada che bypassano Monte\nRomano. I 12 chilometri (2° Stralcio Tarquinia-A12 Civitavecchia)\ndell’Ultimazione della superstrada Orte-Civitavecchia.",
+            "autore": "Stefano Stefanini",
+            "data": "2026-05-20",
+            "file": "lavori_roma_civitavecchia.html",
+            "id": "150"
+        },
+        {
+            "titolo": "La persona umana… trattiamole almeno come gli animali come i cani\ncome i gatti",
+            "sottotitolo": "ll Papa sull’aereo di ritorno dal viaggio in Africa . Rispondendo a\nuna domanda fattagli dai giornalisti: “… Uno Stato ha il diritto di\nporre regole alle sue frontiere, però (i migranti) sono esseri umani e\ndobbiamo trattare gli esseri umani in modo umano, non trattarli molte\nvolte peggio degli animali…”. Mi sono fermato a pensare: “peggio degli\nanimali?” Ma di quali animali? Perché cani, gatti… vestono abitini\nfirmati, godono di cibi selezionati, hanno alberghi per loro, psicologi,\nbadanti… e non mi pare di esagerare. Poi ci sono gli animali da macello\nche vengono trattati peggio di tante persone umane e diventano ricette\nper cucine selezionate. Ci sono movimenti per la protezione degli\nanimali che non hanno torto nel loro tentativo di diffondere rispetto\nper tutto e per tutti. Che poi si possa arrivare a una società dove\nnessuno più mangia carne di animali macellati… beh! Ho seri dubbi che\npossa accadere in questo secolo o nei successivi. Ma non è di questo che\nvoglio parlare. Voglio parlarvi di un dipinto ispirato da Francis Bacon\ne rifletterci sopra per ingentilire la nostra coscienza e magari avviare\nprocessi di purificazione e rispetto vero, non solo politico da applausi\ne, aggiungerei, non solo per gli animali. Il dipinto di cui parlo è:\n“Fragment of a Crucifixion” (Francis Bacon, 1950)",
+            "autore": "Don Gianni Carparelli",
+            "data": "2026-05-20",
+            "file": "le_persone_umane.html",
+            "id": "160"
+        },
+        {
+            "titolo": "il lavoro è radice di libertà",
+            "sottotitolo": "Il Presidente della Repubblica Sergio Mattarella alla Piaggio di\nPontedera in occasione della celebrazione della Festa del Lavoro: il\nlavoro è radice di libertà, ha animato la nostra democrazia, ha prodotto\neguaglianza e coesione sociale.",
+            "autore": "Stefano Stefanini",
+            "data": "2026-05-20",
+            "file": "mattarella_pontedera.html",
+            "id": "170"
+        },
+        {
+            "titolo": "Partecipazione",
+            "sottotitolo": "Partecipazione vo cercando, ch’è sì rara",
+            "autore": "Raimondo Raimondi",
+            "data": "1-05-2026",
+            "file": "partecipazione_vo_cercando.html",
+            "id": "180"
+        },
+        {
+            "titolo": "Memoria, ferita e rinascita a Ferento",
+            "sottotitolo": "Quando le rovine insegnano al corpo a ritrovare il proprio asse",
+            "autore": "Barbar Matteucci",
+            "data": "1026-05-20",
+            "file": "quando_le_rovine.html",
+            "id": "190"
+        }
+    ]
+}
