@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 import json
-from pathlib import Path
 import sys
+from pathlib import Path
 
 
+# https://ipotesi2000.github.io/ipotesi/html/n016/santa_rosa.html
 def generate_facebook_post(num):
     """
     Generate a Facebook-ready text post for a specific issue of IPOTESI magazine
@@ -42,8 +43,8 @@ def generate_facebook_post(num):
             autore = article.get('autore', '')
 
             # Build the article URL
-            article_url = f"http://www.ipotesi.eu/html/{num_str}/{filename}"
-
+            # article_url = f"http://www.ipotesi.eu/html/{num_str}/{filename}"
+            article_url = f"https://ipotesi2000.github.io/ipotesi/html/{num_str}/{filename}"
             # Add article to post
             post_text += f"📖 {titolo}\n"
             if sottotitolo:
