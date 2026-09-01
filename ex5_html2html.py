@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-from pathlib import Path
 import sys
+from pathlib import Path
 
 
 def build_html_page(html_content):
@@ -171,7 +171,7 @@ def main(num):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("ex3_html2pdf.py <num>")
+        print("ex5_html2html.py <num>")
         sys.exit(1)
     try:
         number = int(sys.argv[1])
