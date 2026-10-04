@@ -1,0 +1,60 @@
+{
+    "ordine": [
+        "aggressione_prof.html",
+        "provincia_viterbo.html",
+        "essere_costituzione.html",
+        "due_citta_vittoria.html",
+        "la_strega.html",
+        "luce_della_luce_.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Aggressione di un alunno ad una professoressa.",
+            "sottotitolo": "Dopo l’aggressione di un alunno ad una professoressa di Roma. La\nproposta del divieto dei social per i minori di 13 anni.",
+            "autore": "Stefano Stefanini",
+            "data": "30-10-2026",
+            "file": "aggressione_prof.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Ci sono due città che si contendono la vittoria",
+            "sottotitolo": "La lettera del Papa: “Magnifica Humanitas” ha riproposto l’incontro\ndi una eterna battaglia. Non l’ha inventato il Papa. Lui ci dice:\nentriamo nella mischia perché non basta fare il tifo. Dobbiamo salire\nsul palco della storia e decidere da che parte stiamo. Vogliamo una\n“città di Dio” (dirò poi cosa intendo per tranquillizzare i non\ncredenti, perché non li sto invitando a Messa, ma solo a pensare… ),",
+            "autore": "Don Gianni Carparelli",
+            "data": "30-10-2026",
+            "file": "due_citta_vittoria.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Essere Costituzione",
+            "sottotitolo": "Modesta risposta a don Gianni Carparelli",
+            "autore": "Raimondo Raimondi",
+            "data": "10-09-2026",
+            "file": "essere_costituzione.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Ma Aveva Ragione La “ STREGA “ ?",
+            "sottotitolo": "Vent’anni fa, se ne anda va ORIANA FALLACI vinta, dopo una lunga\nmalattia, da un tumore, l’ALIENO, come lei lo chiamava, e che combattè\ncon il suo consueto indomito coraggio.",
+            "autore": "Francesco Chiucchiurlotto",
+            "data": "30-09-2026",
+            "file": "la_strega.html",
+            "id": "140"
+        },
+        {
+            "titolo": "Noi siamo la luce della luce",
+            "sottotitolo": "Si parla molto di volontariato, di servizio, di attenzione alle\nfragilità o, come diceva il grande Papa Francesco, alle periferie umane\nche stanno sempre più occupando il centro della nostra attenzione non\nsempre attenta. Siamo distratti dal rumore mediatico delle “pazzie\npazze” di troppi e che ci rendono sordi alle voci flebili di chi non ce\nla fa, di chi non si conforma, di chi si ritira non sempre in buon\nordine, di chi anche aggredisce quasi per difendersi… insomma viviamo\nnelle tenebre e si sembra quasi normale che sia così. Siamo invece\ninvitati a trasformarci in luce.",
+            "autore": "Don Gianni Carparelli",
+            "data": "30-09-2026",
+            "file": "luce_della_luce_.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Il Rilancio Del Ruolo Della Provincia Di Viterbo.",
+            "sottotitolo": "Intervista Al Presidente Alessandro Romoli.",
+            "autore": "Stefano Stefanini",
+            "data": "30-09-2026",
+            "file": "provincia_viterbo.html",
+            "id": "160"
+        }
+    ]
+}
