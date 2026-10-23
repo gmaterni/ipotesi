@@ -5,6 +5,7 @@ Converte articoli da DOCX a HTML.
 
 - Converte il DOCX in HTML tramite pandoc (solo testo: i contenuti non testuali vengono scartati)
 - Estrae la "scheda articolo" (TITOLO, SOTTOTITOLO, AUTORE, DATA) e la inserisce come commento HTML
+- Allinea il nome in fondo all'articolo all'AUTORE della scheda, senza il "di" iniziale
 
 **Uso:** `python ex1_docx2html.py <numero>`
 **Esempio:** `python ex1_docx2html.py 11` processa `./articoli/n011/docx/` → `./articoli/n011/html/`
@@ -17,6 +18,7 @@ Pubblica gli articoli convertiti nella directory `data/`.
 
 - Legge gli HTML generati da `ex1_docx2html.py`
 - Estrae i metadati dalla scheda articolo (titolo, sottotitolo, autore, data)
+- Normalizza l'autore togliendo l'eventuale "di" iniziale
 - Genera il file `sommario.json` con l'ordine degli articoli e i relativi metadati
 - Copia gli articoli HTML nella directory `data/{num}/`
 
