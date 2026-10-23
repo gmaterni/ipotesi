@@ -1,0 +1,78 @@
+{
+    "ordine": [
+        "bobbio_deelice.html",
+        "conoescere_costituzione.html",
+        "nuovo_patto_generazionale.html",
+        "referendum__cqua.html",
+        "russia_eucraina_europa.html",
+        "santa_rosa.html",
+        "siamo_forti.html",
+        "ulisse_penelope.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Bobbio e De Felice a confronto",
+            "sottotitolo": "Nella primavera del 1995, in un incontro organizzato dalla rivista\n«Reset», Norberto Bobbio, il filosofo azionista che considera il 25\naprile 1945 «una data fondamentale non solo per l’Italia», e Renzo De\nFelice, lo storico autore di una monumentale biografia di Mussolini che\ndefinisce l’8 settembre 1943 come il «giorno in cui morì l’idea di\npatria», si confrontano sul ruolo della Resistenza nella nascita della\nRepubblica, ed altro.",
+            "autore": "Francesco Chiucchiurlotto –",
+            "data": "20-08-2026",
+            "file": "bobbio_deelice.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Non basta conoscere la costituzione italiana dobbiamo essere\ncostituzione",
+            "sottotitolo": "il 2 di giugno del 1946 nacque con il referendum la Repubblica\nItaliana, prese il via la redazione della Costituzione della Repubblica\nItaliana con i padri costituenti. Costituzione firmata poi il 27\ndicembre 1947 ed entrata in vigore dal 1 Gennaio 1948. Sono trascorsi 80\nanni. Mi pare doveroso e corretto che certe intuizioni e dichiarazioni\nvengano poi ricordate e con solennità rispettosa. Ma la mia riflessione\nparte da altre considerazioni. Non basta parlare, commemorare,\ncerimoniare, sbandierare, infiorare… dovremmo cercare di entrare\nnell’anima (= animare) che significa entrare nella vita delle persone,\ncioè: nella nostra vita, per diventare quello che cantiamo nelle piazze.\nMa come arrivare a questo di fronte al trionfo non di rado\n“spiritualmente semi vuoto” delle cerimonie e delle processioni\nlaiche?",
+            "autore": "Don Gianni Carparelli",
+            "data": "Giugno 2026",
+            "file": "conoescere_costituzione.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Per un nuovo Patto generazionale",
+            "sottotitolo": "Dal Consiglio Nazionale dell’Economia e del Lavoro Il documento “Per\nun nuovo Patto generazionale” per recuperare valorizzare il protagonismo\ndelle nuove generazioni",
+            "autore": "Stefano Stefanini",
+            "data": "30-08-2026",
+            "file": "nuovo_patto_generazionale.html",
+            "id": "130"
+        },
+        {
+            "titolo": "PER L’ACQUA PUBBLICA CI VUOLE UN NUOVO REFERENDUM",
+            "sottotitolo": "L\na gestione del servizio idrico: si proponeva di abrogare le norme che\nfavorivano l’affidamento dei servizi pubblici locali, compreso quello\nidrico, a società private o miste. Votare SI significava cancellare\nquelle norme, ed il SI ottenne il 95,35%.",
+            "autore": "Francesco Chiucchiurlotto",
+            "data": "30-08-2026",
+            "file": "referendum__cqua.html",
+            "id": "140"
+        },
+        {
+            "titolo": "Europa-Russia-Ucraina",
+            "sottotitolo": "EUROPA-RUSSIA-UCRAINA: perché la guerra non può finire presto",
+            "autore": "Marco Faregna",
+            "data": "30-08-2026",
+            "file": "russia_eucraina_europa.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Il Trasporto di “Dies Natalis”",
+            "sottotitolo": "Si rinnova la meraviglia del cammino ascensionale della Santità della\ngiovane Rosa.",
+            "autore": "Stefano Stefanini",
+            "data": "30-08-2026",
+            "file": "santa_rosa.html",
+            "id": "160"
+        },
+        {
+            "titolo": "Trump dice: “Siamo forti” Ma è davvero così?",
+            "sottotitolo": "Parlando dello “stato dell'Unione” Donald Trump, in occasione dei 250\nanni della nascita degli Usa, ha detto più o meno : “Siamo forti, siamo\nricchi, non siamo mai stati così ricchi e forti”. Ma è proprio così?",
+            "autore": "Paolo Mastromo",
+            "data": "30-08-2026",
+            "file": "siamo_forti.html",
+            "id": "170"
+        },
+        {
+            "titolo": "Ulisse-Penelope: oltre il viaggio dell’eroe",
+            "sottotitolo": "Rileggere l’Odissea come viaggio dell’essere umano dalla\nseparazione alla generatività",
+            "autore": "Barbara Matteucci",
+            "data": "DATA\n30-08-2026",
+            "file": "ulisse_penelope.html",
+            "id": "180"
+        }
+    ]
+}

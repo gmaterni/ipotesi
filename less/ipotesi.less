@@ -1,0 +1,1223 @@
+/** @format */
+
+// ===================================================================
+// THEME DEFINITIONS (REFACTORED)
+// ===================================================================
+
+// --- Tier 1: Core Color Palette ---
+// The single source of truth for all color values.
+@c-white: #ffffff;
+@c-black: #000000;
+
+@c-gray-50: #fafafa;
+@c-gray-200: #eceff1; // Material Blue Grey 50
+@c-gray-250: #cfd8dc; // For Speak Panel Dark Text
+@c-gray-300: #e6e6e6;
+@c-gray-400: #dddddd;
+@c-gray-500: #bababa;
+@c-gray-550: #aaaaaa; // For Dark Theme Secondary Text
+@c-gray-600: #a5a4a4;
+@c-gray-700: #999999;
+@c-gray-750: #777777; // For Dark Theme Secondary Border
+@c-gray-800: #696969;
+@c-gray-900: #666666;
+@c-gray-1000: #555555;
+@c-gray-1100: #444444;
+@c-gray-1200: #3a3a3a;
+@c-gray-1300: #37474f; // Material Blue Grey 800
+@c-gray-1400: #333333;
+@c-gray-1600: #222222;
+
+@c-blue-300: #58a6ff;
+@c-blue-700: #0366d6;
+
+@c-teal-200: #80cbc4; // Material Teal 200
+@c-teal-500: #009688; // Material Teal 500
+
+@c-orange-500: #e0450c;
+
+// --- Tier 2: Semantic Role Mapping ---
+// Maps core colors to their purpose within a theme.
+// All styles below MUST use these variables.
+
+// --- Light Theme ---
+@theme-light-bg-primary: @c-white;
+@theme-light-bg-secondary: @c-gray-300; // Menu, windows
+@theme-light-bg-content: @c-gray-50; // Main content area
+@theme-light-bg-hover: @c-gray-500;
+@theme-light-text-primary: @c-black;
+@theme-light-text-secondary: @c-gray-800;
+@theme-light-border-primary: @c-gray-700;
+@theme-light-border-secondary: @c-gray-600;
+@theme-light-link: @c-blue-700;
+@theme-light-accent: @c-teal-500;
+@theme-light-tooltip-bg: @c-orange-500;
+@theme-light-tooltip-text: @c-white;
+
+// --- Dark Theme ---
+@theme-dark-bg-primary: @c-gray-1600;
+@theme-dark-bg-secondary: @c-gray-1200; // Menu, windows
+@theme-dark-bg-content: @c-gray-1400; // Main content area
+@theme-dark-bg-hover: @c-gray-1000;
+@theme-dark-text-primary: @c-gray-400;
+@theme-dark-text-secondary: @c-gray-550;
+@theme-dark-border-primary: @c-gray-900;
+@theme-dark-border-secondary: @c-gray-750;
+@theme-dark-link: @c-blue-300;
+@theme-dark-accent: @c-teal-200;
+@theme-dark-tooltip-bg: @c-orange-500;
+@theme-dark-tooltip-text: @c-white;
+
+// --- Component-Specific Variables ---
+// These components have a distinct style.
+@speak-light-bg: @c-gray-200;
+@speak-light-text: @c-gray-1300;
+@speak-dark-bg: @c-gray-1300;
+@speak-dark-text: @c-gray-250;
+
+// ===================================================================
+// GENERIC STYLES & MIXINS
+// ===================================================================
+
+// --- Sizing & Fonts ---
+@fsize-title: calc(20px + 5.9vh);
+@fsize-subtitle: calc(11px + 1vw);
+@fsize-menu-a: calc(8px + 0.9vw);
+@fsize-container: calc(8px + 0.9vw);
+@fsize-reader: calc(9px + 1vw);
+@fsize-wnd: calc(8px + 0.9vw);
+@fsize-btn: calc(10px + 0.9vw);
+@fsize-num: calc(10px + 1.1vw);
+@fsize-vers: calc(5px + 0.9vw);
+@fsize-msg: 5px;
+
+@fserif: "Noto Serif", Georgia, "Times New Roman", serif;
+@fsans: arial, verdana, Helvetica, sans-serif;
+@fdisplay: "Red Hat Display", "Arial Narrow", Arial, sans-serif;
+@ftext: "Red Hat Text", Arial, Verdana, sans-serif;
+
+// --- Z-Indexes ---
+@zmwnu: 1;
+@zmenubox: 102;
+@zfullscreen: 101;
+@zbtn: 1;
+
+// --- Tooltip ---
+@tt-font:
+  20px "Arial",
+  sans-serif;
+@tt-radius: 4px;
+@tt-shadow: 0 3px 6px #e2ca0e29;
+@tt-transition: 0.3s opacity;
+
+// ===================================================================
+// Tier 3: STYLE APPLICATION
+// ===================================================================
+
+// --- Theme Switching ---
+.theme-dark .btn-light {
+  display: inline-block !important;
+}
+.theme-light .btn-dark {
+  display: inline-block !important;
+}
+
+// --- Base Body & HTML ---
+html {
+  scrollbar-width: thin;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  overflow-y: hidden;
+  &.theme-light {
+    background: @theme-light-bg-secondary;
+    color: @theme-light-text-primary;
+  }
+  &.theme-dark {
+    background: @theme-dark-bg-primary;
+    color: @theme-dark-text-primary;
+  }
+  &.post-standalone {
+    overflow-y: auto;
+    font-size: 17px;
+  }
+}
+
+.open-menu .menu-box {
+  left: 0 !important;
+}
+
+div.menu {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 14.8vh;
+  z-index: @zmwnu;
+  caret-color: transparent;
+
+  .theme-light & {
+    background-color: @theme-light-bg-secondary;
+    border-bottom: 1px solid @theme-light-border-primary;
+  }
+  .theme-dark & {
+    background-color: @theme-dark-bg-secondary;
+    border-bottom: 1px solid @theme-dark-border-primary;
+  }
+
+  .menu-h {
+    box-sizing: border-box;
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    height: 36px;
+    width: 36px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    .theme-light &:hover {
+      background: @theme-light-bg-hover;
+    }
+    .theme-dark &:hover {
+      background: @theme-dark-bg-hover;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      .theme-light & {
+        fill: @theme-light-text-primary;
+      }
+      .theme-dark & {
+        fill: @theme-dark-text-primary;
+      }
+    }
+
+    .menu-icon-close {
+      display: none;
+    }
+
+    &.active {
+      .menu-icon-open {
+        display: none;
+      }
+      .menu-icon-close {
+        display: block;
+      }
+    }
+  }
+
+  div.title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: @fsize-title;
+    font-weight: bold;
+    font-family: @fserif;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 9px;
+  }
+  div.sub-title {
+    position: absolute;
+    bottom: 0.9vh;
+    left: 1vw;
+    font-size: @fsize-subtitle;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1;
+  }
+  div.version {
+    position: absolute;
+    bottom: 5px;
+    right: 1vw;
+    font-size: @fsize-vers;
+    font-weight: bold;
+    .theme-light & {
+      color: @theme-light-text-primary;
+    }
+    .theme-dark & {
+      color: @theme-dark-text-primary;
+    }
+  }
+}
+
+.btn-theme {
+  position: fixed;
+  right: 6vw;
+  top: 1vh;
+  z-index: @zbtn;
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+    .theme-light & {
+      color: @theme-light-text-primary;
+    }
+    .theme-dark & {
+      color: @theme-dark-text-primary;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+    }
+  }
+}
+
+div.menu-box {
+  z-index: @zmenubox;
+  box-sizing: border-box;
+  position: fixed;
+  top: 10vh;
+  left: -2000px;
+  width: 25vw;
+  height: 85vh;
+  padding: 10px 0 10px 10px;
+  transition: left 0.5s ease;
+  overflow-y: auto;
+  .theme-light & {
+    border-top: 2px solid @theme-light-border-primary;
+    border-right: 1px solid @theme-light-border-secondary;
+    background-color: @theme-light-bg-secondary;
+  }
+  .theme-dark & {
+    border-top: 2px solid @theme-dark-border-primary;
+    border-right: 1px solid @theme-dark-border-secondary;
+    background-color: @theme-dark-bg-secondary;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .theme-light & {
+      border-top: 1px solid @theme-light-border-secondary;
+    }
+    .theme-dark & {
+      border-top: 1px solid @theme-dark-border-secondary;
+    }
+
+    li {
+      .theme-light & {
+        border-left: 1px solid @theme-light-border-secondary;
+        border-bottom: 1px solid @theme-light-border-secondary;
+      }
+      .theme-dark & {
+        border-left: 1px solid @theme-dark-border-secondary;
+        border-bottom: 1px solid @theme-dark-border-secondary;
+      }
+      a {
+        font-size: @fsize-menu-a;
+        font-weight: bold;
+        display: block;
+        padding: 10px 5px;
+        text-decoration: none;
+        .theme-light & {
+          color: @theme-light-text-primary;
+        }
+        .theme-dark & {
+          color: @theme-dark-text-primary;
+        }
+      }
+      &:hover {
+        text-decoration: underline;
+        .theme-light & {
+          background-color: @theme-light-bg-hover;
+        }
+        .theme-dark & {
+          background-color: @theme-dark-bg-hover;
+        }
+      }
+    }
+    li.msg {
+      font-size: @fsize-msg !important;
+      font-weight: normal;
+      padding: 10px 0;
+      .theme-light & {
+        color: @theme-light-text-primary;
+      }
+      .theme-dark & {
+        color: @theme-dark-text-primary;
+      }
+    }
+  }
+}
+
+// --- Main Layout Containers ---
+div.container {
+  box-sizing: border-box;
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  width: 100vw;
+  height: 85vh;
+  padding-top: 10px;
+  font-size: @fsize-container;
+
+  div.item {
+    font-size: @fsize-container;
+    .theme-light & {
+      color: @theme-light-text-primary;
+    }
+    .theme-dark & {
+      color: @theme-dark-text-primary;
+    }
+  }
+
+  div.item1 {
+    // Article list
+    box-sizing: border-box;
+    height: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+    .num {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      padding: 1vh 0;
+      font-size: @fsize-num;
+      font-weight: bold;
+      .theme-light & {
+        border-top: 1px solid @theme-light-border-primary;
+        border-bottom: 1px solid @theme-light-border-primary;
+        color: @post-accent-light;
+        background: @theme-light-bg-secondary;
+      }
+      .theme-dark & {
+        border-top: 1px solid @theme-dark-border-primary;
+        border-bottom: 1px solid @theme-dark-border-primary;
+        color: @post-accent-dark;
+        background: @theme-dark-bg-primary;
+      }
+    }
+    .list {
+      padding: 5px;
+      .list-item,
+      .list-item2 {
+        a {
+          text-decoration: none;
+          .theme-light & {
+            color: @theme-light-text-primary;
+          }
+          .theme-dark & {
+            color: @theme-dark-text-primary;
+          }
+          &:hover {
+            text-decoration: underline;
+            .theme-light & {
+              background: @theme-light-bg-hover;
+            }
+            .theme-dark & {
+              background: @theme-dark-bg-hover;
+            }
+          }
+        }
+        p {
+          margin: 5px 0 0 0;
+          .theme-light & {
+            color: @theme-light-text-primary;
+          }
+          .theme-dark & {
+            color: @theme-dark-text-primary;
+          }
+          &.autore {
+            font-style: italic;
+          }
+        }
+      }
+      .list-item {
+        margin-bottom: 3vh;
+      }
+      .list-item2 {
+        margin-bottom: 1.4vh;
+        span {
+          margin-left: 1vw;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+// --- Generic Window & Reader Styles ---
+.window-text {
+  // Generic popup window
+  box-sizing: border-box;
+  padding: 2px;
+  width: 78vw;
+  height: 90vh;
+  border-radius: 10px;
+  overflow: auto;
+  .theme-light & {
+    background: @theme-light-bg-secondary;
+    color: @theme-light-text-primary;
+    border: 1px solid @theme-light-border-primary;
+  }
+  .theme-dark & {
+    background: @theme-dark-bg-secondary;
+    color: @theme-dark-text-primary;
+    border: 1px solid @theme-dark-border-primary;
+  }
+  div.div-text {
+    font-family: @fserif;
+    font-size: @fsize-wnd;
+    padding: 0 2px;
+  }
+}
+
+.btn-wrapper {
+  // Close button container in generic window
+  width: 100%;
+  height: 2vw;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .theme-light & {
+    background: @theme-light-bg-content;
+  }
+  .theme-dark & {
+    background: @theme-dark-bg-content;
+  }
+
+  button {
+    font-size: @fsize-btn;
+    font-weight: bold;
+    margin-right: 5vw;
+    height: 100%;
+    aspect-ratio: 1;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    .theme-light & {
+      color: @theme-light-text-primary;
+    }
+    .theme-dark & {
+      color: @theme-dark-text-primary;
+    }
+    &:hover {
+      .theme-light & {
+        background: @theme-light-bg-hover;
+      }
+      .theme-dark & {
+        background: @theme-dark-bg-hover;
+      }
+    }
+  }
+}
+
+.text-reader {
+  // Article reader container
+  width: 100vw;
+  height: 89.9vh;
+  overflow: hidden;
+
+  .toolbar {
+    min-height: 2.5vh;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    .theme-light & {
+      border: 1px solid @theme-light-border-primary;
+      background-color: @theme-light-bg-primary;
+    }
+    .theme-dark & {
+      border: 1px solid @theme-dark-border-primary;
+      background-color: @theme-dark-bg-primary;
+    }
+    span {
+      font-size: @fsize-btn;
+      font-style: italic;
+      margin-right: auto;
+      .theme-light & {
+        color: @theme-light-text-secondary !important;
+      }
+      .theme-dark & {
+        color: @theme-dark-text-secondary !important;
+      }
+    }
+    button {
+      font-size: @fsize-btn;
+      margin-left: 2vw;
+      border: none;
+      background: none;
+      cursor: pointer;
+      .theme-light & {
+        color: @theme-light-text-primary;
+      }
+      .theme-dark & {
+        color: @theme-dark-text-primary;
+      }
+      &:hover {
+        .theme-light & {
+          background: @theme-light-bg-hover;
+        }
+        .theme-dark & {
+          background: @theme-dark-bg-hover;
+        }
+      }
+    }
+  }
+
+  .content {
+    box-sizing: border-box;
+    height: 87vh;
+    width: 100%;
+    padding: 1vh 7vw 5vh 7vw;
+    overflow-y: auto;
+    line-height: 1.6;
+    font-family: @fserif;
+    font-size: @fsize-reader;
+    .theme-light & {
+      color: @theme-light-text-primary;
+      background-color: @theme-light-bg-secondary;
+    }
+    .theme-dark & {
+      color: @theme-dark-text-primary;
+      background-color: @theme-dark-bg-primary;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 1.5em;
+      margin-bottom: 1em;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    h3 {
+      font-size: 1.7em;
+      text-align: center;
+    }
+    h4 {
+      font-size: 1.3em;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      .theme-light & {
+        color: @theme-light-link;
+      }
+      .theme-dark & {
+        color: @theme-dark-link;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    blockquote {
+      margin: 1em 0;
+      padding: 0 1em;
+      border-left: none;
+      .theme-light & {
+        color: @theme-light-text-secondary;
+        // border-left: 0.25em solid @theme-light-border-secondary;
+      }
+      .theme-dark & {
+        color: @theme-dark-text-secondary;
+        // border-left: 0.25em solid @theme-dark-border-secondary;
+      }
+    }
+  }
+}
+
+// --- Speak Panel (Material) ---
+.panel-speak {
+  box-sizing: border-box;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  width: 35vw;
+  min-height: 25vh;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+  border-radius: 8px;
+  font-family: @fsans;
+
+  .theme-light & {
+    background-color: @speak-light-bg;
+    color: @speak-light-text;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid darken(@speak-light-bg, 25%);
+  }
+  .theme-dark & {
+    background-color: @speak-dark-bg;
+    color: @speak-dark-text;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border: 2px solid lighten(@speak-dark-bg, 25%);
+  }
+
+  .toolbar {
+    margin: -16px -16px 16px -16px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid;
+    .theme-light & {
+      border-color: darken(@speak-light-bg, 10%);
+    }
+    .theme-dark & {
+      border-color: lighten(@speak-dark-bg, 10%);
+    }
+
+    button {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &#btn-save-speak {
+        .theme-light & {
+          background-color: @theme-light-accent;
+          color: @c-white;
+          &:hover {
+            background-color: darken(@theme-light-accent, 10%);
+          }
+        }
+        .theme-dark & {
+          background-color: @theme-dark-accent;
+          color: @c-gray-1300;
+          &:hover {
+            background-color: lighten(@theme-dark-accent, 10%);
+          }
+        }
+      }
+      &#btn-close-speak {
+        background: none;
+        font-size: 20px;
+        font-weight: normal;
+        .theme-light & {
+          color: @speak-light-text;
+        }
+        .theme-dark & {
+          color: @speak-dark-text;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  #id_voices {
+    padding: 0;
+    background: none;
+  }
+
+  .voice-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      input[type="range"] {
+        flex-grow: 1;
+        margin-right: 12px;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        outline: none;
+        .theme-light & {
+          background: darken(@speak-light-bg, 15%);
+        }
+        .theme-dark & {
+          background: lighten(@speak-dark-bg, 15%);
+        }
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: none;
+          .theme-light & {
+            background: @theme-light-accent;
+          }
+          .theme-dark & {
+            background: @theme-dark-accent;
+          }
+        }
+        &::-moz-range-thumb {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: none;
+          .theme-light & {
+            background: @theme-light-accent;
+          }
+          .theme-dark & {
+            background: @theme-dark-accent;
+          }
+        }
+      }
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        min-width: 30px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+// --- Tooltip ---
+.tt-top,
+.tt-bottom,
+.tt-left,
+.tt-right {
+  position: relative;
+  &::before {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+    transition: @tt-transition;
+    content: attr(data-tt);
+    font: @tt-font;
+    font-weight: normal;
+    padding: 4px 10px;
+    border-radius: @tt-radius;
+    box-shadow: @tt-shadow;
+    white-space: nowrap;
+    .theme-light & {
+      background: @theme-light-tooltip-bg;
+      color: @theme-light-tooltip-text;
+    }
+    .theme-dark & {
+      background: @theme-dark-tooltip-bg;
+      color: @theme-dark-tooltip-text;
+    }
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.tt-top::before {
+  bottom: ~"calc(100% + 12px)";
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tt-bottom::before {
+  top: ~"calc(100% + 12px)";
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tt-left::before {
+  right: ~"calc(100% + 8px)";
+  top: 80%;
+  transform: translateY(20%);
+}
+.tt-right::before {
+  left: ~"calc(100% + 12px)";
+  top: 50%;
+  transform: translateY(10%);
+}
+
+// ===================================================================
+// Tier 4: POST-STYLE RESTYLING (change restyling-stile-post)
+// Veste le classi post-* condivise da frammenti, reader e pagine.
+// Regole chiare di default; .theme-dark le adatta nell'app.
+// ===================================================================
+
+// Font di sistema (niente webfont da rete): i nomi Red Hat / Noto restano
+// come prima scelta ma ripiegano su Arial Narrow, Arial, Georgia.
+
+// --- Token Post ---
+@post-ink-light: #111111;
+@post-ink-dark: #ededed;
+@post-summary-light: #222222;
+@post-summary-dark: #d9d9d9;
+@post-accent-light: #c1121f;
+@post-accent-dark: #ff8a7a;
+@post-rule-light: #e3e3e3;
+@post-rule-dark: #3d3d3d;
+
+// --- Articolo condiviso (reader + pagine generate) ---
+article.post-article {
+  box-sizing: border-box;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 22px 70px;
+  font-family: @fserif;
+  color: @post-ink-light;
+  background: transparent;
+  .theme-dark & {
+    color: @post-ink-dark;
+  }
+
+  .post-kicker {
+    font-family: @fdisplay;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: @post-accent-light;
+    margin-bottom: 14px;
+    .theme-dark & {
+      color: @post-accent-dark;
+    }
+  }
+
+  h1.post-title {
+    font-family: @fdisplay;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px 0;
+  }
+
+  .post-subtitle {
+    font-family: @ftext;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: @post-summary-light;
+    margin: 0 0 14px 0;
+    .theme-dark & {
+      color: @post-summary-dark;
+    }
+  }
+
+  .post-byline {
+    font-family: @ftext;
+    font-size: 14px;
+    margin: 0 0 12px 0;
+    .post-author {
+      font-weight: 700;
+    }
+  }
+
+  .post-share {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 4px;
+    margin: 0 0 22px 0;
+    .post-share-link {
+      font-family: @ftext;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      color: @post-accent-light;
+      .theme-dark & {
+        color: @post-accent-dark;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  div.post-body {
+    font-size: 1em;
+    line-height: 1.7;
+    p {
+      margin: 0 0 1.2em 0;
+    }
+  }
+}
+
+// --- Home: voci attuali + righe/apertura Post (ex3) ---
+div.item1 {
+  .list {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .num {
+    font-family: @fdisplay;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: @post-accent-light;
+    .theme-dark & {
+      color: @post-accent-dark;
+    }
+  }
+  .list-item {
+    padding: 20px 6px;
+    border-bottom: 1px solid @post-rule-light;
+    .theme-dark & {
+      border-bottom-color: @post-rule-dark;
+    }
+    a strong {
+      font-family: @fdisplay;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    > p {
+      font-family: @ftext;
+      color: @post-summary-light;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      .theme-dark & {
+        color: @post-summary-dark;
+      }
+    }
+    p.autore {
+      font-family: @ftext;
+      font-style: normal;
+      font-weight: 500;
+      &::before {
+        content: "di ";
+      }
+    }
+  }
+  // Righe generate da ex3 in stile Post
+  // (stili globali in fondo al Tier 4: .post-row)
+}
+
+// --- Righe Post (home app, copertina, archivio) ---
+.post-kicker {
+  font-family: @fdisplay;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: @post-accent-light;
+  margin-bottom: 10px;
+  .theme-dark & {
+    color: @post-accent-dark;
+  }
+}
+
+.post-byline {
+  font-family: @ftext;
+  font-size: 14px;
+  margin: 8px 0 0 0;
+  .post-author {
+    font-weight: 700;
+  }
+}
+
+.post-row {
+  display: flex;
+  gap: 16px;
+  padding: 20px 6px;
+  border-bottom: 1px solid @post-rule-light;
+  .theme-dark & {
+    border-bottom-color: @post-rule-dark;
+  }
+  &:hover {
+    background: @theme-light-bg-content;
+    .theme-dark & {
+      background: @theme-dark-bg-content;
+    }
+  }
+  .post-row-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .post-row-title {
+    font-family: @fdisplay;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 6px 0;
+    a {
+      text-decoration: none;
+      color: @post-accent-light;
+      .theme-dark & {
+        color: @post-accent-dark;
+      }
+      &:hover {
+        text-decoration: underline;
+        color: darken(@post-accent-light, 10%);
+        .theme-dark & {
+          color: lighten(@post-accent-dark, 10%);
+        }
+      }
+    }
+  }
+  .post-row-summary {
+    font-family: @ftext;
+    font-size: 14px;
+    line-height: 1.5;
+    color: @post-summary-light;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    .theme-dark & {
+      color: @post-summary-dark;
+    }
+  }
+}
+
+// --- Toolbar reader: comandi testuali arancioni + freccia laterale ---
+.text-reader {
+  .toolbar {
+    .btn-pagina {
+      font-weight: 700;
+      color: #ffffff;
+      background: @post-accent-light;
+      border-radius: 4px;
+      padding: 3px 12px;
+      .theme-dark & {
+        background: @post-accent-dark;
+        color: #1a1a1a;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    button.btn-cmd-text {
+      font-weight: 700;
+      color: @c-orange-500;
+      background: none;
+      border: none;
+      border-radius: 0;
+      padding: 3px 8px;
+      .theme-dark & {
+        color: lighten(@c-orange-500, 25%);
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    button.btn-back-reader {
+      margin-right: auto;
+      font-family: @fdisplay;
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-radius: 0;
+      padding: 3px 8px;
+      color: @post-accent-light;
+      .theme-dark & {
+        color: @post-accent-dark;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// --- Selezione testo ---
+::selection {
+  background: @post-accent-light;
+  color: #ffffff;
+}
+
+// --- Guscio pagine standalone (ex5/ex6) ---
+.post-site-header {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px 22px 0;
+  a.post-site-brand {
+    font-family: @fdisplay;
+    font-weight: 900;
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: @post-accent-light;
+    .theme-dark & {
+      color: @post-accent-dark;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .post-site-sub {
+    font-family: @ftext;
+    font-size: 14px;
+    color: @post-summary-light;
+    margin-top: 2px;
+    .theme-dark & {
+      color: @post-summary-dark;
+    }
+  }
+  .post-site-rule {
+    border: none;
+    border-top: 2px solid @post-ink-light;
+    margin: 14px 0 0 0;
+    .theme-dark & {
+      border-top-color: @post-ink-dark;
+    }
+  }
+}
+
+.post-site-footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px 40px;
+  font-family: @ftext;
+  font-size: 13px;
+  text-align: center;
+  color: @post-summary-light;
+  .theme-dark & {
+    color: @post-summary-dark;
+  }
+  a {
+    color: @post-summary-light;
+    .theme-dark & {
+      color: @post-summary-dark;
+    }
+  }
+}
+
+// --- Responsive Post (breakpoint esistenti) ---
+@media (max-width: 765px) {
+  article.post-article {
+    h1.post-title {
+      font-size: 26px;
+    }
+    div.post-body {
+      font-size: 0.95em;
+    }
+  }
+  .post-row {
+    .post-row-title {
+      font-size: 20px;
+    }
+  }
+}

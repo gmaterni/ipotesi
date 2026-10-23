@@ -1,0 +1,78 @@
+{
+    "ordine": [
+        "esperienze_accogltore_fiabe_.html",
+        "il_corpo_che_incontra_altro.html",
+        "imparare_a_ballare_la_vita.html",
+        "lago_di_vico.html",
+        "osservatorrio_regionale_azzardo.html",
+        "paradosso_referendum.html",
+        "referndum_giustizia_.html",
+        "spagna_di_sanchez.html"
+    ],
+    "schede": [
+        {
+            "titolo": "Esperienze di un raccoglitore di fiabe",
+            "sottotitolo": "Raccontare fiabe è anche raccontare se stessi?",
+            "autore": "Marcello Arduini",
+            "data": "29-03-3036",
+            "file": "esperienze_accogltore_fiabe_.html",
+            "id": "110"
+        },
+        {
+            "titolo": "Corpo e Territorio –Postura Naturale nella\nTuscia",
+            "sottotitolo": "Il corpo che incontra l’altro\nEmpatia, linguaggio e comunità nello spazio condiviso",
+            "autore": "di Barbara Matteucci",
+            "data": "29-03-2026",
+            "file": "il_corpo_che_incontra_altro.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Imparare a ballare la vita non solo camminarla a stenti.",
+            "sottotitolo": "Il libro “Dancing the walk” (Toronto) e incontro AICW (Associazione\ndi scrittori Italo-Canadesi) a Viterbo. L’Associazione insieme alla\nUniversità della Tuscia ha organizzato un incontro culturale\ninternazionale: “Common Ground, distant shores”, prospettive\ninterdisciplinari tra Italia e Canada. Alla fine di maggio: 27-30 2026.\nAprirà l’incontro la rettrice prof.ssa Tiziana Laureti, il prof. Luca\nLorenzetti direttore Distu, la Prof.ssa Cristine Sansalone, presidente\ndella Associazione scrittori italo-canadese e il Prof. Simone Casini,\npresidente lettere moderne, Unitus. A me hanno affidato l’esperienza di\nun progetto originale di recupero per persone nel disagio della\ndipendenza e salute mentale che ebbi modo di avviare in Canada 40 anni\nfa e sul quale è appena uscito un libro testimonianze",
+            "autore": "Don Gianni Carparelli",
+            "data": "29-03-2026",
+            "file": "imparare_a_ballare_la_vita.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Lago di Vicoo misure di salvaguardia ambientale",
+            "sottotitolo": "L’appello sul Lago di Vico di Antonella Litta di Medici per\nl’Ambiente Isde nell’intervista a lumsanews: “La priorità è riportare\nl’acqua potabile”",
+            "autore": "Stefano Stefanini",
+            "data": "30-03-2026",
+            "file": "lago_di_vico.html",
+            "id": "140"
+        },
+        {
+            "titolo": "l’osservatorio regionale del lazio sul fenomeno del gioco d’azzardo.\nperche’ non deve essere abrogato.",
+            "sottotitolo": "La legge regionale del Lazio n. 5 del 2013, recante Disposizioni\nper la prevenzione e il trattamento del gioco d'azzardo patologico\n(GAP), all’articolo 6 ha previsto la istituzione di un\nOsservatorio regionale sul fenomeno del",
+            "autore": "Domenico Faggiani",
+            "data": "29-03-2027",
+            "file": "osservatorrio_regionale_azzardo.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Paradosso Italiano: ha vinto il NO 53,5%",
+            "sottotitolo": "La sinistra populista deprivata della propria memoria storica, ha\nbattuto la sinistra riformista che da ¾ di secolo perseguiva il\nsuperamento del codice fascista Rocco.",
+            "autore": "Marco Faregna",
+            "data": "29-03-2028",
+            "file": "paradosso_referendum.html",
+            "id": "160"
+        },
+        {
+            "titolo": "Il Referendum popolare ha dato il suo responso: no al 55% e il si al\n45%.",
+            "sottotitolo": "Hanno vinto le ragioni del ragioni No al Referendum confermativo\nsulla legge costituzionale sulla separazione delle carriere della\nMagistratura. Le prospettive per le elezioni del 2027 e l’elezione del\nPresidente della Repubblica.",
+            "autore": "Stefano Stefanini",
+            "data": "30-03-2026",
+            "file": "referndum_giustizia_.html",
+            "id": "170"
+        },
+        {
+            "titolo": "la Spagna di Pedro Sánchez",
+            "sottotitolo": "Dopo il “no” a Trump per le basi militari",
+            "autore": "Di Paolo Mastromo",
+            "data": "29-03-2026",
+            "file": "spagna_di_sanchez.html",
+            "id": "180"
+        }
+    ]
+}

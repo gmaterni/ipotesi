@@ -1,0 +1,78 @@
+{
+    "ordine": [
+        "1_maggio_maghera.html",
+        "25_aprile.html",
+        "aiutare_politica_risorgere.html",
+        "liberazione_valori_attuali.html",
+        "omaggio_odissea_spazio.html",
+        "raccoglitore_fiabe.html",
+        "ritrovre_gesto_naturale.html",
+        "ungheria.html"
+    ],
+    "schede": [
+        {
+            "titolo": "1° Maggio a Marghera: il lavoro dignitoso nell’era\ndell’intelligenza artificiale",
+            "sottotitolo": "Il prossimo Primo Maggio si celebrerà a Marghera in un luogo che,\noggi più che mai, assume un forte valore simbolico. Qui, dove\nrecentemente 37 lavoratori sono stati licenziati e sostituiti da sistemi\ndi intelligenza artificiale, le confederazioni sindacali CGIL, CISL e\nUIL si ritroveranno unite per ribadire un principio fondamentale: il\nlavoro non può perdere la sua dignità, nemmeno di fronte al cambiamento\ntecnologico.",
+            "autore": "Sconosciuto",
+            "data": "20-04-2026",
+            "file": "1_maggio_maghera.html",
+            "id": "110"
+        },
+        {
+            "titolo": "IL 25 APRILE DI TUTTI E DI NESSUNO",
+            "sottotitolo": "L’ evento del 25 Aprile 1945 ha superato da\npoco gli 80 anni e quindi ci si dovrebbe accostare ad esso come ad un\nvegliardo saggio, sveglio e memore di un’esperienza storica importante,\nlontano da passioni e giudizi discriminatori.",
+            "autore": "Francesco Chiucchiurlotto",
+            "data": "20-04-2026",
+            "file": "25_aprile.html",
+            "id": "120"
+        },
+        {
+            "titolo": "Aiutare la politica a risorgere dalla tomba del menefreghismo\netico",
+            "sottotitolo": "Come fate a dire che la notte è giunta alla fine e che sta tornando\nil nuovo giorno?”… La “Politica” deve uscire dalla tomba dell’ossessione\nautoreferenziale e riscoprire il bene comune.\nNon sapevo come riflettere sul “crollo etico della politica” nel\ncontesto del “potere sbandato e arrogante” che stiamo soffrendo, tutti e\ntutto, in questi anni. Celebrare il mistero della Resurrezione in un\nmondo che crolla a pezzi con alla guida rematori senza remi e senza\nbussola, mi sembrava un affronto alla speranza che nasce dalla fede e si\nnutre di carità… ma cosa vuol dire tutto questo a chi in questo “Aprile\n2026” ha ancora il coraggio di pensare e di credere che le tombe si\npossono anche aprire? Dobbiamo però dare una mano alla verità e alla\nserietà perché possano emergere di nuovo e vestite a festa. Così è nata\nquesta riflessione e mi ha aiutato la lettura attenta di un libro\ninteressante: “Dare una anima alla politica” di Bruno Bignami (Edizioni\nSan Paolo, 2024). Da circa due anni giaceva sulla mia scrivania e mi\nfaceva l’occhiolino:“… ma a me quando ci pensi ?",
+            "autore": "Don Gianni Carparelli",
+            "data": "22-04-2026",
+            "file": "aiutare_politica_risorgere.html",
+            "id": "130"
+        },
+        {
+            "titolo": "Liberzione: valori attuali e fatti storici",
+            "sottotitolo": "La lezione del 25 Aprile....dopo 81 anni dalla Liberazione, esigenza\ndi unita’ per costruire un’Italia più solidale, efficiente, con la\ntutela di ambiente, formazione, lavoro, cultura e benessere diffuso.",
+            "autore": "Stefno Stefanini",
+            "data": "24-04-2026",
+            "file": "liberazione_valori_attuali.html",
+            "id": "140"
+        },
+        {
+            "titolo": "Omaggio a “2001: Odissea nello spazio” ed ai simboli per uscire umani\ndal disagio di oggi.",
+            "sottotitolo": "Riprendendo i temi della coscienza in crisi nel nuovo millennio, e la\ndecadenza di identità rassicurante, si propongono farmaci di umana\nmaturità per ridurre rischi ed inciviltà personale e sociale, nel\nrapporto tra vita e tecnologia.",
+            "autore": "Giovanni Mastrangeli",
+            "data": "20-04-2026",
+            "file": "omaggio_odissea_spazio.html",
+            "id": "150"
+        },
+        {
+            "titolo": "Esperienze di un raccoglitore di fiabe",
+            "sottotitolo": "Può la fiaba tradizionale essere il veicolo di messaggi\nautobiografici del narratore? Può essere riconosciuta dagli ascoltatori\ncome parte della propria vita storico-esistenziale?",
+            "autore": "Marcello Arduini",
+            "data": "20-04-2026",
+            "file": "raccoglitore_fiabe.html",
+            "id": "160"
+        },
+        {
+            "titolo": "Corpo e Territorio – Postura Naturale nella\nTuscia",
+            "sottotitolo": "Semplicità – Ritrovare il gesto naturale\nLeggerezza, misura, essenzialità in un tempo che complica\ntutto",
+            "autore": "Barbara Matteucci",
+            "data": "20-04-2026",
+            "file": "ritrovre_gesto_naturale.html",
+            "id": "170"
+        },
+        {
+            "titolo": "UNGHERIA: E’ finita l’era Orban.",
+            "sottotitolo": "MAGYAR governerà con la maggioranza di oltre i 2/3 del\nparlamento.",
+            "autore": "Marco Faregna",
+            "data": "21-04-2026",
+            "file": "ungheria.html",
+            "id": "180"
+        }
+    ]
+}
