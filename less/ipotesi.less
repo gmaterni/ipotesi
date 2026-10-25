@@ -963,6 +963,13 @@ article.post-article {
       font-weight: 700;
       text-align: right;
     }
+    // Riassunto iniziale (ex1_docx2html): carattere diverso dal corpo,
+    // in corsivo e con almeno una riga di spazio dall'inizio.
+    p.post-abstract {
+      margin-top: 1.7em;
+      font-family: @ftext;
+      font-style: italic;
+    }
     // Le immagini arrivano dal DOCX con width/height inline in pollici:
     // max-width le adatta al contenitore, height auto conserva le proporzioni.
     img {
