@@ -1,40 +1,41 @@
 {
     "ordine": [
-        "sfascio_tutto_e_tutti.html",
-        "capitali_arte_2028_reazioni_tuscia.html",
         "civita_bolsena_capitali_arte_2028.html",
-        "navigare_tra_scilla_e_cariddi.html",
+        "navigare_ancora_scilla_cariddi.html",
+        "normalita_cambia_forma.html",
         "populisticamente_corretto_colpisce_ancora.html",
-        "videogiochi_e_gioco_d_azzardo.html"
+        "sfascio_tutto_tutti_14_anni.html",
+        "si_puo_rinascere.html",
+        "videogiochi_gioco_azzardo.html"
     ],
     "schede": [
         {
-            "titolo": "Capitali dell'Arte Contemporanea 2028: le reazioni della Tuscia",
-            "sottotitolo": "Il plauso dei sindaci, di Mauro Belli e della Casa dei Comuni per un\nriconoscimento che premia la capacità di fare squadra e rilancia il\nmodello di sviluppo del territorio.",
-            "autore": "Stefano Stefanini",
-            "data": "30-11-2026",
-            "file": "capitali_arte_2028_reazioni_tuscia.html",
-            "id": "110"
-        },
-        {
-            "titolo": "Civita di Bagnoregio e Bolsena proclamate Capitali dell'Arte\nContemporanea 2028",
-            "sottotitolo": "Un qualificato presupposto per estendere un valido modello di\nsviluppo diffuso all'intera Tuscia con adeguati interventi\ninfrastrutturali.",
+            "titolo": "Civita di Bagnoregio e Bolsena proclamate Capitali dell’Arte\nContemporanea 2028",
+            "sottotitolo": "Un qualificato presupposto per estendere un valido modello di\nsviluppo diffuso all’intera Tuscia con adeguati interventi\ninfrastrutturali.",
             "autore": "Stefano Stefanini",
             "data": "30-11-2026",
             "file": "civita_bolsena_capitali_arte_2028.html",
-            "id": "120"
+            "id": "110"
         },
         {
             "titolo": "Navigare ancora tra Scilla e Cariddi",
             "sottotitolo": "Attraversare la vita nel tempo delle dissonanze umane",
-            "autore": "Giovanni Mastrangeli",
+            "autore": "Marco Faregna",
             "data": "30-11-2026",
-            "file": "navigare_tra_scilla_e_cariddi.html",
+            "file": "navigare_ancora_scilla_cariddi.html",
+            "id": "120"
+        },
+        {
+            "titolo": "La normalità cambia forma",
+            "sottotitolo": "Disabilità, Postura Naturale e il diritto di abitare il mondo a modo\nproprio",
+            "autore": "Barbara Matteucci",
+            "data": "30-11-2026",
+            "file": "normalita_cambia_forma.html",
             "id": "130"
         },
         {
             "titolo": "Il populisticamente corretto colpisce ancora",
-            "sottotitolo": "La cultura woke sta rifluendo, ma il populismo di sinistra resta\ndebole e confuso. Anche nel terzo anniversario del 7 ottobre ha\nprevaluto il giudizio equidistante del politicamente corretto.",
+            "sottotitolo": "La cultura woke ha contaminato il linguaggio della sinistra e il suo\npopulismo, fino a condizionare il racconto pubblico anche nel ricordo\ndel 7 ottobre.",
             "autore": "Francesco Chiucchiurlotto",
             "data": "30-11-2026",
             "file": "populisticamente_corretto_colpisce_ancora.html",
@@ -45,16 +46,24 @@
             "sottotitolo": "C’è un numero impressionante di giovanissimi ai quali non gliene\nfrega più nulla e di nulla. Sfasciare, urlare, devastare, menare a caso…\nè diventato un orgasmo a-sessuato. E, ovviamente piace. Ma cosa vogliono\ndire?",
             "autore": "Manuel Bellomi-Grazzini e Don Gianni Carparelli",
             "data": "30-11-2026",
-            "file": "sfascio_tutto_e_tutti.html",
+            "file": "sfascio_tutto_tutti_14_anni.html",
             "id": "150"
         },
         {
-            "titolo": "Videogiochi e gioco d'azzardo",
-            "sottotitolo": "Il mercato italiano vale 2,4 miliardi di euro e un terzo dei\ngiocatori ha tra i 6 e i 17 anni. Proteggere i minori e regolamentare le\nloot box è ormai una necessità.",
+            "titolo": "Si può rinascere",
+            "sottotitolo": "Quando il corpo cambia, la vita cerca una nuova voce",
+            "autore": "Andrea Binelli",
+            "data": "30-11-2026",
+            "file": "si_puo_rinascere.html",
+            "id": "160"
+        },
+        {
+            "titolo": "Videogiochi e gioco d’azzardo",
+            "sottotitolo": "Il settore vale 2,4 miliardi di euro e coinvolge 14,2 milioni di\nitaliani; tra microtransazioni e loot box, la protezione dei minori\nresta il nodo aperto.",
             "autore": "Domenico Faggiani",
             "data": "30-11-2026",
-            "file": "videogiochi_e_gioco_d_azzardo.html",
-            "id": "160"
+            "file": "videogiochi_gioco_azzardo.html",
+            "id": "170"
         }
     ]
 }

@@ -4,6 +4,8 @@ import { HttpService } from "./ipotesi_http.js";
 import { tts } from "./ipotesi_speak.js";
 import { UaWindowAdm } from "./uawindow.js";
 import { EventManager } from "./event_manager.js";
+import { APP_NAME } from "./ipotesi_config.js";
+import { UaSender } from "./ipotesi_sender.js";
 
 class Reader {
   constructor() {
@@ -61,12 +63,29 @@ class Reader {
     w.setZ(12);
     w.vw_vh().setXY(0.1, 10.2, -1);
     w.setHtml(h);
+    this.fixMediaSources(w);
     w.show();
     this.defaultFontSize();
   }
 
+  /**
+   * I frammenti in data/ usano src relativi alla loro cartella
+   * (es. "media/slug/foto.png"). Il reader li innesta nella pagina
+   * principale, quindi vanno risolti rispetto all'URL del frammento.
+   */
+  fixMediaSources(w) {
+    if (!this.urlCurrent || !w || !w.w) return;
+    const base = new URL(this.urlCurrent, document.baseURI);
+    w.w.querySelectorAll("img[src]").forEach((img) => {
+      const src = img.getAttribute("src");
+      if (!src || /^(?:[a-z]+:|\/)/i.test(src)) return;
+      img.src = new URL(src, base).href;
+    });
+  }
+
   openReader(url) {
     this.urlCurrent = url;
+    UaSender.sendEventAsync(APP_NAME, "read");
     HttpService.fetchText(url, (text) => this.showReader(text));
     this.isReaderOpen = true;
   }

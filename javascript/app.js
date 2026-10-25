@@ -6,8 +6,8 @@ import { toggleMenu, opHome, opArchivio, opHelp, opRedazione, opCollaboatori } f
 import { wnds, showSommario } from "./ipotesi_ui.js";
 import { tts } from "./ipotesi_speak.js";
 import { EventManager } from "./event_manager.js";
-// import { initUsageTracker } from './usage_tracker.mjs';
-// initUsageTracker();
+import { APP_NAME, WORKER_URL } from "./ipotesi_config.js";
+import { UaSender } from "./ipotesi_sender.js";
 
 const initMenu = () => {
   document.body.classList.add("theme-light");
@@ -55,6 +55,10 @@ const openApp = () => {
   getTheme();
   showSommario();
   updateVersionAndDate();
+
+  // Analytics: registra l'accesso alla pagina (saltato in locale).
+  UaSender.init({ workerUrl: WORKER_URL });
+  UaSender.sendEventAsync(APP_NAME, "open");
 };
 
 // L'evento DOMContentLoaded non ha bisogno di EventManager, è un evento di inizializzazione una tantum.
