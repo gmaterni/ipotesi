@@ -964,6 +964,15 @@ article.post-article {
       height: auto !important;
       vertical-align: middle;
     }
+    // Immagini flottanti ricostruite dal DOCX: su schermi stretti
+    // tornano a blocco per non schiacciare il testo che le affianca.
+    img.docx-float {
+      @media (max-width: 765px) {
+        float: none !important;
+        display: block;
+        margin: 0 auto 1.2em !important;
+      }
+    }
   }
 }
 

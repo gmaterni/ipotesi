@@ -3,7 +3,9 @@
 
 Converte articoli da DOCX a HTML.
 
-- Converte il DOCX in HTML tramite pandoc (solo testo: i contenuti non testuali vengono scartati)
+- Converte il DOCX in HTML tramite pandoc
+- Estrae le immagini in `media/<slug>/` e ne conserva posizione e allineamento
+  (flottanti con testo a lato, centrate, distanze dal paragrafo) come in Word
 - Estrae la "scheda articolo" (TITOLO, SOTTOTITOLO, AUTORE, DATA) e la inserisce come commento HTML
 - Allinea il nome in fondo all'articolo all'AUTORE della scheda, senza il "di" iniziale
 
