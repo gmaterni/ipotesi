@@ -4,6 +4,7 @@
         "navigare_ancora_scilla_cariddi.html",
         "normalita_cambia_forma.html",
         "populisticamente_corretto_colpisce_ancora.html",
+        "prima_i_viterbesi.html",
         "sfascio_tutto_tutti_14_anni.html",
         "si_puo_rinascere.html",
         "videogiochi_gioco_azzardo.html"
@@ -42,12 +43,20 @@
             "id": "140"
         },
         {
+            "titolo": "Prima i viterbesi",
+            "sottotitolo": "Viterbo universale luogo dello spirito.",
+            "autore": "Raimondo Raimondi",
+            "data": "30-11-2026",
+            "file": "prima_i_viterbesi.html",
+            "id": "150"
+        },
+        {
             "titolo": "Sfascio tutto e tutti. Ho 14 anni e m’avete scassato… er monno",
             "sottotitolo": "C’è un numero impressionante di giovanissimi ai quali non gliene\nfrega più nulla e di nulla. Sfasciare, urlare, devastare, menare a caso…\nè diventato un orgasmo a-sessuato. E, ovviamente piace. Ma cosa vogliono\ndire?",
             "autore": "Manuel Bellomi-Grazzini e Don Gianni Carparelli",
             "data": "30-11-2026",
             "file": "sfascio_tutto_tutti_14_anni.html",
-            "id": "150"
+            "id": "160"
         },
         {
             "titolo": "Si può rinascere",
@@ -55,7 +64,7 @@
             "autore": "Andrea Binelli",
             "data": "30-11-2026",
             "file": "si_puo_rinascere.html",
-            "id": "160"
+            "id": "170"
         },
         {
             "titolo": "Videogiochi e gioco d’azzardo",
@@ -63,7 +72,7 @@
             "autore": "Domenico Faggiani",
             "data": "30-11-2026",
             "file": "videogiochi_gioco_azzardo.html",
-            "id": "170"
+            "id": "180"
         }
     ]
 }
