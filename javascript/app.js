@@ -63,3 +63,4 @@ const openApp = () => {
 
 // L'evento DOMContentLoaded non ha bisogno di EventManager, è un evento di inizializzazione una tantum.
 document.addEventListener("DOMContentLoaded", openApp);
+ 

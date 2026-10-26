@@ -5,7 +5,6 @@ import { tts } from "./ipotesi_speak.js";
 import { UaWindowAdm } from "./uawindow.js";
 import { EventManager } from "./event_manager.js";
 import { APP_NAME } from "./ipotesi_config.js";
-import { UaSender } from "./ipotesi_sender.js";
 
 class Reader {
   constructor() {
@@ -85,7 +84,6 @@ class Reader {
 
   openReader(url) {
     this.urlCurrent = url;
-    UaSender.sendEventAsync(APP_NAME, "read");
     HttpService.fetchText(url, (text) => this.showReader(text));
     this.isReaderOpen = true;
   }
